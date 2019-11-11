@@ -21,7 +21,7 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Test Site', // Title for your website.
+  title: 'OpenHIM', // Title for your website.
   tagline: 'A website for testing',
   url: 'https://openhim.org', // Your website URL
   baseUrl: '/openhim-docs/', // Base URL for your project */
@@ -38,24 +38,31 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'doc1', label: 'Docs'},
-    {doc: 'doc4', label: 'API'},
+    {doc: 'introduction/welcome', label: 'Docs'},
+    {doc: 'api/introduction/welcome', label: 'API'},
     {page: 'help', label: 'Help'},
-    {blog: true, label: 'Blog'},
+    {blog: false},
   ],
+
+  // Details for the Search functionality
+  algolia: {
+    apiKey: 'my-api-key',
+    indexName: 'my-index-name',
+    algoliaOptions: {} // Optional, if provided by Algolia
+  },
 
   // If you have users set above, you add it here:
   users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/favicon.ico',
+  // headerIcon: 'img/openhim-logo-green.svg',
   footerIcon: 'img/favicon.ico',
   favicon: 'img/favicon.ico',
 
   /* Colors for website */
   colors: {
-    primaryColor: '#2f2756',
-    secondaryColor: '#201b3c',
+    primaryColor: '#206636',
+    secondaryColor: '#7CAB2F',
   },
 
   /* Custom fonts for website */
@@ -73,7 +80,7 @@ const siteConfig = {
   */
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Your Name or Your Company Name`,
+  copyright: `Copyright © ${new Date().getFullYear()} Jembi Health Systems NPC`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
@@ -94,7 +101,7 @@ const siteConfig = {
 
   // For sites with a sizable amount of content, set collapsible to true.
   // Expand/collapse the links and subcategories under categories.
-  // docsSideNavCollapsible: true,
+  docsSideNavCollapsible: true,
 
   // Show documentation's last contributor's name.
   // enableUpdateBy: true,
