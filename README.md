@@ -1,6 +1,6 @@
 # OpenHIM Docs
 
-This repository contains all the scripts and and files for running the OpenHIM website as well as the documentation sections for the OpenHIM.
+This repository contains all the scripts and files for running the OpenHIM website as well as the documentation sections for the OpenHIM.
 
 [https://jembi.github.io/openhim-docs/](https://jembi.github.io/openhim-docs/)
 
