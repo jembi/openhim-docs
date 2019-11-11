@@ -1,0 +1,731 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>RESTful API · OpenHIM</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Each and every API call that is made to the OpenHIM has to be authenticated. The authentication mechanism that is used can be fairly complex to work with however it provides decent security."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="RESTful API · OpenHIM"/><meta property="og:type" content="website"/><meta property="og:url" content="https://openhim.org/openhim-docs/"/><meta property="og:description" content="Each and every API call that is made to the OpenHIM has to be authenticated. The authentication mechanism that is used can be fairly complex to work with however it provides decent security."/><meta property="og:image" content="https://openhim.org/openhim-docs/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://openhim.org/openhim-docs/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/openhim-docs/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/openhim-docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/openhim-docs/css/main.css"/><script src="/openhim-docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/openhim-docs/"><h2 class="headerTitle">OpenHIM</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/openhim-docs/docs/introduction/welcome" target="_self">Docs</a></li><li class=""><a href="/openhim-docs/docs/api/introduction/welcome" target="_self">API</a></li><li class=""><a href="/openhim-docs/help" target="_self">Help</a></li><li class=""><a target="_self"></a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Developer Guide</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Introduction<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/introduction/welcome">Welcome</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/introduction/about">About the OpenHIM</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/introduction/key-components">Key Components</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/introduction/roadmap">Roadmap</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/introduction/community">Community</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Installation<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/installation/manual">Install Manually</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/installation/docker">Install via Docker</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/installation/npm">Install via NPM</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/installation/virtual-machine">Install via Virtual Machine</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/installation/console-configuration">Console Configuration</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Tutorial<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/tutorial/prerequisite">Prerequisite</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/tutorial/installation">Installation</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/tutorial/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/tutorial/mediator">Building a Mediator</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">User Guide<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/user-guide/overview">OpenHIM Overview</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/user-guide/basic-configuration">Basic configuration</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/user-guide/adding-users">Adding Users</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/user-guide/transaction-list">Transaction List</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/user-guide/alerting-reports">Alerting and reports</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/user-guide/polling-channels">Polling Channels (scheduled tasks)</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/user-guide/certificates-keystore">Certificates &amp; Keystore</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/user-guide/mediators">Mediators</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/user-guide/sample-disaster-recovery-procedure">Sample disaster recovery procedure</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/user-guide/openhim-core-versioning-and-compatibility">OpenHIM Core versioning and compatibility</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/user-guide/auditing">Auditing</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Developer Guide<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/dev-guide/design-overview">Design overview</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/dev-guide/design-details">Detailed design using Node.js</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/dev-guide/openhim-development">Getting started with OpenHIM development</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/dev-guide/developing-mediators">Developing mediators</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/openhim-docs/docs/dev-guide/restful-api">RESTful API</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/dev-guide/contributing">Contributing</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Implementations<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/implementations/datim">DATIM</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/implementations/mhero">mHero</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/implementations/momconnect">MomConnect</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/implementations/openhie">OpenHIE</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">How to<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/how-to/setup-and-configure">Setup and configure the OpenHIM</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/how-to/openhim-core-release">Create an OpenHIM-core release</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/how-to/openhim-console-release">Create an OpenHIM-console release</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/how-to/build-centos-rpm-package">Build a CentOS RPM package</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/how-to/install-on-centos">Install on CentOS</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/how-to/setup-ssl">Setup SSL</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/how-to/pre-package-offline-release">Pre-package an offline OpenHIM-core release</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/how-to/run-openhim-using-vagrant">Run the OpenHIM using vagrant</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/how-to/run-openhim-on-startup">Run the OpenHIM on startup</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/how-to/export-import-configuration">Export/import Configuration</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/how-to/setup-basic-cluster">Setup a basic cluster</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/how-to/manually-install-on-ubuntu-trusty">Manually install on Ubuntu 14.04 Trusty</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/how-to/manually-install-on-windows">Manually install on Windows</a></li><li class="navListItem"><a class="navItem" href="/openhim-docs/docs/how-to/build-openhim-documentation">Build the documentation</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">RESTful API</h1></header><article><div><span><p>Each and every API call that is made to the OpenHIM has to be authenticated. The authentication mechanism that is used can be fairly complex to work with however it provides decent security.</p>
+<p>The authentication mechanism is based on <a href="http://stackoverflow.com/a/9387289/588776">http://stackoverflow.com/a/9387289/588776</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="initial-authentication-notification"></a><a href="#initial-authentication-notification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Initial authentication notification</h2>
+<p>The user notifies the API that it wants to use its authenticated service:</p>
+<p><code>GET https://&lt;server&gt;:8080/authenticate/&lt;user_email&gt;</code></p>
+<p>If you don't have a user account yet, you can use the root user. The default root user details are as follows:</p>
+<p>username: root
+password: openhim-password (you should change this on a production installation!)</p>
+<p>The server will respond with the salt that was used to calculate the clients passwordHash (during user registration):</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"salt"</span>: <span class="hljs-string">"xxx"</span>,
+  <span class="hljs-attr">"ts"</span>: <span class="hljs-string">"xxx"</span>
+}
+</code></pre>
+<p>You must calculate a passwordhash using the received salt and the supplied user password. <code>passwordhash = (sha512(salt + password))</code></p>
+<h2><a class="anchor" aria-hidden="true" id="for-subsequent-requests-to-the-api"></a><a href="#for-subsequent-requests-to-the-api" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>For subsequent requests to the API</h2>
+<p>For every request you must add the following additional HTTP headers to the request:</p>
+<pre><code class="hljs css language-http"><span class="hljs-attribute">auth-username</span>: &lt;username&gt;
+<span class="hljs-attribute">auth-ts</span>: &lt;the current timestamp - in the following format '2014-10-20T13:19:32.380Z' - user time must be in sync with server time for request to work&gt;
+<span class="hljs-attribute">auth-salt</span>: &lt;random uuid salt that you generate&gt;
+<span class="hljs-attribute">auth-token</span>: &lt;= sha512(passwordhash + auth-salt + auth-ts) &gt;
+</code></pre>
+<p>The server will authorise this request by calculating sha512(passwordhash + auth-salt + auth-ts) using the passwordhash from its own database and ensuring that:</p>
+<ul>
+<li>this is equal to auth-token</li>
+<li>the auth-ts isn't more than 2 seconds old</li>
+</ul>
+<p>If these 2 conditions true the request is allowed.</p>
+<h2><a class="anchor" aria-hidden="true" id="example-implementations"></a><a href="#example-implementations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example implementations</h2>
+<p>An example of how this authentication mechanism can implemented for use with curl is show here: <a href="https://github.com/jembi/openhim-core-js/blob/master/resources/openhim-api-curl.sh">https://github.com/jembi/openhim-core-js/blob/master/resources/openhim-api-curl.sh</a></p>
+<p>An example of how this is implemented in the OpenHIM Console see: <a href="https://github.com/jembi/openhim-console/blob/master/app/scripts/services/login.js#L12-L39">https://github.com/jembi/openhim-console/blob/master/app/scripts/services/login.js#L12-L39</a> and <a href="https://github.com/jembi/openhim-console/blob/master/app/scripts/services/authinterceptor.js#L20-L50">https://github.com/jembi/openhim-console/blob/master/app/scripts/services/authinterceptor.js#L20-L50</a></p>
+<h2><a class="anchor" aria-hidden="true" id="api-reference"></a><a href="#api-reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API Reference</h2>
+<h3><a class="anchor" aria-hidden="true" id="channels-resource"></a><a href="#channels-resource" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Channels resource</h3>
+<p>Channels represent configuration setting of how to route requests through the OpenHIM.</p>
+<p><code>https://&lt;server&gt;:&lt;api_port&gt;/channels</code></p>
+<h4><a class="anchor" aria-hidden="true" id="fetch-all-channels"></a><a href="#fetch-all-channels" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fetch all channels</h4>
+<p><code>GET /channels</code></p>
+<p>The response status code will be <code>200</code> if successful and the response body will contain an array of channel objects. See the <a href="https://github.com/jembi/openhim-core-js/blob/master/src/model/channels.js">channel schema</a>.</p>
+<h4><a class="anchor" aria-hidden="true" id="add-a-channel"></a><a href="#add-a-channel" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add a channel</h4>
+<p><code>POST /channels</code></p>
+<p>with a json body representing the channel to be added. See the <a href="https://github.com/jembi/openhim-core-js/blob/master/src/model/channels.js">channel schema</a>.</p>
+<p>The response code will be <code>201</code> if successful.</p>
+<h4><a class="anchor" aria-hidden="true" id="fetch-a-specific-channel"></a><a href="#fetch-a-specific-channel" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fetch a specific channel</h4>
+<p><code>GET /channels/:channelId</code></p>
+<p>where <code>:channelId</code> is the <code>_id</code> property of the channel to fetch.</p>
+<p>The response status code will be <code>200</code> if successful and the response body will contain a channel object. See the <a href="https://github.com/jembi/openhim-core-js/blob/master/src/model/channels.js">channel schema</a>.</p>
+<h4><a class="anchor" aria-hidden="true" id="update-a-channel"></a><a href="#update-a-channel" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update a channel</h4>
+<p><code>PUT /channels/:channelId</code></p>
+<p>where <code>:channelId</code> is the <code>_id</code> property of the channel to update and with a json body representing the channel updates. See the <a href="https://github.com/jembi/openhim-core-js/blob/master/src/model/channels.js">channel schema</a>.</p>
+<p>The response code will be <code>200</code> if successful.</p>
+<h4><a class="anchor" aria-hidden="true" id="delete-a-channel"></a><a href="#delete-a-channel" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Delete a channel</h4>
+<p><code>DELETE /channels/:channelId</code></p>
+<p>where <code>:channelId</code> is the <code>_id</code> property of the channel to delete.</p>
+<p>The response code will be <code>200</code> if successful.</p>
+<h4><a class="anchor" aria-hidden="true" id="manually-trigger-polling-channel"></a><a href="#manually-trigger-polling-channel" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Manually Trigger Polling Channel</h4>
+<p>'POST /channels/:channelId/trigger'</p>
+<p>where ':channelId' is the '_id' property of the channel to manually trigger.</p>
+<h3><a class="anchor" aria-hidden="true" id="clients-resource"></a><a href="#clients-resource" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Clients resource</h3>
+<p>Other system that send request for the OpenHIM to forward.</p>
+<p><code>https://&lt;server&gt;:&lt;api_port&gt;/clients</code></p>
+<h4><a class="anchor" aria-hidden="true" id="fetch-all-clients"></a><a href="#fetch-all-clients" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fetch all clients</h4>
+<p><code>GET /clients</code></p>
+<p>The response status code will be <code>200</code> if successful and the response body will contain an array of client objects. See the <a href="https://github.com/jembi/openhim-core-js/blob/master/src/model/clients.js">clients schema</a>.</p>
+<h4><a class="anchor" aria-hidden="true" id="add-a-client"></a><a href="#add-a-client" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add a client</h4>
+<p><code>POST /clients</code></p>
+<p>with a json body representing the client to be added. See the <a href="https://github.com/jembi/openhim-core-js/blob/master/src/model/clients.js">clients schema</a>.</p>
+<p>The response code will be <code>201</code> if successful.</p>
+<h4><a class="anchor" aria-hidden="true" id="fetch-a-specific-client"></a><a href="#fetch-a-specific-client" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fetch a specific client</h4>
+<p><code>GET /clients/:clientId</code></p>
+<p>where <code>:clientId</code> is the <code>_id</code> property of the client to fetch.</p>
+<p>The response status code will be <code>200</code> if successful and the response body will contain a client object. See the <a href="https://github.com/jembi/openhim-core-js/blob/master/src/model/clients.js">client schema</a>.</p>
+<h4><a class="anchor" aria-hidden="true" id="fetch-a-specific-client-by-domain"></a><a href="#fetch-a-specific-client-by-domain" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fetch a specific client by domain</h4>
+<p><code>GET /clients/domain/:clientDomain</code></p>
+<p>where <code>:clientDomain</code> is the <code>domain</code> property of the client to fetch.</p>
+<p>The response status code will be <code>200</code> if successful and the response body will contain a client object. See the <a href="https://github.com/jembi/openhim-core-js/blob/master/src/model/clients.js">client schema</a>.</p>
+<h4><a class="anchor" aria-hidden="true" id="update-a-client"></a><a href="#update-a-client" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update a client</h4>
+<p><code>PUT /clients/:clientId</code></p>
+<p>where <code>:clientId</code> is the <code>_id</code> property of the client to update.</p>
+<p>The response code will be <code>200</code> if successful.</p>
+<h4><a class="anchor" aria-hidden="true" id="delete-a-client"></a><a href="#delete-a-client" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Delete a client</h4>
+<p><code>DELETE /clients/:clientId</code></p>
+<p>where <code>:clientId</code> is the <code>_id</code> property of the client to delete.</p>
+<p>The response code will be <code>200</code> if successful.</p>
+<h3><a class="anchor" aria-hidden="true" id="roles-resource"></a><a href="#roles-resource" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Roles resource</h3>
+<p>Allows for the management of client access control to channels.</p>
+<p>It should be noted that there is no actual roles collection in the database. The API is a facade on top of the <code>allow</code> and <code>roles</code> fields from Channels and Clients respectively. Roles can therefore also be altered by changing values for those fields directly.</p>
+<h4><a class="anchor" aria-hidden="true" id="fetch-all-roles"></a><a href="#fetch-all-roles" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fetch all roles</h4>
+<p><code>GET /roles</code></p>
+<p>The response status will be <code>200</code> if successful and the response body will contain an array of role objects, each consisting of a <code>name</code>, an array of <code>channels</code> and an array of <code>clients</code>, e.g.:</p>
+<pre><code class="hljs css language-json">[
+  {
+    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Role1"</span>,
+    <span class="hljs-attr">"channels"</span>: [
+      {
+        <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"56d56f34131d779a3f220d6d"</span>,
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"channel1"</span>
+      },
+      {
+        <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"56dfff5ef51fbdc660fe6722"</span>,
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"channel2"</span>
+      }
+    ],
+    <span class="hljs-attr">"clients"</span>: [
+      {
+        <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"56d43e584582beae226d8226"</span>,
+        <span class="hljs-attr">"clientID"</span>: <span class="hljs-string">"jembi"</span>
+      }
+    ]
+  },
+  {
+    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Role2"</span>,
+    <span class="hljs-attr">"channels"</span>: [
+      {
+        <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"56d43e424582beae226d8224"</span>,
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Channel3"</span>
+      }
+    ],
+    <span class="hljs-attr">"clients"</span>: [
+      {
+        <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"56d43e584582beae226d8226"</span>,
+        <span class="hljs-attr">"clientID"</span>: <span class="hljs-string">"jembi"</span>
+      }
+    ]
+  },
+  {
+    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"internal"</span>,
+    <span class="hljs-attr">"channels"</span>: [
+      {
+        <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"56e116d9beabfb406e0e7c91"</span>,
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Daily Task"</span>
+      }
+    ],
+    <span class="hljs-attr">"clients"</span>: []
+  }
+]
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="fetch-a-specific-role-by-role-name"></a><a href="#fetch-a-specific-role-by-role-name" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fetch a specific role by role name</h4>
+<p><code>GET /roles/:name</code></p>
+<p>The response status code will be <code>200</code> if successful and the response body will contain a role object in the same format as the role elements in the <em>Fetch all roles</em> operation response above. E.g.</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Role1"</span>,
+  <span class="hljs-attr">"channels"</span>: [
+    {
+      <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"56d56f34131d779a3f220d6d"</span>,
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"channel1"</span>
+    },
+    {
+      <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"56dfff5ef51fbdc660fe6722"</span>,
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"channel2"</span>
+    }
+  ],
+  <span class="hljs-attr">"clients"</span>: [
+    {
+      <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"56d43e584582beae226d8226"</span>,
+      <span class="hljs-attr">"clientID"</span>: <span class="hljs-string">"jembi"</span>
+    }
+  ]
+}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="add-a-new-role"></a><a href="#add-a-new-role" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add a new role</h4>
+<p><code>POST /roles</code></p>
+<p>with a json body containing the role name and channels and clients to apply to. At least one channel or client has to be specified. Channels and clients can be specified either by their <code>_id</code> or <code>name</code> for a channel and <code>clientID</code> for a client.</p>
+<p>An example role that will give a client named <em>jembi</em> permission to access <em>channel1</em> and <em>channel2</em>.</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Role1"</span>,
+  <span class="hljs-attr">"channels"</span>: [
+    {
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"channel1"</span>
+    },
+    {
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"channel2"</span>
+    }
+  ],
+  <span class="hljs-attr">"clients"</span>: [
+    {
+      <span class="hljs-attr">"clientID"</span>: <span class="hljs-string">"jembi"</span>
+    }
+  ]
+}
+</code></pre>
+<p>The response status code will be <code>201</code> if successful.</p>
+<h4><a class="anchor" aria-hidden="true" id="update-an-existing-role"></a><a href="#update-an-existing-role" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update an existing role</h4>
+<p><code>PUT /roles/:name</code></p>
+<p>with a json body containing any updates to channels and clients. As with the <em>Add a new role</em> operation, channels and clients can be specified either by their <code>_id</code> or <code>name</code> for a channel and <code>clientID</code> for a client.</p>
+<p>Note that the channel and client arrays, if specified, must contain the complete list of items to apply to, i.e. roles will be removed if they exist on any channels and clients that are not contained in the respective arrays. This also means that if <code>channels</code> and <code>clients</code> are specified as empty arrays, the result will be the same as deleting the role. If the fields are not specified, then the existing setup will be left as is.</p>
+<p>The following example will change <code>Role1</code> by giving the clients <em>jembi</em> and <em>client-service</em> permission to access <em>channel1</em>. Any other channels will be removed, e.g. following from the <em>Add a new role</em> example above, access to <em>channel2</em> will be removed:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"channels"</span>: [
+    {
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"channel1"</span>
+    }
+  ],
+  <span class="hljs-attr">"clients"</span>: [
+    {
+      <span class="hljs-attr">"clientID"</span>: <span class="hljs-string">"jembi"</span>
+    },
+    {
+      <span class="hljs-attr">"clientID"</span>: <span class="hljs-string">"client-service"</span>
+    }
+  ]
+}
+</code></pre>
+<p>Roles can also be renamed by specifying the <code>name</code> field.</p>
+<p>The response status code will be <code>200</code> if successful.</p>
+<h4><a class="anchor" aria-hidden="true" id="delete-an-existing-role"></a><a href="#delete-an-existing-role" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Delete an existing role</h4>
+<p><code>DELETE /roles/:name</code></p>
+<p>Remove an existing role from all channels and clients.</p>
+<p>The response status code will be <code>200</code> if successful.</p>
+<h3><a class="anchor" aria-hidden="true" id="users-resource"></a><a href="#users-resource" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Users resource</h3>
+<p>Console and API Users of the system.</p>
+<p><code>https://&lt;server&gt;:&lt;api_port&gt;/users</code></p>
+<h4><a class="anchor" aria-hidden="true" id="fetch-all-users"></a><a href="#fetch-all-users" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fetch all users</h4>
+<p><code>GET /users</code></p>
+<p>The response status code will be <code>200</code> if successful and the response body will contain an array of users objects. See the <a href="https://github.com/jembi/openhim-core-js/blob/master/src/model/users.js">user schema</a>.</p>
+<h4><a class="anchor" aria-hidden="true" id="add-a-user"></a><a href="#add-a-user" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add a user</h4>
+<p><code>POST /users</code></p>
+<p>with a json body representing the user to be added. See the <a href="https://github.com/jembi/openhim-core-js/blob/master/src/model/users.js">users schema</a>.</p>
+<p>The response code will be <code>201</code> if successful.</p>
+<h4><a class="anchor" aria-hidden="true" id="fetch-a-specific-user-by-email-address"></a><a href="#fetch-a-specific-user-by-email-address" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fetch a specific user by email address</h4>
+<p><code>GET /users/:email</code></p>
+<p>where <code>:email</code> is the <code>email</code> property of the user to fetch.</p>
+<p>The response status code will be <code>200</code> if successful and the response body will contain a user object. See the <a href="https://github.com/jembi/openhim-core-js/blob/master/src/model/users.js">user schema</a>.</p>
+<h4><a class="anchor" aria-hidden="true" id="update-a-user"></a><a href="#update-a-user" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update a user</h4>
+<p><code>PUT /users/:email</code></p>
+<p>where <code>:email</code> is the <code>email</code> property of the user to update and with a json body representing the user updates. See the <a href="https://github.com/jembi/openhim-core-js/blob/master/src/model/users.js">user schema</a>.</p>
+<p>The response code will be <code>200</code> if successful.</p>
+<h4><a class="anchor" aria-hidden="true" id="delete-a-user"></a><a href="#delete-a-user" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Delete a user</h4>
+<p><code>DELETE /users/:email</code></p>
+<p>where <code>:email</code> is the <code>email</code> property of the user to delete.</p>
+<p>The response code will be <code>200</code> if successful.</p>
+<h3><a class="anchor" aria-hidden="true" id="transactions-resource"></a><a href="#transactions-resource" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Transactions resource</h3>
+<p>Transactions store details about request and responses send through specifc channels.</p>
+<p><code>https://&lt;server&gt;:&lt;api_port&gt;/transactions</code></p>
+<p>An important concept to grasp with a transaction is the meaning of a transactions status. Here is a description of what each state means:</p>
+<ul>
+<li>Processing - We are waiting for responses from one or more routes</li>
+<li>Successful - The primary route and all other routes returned successful http response codes (2xx).</li>
+<li>Failed - The primary route has returned a failed http response code (5xx)</li>
+<li>Completed - The primary route and the other routes did not return a failure http response code (5xx) but some weren't successful (2xx).</li>
+<li>Completed with error(s) - The primary route did not return a failure http response code (5xx) but one of the routes did.</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="fetch-all-transactions"></a><a href="#fetch-all-transactions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fetch all transactions</h4>
+<p><code>GET /transactions</code></p>
+<p>The response status code will be <code>200</code> if successful and the response body will contain an array of transaction objects. See the <a href="https://github.com/jembi/openhim-core-js/blob/master/src/model/transactions.js">transaction schema</a>.</p>
+<p>The following query parameters are supported:</p>
+<ul>
+<li><code>filterLimit</code>: The max number of transactions to return</li>
+<li><code>filterPage</code>: The page to return (used in conjunction with <code>filterLimit</code>)</li>
+<li><code>filterRepresentation</code>: Determines how much information for a transaction to return; options are
+<ul>
+<li><code>simple</code>: minimal transaction information</li>
+<li><code>simpledetails</code>: minimal transaction information, but with more fields than simple</li>
+<li><code>bulkrerun</code>: minimal transaction information required in order to determine rerun status</li>
+<li><code>full</code>: Full transaction information</li>
+<li><code>fulltruncate</code>: The same as full except that large transaction bodies will be truncated</li>
+</ul></li>
+<li><code>channelID</code>: Only return transactions that are linked to the specified channel</li>
+<li><code>filters</code>: Advanced filters specified as an object. Transaction fields can be specified based on the <a href="https://github.com/jembi/openhim-core-js/blob/master/src/model/transactions.js#L40-L56">transaction schema</a>. For example, in order to filter by response status 200 and a property called <code>prop</code> with a value <code>val</code>, the following query could be used: <code>/transactions?filterLimit=100&amp;filterPage=0&amp;filters=%7B%22response.status%22:%22200%22,%22properties%22:%7B%22prop%22:%22val%22%7D%7D</code></li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="add-a-transaction"></a><a href="#add-a-transaction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add a transaction</h4>
+<p><code>POST /transactions</code></p>
+<p>with a json body representing the transaction to be added. See the <a href="https://github.com/jembi/openhim-core-js/blob/master/src/model/transactions.js">transactions schema</a>.</p>
+<p>The response code will be <code>201</code> if successful.</p>
+<h4><a class="anchor" aria-hidden="true" id="fetch-a-specific-transaction"></a><a href="#fetch-a-specific-transaction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fetch a specific transaction</h4>
+<p><code>GET /transactions/:transactionId</code></p>
+<p>where <code>:transactionId</code> is the <code>_id</code> property of the user to fetch.</p>
+<p>The response status code will be <code>200</code> if successful and the response body will contain a transaction object. See the <a href="https://github.com/jembi/openhim-core-js/blob/master/src/model/transactions.js">transaction schema</a>.</p>
+<h4><a class="anchor" aria-hidden="true" id="find-transactions-by-client-id"></a><a href="#find-transactions-by-client-id" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Find transactions by client Id</h4>
+<p><code>GET /transactions/clients/:clientId</code></p>
+<p>where <code>:clientId</code> is the <code>clientID</code> property of the client we wish to find transaction for.</p>
+<p>The response status code will be <code>200</code> if successful and the response body will contain an array of transaction objects. See the <a href="https://github.com/jembi/openhim-core-js/blob/master/src/model/transactions.js">transaction schema</a>.</p>
+<h4><a class="anchor" aria-hidden="true" id="update-a-transaction"></a><a href="#update-a-transaction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update a transaction</h4>
+<p><code>PUT /transactions/:transactionId</code></p>
+<p>where <code>:transactionId</code> is the <code>_id</code> property of the transaction to update and with a json body representing the transaction updates. See the <a href="https://github.com/jembi/openhim-core-js/blob/master/src/model/transactions.js">transaction schema</a>.</p>
+<p>The response code will be <code>200</code> if successful.</p>
+<h4><a class="anchor" aria-hidden="true" id="delete-a-transaction"></a><a href="#delete-a-transaction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Delete a transaction</h4>
+<p><code>DELETE /transactions/:transactionId</code></p>
+<p>where <code>:transactionId</code> is the <code>_id</code> property of the transaction to delete.</p>
+<p>The response code will be <code>200</code> if successful.</p>
+<h3><a class="anchor" aria-hidden="true" id="contact-groups-resource"></a><a href="#contact-groups-resource" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Contact groups resource</h3>
+<p>A contact group (or contact list) defines logical groups of users used for contacting users en masse.</p>
+<p><code>https://&lt;server&gt;:&lt;api_port&gt;/groups</code></p>
+<h4><a class="anchor" aria-hidden="true" id="fetch-all-groups"></a><a href="#fetch-all-groups" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fetch all groups</h4>
+<p><code>GET /groups</code></p>
+<p>The response status code will be <code>200</code> if successful and the response body will contain an array of group objects. See the <a href="https://github.com/jembi/openhim-core-js/blob/master/src/model/contactGroups.js">contact groups schema</a>.</p>
+<h4><a class="anchor" aria-hidden="true" id="add-a-group"></a><a href="#add-a-group" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add a group</h4>
+<p><code>POST /groups</code></p>
+<p>with a json body representing the group to be added. See the <a href="https://github.com/jembi/openhim-core-js/blob/master/src/model/contactGroups.js">contact groups schema</a>.</p>
+<p>The response code will be <code>201</code> if successful.</p>
+<h4><a class="anchor" aria-hidden="true" id="fetch-a-specific-group"></a><a href="#fetch-a-specific-group" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fetch a specific group</h4>
+<p><code>GET /groups/:groupId</code></p>
+<p>where <code>:groupId</code> is the <code>_id</code> property of the group to fetch.</p>
+<p>The response status code will be <code>200</code> if successful and the response body will contain a group object. See the <a href="https://github.com/jembi/openhim-core-js/blob/master/src/model/contactGroups.js">contact group schema</a>.</p>
+<h4><a class="anchor" aria-hidden="true" id="update-a-group"></a><a href="#update-a-group" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update a group</h4>
+<p><code>PUT /groups/:groupId</code></p>
+<p>where <code>:groupId</code> is the <code>_id</code> property of the group to update.</p>
+<p>The response code will be <code>200</code> if successful.</p>
+<h4><a class="anchor" aria-hidden="true" id="delete-a-group"></a><a href="#delete-a-group" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Delete a group</h4>
+<p><code>DELETE /groups/:groupId</code></p>
+<p>where <code>:groupId</code> is the <code>_id</code> property of the group to delete.</p>
+<p>The response code will be <code>200</code> if successful.</p>
+<h3><a class="anchor" aria-hidden="true" id="tasks-resource"></a><a href="#tasks-resource" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tasks resource</h3>
+<p>Tasks are used to submit transactions to be re-run.</p>
+<p><code>https://&lt;server&gt;:&lt;api_port&gt;/tasks</code></p>
+<h4><a class="anchor" aria-hidden="true" id="fetch-all-tasks"></a><a href="#fetch-all-tasks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fetch all tasks</h4>
+<p><code>GET /tasks</code></p>
+<p>The response status code will be <code>200</code> if successful and the response body will contain an array of task objects. See the <a href="https://github.com/jembi/openhim-core-js/blob/master/src/model/tasks.js">tasks schema</a>.</p>
+<h4><a class="anchor" aria-hidden="true" id="add-a-task"></a><a href="#add-a-task" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add a task</h4>
+<p><code>POST /tasks</code></p>
+<p>with a json body representing the task to be added in the following format:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"tids"</span>: [
+    <span class="hljs-string">"id#1"</span>,
+    <span class="hljs-string">"id#2"</span>,
+    ...
+    <span class="hljs-string">"id#N"</span>
+  ],
+  <span class="hljs-attr">"batchSize"</span>: <span class="hljs-number">4</span>,   <span class="hljs-comment">//optional</span>
+  <span class="hljs-attr">"paused"</span>: <span class="hljs-literal">true</span>    <span class="hljs-comment">//optional</span>
+}
+</code></pre>
+<p>The <code>tids</code> field should contain an array of transaction identifiers indicating the transactions that need to be rerun. The <code>batchSize</code> field indicates the number of transactions that the core should run concurrently. To prevent a task from immediately starting upon add, the <code>paused</code> field can be added. In this case the task will simply be scheduled with a <code>Paused</code> status, ready to be started at any later stage.</p>
+<p>The response code will be <code>201</code> if successful.</p>
+<h4><a class="anchor" aria-hidden="true" id="fetch-a-specific-task"></a><a href="#fetch-a-specific-task" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fetch a specific task</h4>
+<p><code>GET /tasks/:taskId</code></p>
+<p>where <code>:taskId</code> is the <code>_id</code> property of the task to fetch.</p>
+<p>The response status code will be <code>200</code> if successful and the response body will contain a task object. See the <a href="https://github.com/jembi/openhim-core-js/blob/master/src/model/tasks.js">task schema</a>.</p>
+<h4><a class="anchor" aria-hidden="true" id="update-a-task"></a><a href="#update-a-task" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update a task</h4>
+<p><code>PUT /tasks/:taskId</code></p>
+<p>where <code>:taskId</code> is the <code>_id</code> property of the task to update.</p>
+<p>Tasks can be paused, resumed or cancelled by sending through an update with status equal to <code>Paused</code>, <code>Queued</code> or <code>Cancelled</code> respectively.</p>
+<p>The response code will be <code>200</code> if successful.</p>
+<h4><a class="anchor" aria-hidden="true" id="delete-a-task"></a><a href="#delete-a-task" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Delete a task</h4>
+<p><code>DELETE /tasks/:taskId</code></p>
+<p>where <code>:taskId</code> is the <code>_id</code> property of the task to delete.</p>
+<p>The response code will be <code>200</code> if successful.</p>
+<h3><a class="anchor" aria-hidden="true" id="mediators"></a><a href="#mediators" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mediators</h3>
+<p><code>https://&lt;server&gt;:&lt;api_port&gt;/mediators</code></p>
+<h4><a class="anchor" aria-hidden="true" id="fetch-all-mediators"></a><a href="#fetch-all-mediators" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fetch all mediators</h4>
+<p><code>GET /mediators</code></p>
+<p>The response status code will be <code>200</code> if successful and the response body will contain an array of mediator objects. See the <a href="https://github.com/jembi/openhim-core-js/blob/master/src/model/mediators.js">mediators schema</a>.</p>
+<p><strong>Note:</strong> All password types returned in a mediator's config will be masked. To view the password, the heartbeat endpoint must be used by a mediator to retrieve config.</p>
+<h4><a class="anchor" aria-hidden="true" id="add-a-mediator"></a><a href="#add-a-mediator" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add a mediator</h4>
+<p><code>POST /mediators</code></p>
+<p>with a json body representing the mediator to be added. See the <a href="https://github.com/jembi/openhim-core-js/blob/master/src/model/mediators.js">mediators schema</a>.</p>
+<p>The response code will be <code>201</code> if successful.</p>
+<h4><a class="anchor" aria-hidden="true" id="fetch-a-specific-mediator"></a><a href="#fetch-a-specific-mediator" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fetch a specific mediator</h4>
+<p><code>GET /mediators/:urn</code></p>
+<p>where <code>:urn</code> is the <code>urn</code> property of the mediator to fetch.</p>
+<p>The response status code will be <code>200</code> if successful and the response body will contain a mediator object. See the <a href="https://github.com/jembi/openhim-core-js/blob/master/src/model/mediators.js">mediator schema</a>.</p>
+<p><strong>Note:</strong> All password types returned in a mediator's config will be masked. To view the password, the heartbeat endpoint must be used by a mediator to retrieve config.</p>
+<h4><a class="anchor" aria-hidden="true" id="mediator-heartbeat-endpoint"></a><a href="#mediator-heartbeat-endpoint" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mediator heartbeat endpoint</h4>
+<p>This endpoint allows a mediator to send a heartbeat to the OpenHIM-core. This serves two purposes:</p>
+<ol>
+<li>It allows the mediator to demonstrate its alive-ness and submit an uptime property</li>
+<li>It allows the mediator to fetch the latest configuration from the OpenHIM-core</li>
+</ol>
+<p>This endpoint only returns mediator config if the config has changed between the time the previous heartbeat was received and the current time. You may force the endpoint to return the latest config via the <code>config: true</code> property.</p>
+<p><code>POST /mediators/:urn/heartbeat</code></p>
+<p>where <code>:urn</code> is the <code>urn</code> property of the mediator that is sending in a heartbeat.</p>
+<p>with an http body of:</p>
+<pre><code class="hljs css language-js">{
+  <span class="hljs-string">"uptime"</span>: <span class="hljs-number">50.25</span> <span class="hljs-comment">// The uptime is seconds</span>
+  <span class="hljs-string">"config"</span>: <span class="hljs-literal">true</span> <span class="hljs-comment">// (Optional) a flag to force the OpenHIM-core to send back the latest config</span>
+}
+</code></pre>
+<p>The response will always have a <code>200</code> status if successful or a <code>404</code> if the mediator specified by the urn cannot be found. The response body will contain the latest mediator config that has been set on the OpenHIM-core server only if the config has changed since the last time a heartbeat was received from this mediator. Otherwise, the response body is left empty.</p>
+<p>This endpoint can only be called by an admin user.</p>
+<h4><a class="anchor" aria-hidden="true" id="set-mediator-config"></a><a href="#set-mediator-config" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Set mediator config</h4>
+<p>Sets the current configuration values for this mediator. The received configuration must conform to the configuration definition that the mediator defined in its registration message.</p>
+<p><code>POST /mediators/:urn/config</code></p>
+<p>where <code>:urn</code> is the <code>urn</code> property of the mediator that is sending in the heartbeat.</p>
+<p>with an http body of:</p>
+<pre><code class="hljs css language-js">{
+  <span class="hljs-attr">paramName</span>: <span class="hljs-string">"value"</span>,
+  <span class="hljs-attr">paramName</span>: <span class="hljs-string">"value"</span>
+}
+</code></pre>
+<p>The response will have an http status code of <code>201</code> if successful, <code>404</code> if the mediator referenced by urn cannot be found and <code>400</code> if the config supplied cannot be validated against the configuration definition supplied in the mediator registration message.</p>
+<p>This endpoint can only be called by an admin user.</p>
+<h4><a class="anchor" aria-hidden="true" id="install-mediator-channels"></a><a href="#install-mediator-channels" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install mediator channels</h4>
+<p>Installs channels that are listed in the mediator's config (<code>defaultChannelConfig</code> property). This endpoint can install all listed channels or a subset of channels depending on the post body the of request.</p>
+<p><code>POST /mediators/:urn/channels</code></p>
+<p>where <code>:urn</code> is the <code>urn</code> property of the mediator that is installing the channels.</p>
+<p>with an http body that contains a JSON array of channel names to install. These names must match the names of channels in the mediators <code>defaultChannelConfig</code> property. If no body is sent, all channel are added by default.</p>
+<p>e.g.</p>
+<pre><code class="hljs css language-js">;[<span class="hljs-string">'Channel 1'</span>, <span class="hljs-string">'Channel 2'</span>]
+</code></pre>
+<p>The response will be an http status code of <code>201</code> if the channels were successfully created and <code>400</code> if you provide a channel name that doesn't exist.</p>
+<h3><a class="anchor" aria-hidden="true" id="metrics-resource"></a><a href="#metrics-resource" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Metrics resource</h3>
+<p>This resource enables transaction metrics to be extracted from the OpenHIM in a flexible way. There are various forms of this endpoint depending on the format of the metrics that you want to get out. Metrics will only be returned for the channels that the API user has access to.</p>
+<p>The base url is <code>https://&lt;server&gt;:&lt;api_port&gt;/metrics</code></p>
+<p>All calls to the metrics API <strong>MUST</strong> include request parameter with both the start date and end date for the metrics query. E.g. <code>/metrics?startDate=2014-07-15T00:00:00.000Z&amp;endDate=2014-07-19T00:00:00.000Z</code></p>
+<p>There are a few different forms of this endpoint that returns metrics broken down in different ways:</p>
+<ul>
+<li>Use <code>/metrics</code> to get overall metrics about every transaction.</li>
+<li>Use <code>/metrics/channels</code> to get metrics broken down by each channel.</li>
+<li>Use <code>/metrics/channels/:channelID</code> to get metrics for a specific channel.</li>
+<li>Use <code>/metrics/timeseries/:timeSeries</code> to get overall metrics returned in the specified time series. Time series values are one of 'minute', 'hour', 'day', 'month', 'year'.</li>
+<li>Use <code>/metrics/timeseries/:timeSeries/channels</code> to get metrics broken down by each channel returned in the specified time series. Time series values are one of 'minute', 'hour', 'day', 'month', 'year'.</li>
+<li>Use <code>/metrics/timeseries/:timeSeries/channels/:channelID</code> to get metrics for a specific channel returned in the specified time series. Time series values are one of 'minute', 'hour', 'day', 'month', 'year'.</li>
+</ul>
+<p>The metrics API always returns a JSON array, even if it is returning just one metrics object. It returns a <code>200</code> response along with the metrics array. A <code>401</code> response will be returned if a specified channel doesn't exist. Each metrics object in the array has the following format:</p>
+<pre><code class="hljs css language-js">{
+  <span class="hljs-attr">_id</span>: {
+     <span class="hljs-attr">channelID</span>: <span class="hljs-string">'222222222222222222222222'</span>, <span class="hljs-comment">// Only if breaking down by channels</span>
+     <span class="hljs-attr">day</span>: <span class="hljs-number">15</span>,  <span class="hljs-comment">// Only the approporiate time components will be returned when</span>
+     <span class="hljs-attr">week</span>: <span class="hljs-number">28</span>, <span class="hljs-comment">// breaking down in time series, these will not appear if not</span>
+     <span class="hljs-attr">month</span>: <span class="hljs-number">7</span>, <span class="hljs-comment">// breaking down by time series. These are always UTC values.</span>
+     <span class="hljs-attr">year</span>: <span class="hljs-number">2014</span>
+    },
+  <span class="hljs-attr">total</span>: <span class="hljs-number">1</span>,
+  <span class="hljs-attr">avgResp</span>: <span class="hljs-number">100</span>,
+  <span class="hljs-attr">minResp</span>: <span class="hljs-number">100</span>,
+  <span class="hljs-attr">maxResp</span>: <span class="hljs-number">100</span>,
+  <span class="hljs-attr">failed</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-attr">successful</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-attr">processing</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-attr">completed</span>: <span class="hljs-number">1</span>,
+  <span class="hljs-attr">completedWErrors</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-attr">timestamp</span>: <span class="hljs-string">'2014-08-14T22:00:00.000Z'</span> <span class="hljs-comment">// This will appear only for time series</span>
+                                        <span class="hljs-comment">// data as a convenience. It represents</span>
+                                        <span class="hljs-comment">// the start of this time series period</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="keystore-resource"></a><a href="#keystore-resource" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Keystore resource</h3>
+<p>The keystore resource allows you to set and fetch the server certificate and key and set and query trusted certificates.</p>
+<h4><a class="anchor" aria-hidden="true" id="get-the-current-him-server-cert"></a><a href="#get-the-current-him-server-cert" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get the current HIM server cert</h4>
+<p><code>GET keystore/cert</code></p>
+<p>returns 200 ok with <code>{ subject: '', issuer: '', validity: '', cert: '&lt;pem string&gt;' }</code></p>
+<h4><a class="anchor" aria-hidden="true" id="gets-the-array-of-trusted-ca-certs"></a><a href="#gets-the-array-of-trusted-ca-certs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Gets the array of trusted ca certs</h4>
+<p><code>GET keystore/ca</code></p>
+<p>returns 200 ok with <code>[ { subject: '', issuer: '', validity: '', cert: '&lt;pem string&gt;' }, ... ]</code></p>
+<h4><a class="anchor" aria-hidden="true" id="gets-a-ca-cert-by-its-_id"></a><a href="#gets-a-ca-cert-by-its-_id" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>gets a ca cert by its _id</h4>
+<p><code>GET keystore/ca/_id</code></p>
+<p>returns 200 ok with <code>{ subject: '', issuer: '', validity: '', cert: '&lt;pem string&gt;' }</code></p>
+<h4><a class="anchor" aria-hidden="true" id="sets-the-him-server-key"></a><a href="#sets-the-him-server-key" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sets the HIM server key</h4>
+<p><code>POST keystore/key</code></p>
+<p>data <code>{ key: '&lt;pem string&gt;' }</code></p>
+<p>returns 201 ok</p>
+<h4><a class="anchor" aria-hidden="true" id="sets-the-him-server-cert"></a><a href="#sets-the-him-server-cert" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sets the HIM server cert</h4>
+<p><code>POST keystore/cert</code></p>
+<p>data <code>{ cert: '&lt;pem string&gt;' }</code></p>
+<p>returns 201 ok</p>
+<h4><a class="anchor" aria-hidden="true" id="adds-a-cert-to-the-list-of-ca-certs"></a><a href="#adds-a-cert-to-the-list-of-ca-certs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Adds a cert to the list of ca certs</h4>
+<p><code>POST keystore/ca/cert</code></p>
+<p>data <code>{ cert: '&lt;pem string&gt;' }</code></p>
+<p>returns 201 ok</p>
+<h4><a class="anchor" aria-hidden="true" id="removes-a-ca-cert-by-its-_id"></a><a href="#removes-a-ca-cert-by-its-_id" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Removes a ca cert by its _id</h4>
+<p><code>DELETE keystore/ca/_id</code></p>
+<p>returns 200 ok</p>
+<h4><a class="anchor" aria-hidden="true" id="queries-the-validity-of-the-server-cert-and-private-key"></a><a href="#queries-the-validity-of-the-server-cert-and-private-key" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Queries the validity of the server cert and private key</h4>
+<p><code>GET keystore/validity</code></p>
+<p>return 200 ok with <code>{ valid: true|false}</code></p>
+<h3><a class="anchor" aria-hidden="true" id="logs-resource"></a><a href="#logs-resource" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Logs resource</h3>
+<p>The logs resource allows you to get access to the server logs. This resource is only accessible by admin users and only works if you have <a href="https://github.com/jembi/openhim-core-js/blob/master/config/config.md">database logging</a> enabled (This is enabled by default).</p>
+<h4><a class="anchor" aria-hidden="true" id="get-logs"></a><a href="#get-logs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get logs</h4>
+<p><code>GET logs?[filters]</code></p>
+<p>Fetches server logs. You may apply a number of filters to fetch the logs that you require. By default the logs with level <code>info</code> and above for the last 5 mins with be returned. The logs will be returned as an ordered array with the latest message at the end of the array.</p>
+<p>A maximum of 100 000 log messages will ever be returned. So don't make unreasonable queries as you won't get all the results (hint: use pagination).</p>
+<p>The following filters are available:</p>
+<ul>
+<li><code>from</code> - an ISO8601 formatted date to query from. Defaults to 5 mins ago.</li>
+<li><code>until</code> - an ISO8601 formatted date to query until. Defaults to now.</li>
+<li><code>start</code> - a number n: the log message to start from, if specified the first <code>n</code> message are NOT returned. Useful along with limit for pagination. Defaults to 0.</li>
+<li><code>limit</code> - a number n: the max number of log messages to return. Useful along with <code>start</code> for pagination. Defaults to 100 000.</li>
+<li><code>level</code> - The log level to return. Possible values are <code>debug</code>, <code>info</code>, <code>warn</code> and <code>error</code>. All messages with a level equal to or of higher severity to the specified value will be returned. Defaults to <code>info</code>.</li>
+</ul>
+<p>The logs will be returned in the following format with a <code>200</code> status code:</p>
+<pre><code class="hljs css language-js">;[
+  {
+    <span class="hljs-attr">label</span>: <span class="hljs-string">'worker1'</span>,
+    <span class="hljs-attr">meta</span>: {},
+    <span class="hljs-attr">level</span>: <span class="hljs-string">'info'</span>,
+    <span class="hljs-attr">timestamp</span>: <span class="hljs-string">'2015-10-29T09:40:31.536Z'</span>,
+    <span class="hljs-attr">message</span>: <span class="hljs-string">'Some message'</span>
+  },
+  {
+    <span class="hljs-attr">label</span>: <span class="hljs-string">'worker1'</span>,
+    <span class="hljs-attr">meta</span>: {},
+    <span class="hljs-attr">level</span>: <span class="hljs-string">'info'</span>,
+    <span class="hljs-attr">timestamp</span>: <span class="hljs-string">'2015-10-29T09:40:39.128Z'</span>,
+    <span class="hljs-attr">message</span>: <span class="hljs-string">'Another message'</span>
+  }
+  <span class="hljs-comment">// ...</span>
+]
+</code></pre>
+<p>For example a sample request could look like this:</p>
+<pre><code class="hljs css language-http">https://localhost:8080/logs?from=2015-10-28T12:31:46&amp;until=2015-10-28T12:38:55&amp;limit=100&amp;start=10&amp;level=error`
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="server-uptime"></a><a href="#server-uptime" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Server uptime</h3>
+<p><code>GET heartbeat</code></p>
+<p>returns 200 ok with <code>{ master: &lt;core-uptime&gt;, mediators: { &lt;urn&gt;: &lt;mediator-uptime&gt; ... }}</code></p>
+<p>Returns the server uptime in seconds. Includes a list of all registered mediators and if heartbeats have been received for them, will include their uptimes as well.</p>
+<p>Note that this is a public endpoint that does not require any authorization. It is convenient for integrating with external monitoring tools.</p>
+<h3><a class="anchor" aria-hidden="true" id="metadata-resource"></a><a href="#metadata-resource" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Metadata resource</h3>
+<p>The metadata resource allows the user to export and import Channels, Clients, Mediators, Users and ContactGroups.</p>
+<p>Use <code>GET</code> to retrieve all available metadata, and <code>POST</code> to import metadata.</p>
+<p>The import checks for conflicts in the database and either updates or inserts based on the result. For more control over the import, the validate endpoint accepts the same payload as the import endpoint and returns a validation status per metadata record.</p>
+<h4><a class="anchor" aria-hidden="true" id="export-metadata"></a><a href="#export-metadata" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Export Metadata</h4>
+<p><code>Get /metadata</code> Returns <code>200</code> and an object with the following format:</p>
+<pre><code class="hljs css language-json">[
+  {
+    "Channels": [
+      { ChannelObject1 }
+    ]
+    "Clients": [
+      { ClientObject1 },
+      { ClientObject2 }
+    ],
+    "Mediators": [],
+    "Users": [],
+    "ContactGroups:": []
+  }
+]
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="validate-metadata"></a><a href="#validate-metadata" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Validate Metadata</h4>
+<p><code>Post /metadata/validate</code> Returns <code>201</code> and an object with the following format:</p>
+<pre><code class="hljs css language-js">[
+  {
+    <span class="hljs-attr">model</span>: <span class="hljs-string">'Channel'</span>
+    <span class="hljs-attr">record</span>: { ChannelObject1 }
+    <span class="hljs-attr">status</span>: <span class="hljs-string">'Valid'</span>
+    <span class="hljs-attr">message</span>: <span class="hljs-string">''</span>
+    <span class="hljs-attr">uid</span>: <span class="hljs-string">'ChannelName'</span>
+  }, {
+    <span class="hljs-attr">model</span>: <span class="hljs-string">'Client'</span>
+    <span class="hljs-attr">record</span>: { ClientObject1 }
+    <span class="hljs-attr">status</span>: <span class="hljs-string">'Conflict'</span>
+    <span class="hljs-attr">message</span>: <span class="hljs-string">''</span>
+    <span class="hljs-attr">uid</span>: <span class="hljs-string">"ClientId"</span>
+  }, {
+    <span class="hljs-attr">model</span>: <span class="hljs-string">'Client'</span>
+    <span class="hljs-attr">record</span>: { ClientObject2 }
+    <span class="hljs-attr">status</span>: <span class="hljs-string">'Error'</span>
+    <span class="hljs-attr">message</span>: <span class="hljs-string">'Error Message'</span>
+    <span class="hljs-attr">uid</span>: <span class="hljs-string">'ClientId'</span>
+  },
+  <span class="hljs-comment">//...</span>
+]
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="import-metadata"></a><a href="#import-metadata" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Import Metadata</h4>
+<p><code>Post /metadata</code> Returns <code>201</code> and an object with the following format:</p>
+<pre><code class="hljs css language-js">[
+  {
+    <span class="hljs-attr">model</span>: <span class="hljs-string">'Channel'</span>
+    <span class="hljs-attr">record</span>: { ChannelObject1 }
+    <span class="hljs-attr">status</span>: <span class="hljs-string">'Inserted'</span>
+    <span class="hljs-attr">message</span>: <span class="hljs-string">''</span>
+    <span class="hljs-attr">uid</span>: <span class="hljs-string">'ChannelName'</span>
+  }, {
+    <span class="hljs-attr">model</span>: <span class="hljs-string">'Client'</span>
+    <span class="hljs-attr">record</span>: { ClientObject1 }
+    <span class="hljs-attr">status</span>: <span class="hljs-string">'Updated'</span>
+    <span class="hljs-attr">message</span>: <span class="hljs-string">''</span>
+    <span class="hljs-attr">uid</span>: <span class="hljs-string">'ClientId'</span>
+  }, {
+    <span class="hljs-attr">model</span>: <span class="hljs-string">'Client'</span>
+    <span class="hljs-attr">record</span>: { ClientObject2 }
+    <span class="hljs-attr">status</span>: <span class="hljs-string">'Error'</span>
+    <span class="hljs-attr">message</span>: <span class="hljs-string">'Error Message'</span>
+    <span class="hljs-attr">uid</span>: <span class="hljs-string">'ClientId'</span>
+  },
+  <span class="hljs-comment">//...</span>
+]
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="visualizer-resource"></a><a href="#visualizer-resource" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Visualizer resource</h3>
+<p>The visualizer resource allows the user to manage the visualizers that are present in the system. Visualizers are only accessible by admin users and all saved visualizers can be viewed by all admin users.</p>
+<p>An example visualizer object conforming to the <a href="https://github.com/jembi/openhim-core-js/blob/master/src/model/visualizer.js">visualizer schema</a>:</p>
+<pre><code class="hljs css language-json">[
+  {
+    "_id": "57a4a09078ae562b26d5b2b0",
+    "name": "Visualizer1",
+    "__v": 0,
+    "time": {
+      "updatePeriod": 200
+    },
+    "size": {
+      "padding": 20,
+      "height": 400,
+      "width": 1000,
+      "responsive": true
+    },
+    "color": {
+      "text": "#4a4254",
+      "error": "#a84b5c",
+      "active": "#10e057",
+      "inactive": "#c8cacf"
+    },
+    "mediators": [
+      {
+        "mediator": "urn:mediator:fhir-proxy",
+        "name": "OpenHIM Mediator FHIR Proxy",
+        "display": "OpenHIM Mediator FHIR Proxy",
+        "_id": "57a4a09078ae562b26d5b2b2"
+      },
+      {
+        "mediator": "urn:mediator:shell-script",
+        "name": "OpenHIM Shell Script Mediator",
+        "display": "OpenHIM Shell Script Mediator",
+        "_id": "57a4a09078ae562b26d5b2b1"
+      }
+    ],
+    "channels": [
+      {
+        "eventType": "channel",
+        "eventName": "FHIR Proxy",
+        "display": "FHIR Proxy",
+        "_id": "57a4a09078ae562b26d5b2b4"
+      },
+      {
+        "eventType": "channel",
+        "eventName": "Echo",
+        "display": "Echo",
+        "_id": "57a4a09078ae562b26d5b2b3"
+      }
+    ],
+    "components": [
+      {
+        "eventType": "primary",
+        "eventName": "OpenHIM Mediator FHIR Proxy Route",
+        "display": "FHIR Server",
+        "_id": "57a4a09078ae562b26d5b2b6"
+      },
+      {
+        "eventType": "primary",
+        "eventName": "echo",
+        "display": "Echo",
+        "_id": "57a4a09078ae562b26d5b2b5"
+      }
+    ]
+  },
+  {
+    ...
+  }
+]
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="fetch-all-visualizers"></a><a href="#fetch-all-visualizers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fetch all visualizers</h4>
+<p><code>GET /visualizers</code></p>
+<p>This request will return a <code>200</code> response code and an array of visualizer objects.</p>
+<h4><a class="anchor" aria-hidden="true" id="fetch-a-specific-visualizer-by-mongo-id"></a><a href="#fetch-a-specific-visualizer-by-mongo-id" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fetch a specific visualizer by mongo id</h4>
+<p><code>GET /visualizers/:visualizerId</code></p>
+<p>This request will return a <code>200</code> response code and a visualizer object.</p>
+<h4><a class="anchor" aria-hidden="true" id="add-new-visualizer"></a><a href="#add-new-visualizer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add new visualizer</h4>
+<p><code>POST /visualizers</code></p>
+<p>with a json body representing the new visualizer to be added.</p>
+<p>The response status code will be <code>201</code> if successful.</p>
+<h4><a class="anchor" aria-hidden="true" id="update-an-existing-visualizer-by-mongo-id"></a><a href="#update-an-existing-visualizer-by-mongo-id" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update an existing visualizer by mongo id</h4>
+<p><code>PUT /visualizers/:visualizerId</code></p>
+<p>with a json body representing the changes to the visualizer.</p>
+<p>The response status code will be <code>200</code> if successful.</p>
+<h4><a class="anchor" aria-hidden="true" id="delete-an-existing-visualizer-by-mongo-id"></a><a href="#delete-an-existing-visualizer-by-mongo-id" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Delete an existing visualizer by mongo id</h4>
+<p><code>DELETE /visualizers/:visualizerId</code></p>
+<p>Remove an existing visualizer.</p>
+<p>The response status code will be <code>200</code> if successful.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/openhim-docs/docs/dev-guide/developing-mediators"><span class="arrow-prev">← </span><span>Developing mediators</span></a><a class="docs-next button" href="/openhim-docs/docs/dev-guide/contributing"><span>Contributing</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#initial-authentication-notification">Initial authentication notification</a></li><li><a href="#for-subsequent-requests-to-the-api">For subsequent requests to the API</a></li><li><a href="#example-implementations">Example implementations</a></li><li><a href="#api-reference">API Reference</a><ul class="toc-headings"><li><a href="#channels-resource">Channels resource</a></li><li><a href="#clients-resource">Clients resource</a></li><li><a href="#roles-resource">Roles resource</a></li><li><a href="#users-resource">Users resource</a></li><li><a href="#transactions-resource">Transactions resource</a></li><li><a href="#contact-groups-resource">Contact groups resource</a></li><li><a href="#tasks-resource">Tasks resource</a></li><li><a href="#mediators">Mediators</a></li><li><a href="#metrics-resource">Metrics resource</a></li><li><a href="#keystore-resource">Keystore resource</a></li><li><a href="#logs-resource">Logs resource</a></li><li><a href="#server-uptime">Server uptime</a></li><li><a href="#metadata-resource">Metadata resource</a></li><li><a href="#visualizer-resource">Visualizer resource</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/openhim-docs/" class="nav-home"><img src="/openhim-docs/img/favicon.ico" alt="OpenHIM" width="66" height="58"/></a><div><h5>Docs</h5><a href="/openhim-docs/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/openhim-docs/docs/en/doc2.html">Guides (or other categories)</a><a href="/openhim-docs/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/openhim-docs/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/openhim-docs/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/openhim-docs/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Your Name or Your Company Name</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'my-api-key',
+                indexName: 'my-index-name',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
