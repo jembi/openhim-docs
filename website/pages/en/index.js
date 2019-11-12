@@ -100,7 +100,7 @@ class Index extends React.Component {
               '<p>The OpenHIM allows you to <b>secure and view requests to your web service APIs</b>. It acts as a reverse proxy to your upstream services and while doing so enables visibility into your service-oriented architecture (SOA) by logging each request and by providing metrics about requests hitting your services. It also provides a central entry point into your SOA and allows you to secure access through mutual TLS or basic-auth.</p>' +
               '<p>The OpenHIM is easy to install and can be easily configured to meet your needs through the administration console. You can also <b>extend the OpenHIM to transform or orchestrate requests through the mediator framework.</b></p>' + 
               '<p>Plus, the OpenHIM is <b>open-source</b>! It is published under the <a href="https://tldrlegal.com/license/mozilla-public-license-2.0-(mpl-2)">MPL-2.0</a> and is currently developed and maintained by <a href="http://www.jembi.org/">Jembi Health Systems</a>. It was initially developed in collaboration with <a href="http://www.ukzn.ac.za/">UKZN</a>. Browse the OpenHIM features below or get started right away. <a href="http://openhim.readthedocs.org/en/latest/getting-started.html#getting-started"><i class="fa fa-arrow-circle-right"></i></a><p>',
-            image: `${baseUrl}img/jembi.png`,
+            image: `${baseUrl}img/jembi-heal.png`,
             imageAlign: 'right',
             title: 'About',
           }

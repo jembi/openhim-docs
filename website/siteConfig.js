@@ -22,7 +22,7 @@ const users = [
 
 const siteConfig = {
   title: 'OpenHIM', // Title for your website.
-  tagline: 'A website for testing',
+  tagline: 'Simplifying Interoperability',
   url: 'https://openhim.org', // Your website URL
   baseUrl: '/openhim-docs/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
