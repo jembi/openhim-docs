@@ -23,23 +23,20 @@ class HomeSplash extends React.Component {
 
     const SplashContainer = props => (
       <div className="homeContainer">
+        <a href="https://github.com/jembi/openhim-core-js">
+          <img className="fork-link" src="https://camo.githubusercontent.com/121cd7cbdc3e4855075ea8b558508b91ac463ac2/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png" />
+        </a>
         <div className="homeSplashFade">
           <div className="wrapper homeWrapper">{props.children}</div>
         </div>
       </div>
     );
 
-    const Logo = props => (
-      <div className="projectLogo">
-        <img src={props.img_src} alt="Project Logo" />
-      </div>
-    );
-
     const ProjectTitle = () => (
-      <h2 className="projectTitle">
-        {siteConfig.title}
-        <small>{siteConfig.tagline}</small>
-      </h2>
+      <div className="projectTitle">
+        <h3>{siteConfig.tagline}</h3>
+        <hr className="intro-divider"></hr>
+      </div>
     );
 
     const PromoSection = props => (
@@ -60,14 +57,20 @@ class HomeSplash extends React.Component {
 
     return (
       <SplashContainer>
-        <Logo img_src={`${baseUrl}img/undraw_monitor.svg`} />
+        <img src={`${baseUrl}img/openhim-logo-green.svg`} alt="Project Logo" />
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
-            <Button href="#try">Try It Out</Button>
-            <Button href={docUrl('doc1.html')}>Example Link</Button>
-            <Button href={docUrl('doc2.html')}>Example Link 2</Button>
+            <Button href="#try">Get Started</Button>
+            <Button href={docUrl('doc1.html')}>Documentation</Button>
+            <Button href={docUrl('doc2.html')}>Mediator Library</Button>
+            <Button href={docUrl('doc2.html')}>Github</Button>
+            <Button href={docUrl('doc2.html')}>Roadmap</Button>
           </PromoSection>
+          <div className="lead">
+            <p>The <strong>Open Health Information Mediator</strong> (OpenHIM) is a middleware component designed to ease interoperability between disparate information systems. It provides secure communications and data governance as well as support for routing, orchestrating and translating requests as they flow between systems.</p>
+            <p>Connecting health systems simply, securely and safely.</p>
+          </div>
         </div>
       </SplashContainer>
     );
@@ -267,7 +270,7 @@ class Index extends React.Component {
     return (
       <div>
         <HomeSplash siteConfig={siteConfig} language={language} />
-        <div className="mainContainer">
+        <div className="mainContainer landing">
           <About />
           <Mediators />
           <ReverseProxy />
@@ -280,7 +283,6 @@ class Index extends React.Component {
           <RerunTransactions />
           <MinimalOverhead />
           <GetInvolved />
-          
         </div>
       </div>
     );
