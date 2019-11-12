@@ -40,6 +40,7 @@ const siteConfig = {
   headerLinks: [
     {doc: 'introduction/welcome', label: 'Docs'},
     {doc: 'api/introduction/welcome', label: 'API'},
+    {page: 'mediator-library', label: 'Mediator Library'},
     {page: 'help', label: 'Help'},
     {blog: false},
   ],
@@ -80,7 +81,7 @@ const siteConfig = {
   */
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Jembi Health Systems NPC`,
+  copyright: `Copyright © ${new Date().getFullYear()} Jembi Health Systems`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
