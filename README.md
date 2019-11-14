@@ -24,16 +24,16 @@ npm install --global docusaurus
 
 Ensure that you are within the `website` directory to start up the local development server.
 
-Execute the below commands to start the development server. 
+Execute the below commands to download the dependencies and start the development server. 
 
 ```sh
-yarn start
+yarn && yarn start
 ```
 
 or 
 
 ```sh
-npm start
+npm install && npm start
 ```
 
 If port `3000` isnt being used by another service, you should see the website successfully start up at [http://localhost:3000/openhim-docs/](http://localhost:3000/openhim-docs/)
