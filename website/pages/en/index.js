@@ -127,8 +127,8 @@ class Index extends React.Component {
     );
 
     const OpenhimFeatureSubHeading = () => (
-      <div class="feature-header-divider">
-        <h2 class="feature-header">OpenHIM Features</h2>
+      <div className="feature-header-divider">
+        <h2 className="feature-header">OpenHIM Features</h2>
       </div>
     )
 
