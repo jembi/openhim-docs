@@ -61,11 +61,11 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
-            <Button href="#try">Get Started</Button>
-            <Button href={docUrl('doc1.html')}>Documentation</Button>
-            <Button href={docUrl('doc2.html')}>Mediator Library</Button>
-            <Button href={docUrl('doc2.html')}>Github</Button>
-            <Button href={docUrl('doc2.html')}>Roadmap</Button>
+            <Button href={docUrl("installation/docker")}>Get Started</Button>
+            <Button href={docUrl("introduction/welcome")}>Documentation</Button>
+            <Button href={docUrl("../mediator-library")}>Mediator Library</Button>
+            <Button href={"https://github.com/jembi/openhim-core-js"}>Github</Button>
+            <Button href={docUrl("introduction/roadmap")}>Roadmap</Button>
           </PromoSection>
           <div className="lead">
             <p>The <strong>Open Health Information Mediator</strong> (OpenHIM) is a middleware component designed to ease interoperability between disparate information systems. It provides secure communications and data governance as well as support for routing, orchestrating and translating requests as they flow between systems.</p>
