@@ -126,6 +126,12 @@ class Index extends React.Component {
       </Block>
     );
 
+    const OpenhimFeatureSubHeading = () => (
+      <div class="feature-header-divider">
+        <h2 class="feature-header">OpenHIM Features</h2>
+      </div>
+    )
+
     const ReverseProxy = () => (
       <Block background="none">
         {[
@@ -273,6 +279,7 @@ class Index extends React.Component {
         <div className="mainContainer landing">
           <About />
           <Mediators />
+          <OpenhimFeatureSubHeading />
           <ReverseProxy />
           <GainVisibility />
           <ExtendViaMediators />

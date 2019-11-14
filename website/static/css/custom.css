@@ -98,3 +98,14 @@
 .fork-link {
   position: absolute; top: 50px; left: 0; border: 0;
 }
+
+.feature-header {
+  font-size: 30px;
+  text-align: center;
+}
+
+.feature-header-divider {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background-color: #69B578;
+}
