@@ -61,7 +61,7 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
-            <Button href={docUrl("installation/docker")}>Get Started</Button>
+            <Button href={docUrl("TODO")}>Get Started</Button>
             <Button href={docUrl("introduction/welcome")}>Documentation</Button>
             <Button href={docUrl("../mediator-library")}>Mediator Library</Button>
             <Button href={"https://github.com/jembi/openhim-core-js"}>Github</Button>
@@ -99,9 +99,9 @@ class Index extends React.Component {
       <Block background="none" layout="twoColumn">
         {[
           {
-            content: 
+            content:
               '<p>The OpenHIM allows you to <b>secure and view requests to your web service APIs</b>. It acts as a reverse proxy to your upstream services and while doing so enables visibility into your service-oriented architecture (SOA) by logging each request and by providing metrics about requests hitting your services. It also provides a central entry point into your SOA and allows you to secure access through mutual TLS or basic-auth.</p>' +
-              '<p>The OpenHIM is easy to install and can be easily configured to meet your needs through the administration console. You can also <b>extend the OpenHIM to transform or orchestrate requests through the mediator framework.</b></p>' + 
+              '<p>The OpenHIM is easy to install and can be easily configured to meet your needs through the administration console. You can also <b>extend the OpenHIM to transform or orchestrate requests through the mediator framework.</b></p>' +
               '<p>Plus, the OpenHIM is <b>open-source</b>! It is published under the <a href="https://tldrlegal.com/license/mozilla-public-license-2.0-(mpl-2)">MPL-2.0</a> and is currently developed and maintained by <a href="http://www.jembi.org/">Jembi Health Systems</a>. It was initially developed in collaboration with <a href="http://www.ukzn.ac.za/">UKZN</a>. Browse the OpenHIM features below or get started right away. <a href="http://openhim.readthedocs.org/en/latest/getting-started.html#getting-started"><i class="fa fa-arrow-circle-right"></i></a><p>',
             image: `${baseUrl}img/jembi-heal.png`,
             imageAlign: 'right',
@@ -117,7 +117,7 @@ class Index extends React.Component {
           {
             content:
               '<p>The OpenHIM enables you to extend its functionality so that implementation specific processing may occur. The OpenHIM has first class support for mediators through its mediator framework. This framework enables mediators to communicate with the OpenHIM-core to register themselves, log the processing that they do and even fetch user defined config.</p>' +
-              '<p>Check out the <a href="mediators.html">mediator library</a> to view mediators that have already been built. To learn more about creating your own mediators, see our <a href="http://openhim.readthedocs.org/en/latest/dev-guide/mediators.html">documentation</a>.</p>',
+              '<p>Check out the <a href="mediator-library">mediator library</a> to view mediators that have already been built. To learn more about creating your own mediators, see our <a href="docs/introduction/welcome">documentation</a>.</p>',
             image: `${baseUrl}img/plug-solid.png`,
             imageAlign: 'left',
             title: 'Mediators',
@@ -160,7 +160,7 @@ class Index extends React.Component {
           {
             content:
               '<p>The OpenHIM allows you to build your own micro-services called mediators that plug into the OpenHIM to extend its functionality. These mediators can be used to transform or orchestrate requests or more. They also report details of what processing has been done back to the OpenHIM using the mediator framework.</p>' +
-              '<p><p class="lead justify">View our <a href="mediators.html">mediator library</a> to see mediator have already been built.</p></p>',
+              '<p><p class="lead justify">View our <a href="mediator-library">mediator library</a> to see mediator have already been built.</p></p>',
             image: `${baseUrl}img/mediators.png`,
             imageAlign: 'right',
             title: 'Extend the OpenHIM\'s request processing via mediators',
