@@ -1,8 +1,11 @@
 ---
 id: about
+hide_title: true
 title: About the OpenHIM
 sidebar_label: About the OpenHIM
 ---
+
+![OpenHIM](assets/general/openhim-logo-green.svg)
 
 The Open Health Information Mediator (OpenHIM) is an interoperability layer: a software component that enables easier interoperability between disparate electronic information systems by providing a central point where the exchange of data is managed. An interoperability layer receives transactions from different information systems and coordinates the interactions between them. The OpenHIM provides a layer of abstraction between systems that allows for the transformation of incoming messages to a form that the other system components expect and can support the business logic by orchestrating the transaction flow.
 
@@ -112,24 +115,29 @@ There are three types of mediators:
   These services are invoked whenever there is a need to orchestrate or adapt a certain transaction. If they are not needed the OpenHIM core component will call the domain service directly. Orchestrators may use other adapters to send messages to other services.
   As the architecture is designed to evolve as the environment changes, designing these orchestrators and adapters as independent services allows for additional logic or business processes to be added as the need arises. Mediators are often implementation specific so they will change to meet the specific needs and business processes of the system. A mediator library is available so that existing mediators can be re-used or adapted as needed. Both the orchestrator and adapter services are also expected to log and audit messages that they send out to the domain services. These services are implemented as mediators within the OpenHIM.
 
-## Funders
+<div class="funder-images">
+  <!-- Below space needed for h2 markdown to be valid -->
 
-[![pepfar](assets/funders/pepfar.jpg)](http://www.pepfar.gov/ 'PEPFAR')
-[![cdc](assets/funders/cdc.jpg)](http://www.cdc.gov/ 'CDC')
-[![idrc](assets/funders/idrc.jpg)](http://www.idrc.ca/EN/Pages/default.aspx 'IDRC')
-[![rockefellerFoundation](assets/funders/rockefellerFoundation.jpg)](http://www.rockefellerfoundation.org/ 'Rockefeller Foundation')
+  ## Funders
 
-## Development Partners
+  [![pepfar](assets/funders/pepfar.jpg)](http://www.pepfar.gov/ 'PEPFAR')
+  [![cdc](assets/funders/cdc.jpg)](http://www.cdc.gov/ 'CDC')
+  [![idrc](assets/funders/idrc.jpg)](http://www.idrc.ca/EN/Pages/default.aspx 'IDRC')
+  [![rockefellerFoundation](assets/funders/rockefellerFoundation.jpg)](http://www.rockefellerfoundation.org/ 'Rockefeller Foundation')
 
-[![jembi](assets/funders/jembi.png)](http://jembi.org)
-[![heal](assets/funders/heal.png)](http://heal.cs.ukzn.ac.za/ 'HeAL UKZN')
+  ## Development Partners
 
-## Other Partners
+  [![jembi](assets/funders/jembi.png)](http://jembi.org)
+  [![heal](assets/funders/heal.png)](http://heal.cs.ukzn.ac.za/ 'HeAL UKZN')
 
-[![mohawk](assets/funders/mohawk.jpg)](http://www.mohawkcollege.ca/ 'Mohawk College')
-[![regenstriefInstitute](assets/funders/regenstriefInstitute.jpg)](http://www.regenstrief.org/ 'Regenstrief Institute')
-[![intraHealth](assets/funders/intraHealth.jpg)](http://www.intrahealth.org/ 'InntraHealth')
+  ## Other Partners
 
-[![hisp](assets/funders/hisp.png)](http://hisp.org)
-[![openhie-logo](assets/funders/openhie-logo.png)](http://ohie.org)
-[**eCGroup**](http://www.ecgroupinc.com/index.htm 'eCGroup')
+  [![mohawk](assets/funders/mohawk.jpg)](http://www.mohawkcollege.ca/ 'Mohawk College')
+  [![regenstriefInstitute](assets/funders/regenstriefInstitute.jpg)](http://www.regenstrief.org/ 'Regenstrief Institute')
+  [![intraHealth](assets/funders/intraHealth.jpg)](http://www.intrahealth.org/ 'InntraHealth')
+
+  [![hisp](assets/funders/hisp.png)](http://hisp.org)
+  [![openhie-logo](assets/funders/openhie-logo.png)](http://ohie.org)
+  [**eCGroup**](http://www.ecgroupinc.com/index.htm 'eCGroup')
+<div>
+

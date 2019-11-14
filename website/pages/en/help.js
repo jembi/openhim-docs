@@ -22,12 +22,18 @@ function Help(props) {
   const supportLinks = [
     {
       content: `Learn more using the [documentation on this site.](${docUrl(
-        'introduction/welcome',
+        'introduction/about',
       )})`,
       title: 'Browse Docs',
     },
     {
-      content: 'Ask questions about the documentation and project',
+      content: `<p>Ask questions about the documentation and project.</p>
+                <p>Join our mailings list:<br />
+                  <a href="mailto:openhim-implementers@googlegroups.com" title="OpenHIM Implementers Mailing list">openhim-implementers@googlegroups.com</a>
+                </p>
+                <p>Subscribe:<br />
+                  <a href="mailto:openhim-implementers+subscribe@googlegroups.com" title="OpenHIM Implementers Mailing list Subscribe">openhim-implementers+subscribe@googlegroups.com</a>
+                </p>`,
       title: 'Join the community',
     },
     {
