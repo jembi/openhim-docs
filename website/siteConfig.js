@@ -55,8 +55,11 @@ const siteConfig = {
   // If you have users set above, you add it here:
   users,
 
+  // remove the Header title from the top header bar
+  disableHeaderTitle: true,
+
   /* path to images for header/footer */
-  // headerIcon: 'img/openhim-logo-green.svg',
+  headerIcon: 'img/openhim-logo-green.svg',
   footerIcon: 'img/favicon.ico',
   favicon: 'img/favicon.ico',
 

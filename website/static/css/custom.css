@@ -15,6 +15,24 @@
 @media only screen and (min-width: 1500px) {
 }
 
+.fixedHeaderContainer {
+  background: #FFF;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.navigationSlider .slidingNav ul li a {
+  color: #777;
+}
+
+.navigationSlider .slidingNav ul li > a:focus,
+.navigationSlider .slidingNav ul li > a:hover,
+.navigationSlider .slidingNav ul li.siteNavItemActive > a,
+.navigationSlider .slidingNav ul li.siteNavGroupActive > a {
+  background-color: initial;
+  color: #333;
+  text-decoration: underline;
+}
+
 .homeContainer {
   padding-top: 50px;
   padding-bottom: 50px;
