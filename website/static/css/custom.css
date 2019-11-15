@@ -1,18 +1,46 @@
 /* your custom css */
 
-@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+.fixedHeaderContainer {
+  background: #FFF;
+  border-bottom: 1px solid #e7e7e7;
 }
 
-@media only screen and (min-width: 1024px) {
+.navigationSlider .slidingNav ul {
+  background: #FFF;
 }
 
-@media only screen and (max-width: 1023px) {
+.navigationSlider .slidingNav ul li a {
+  color: #777;
 }
 
-@media only screen and (min-width: 1400px) {
+.navigationSlider .slidingNav ul li > a:focus,
+.navigationSlider .slidingNav ul li > a:hover,
+.navigationSlider .slidingNav ul li.siteNavItemActive > a,
+.navigationSlider .slidingNav ul li.siteNavGroupActive > a {
+  background-color: #f1f1f1;
+  color: #333;
+  text-decoration: underline;
 }
 
-@media only screen and (min-width: 1500px) {
+a {
+  color: #337ab7;
+}
+
+a:focus, a:hover {
+  color: #23527c;
+  text-decoration: underline;
+}
+
+.homeContainer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  color: #333;
+  background: url(../img/congruent_pentagon.png) repeat;
+}
+
+.mainContainer.landing {
+  padding: inherit
 }
 
 .container .wrapper .imageAlignSide p {
@@ -29,4 +57,143 @@
   max-height: 100px;
   max-width: 300px;
   margin: 10px 20px;
+
+.imageAlignSide {
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  border-top: 1px solid #e7e7e7;
+}
+
+.container.paddingTop {
+  padding-top: 40px;
+}
+
+.container.paddingBottom {
+  padding-bottom: 40px;
+}
+
+.projectTitle h3 {
+  font-size: 30px;
+  font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  color: #333;
+}
+
+.intro-divider {
+  max-width: 500px;
+  border-top: 1px solid rgba(0,0,0,0.5);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  margin: auto;
+}
+
+.lead {
+  margin-top: 16px
+}
+
+.lead .p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.homeContainer {
+  padding-bottom: 0px
+}
+
+.homeContainer .button {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.homeContainer .button.active, .homeContainer .button.focus, .homeContainer .button:active, .homeContainer .button:focus, .homeContainer .button:hover {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+
+.fork-link {
+  position: absolute; top: 50px; left: 0; border: 0;
+}
+
+.feature-header {
+  font-size: 30px;
+  text-align: center;
+}
+
+.feature-header-divider {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background-color: #69B578;
+}
+
+.getInvolvedContainer {
+  color: #f8f8f8;
+  background: url(../img/footer_lodyas.png) repeat;
+}
+
+.getInvolvedContainer .container {
+  border: none;
+}
+
+.getInvolvedContainer .container h2 {
+  margin-top: 14px;
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+}
+
+@media only screen and (max-width: 1024px) {
+  .reactNavSearchWrapper input#search_input_react:focus {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .reactNavSearchWrapper input#search_input_react {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .fork-link {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    border: 0;
+    width: 15%;
+  }
+
+  .navSearchWrapper {
+    top: 10px
+  }
+
+  .reactNavSearchWrapper input#search_input_react:focus {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .reactNavSearchWrapper input#search_input_react {
+    background: rgba(0, 0, 0, 0.2);
+    height: 30px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+}
+
+@media only screen and (min-width: 1500px) {
+}
+
+@media only screen and (max-width: 735px) {
+  .fork-link {
+    width: 20%;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .fork-link {
+    width: 30%;
+  }
 }
