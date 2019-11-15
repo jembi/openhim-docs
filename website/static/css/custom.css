@@ -52,6 +52,12 @@ a:focus, a:hover {
   margin-top: 0;
 }
 
+.funder-images img {
+  display: inherit;
+  max-height: 100px;
+  max-width: 300px;
+  margin: 10px 20px;
+
 .imageAlignSide {
   align-items: center;
   justify-content: center;
