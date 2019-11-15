@@ -5,7 +5,7 @@ const CompLibrary = require('../../core/CompLibrary.js');
 const Container = CompLibrary.Container;
 
 const MediatorListContainer = () => (
-  <Container className="mainContainer documentContainer postContainer" background="light">
+  <Container className="mainContainer documentContainer postContainer">
     A list of Mediators...
   </Container>
 );
@@ -13,7 +13,7 @@ const MediatorListContainer = () => (
 function MediatorLibrary(props) {
   return (
     <div>
-      <Container className="mainContainer documentContainer postContainer" background="light">
+      <Container className="mainContainer documentContainer postContainer">
         <div className="post">
           <header className="postHeader">
             <h1>OpenHIM Mediator Library</h1>

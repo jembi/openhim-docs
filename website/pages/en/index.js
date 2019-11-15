@@ -126,12 +126,6 @@ class Index extends React.Component {
       </Block>
     );
 
-    const OpenhimFeatureSubHeading = () => (
-      <div className="feature-header-divider">
-        <h2 className="feature-header">OpenHIM Features</h2>
-      </div>
-    )
-
     const ReverseProxy = () => (
       <Block background="none">
         {[
@@ -260,17 +254,19 @@ class Index extends React.Component {
     );
 
     const GetInvolved = () => (
-      <Block background="light">
-        {[
-          {
-            content:
-              '<p>If you want to get involved in the development of the OpenHIM then find us on <a href="https://github.com/jembi/openhim-core-js">github</a>. There you may submit issues if have any features request or find any bugs. You may also submit pull requests for changes that you\'d like to see and the maintainers will review them.</p>' +
-              '<p>The OpenHIM is used in the OpenHIE project as a reference implementation of an <b>interoperability layer</b>. Join the <a href="https://wiki.ohie.org/display/SUB/Interoperability+Layer+Community">interoperability community</a> or the <a href="https://ohie.org/#involved">OpenHIE initiative</a> to participate.</p>',
-            imageAlign: 'left',
-            title: 'Get involved',
-          },
-        ]}
-      </Block>
+      <div className="getInvolvedContainer">
+        <Block>
+          {[
+            {
+              content:
+                '<p>If you want to get involved in the development of the OpenHIM then find us on <a href="https://github.com/jembi/openhim-core-js">github</a>. There you may submit issues if have any features request or find any bugs. You may also submit pull requests for changes that you\'d like to see and the maintainers will review them.</p>' +
+                '<p>The OpenHIM is used in the OpenHIE project as a reference implementation of an <b>interoperability layer</b>. Join the <a href="https://wiki.ohie.org/display/SUB/Interoperability+Layer+Community">interoperability community</a> or the <a href="https://ohie.org/#involved">OpenHIE initiative</a> to participate.</p>',
+              imageAlign: 'left',
+              title: 'Get involved',
+            },
+          ]}
+        </Block>
+      </div>
     );
 
     return (
@@ -279,7 +275,6 @@ class Index extends React.Component {
         <div className="mainContainer landing">
           <About />
           <Mediators />
-          <OpenhimFeatureSubHeading />
           <ReverseProxy />
           <GainVisibility />
           <ExtendViaMediators />
