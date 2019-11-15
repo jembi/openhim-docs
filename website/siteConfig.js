@@ -22,7 +22,7 @@ const users = [
 
 const siteConfig = {
   title: 'OpenHIM', // Title for your website.
-  tagline: 'A website for testing',
+  tagline: 'Simplifying Interoperability',
   url: 'https://openhim.org', // Your website URL
   baseUrl: '/openhim-docs/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
@@ -38,8 +38,9 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'introduction/welcome', label: 'Docs'},
+    {doc: 'introduction/about', label: 'Docs'},
     {doc: 'api/introduction/welcome', label: 'API'},
+    {page: 'mediator-library', label: 'Mediator Library'},
     {page: 'help', label: 'Help'},
     {blog: false},
   ],
@@ -54,8 +55,11 @@ const siteConfig = {
   // If you have users set above, you add it here:
   users,
 
+  // remove the Header title from the top header bar
+  disableHeaderTitle: true,
+
   /* path to images for header/footer */
-  // headerIcon: 'img/openhim-logo-green.svg',
+  headerIcon: 'img/openhim-logo-green.svg',
   footerIcon: 'img/favicon.ico',
   favicon: 'img/favicon.ico',
 
@@ -80,7 +84,7 @@ const siteConfig = {
   */
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Jembi Health Systems NPC`,
+  copyright: `Copyright © ${new Date().getFullYear()} Jembi Health Systems`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.

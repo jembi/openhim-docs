@@ -1,12 +1,15 @@
 ---
 id: about
+hide_title: true
 title: About the OpenHIM
 sidebar_label: About the OpenHIM
 ---
 
+![OpenHIM](assets/general/openhim-logo-green.svg)
+
 The Open Health Information Mediator (OpenHIM) is an interoperability layer: a software component that enables easier interoperability between disparate electronic information systems by providing a central point where the exchange of data is managed. An interoperability layer receives transactions from different information systems and coordinates the interactions between them. The OpenHIM provides a layer of abstraction between systems that allows for the transformation of incoming messages to a form that the other system components expect and can support the business logic by orchestrating the transaction flow.
 
-The OpenHIM was initially developed by Jembi Health Systems in collaboration with the Health Architecture Laboratory ( HeAL) at the University of KwaZulu-Natal as part of the Rwanda Health Enterprise Architecture (RHEA) project, and formed the basis for Ryan Crichton’s Master's thesis “The Open Health Information Mediator: an Architecture for Enabling Interoperability in Low to Middle Income Countries”. The OpenHIM is the current reference technology for the interoperability layer of the OpenHIE (Open Health Information Exchange). It is supported through a number of implementation projects that drive its continuing development to meet real world needs.
+The OpenHIM was initially developed by Jembi Health Systems in collaboration with the Health Architecture Laboratory ( HeAL) at the University of KwaZulu-Natal as part of the Rwanda Health Enterprise Architecture (RHEA) project, and formed the basis for Ryan Crichton’s Master's thesis “[The Open Health Information Mediator: an Architecture for Enabling Interoperability in Low to Middle Income Countries](https://researchspace.ukzn.ac.za/xmlui/handle/10413/12343)”. The OpenHIM is a current reference technology for the [interoperability layer](https://wiki.ohie.org/display/SUB/Interoperability+Layer+Roadmap) of the OpenHIE ([Open Health Information Exchange](https://wiki.ohie.org/display/documents/OpenHIE+Introduction)). It is supported through a number of implementation projects that drive its continuing development to meet real world needs.
 
 Some examples of common workflows that the OpenHIM can support to facilitate the sharing of health information within a Health Information Exchange are:
 
@@ -18,7 +21,7 @@ Some examples of common workflows that the OpenHIM can support to facilitate the
 
 ## Ok. But, what does the OpenHIM actually do?
 
-The OpenHIM enables easier interoperability between systems by connecting all of the infrastructure services and client or point of service applications together. In the OpenHIE context, these systems are Health Information Systems (HISs) such as a client registry, provider registry, facility registry, shared health record, terminology service and a data warehouse.
+The OpenHIM enables easier interoperability between systems by connecting all of the infrastructure services and client or point of service applications together. In the OpenHIE context, these systems are Health Information Systems (HISs) such as a client registry, worker registry, facility registry, shared health record, terminology service, etc.
 
 ![OpenHIEArchitecture](assets/overview/OpenHIEArchitecture.png)
 
@@ -53,7 +56,7 @@ The OpenHIM acts as a central exchange that offers the following benefits:
 - The use of mediators for message transformation and orchestration. The OpenHIM provides a framework to add and manage your own custom implementation-specific mediators.
   - Transformation: Transforms messages received in one format into another format e.g. MHD to XDS.b or custom format to HL7v3.
   - Orchestration: Ensures the correct workflow between the systems components.
-- The OpenHIM offers a publicly accessible mediator library for the re-use of existing mediators.
+- The OpenHIM offers a publicly accessible mediator library for the re-use of [existing mediators](https://jembi.github.io/openhim-docs/mediator-library).
 - The OpenHIM is configurable, providing the flexibility to support differing use cases.
 - The OpenHIM supports interchangeability of components, allowing for easier swap-outs for new and improved technologies and helping to minimise vendor lock-in.
 - The OpenHIM is scalable to handle large transaction loads. It supports same server and multi-server clusters.
@@ -112,24 +115,27 @@ There are three types of mediators:
   These services are invoked whenever there is a need to orchestrate or adapt a certain transaction. If they are not needed the OpenHIM core component will call the domain service directly. Orchestrators may use other adapters to send messages to other services.
   As the architecture is designed to evolve as the environment changes, designing these orchestrators and adapters as independent services allows for additional logic or business processes to be added as the need arises. Mediators are often implementation specific so they will change to meet the specific needs and business processes of the system. A mediator library is available so that existing mediators can be re-used or adapted as needed. Both the orchestrator and adapter services are also expected to log and audit messages that they send out to the domain services. These services are implemented as mediators within the OpenHIM.
 
-## Funders
+<div class="funder-images">
+  <!-- Below space needed for h2 markdown to be valid -->
 
-[![pepfar](assets/funders/pepfar.jpg)](http://www.pepfar.gov/ 'PEPFAR')
-[![cdc](assets/funders/cdc.jpg)](http://www.cdc.gov/ 'CDC')
-[![idrc](assets/funders/idrc.jpg)](http://www.idrc.ca/EN/Pages/default.aspx 'IDRC')
-[![rockefellerFoundation](assets/funders/rockefellerFoundation.jpg)](http://www.rockefellerfoundation.org/ 'Rockefeller Foundation')
+  ## Funders
 
-## Development Partners
+  [![pepfar](assets/funders/pepfar.jpg)](http://www.pepfar.gov/ 'PEPFAR')
+  [![cdc](assets/funders/cdc.jpg)](http://www.cdc.gov/ 'CDC')
+  [![idrc](assets/funders/idrc.jpg)](http://www.idrc.ca/EN/Pages/default.aspx 'IDRC')
+  [![rockefellerFoundation](assets/funders/rockefellerFoundation.jpg)](http://www.rockefellerfoundation.org/ 'Rockefeller Foundation')
 
-[![jembi](assets/funders/jembi.png)](http://jembi.org)
-[![heal](assets/funders/heal.png)](http://heal.cs.ukzn.ac.za/ 'HeAL UKZN')
+  ## Development Partners
 
-## Other Partners
+  [![jembi](assets/funders/jembi.png)](http://jembi.org)
+  [![heal](assets/funders/heal.png)](http://heal.cs.ukzn.ac.za/ 'HeAL UKZN')
 
-[![mohawk](assets/funders/mohawk.jpg)](http://www.mohawkcollege.ca/ 'Mohawk College')
-[![regenstriefInstitute](assets/funders/regenstriefInstitute.jpg)](http://www.regenstrief.org/ 'Regenstrief Institute')
-[![intraHealth](assets/funders/intraHealth.jpg)](http://www.intrahealth.org/ 'InntraHealth')
+  ## Other Partners
 
-[![hisp](assets/funders/hisp.png)](http://hisp.org)
-[![openhie-logo](assets/funders/openhie-logo.png)](http://ohie.org)
-[**eCGroup**](http://www.ecgroupinc.com/index.htm 'eCGroup')
+  [![mohawk](assets/funders/mohawk.jpg)](http://www.mohawkcollege.ca/ 'Mohawk College')
+  [![regenstriefInstitute](assets/funders/regenstriefInstitute.jpg)](http://www.regenstrief.org/ 'Regenstrief Institute')
+  [![intraHealth](assets/funders/intraHealth.jpg)](http://www.intrahealth.org/ 'InntraHealth')
+  [![hisp](assets/funders/hisp.png)](http://hisp.org)
+  [![openhie-logo](assets/funders/openhie-logo.png)](http://ohie.org)
+  [**eCGroup**](http://www.ecgroupinc.com/index.htm 'eCGroup')
+<div>
