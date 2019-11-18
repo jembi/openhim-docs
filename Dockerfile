@@ -1,10 +1,10 @@
 FROM node:8.11.4
 
-WORKDIR /app/website
+WORKDIR /app
 
 EXPOSE 3000 35729
 COPY ./docs /app/docs
-COPY ./website /app/website
+COPY . /app
 RUN yarn install
 
 CMD ["yarn", "start"]
