@@ -1,5 +1,15 @@
 /* your custom css */
 
+:root {
+  --ifm-color-primary: #206636;
+  --ifm-color-primary-dark: #206636;
+  --ifm-color-primary-darker: #083992;
+  --ifm-color-primary-darkest: #11989D;
+  --ifm-color-primary-light: #7CAB2F;
+  --ifm-color-primary-lighter: #53CD5D;
+  --ifm-color-primary-lightest: #9FEBA3;
+}
+
 .fixedHeaderContainer {
   background: #FFF;
   border-bottom: 1px solid #e7e7e7;
@@ -36,7 +46,7 @@ a:focus, a:hover {
   padding-bottom: 50px;
   text-align: center;
   color: #333;
-  background: url(../img/congruent_pentagon.png) repeat;
+  /* background: url(../img/congruent_pentagon.png) repeat; */
 }
 
 .mainContainer.landing {
@@ -57,6 +67,7 @@ a:focus, a:hover {
   max-height: 100px;
   max-width: 300px;
   margin: 10px 20px;
+}
 
 .imageAlignSide {
   align-items: center;
@@ -133,7 +144,7 @@ a:focus, a:hover {
 
 .getInvolvedContainer {
   color: #f8f8f8;
-  background: url(../img/footer_lodyas.png) repeat;
+  /* background: url(../img/footer_lodyas.png) repeat; */
 }
 
 .getInvolvedContainer .container {

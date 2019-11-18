@@ -116,7 +116,6 @@ There are three types of mediators:
   As the architecture is designed to evolve as the environment changes, designing these orchestrators and adapters as independent services allows for additional logic or business processes to be added as the need arises. Mediators are often implementation specific so they will change to meet the specific needs and business processes of the system. A mediator library is available so that existing mediators can be re-used or adapted as needed. Both the orchestrator and adapter services are also expected to log and audit messages that they send out to the domain services. These services are implemented as mediators within the OpenHIM.
 
 <div class="funder-images">
-  <!-- Below space needed for h2 markdown to be valid -->
 
   ## Funders
 
@@ -134,8 +133,8 @@ There are three types of mediators:
 
   [![mohawk](assets/funders/mohawk.jpg)](http://www.mohawkcollege.ca/ 'Mohawk College')
   [![regenstriefInstitute](assets/funders/regenstriefInstitute.jpg)](http://www.regenstrief.org/ 'Regenstrief Institute')
-  [![intraHealth](assets/funders/intraHealth.jpg)](http://www.intrahealth.org/ 'InntraHealth')
+  [![intraHealth](assets/funders/intraHealth.jpg)](http://www.intrahealth.org/ 'IntraHealth')
   [![hisp](assets/funders/hisp.png)](http://hisp.org)
   [![openhie-logo](assets/funders/openhie-logo.png)](http://ohie.org)
   [**eCGroup**](http://www.ecgroupinc.com/index.htm 'eCGroup')
-<div>
+</div>

@@ -14,7 +14,7 @@ Ensure that you have Docusaurus installed globally to be able to run the project
 yarn global add docusaurus
 ```
 
-or 
+or
 
 ```sh
 npm install --global docusaurus
@@ -24,13 +24,13 @@ npm install --global docusaurus
 
 Ensure that you are within the `website` directory to start up the local development server.
 
-Execute the below commands to download the dependencies and start the development server. 
+Execute the below commands to download the dependencies and start the development server.
 
 ```sh
 yarn && yarn start
 ```
 
-or 
+or
 
 ```sh
 npm install && npm start
@@ -42,10 +42,10 @@ Any changes made to the existing scripts should automatically reload the relevan
 
 ## Deploy updated version
 
-Ensure that the latest changes have been reviewed and pushed into the master branch before deploying the changes. 
+Ensure that the latest changes have been reviewed and pushed into the master branch before deploying the changes.
 
 To deploy the latest documentation changes, execute the below command:
 
 ```sh
-GIT_USER=<GIT_USERNAME> USE_SSH=true npm run publish-gh-pages
+GIT_USER=<GIT_USERNAME> USE_SSH=true yarn deploy
 ```
