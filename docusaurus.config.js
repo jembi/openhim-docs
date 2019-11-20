@@ -26,7 +26,7 @@ module.exports = {
         {to: 'mediator-library', label: 'Mediator Library', position: 'left'},
 
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/jembi/openhim-core-js',
           label: 'GitHub',
           position: 'right',
         },
@@ -40,35 +40,47 @@ module.exports = {
           items: [
             {
               label: 'Docs',
-              to: 'docs/doc1',
+              to: 'docs/introduction/about',
             },
+            {
+              label: 'API',
+              to: 'docs/api/introduction/welcome',
+            }
           ],
         },
         {
           title: 'Community',
           items: [
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'OpenHIE',
+              href: 'https://wiki.ohie.org/display/SUB/Interoperability+Layer+Community',
             },
+            {
+              label: 'YouTube Tutorials',
+              href: 'https://www.youtube.com/channel/UCz3UpAGDJbKG7KkorgMGfEA',
+            }
           ],
         },
         {
-          title: 'Social',
+          title: 'Playgrounds',
           items: [
             {
-              label: 'Blog',
-              to: 'blog',
+              label: 'OpenHIM 5.2-latest Sandbox',
+              href: 'https://sandbox.openhim.org',
             },
+            {
+              label: 'OpenHIM 5.3-alpha Sandbox',
+              href: 'https://alpha.sandbox.openhim.org',
+            }
           ],
         },
       ],
       logo: {
-        alt: 'Facebook Open Source Logo',
-        src: 'https://docusaurus.io/img/oss_logo.png',
-        href: 'https://opensource.facebook.com/',
+        alt: 'Jembi health Systems Logo',
+        src: 'img/jembi-logo.png',
+        href: 'https://jembi.org',
       },
-      copyright: `Copyright © ${new Date().getFullYear()} Facebook, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Jembi Health Systems NPC`,
     },
   },
   presets: [
