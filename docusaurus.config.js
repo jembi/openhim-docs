@@ -6,23 +6,25 @@
  */
 
 module.exports = {
-  title: 'My Site',
-  tagline: 'The tagline of my site',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'OpenHIM',
+  tagline: 'Simplifying Interoperability',
+  url: 'https://jembi.github.io',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'jembi', // Usually your GitHub org/user name.
+  projectName: 'openhim-docs', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'My Site',
+      // title: 'OpenHIM',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'OpenHIM',
+        src: 'img/openhim-logo-green.svg',
       },
       links: [
-        {to: 'docs/doc1', label: 'Docs', position: 'left'},
-        {to: 'blog', label: 'Blog', position: 'left'},
+        {to: 'docs/introduction/about', label: 'Docs', position: 'left'},
+        {to: 'docs/api/introduction/welcome', label: 'API', position: 'left'},
+        {to: 'mediator-library', label: 'Mediator Library', position: 'left'},
+
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
