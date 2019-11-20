@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[128],{212:function(e){e.exports=JSON.parse('{"id":"api/users/delete","title":"Delete","sidebar_label":"Delete","description":"Coming soon ...","source":"@site/docs/api/users/delete.md","permalink":"/docs/api/users/delete","sidebar":"api","previous":{"title":"Update","permalink":"/docs/api/users/update"}}')}}]);
