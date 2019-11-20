@@ -25,7 +25,7 @@ Some examples of common workflows that the OpenHIM can support to facilitate the
 
 The OpenHIM enables easier interoperability between systems by connecting all of the infrastructure services and client or point of service applications together. In the OpenHIE context, these systems are Health Information Systems (HISs) such as a client registry, worker registry, facility registry, shared health record, terminology service, etc.
 
-![OpenHIEArchitecture](assets/overview/OpenHIEArchitecture.png)
+<img alt="OpenHIE Architecture" src={useBaseUrl('img/overview/OpenHIEArchitecture.png')} />
 
 The OpenHIM provides a single point of entry into the services of a health information exchange (HIE): it receives transactions from client systems, coordinates interaction between the different components of the HIE by routing requests to the correct orchestrator or registry, and provides the centralised common core functions to simplify data exchange.
 
@@ -79,7 +79,7 @@ The OpenHIM logically consists of three components:
 - The Administration Console provides an easy to use interface for system administrators to configure and manage the OpenHIM, giving a window into the workings of the HIE.
 - Mediators are additional services used to extend the functionality of the OpenHIM by transforming and orchestrating transactions.
 
-![OpenHIM Components](img/assets/overview/OpenHIMComponents.png)
+<img alt="OpenHIM Components" src={useBaseUrl('img/overview/OpenHIMComponents.png')} />
 
 ### The OpenHIM Core
 
@@ -117,26 +117,26 @@ There are three types of mediators:
   These services are invoked whenever there is a need to orchestrate or adapt a certain transaction. If they are not needed the OpenHIM core component will call the domain service directly. Orchestrators may use other adapters to send messages to other services.
   As the architecture is designed to evolve as the environment changes, designing these orchestrators and adapters as independent services allows for additional logic or business processes to be added as the need arises. Mediators are often implementation specific so they will change to meet the specific needs and business processes of the system. A mediator library is available so that existing mediators can be re-used or adapted as needed. Both the orchestrator and adapter services are also expected to log and audit messages that they send out to the domain services. These services are implemented as mediators within the OpenHIM.
 
-<!-- <div class="funder-images">
+<div className="funderImages">
 
   ## Funders
 
-  [![pepfar](assets/funders/pepfar.jpg)](http://www.pepfar.gov/ 'PEPFAR')
-  [![cdc](assets/funders/cdc.jpg)](http://www.cdc.gov/ 'CDC')
-  [![idrc](assets/funders/idrc.jpg)](http://www.idrc.ca/EN/Pages/default.aspx 'IDRC')
-  [![rockefellerFoundation](assets/funders/rockefellerFoundation.jpg)](http://www.rockefellerfoundation.org/ 'Rockefeller Foundation')
+  <a href="http://www.pepfar.gov/" title="PEPFAR" target="_blank"><img alt="OpenHIM" src={useBaseUrl('img/funders/pepfar.jpg')} /></a>
+  <a href="http://www.cdc.gov/" title="CDC" target="_blank"><img alt="OpenHIM" src={useBaseUrl('img/funders/cdc.jpg')} /></a>
+  <a href="http://www.idrc.ca/EN/Pages/default.aspx" title="IDRC" target="_blank"><img alt="IDRC" src={useBaseUrl('img/funders/idrc.jpg')} /></a>
+  <a href="http://www.rockefellerfoundation.org/" title="Rockefeller Foundation" target="_blank"><img alt="Rockefeller Foundation" src={useBaseUrl('img/funders/rockefellerFoundation.jpg')} /></a>
 
   ## Development Partners
 
-  [![jembi](assets/funders/jembi.png)](http://jembi.org)
-  [![heal](assets/funders/heal.png)](http://heal.cs.ukzn.ac.za/ 'HeAL UKZN')
+  <a href="http://jembi.org" title="Jembi Health Systems" target="_blank"><img alt="Jembi Health Systems" src={useBaseUrl('img/funders/jembi.png')} /></a>
+  <a href="http://heal.cs.ukzn.ac.za/" title="HeAL UKZN" target="_blank"><img alt="HeAL UKZN" src={useBaseUrl('img/funders/heal.png')} /></a>
 
   ## Other Partners
 
-  [![mohawk](assets/funders/mohawk.jpg)](http://www.mohawkcollege.ca/ 'Mohawk College')
-  [![regenstriefInstitute](assets/funders/regenstriefInstitute.jpg)](http://www.regenstrief.org/ 'Regenstrief Institute')
-  [![intraHealth](assets/funders/intraHealth.jpg)](http://www.intrahealth.org/ 'InntraHealth')
-  [![hisp](assets/funders/hisp.png)](http://hisp.org)
-  [![openhie-logo](assets/funders/openhie-logo.png)](http://ohie.org)
-  [**eCGroup**](http://www.ecgroupinc.com/index.htm 'eCGroup')
-<div> -->
+  <a href="http://www.mohawkcollege.ca/" title="Mohawk College" target="_blank"><img alt="Mohawk College" src={useBaseUrl('img/funders/mohawk.jpg')} /></a>
+  <a href="http://www.regenstrief.org/" title="Regenstrief Institute" target="_blank"><img alt="Regenstrief Institute" src={useBaseUrl('img/funders/regenstriefInstitute.jpg')} /></a>
+  <a href="http://www.intrahealth.org/" title="IntraHealth" target="_blank"><img alt="IntraHealth" src={useBaseUrl('img/funders/intraHealth.jpg')} /></a>
+  <a href="http://hisp.org" title="HISP" target="_blank"><img alt="HISP" src={useBaseUrl('img/funders/hisp.png')} /></a>
+  <a href="http://ohie.org" title="OpenHIE" target="_blank"><img alt="OpenHIE" src={useBaseUrl('img/funders/openhie-logo.png')} /></a>
+  <a href="http://www.ecgroupinc.com/index.htm" title="eCGroup" target="_blank">eCGroup</a>
+</div>
