@@ -83,7 +83,7 @@ class MediatorListContainer extends Component {
 function MediatorLibrary() {
   return (
     <Layout>
-      <header className={classnames('hero hero--primary', styles.heroBanner)}>
+      <header className={classnames('pentagon-background hero hero--primary', styles.heroBanner)}>
         <div className="container">
           <h1 className="hero__title">OpenHIM Mediator Library</h1>
           <p className="hero__subtitle">

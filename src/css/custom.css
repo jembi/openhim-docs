@@ -63,3 +63,7 @@
   -webkit-filter: brightness(0) invert(1);
   filter: brightness(0) invert(1);
 }
+
+.pentagon-background {
+  background: url(../../static/img/congruent_pentagon.png) repeat;
+}

@@ -96,4 +96,5 @@ module.exports = {
       },
     ],
   ],
+  plugins: ["docusaurus-image-loader"]
 };
