@@ -4,6 +4,8 @@ title: Design overview
 sidebar_label: Design overview
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 This section describes the architectural design of an Interoperability Layer for use within the [OpenHIE project](https://ohie.org/) (The OpenHIM is a reference implementation of an OpenHIE Interoperability Layer). It describes the key components that should make up an interoperability layer and how this relates to the other services that are used in OpenHIE.
 
 Conceptually, the OpenHIM consists of the following three components:
@@ -29,7 +31,7 @@ The defined set of requirements for Version 4.0.0 of the OpenHIM can be found he
 
 Below, the architecture of the Interoperability Layer is shown in the context of the other expected services and registries. The Interoperability Layer components are show in **<span style={{color: "rgb(51,204,204)"}}>blue</span>**, the domain services (registries) are shown in **<span style={{color: "rgb(153,51,0)"}}>red</span>** and the clients are shown in <span style={{color: "rgb(153,204,0)"}}>**green.**</span>
 
-![Central HIM component](assets/design/Central-HIM-componentv2.png)
+<img alt="Central HIM component" src={useBaseUrl('img/design/Central-HIM-componentv2.png')} />
 
 ### The core (thin proxy) component
 

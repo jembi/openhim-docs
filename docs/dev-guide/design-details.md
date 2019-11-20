@@ -4,6 +4,8 @@ title: Detailed design using Node.js
 sidebar_label: Detailed design using Node.js
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 **Note:** this design document was written before the development OpenHIM an as such some of the detail have changed or evolved with the OpenHIM's continuted development. It is a good starting point but not a complete picture.
 
 Node.js is a good technology option on which to develop the interoperability layer core component for the following reasons:
@@ -30,7 +32,7 @@ The OpenHIM-core will use Koa middleware to act on HTTP requests and Responses. 
 
 Each row in the diagram representing the OpenHIM-core is a middleware component. Each of the components of the OpenHIM-core will be described further in the following sections. The OpenHIM-core will also have a REST API that will allow a web UI to be created for easy of management.
 
-![openhim-design](assets/design/OpenHIM-js-design.png)
+<img alt="OpenHIM Design" src={useBaseUrl('img/design/OpenHIM-js-design.png')} />
 
 ## Authentication and Authorization
 

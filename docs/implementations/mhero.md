@@ -4,6 +4,8 @@ title: mHero
 sidebar_label: mHero
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 Mobile Health Worker Electronic Response and Outreach (mHero) harnesses the power of mobile technology to reach frontline health workers. It is a two-way, mobile phone-based communication system that uses basic text messaging, or SMS, to connect ministries of health and health workers. mHero was rapidly developed in August 2014 to support health-sector communication during the Ebola outbreak in Liberia and is being extended for use in Sierra Leone, Guinea and Mali.
 
 Health officials can use mHero to:
@@ -24,7 +26,7 @@ mHero is not a new technology. It’s a way to connect data from existing health
 - SMS messages are developed and tested in RapidPro
 - DHIS2 and iHRIS are connected through the health worker registry, which connects to RapidPro through the OpenHIM
 
-![mhero architecture](assets/mhero/mhero-diagram.png)
+<img alt="mhero architecture" src={useBaseUrl('img/mhero/mhero-diagram.png')} />
 
 Within the context of mHero, the OpenHIM performs a few vital functions.
 

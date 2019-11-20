@@ -4,6 +4,8 @@ title: Developing mediators
 sidebar_label: Developing mediators
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 **OpenHIM mediators** are separate micro services that run independently from the OpenHIM-core and perform additional mediation tasks for a particular use case. The common tasks within a mediator are as follows:
 
 - Message format adaptation - this is the transformation of messages received in a certain format into another format (e.g. HL7 v2 to HL7 v3 or MHD to XDS.b).
@@ -17,7 +19,7 @@ You can also take a look at our handy [mediator yeoman generators](https://githu
 
 For maximum reusability and modifiability, we suggest that mediators be split into a number of sub-components. These sub-components are shown in the diagram bellow. Mediators do not need to follow this structure however it provides some useful benefits. If a mediator is simple and does not need the complexity added by having multiple sub-components it may implement its functionality in which ever way is simplest. If you mediator does not require this, you may skip this section.
 
-![Mediator Structure](assets/mediators/mediator-structure.png)
+<img alt="Mediator Structure" src={useBaseUrl('img/mediators/mediator-structure.png')} />
 
 Each mediator should consist of a **normalisation** sub-components, an **orchestration** sub-component and a **de-normalisation** sub-component. The purpose of each of these are described below.
 

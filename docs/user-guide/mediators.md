@@ -4,12 +4,16 @@ title: Mediators
 sidebar_label: Mediators
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 OpenHIM mediators are separate micro services that run independently to the OpenHIM and perform additional mediation tasks for a particular use case. The common tasks within a mediator are as follows:
 
 - Message format adaptation - this is the transformation of messages received in a certain format into another format (eg. HL7 v2 to HL7 v3 or MHD to XDS.b).
 - Message orchestration - this is the execution of a business function that may need to call out to one or more other service endpoint on other systems. (eg. Enriching a message with a client's unique identifier retrieved from a client registry then sending the enriched message to a shared health record).
 
-Mediators can be built using any platform that is desired (some good options are pure Java using our mediator engine, Node.js, Apache Camel, Mule ESB, or any language or platform that is a good fit for your needs). The only restriction is that the mediator MUST communicate with the OpenHIM-core in a particular way. Mediators must register themselves with the OpenHIM-core, accept request from the OpenHIM-core and return a specialised response to the OpenHIM-core to explain what that mediator did. A diagram of how mediators fit into the overall OpenHIM architecture can be seen below. ![OpenHIM architecture](assets/mediators/mediators-overview.png)
+Mediators can be built using any platform that is desired (some good options are pure Java using our mediator engine, Node.js, Apache Camel, Mule ESB, or any language or platform that is a good fit for your needs). The only restriction is that the mediator MUST communicate with the OpenHIM-core in a particular way. Mediators must register themselves with the OpenHIM-core, accept request from the OpenHIM-core and return a specialised response to the OpenHIM-core to explain what that mediator did. A diagram of how mediators fit into the overall OpenHIM architecture can be seen below. 
+
+<img alt="OpenHIE Architecture" src={useBaseUrl('img/mediators/mediators-overview.png')} />
 
 If you are interested in developing you own mediators see the [documentation available here](../dev-guide/mediators.html) and see our [tutorials page](../tutorial/index.html 'Tutorials') for specific examples to get you started.
 
@@ -41,4 +45,4 @@ Mediators may be developed in any language and only talk to the OpenHIM via its 
 
 ## Existing Mediators
 
-To find some existing mediators we suggest [searching github for "openhim-mediator"](https://github.com/search?utf8=%E2%9C%93&q=%22openhim-mediator%22&type=Repositories&ref=searchresults) which is the naming convention for OpenHIM mediators. For more information on writing you own mediator [click here](../dev-guide/mediators.html).
+To find some existing mediators we suggest either having a look at our <a href={useBaseUrl('/mediator-library')}>mediator library</a> or [searching github for "openhim-mediator"](https://github.com/search?utf8=%E2%9C%93&q=%22openhim-mediator%22&type=Repositories&ref=searchresults) which is the naming convention for OpenHIM mediators. For more information on writing you own mediator [click here](../dev-guide/mediators.html).
