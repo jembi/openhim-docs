@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import Layout from '@theme/Layout';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { styles } from 'ansi-colors';
+import Link from '@docusaurus/Link';
+import classnames from 'classnames';
+
 
 function MediatorDetails(props) {
   return (
@@ -63,7 +66,11 @@ class MediatorListContainer extends Component {
 
   render() {
     if (this.state.spinner) {
-      return <div id="loading"></div>
+      return (
+        <div className="spinnerContainer">
+          <div id="loading"/>
+        </div>
+        )
     } else {
       var nodes = this.state.data.map(function(item) {
         return <MediatorDetails key={item.id} data={item} />
@@ -74,42 +81,38 @@ class MediatorListContainer extends Component {
 }
 
 function MediatorLibrary() {
-  const context = useDocusaurusContext();
-  const { siteConfig = {} } = context;
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
-    >
-      <div className="homeContainer">
+    <Layout>
+      <header className={classnames('hero hero--primary', styles.heroBanner)}>
         <div className="container">
-          <div>
-            <h1 className="hero__title">OpenHIM Mediator Library</h1>
-            <p className="hero__subtitle">
-              This is like the app store for the OpenHIM. Here you will find a
-              number of mediators that are designed to extend the OpenHIM's
-              functionality for a specific purpose. Browse the mediators below to
-              see if any suit your needs. If not, then it is easy to create your
-              own.
-            </p>
-            <p className="hero__subtitle">
-              To get your own mediator published here all you need to do is follow
-              the github repository naming convention. Any public repository
-              beginning with "openhim-mediator" will be displayed here.
-            </p>
-            <div>
-              <a
-                className="button button--secondary button--outline button--lg"
-                href="/openhim-docs/docs/introduction/about"
-              >
-                Create a new mediator »
-              </a>
-            </div>
+          <h1 className="hero__title">OpenHIM Mediator Library</h1>
+          <p className="hero__subtitle">
+            This is like the app store for the OpenHIM. Here you will find a
+            number of mediators that are designed to extend the OpenHIM's
+            functionality for a specific purpose. Browse the mediators below to
+            see if any suit your needs. If not, then it is easy to create your
+            own.
+          </p>
+          <p className="hero__subtitle">
+            To get your own mediator published here all you need to do is follow
+            the github repository naming convention. Any public repository
+            beginning with "openhim-mediator" will be displayed here.
+          </p>
+          <div className={styles.buttons}>
+            <Link
+              className={classnames("button button--outline button--secondary button--lg")}
+              href="/openhim-docs/docs/introduction/about"
+            >
+              Create a new mediator »
+            </Link>
           </div>
-          <hr />
+        </div>
+      </header>
+      <main>
+        <div className="container">
           <MediatorListContainer />
         </div>
-      </div>
+      </main>
     </Layout>
   )
 }
