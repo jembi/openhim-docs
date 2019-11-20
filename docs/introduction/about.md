@@ -5,7 +5,9 @@ title: About the OpenHIM
 sidebar_label: About the OpenHIM
 ---
 
-![OpenHIM](/img/openhim-logo-green.svg)
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+<img alt="OpenHIM" src={useBaseUrl('img/openhim-logo-green.svg')} />
 
 The Open Health Information Mediator (OpenHIM) is an interoperability layer: a software component that enables easier interoperability between disparate electronic information systems by providing a central point where the exchange of data is managed. An interoperability layer receives transactions from different information systems and coordinates the interactions between them. The OpenHIM provides a layer of abstraction between systems that allows for the transformation of incoming messages to a form that the other system components expect and can support the business logic by orchestrating the transaction flow.
 

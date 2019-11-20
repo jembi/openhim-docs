@@ -27,7 +27,7 @@ The defined set of requirements for Version 4.0.0 of the OpenHIM can be found he
 
 ## The architecture
 
-Below, the architecture of the Interoperability Layer is shown in the context of the other expected services and registries. The Interoperability Layer components are show in **<span style="color: rgb(51,204,204);">blue</span>**, the domain services (registries) are shown in **<span style="color: rgb(153,51,0);">red</span>** and the clients are shown in <span style="color: rgb(153,204,0);">**green.**</span>
+Below, the architecture of the Interoperability Layer is shown in the context of the other expected services and registries. The Interoperability Layer components are show in **<span style={{color: "rgb(51,204,204)"}}>blue</span>**, the domain services (registries) are shown in **<span style={{color: "rgb(153,51,0)"}}>red</span>** and the clients are shown in <span style={{color: "rgb(153,204,0)"}}>**green.**</span>
 
 ![Central HIM component](assets/design/Central-HIM-componentv2.png)
 

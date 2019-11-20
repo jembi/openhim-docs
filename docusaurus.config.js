@@ -9,7 +9,7 @@ module.exports = {
   title: 'OpenHIM',
   tagline: 'Simplifying Interoperability',
   url: 'https://jembi.github.io',
-  baseUrl: '/',
+  baseUrl: '/openhim-docs/',
   favicon: 'img/favicon.ico',
   organizationName: 'jembi', // Usually your GitHub org/user name.
   projectName: 'openhim-docs', // Usually your repo name.
