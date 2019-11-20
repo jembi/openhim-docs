@@ -10,7 +10,7 @@ module.exports = {
   tagline: 'Simplifying Interoperability',
   url: 'https://jembi.github.io',
   baseUrl: '/openhim-docs/',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/openhim_badge.svg',
   organizationName: 'jembi', // Usually your GitHub org/user name.
   projectName: 'openhim-docs', // Usually your repo name.
   themeConfig: {
@@ -24,7 +24,6 @@ module.exports = {
         {to: 'docs/introduction/about', label: 'Docs', position: 'left'},
         {to: 'docs/api/introduction/welcome', label: 'API', position: 'left'},
         {to: 'mediator-library', label: 'Mediator Library', position: 'left'},
-
         {
           href: 'https://github.com/jembi/openhim-core-js',
           label: 'GitHub',
