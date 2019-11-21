@@ -13,7 +13,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary: #206636;
   --ifm-color-primary-dark: rgb(33, 175, 144);
   --ifm-color-primary-darker: rgb(31, 165, 136);
   --ifm-color-primary-darkest: rgb(26, 136, 112);
@@ -62,4 +62,32 @@
 .footer .footer__logo {
   -webkit-filter: brightness(0) invert(1);
   filter: brightness(0) invert(1);
+}
+
+.row .col {
+  --ifm-col-width: 42%;
+  max-width: var(--ifm-col-width);
+}
+
+.feature {
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+
+.center-image {
+  text-align: center;
+}
+
+.padding-vert {
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+}
+
+.subtitle {
+  color: var(--ifm-color-primary)
+}
+
+.summary {
+  font-size: 1.4em;
 }
