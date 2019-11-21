@@ -9,14 +9,14 @@ import classnames from 'classnames';
 function MediatorDetails(props) {
   return (
     <div>
-      <div className="card__header">
+      <div>
         <h2>
           <a href={'https://github.com/' + props.data.full_name}>
             {props.data.name}
           </a>
         </h2>
       </div>
-      <div className="card__body">
+      <div>
         {props.data.description && (
           <p>{props.data.description}</p>
         )}
@@ -111,7 +111,7 @@ function MediatorLibrary() {
         </div>
       </header>
       <main>
-        <div className="container padding-vert center">
+        <div className="container padding-vert center mediator_description_max_width">
           <MediatorListContainer />
         </div>
       </main>
