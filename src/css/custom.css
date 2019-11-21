@@ -91,3 +91,12 @@
 .summary {
   font-size: 1.4em;
 }
+
+.button_row {
+  display: flex;
+  justify-content: center;
+}
+
+.button_padding {
+  margin: 0.5em
+}

@@ -24,6 +24,7 @@ module.exports = {
         {to: 'docs/introduction/about', label: 'Docs', position: 'left'},
         {to: 'docs/api/introduction/welcome', label: 'API', position: 'left'},
         {to: 'mediator-library', label: 'Mediator Library', position: 'left'},
+        {to: 'help', label: 'Help', position: 'left'},
         {
           href: 'https://github.com/jembi/openhim-core-js',
           label: 'GitHub',
