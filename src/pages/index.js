@@ -217,7 +217,7 @@ function Feature({ imageUrl, title, description }) {
         <img src={imgUrl} alt={title} />
       </div>
       <div className="col col--offset-1 padding-vert">
-        <h3>{title}</h3>
+        <h2>{title}</h2>
         <div>{description}</div>
       </div>
     </div>
@@ -237,7 +237,9 @@ function Home() {
       >
         <div className="container">
           <SplashContainer>
-            <img src="img/openhim-logo-green.svg" alt="Project Logo" />
+            <h1>
+              <img src="img/openhim-logo-green.svg" alt="Project Logo" />
+            </h1>
             <p className="hero__subtitle subtitle">{siteConfig.tagline}</p>
             <div className="container">
               <p className="summary">
