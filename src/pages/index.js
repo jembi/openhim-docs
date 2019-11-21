@@ -213,7 +213,7 @@ function Feature({ imageUrl, title, description }) {
   const imgUrl = useBaseUrl(imageUrl)
   return (
     <div className="row feature">
-      <div className="col padding-vert center-image">
+      <div className="col padding-vert center">
         <img src={imgUrl} alt={title} />
       </div>
       <div className="col col--offset-1 padding-vert">
