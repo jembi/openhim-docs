@@ -121,7 +121,7 @@ function Help() {
                 data-show-count="true"
                 aria-label="Star jembi/openhim-console on GitHub"
               >
-                Watch openHIM Console
+                Watch OpenHIM Console
               </GitHubButton>
             </div>
           </div>
