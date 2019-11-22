@@ -91,7 +91,8 @@ module.exports = {
       "api/channels/create", 
       "api/channels/read", 
       "api/channels/update", 
-      "api/channels/delete"
+      "api/channels/delete",
+      "api/channels/polling-trigger"
     ],
     "Clients": [
       "api/clients/create", 

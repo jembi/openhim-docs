@@ -1,32 +1,29 @@
 ---
-id: read
-title: Read Channel
-sidebar_label: Read
+id: polling-trigger
+title: Trigger a Polling Channel
+sidebar_label: Trigger Polling
 keywords:
   - OpenHIM
   - API
   - Channel
-  - Read
-description: READ OpenHIM Channels via the API
+  - Polling
+  - Trigger
+description: Manually trigger a polling channel request
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-To read existing channel records you will need to make a TLS request to the OpenHIM API for the below method and endpoint.
+## Manually trigger a polling channel
 
-## Read all channels
+The polling is configured in the same way as we do for normal channel configuration, however, we don't supply a `urlPattern` to match an incoming request on as the polling channel is triggered internally from the OpenHIM core based on the supplied cron pattern. 
 
-```curl
-Method: GET
-Endpoint: {openhim_url}:8080/channels
-```
+To manually trigger a polling channel request you will need to make a TLS request to the OpenHIM API for the below method and endpoint.
 
-## Read a specific channel
 
 ```curl
-Method: GET
-Endpoint: {openhim_url}:8080/channels/:channelId
+Method: POST
+Endpoint: {openhim_url}:8080/channels/:channelId/trigger
 ```
 
 ## Example
@@ -53,7 +50,7 @@ Replace the `openhimOptions` values with the correct implementation details
 (async () => {
   const openhimOptions = {
     apiURL: 'https://localhost:8080',
-    apiEndpoint: '/channels/channelId',
+    apiEndpoint: '/channels/channelId/trigger',
     username: 'root@openhim.org',
     password: 'openhim-password',
     rejectUnauthorized: false
@@ -61,7 +58,8 @@ Replace the `openhimOptions` values with the correct implementation details
 
   const headers = await genAuthHeaders(openhimOptions)
   
-  const options = { method: 'GET',
+  const options = { 
+    method: 'POST',
     url: `${openhimOptions.apiURL}${openhimOptions.apiEndpoint}`,
     rejectUnauthorized: openhimOptions.rejectUnauthorized,
     headers: headers
@@ -78,18 +76,24 @@ Replace the `openhimOptions` values with the correct implementation details
 })()
 ```
 
+Execute the below command in your terminal to run the nodejs script
+
+```bash
+node openhim-api.js
+```
+
 </TabItem>
 <TabItem value="bash">
 
 Ensure that you have created your bash script to construct the HTTP authentication headers and send the request to the OpenHIM API as described in the [authentication section](../introduction/authentication.md). 
 
-Execute the below command in your terminal where the file is located with the required arguments. Replace the placeholder arguments with the correct implementation details.
+Execute the below command in your terminal where the file is located with the required arguments. Replace the placeholder arguments with the correct implementation details
 
 ```curl
-./openhim-api.sh root@openhim.org openhim-password -v https://localhost:8080/channels/channelId
+./openhim-api.sh root@openhim.org openhim-password -v -X POST https://localhost:8080/channels/channelId/trigger
 ```
 
 </TabItem>
 </Tabs>
 
-The response status code will be `200` if successful.
+The response status code will be `201` if successful.

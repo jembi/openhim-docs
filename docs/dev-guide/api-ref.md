@@ -4,107 +4,6 @@ title: RESTful API
 sidebar_label: RESTful API
 ---
 
-Each and every API call that is made to the OpenHIM has to be authenticated. The authentication mechanism that is used can be fairly complex to work with however it provides decent security.
-
-The authentication mechanism is based on <http://stackoverflow.com/a/9387289/588776>.
-
-## Initial authentication notification
-
-The user notifies the API that it wants to use its authenticated service:
-
-`GET https://<server>:8080/authenticate/<user_email>`
-
-If you don't have a user account yet, you can use the root user. The default root user details are as follows:
-
-username: root
-password: openhim-password (you should change this on a production installation!)
-
-The server will respond with the salt that was used to calculate the clients passwordHash (during user registration):
-
-```json
-{
-  "salt": "xxx",
-  "ts": "xxx"
-}
-```
-
-You must calculate a passwordhash using the received salt and the supplied user password. `passwordhash = (sha512(salt + password))`
-
-## For subsequent requests to the API
-
-For every request you must add the following additional HTTP headers to the request:
-
-```http
-auth-username: <username>
-auth-ts: <the current timestamp - in the following format '2014-10-20T13:19:32.380Z' - user time must be in sync with server time for request to work>
-auth-salt: <random uuid salt that you generate>
-auth-token: <= sha512(passwordhash + auth-salt + auth-ts) >
-```
-
-The server will authorise this request by calculating sha512(passwordhash + auth-salt + auth-ts) using the passwordhash from its own database and ensuring that:
-
-- this is equal to auth-token
-- the auth-ts isn't more than 2 seconds old
-
-If these 2 conditions true the request is allowed.
-
-## Example implementations
-
-An example of how this authentication mechanism can implemented for use with curl is show here: https://github.com/jembi/openhim-core-js/blob/master/resources/openhim-api-curl.sh
-
-An example of how this is implemented in the OpenHIM Console see: <https://github.com/jembi/openhim-console/blob/master/app/scripts/services/login.js#L12-L39> and <https://github.com/jembi/openhim-console/blob/master/app/scripts/services/authinterceptor.js#L20-L50>
-
-## API Reference
-
-### Channels resource
-
-Channels represent configuration setting of how to route requests through the OpenHIM.
-
-`https://<server>:<api_port>/channels`
-
-#### Fetch all channels
-
-`GET /channels`
-
-The response status code will be `200` if successful and the response body will contain an array of channel objects. See the [channel schema](https://github.com/jembi/openhim-core-js/blob/master/src/model/channels.js).
-
-#### Add a channel
-
-`POST /channels`
-
-with a json body representing the channel to be added. See the [channel schema](https://github.com/jembi/openhim-core-js/blob/master/src/model/channels.js).
-
-The response code will be `201` if successful.
-
-#### Fetch a specific channel
-
-`GET /channels/:channelId`
-
-where `:channelId` is the `_id` property of the channel to fetch.
-
-The response status code will be `200` if successful and the response body will contain a channel object. See the [channel schema](https://github.com/jembi/openhim-core-js/blob/master/src/model/channels.js).
-
-#### Update a channel
-
-`PUT /channels/:channelId`
-
-where `:channelId` is the `_id` property of the channel to update and with a json body representing the channel updates. See the [channel schema](https://github.com/jembi/openhim-core-js/blob/master/src/model/channels.js).
-
-The response code will be `200` if successful.
-
-#### Delete a channel
-
-`DELETE /channels/:channelId`
-
-where `:channelId` is the `_id` property of the channel to delete.
-
-The response code will be `200` if successful.
-
-#### Manually Trigger Polling Channel
-
-'POST /channels/:channelId/trigger'
-
-where ':channelId' is the '\_id' property of the channel to manually trigger.
 
 ### Clients resource
 
@@ -157,6 +56,19 @@ The response code will be `200` if successful.
 where `:clientId` is the `_id` property of the client to delete.
 
 The response code will be `200` if successful.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Roles resource
 
