@@ -71,7 +71,10 @@ module.exports = {
     ]
   },
   "api": {
-    "Introduction": ["api/introduction/welcome"],
+    "Introduction": [
+      "api/introduction/welcome",
+      "api/introduction/authentication"
+    ],
     "Audits": [
       "api/audits/create", 
       "api/audits/read", 
@@ -125,6 +128,12 @@ module.exports = {
       "api/users/read", 
       "api/users/update", 
       "api/users/delete"
+    ],
+    "Visualizer": [
+      "api/visualizer/create",
+      "api/visualizer/read",
+      "api/visualizer/update",
+      "api/visualizer/delete"
     ]
   }
 };

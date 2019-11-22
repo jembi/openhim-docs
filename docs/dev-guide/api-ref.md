@@ -955,38 +955,3 @@ An example visualizer object conforming to the [visualizer schema](https://githu
 ]
 ```
 
-#### Fetch all visualizers
-
-`GET /visualizers`
-
-This request will return a `200` response code and an array of visualizer objects.
-
-#### Fetch a specific visualizer by mongo id
-
-`GET /visualizers/:visualizerId`
-
-This request will return a `200` response code and a visualizer object.
-
-#### Add new visualizer
-
-`POST /visualizers`
-
-with a json body representing the new visualizer to be added.
-
-The response status code will be `201` if successful.
-
-#### Update an existing visualizer by mongo id
-
-`PUT /visualizers/:visualizerId`
-
-with a json body representing the changes to the visualizer.
-
-The response status code will be `200` if successful.
-
-#### Delete an existing visualizer by mongo id
-
-`DELETE /visualizers/:visualizerId`
-
-Remove an existing visualizer.
-
-The response status code will be `200` if successful.
