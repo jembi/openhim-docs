@@ -14,7 +14,7 @@ To update an existing visualizer record you will need to make a TLS request to t
 
 ```curl
 Method: PUT
-Endpoint: /visualizers/:visualizerId
+Endpoint: {openhim_url}:8080/visualizers/:visualizerId
 Payload: JSON object of the visualizer record
 ```
 
@@ -91,7 +91,7 @@ Payload: JSON object of the visualizer record
 
   Ensure that you have created your bash script to construct the HTTP authentication headers and send the request to the OpenHIM API as described in the [authentication section](../introduction/authentication.md). 
 
-  Execute the below command in your terminal with the required arguments. Replace the placeholder arguments with the correct implementation details and ensure your `SampleData.json` file exists with the updated visualizer object.
+  Execute the below command in your terminal where the file is located with the required arguments. Replace the placeholder arguments with the correct implementation details and ensure your `SampleData.json` file exists with the updated visualizer object.
 
   ```curl
   ./openhim-api.sh root@openhim.org openhim-password -v -X PUT https://localhost:8080/visualizers/visualizerId -d @SampleData.json -H "Content-Type:application/json"

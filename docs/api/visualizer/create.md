@@ -1,6 +1,6 @@
 ---
 id: create
-title: Create a new Visualizer
+title: Create Visualizer
 sidebar_label: Create
 keywords:
   - OpenHIM
@@ -20,7 +20,7 @@ To create a new visualizer record you will need to make a TLS request to the Ope
 
 ```curl
 Method: POST
-Endpoint: /visualizers
+Endpoint: {openhim_url}:8080/visualizers
 Payload: JSON object of the visualizer record
 ```
 
@@ -48,7 +48,7 @@ Payload: JSON object of the visualizer record
 
   Copy the below code at the bottom of your nodejs script that handles the authentication of the OpenHIM headers as described in the [authentication section](../introduction/authentication.md). 
 
-  Replace the `openhimOptions` values with the correct implementation details and supply the `jsonData` payload to submit
+  Replace the `openhimOptions` values with the correct implementation details and supply the `SampleData` payload to submit
 
   ```javascript
   // append below code to the "openhim-api.js" script containing the authentication methods. 
@@ -62,7 +62,7 @@ Payload: JSON object of the visualizer record
       password: 'openhim-password',
       rejectUnauthorized: false
     }
-    const jsonData = 'jsonData'
+    const SampleData = 'SampleData'
 
     const headers = await genAuthHeaders(openhimOptions)
     
@@ -71,7 +71,7 @@ Payload: JSON object of the visualizer record
       url: `${openhimOptions.apiURL}${openhimOptions.apiEndpoint}`,
       rejectUnauthorized: openhimOptions.rejectUnauthorized,
       headers: headers,
-      body: jsonData,
+      body: SampleData,
       json: true
     }
     
@@ -97,10 +97,10 @@ Payload: JSON object of the visualizer record
 
   Ensure that you have created your bash script to construct the HTTP authentication headers and send the request to the OpenHIM API as described in the [authentication section](../introduction/authentication.md). 
 
-  Execute the below command in your terminal with the required arguments. Replace the placeholder arguments with the correct implementation details and ensure your `jsondData.json` file exists with the visualizer object.
+  Execute the below command in your terminal where the file is located with the required arguments. Replace the placeholder arguments with the correct implementation details and ensure your `SampleData.json` file exists with the visualizer object.
 
   ```curl
-  ./openhim-api.sh root@openhim.org openhim-password -v https://localhost:8080/visualizers -d @jsonData.json -H "Content-Type:application/json"
+  ./openhim-api.sh root@openhim.org openhim-password -v https://localhost:8080/visualizers -d @SampleData.json -H "Content-Type:application/json"
   ```
 
   </TabItem>

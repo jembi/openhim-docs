@@ -13,14 +13,14 @@ To read existing visualizer records you will need to make a TLS request to the O
 
 ```curl
 Method: GET
-Endpoint: /visualizers
+Endpoint: {openhim_url}:8080/visualizers
 ```
 
 ## Read a specific visualizer
 
 ```curl
 Method: GET
-Endpoint: /visualizers/:visualizerId
+Endpoint: {openhim_url}:8080/visualizers/:visualizerId
 ```
 
 ## Example
@@ -42,7 +42,8 @@ Copy the below code at the bottom of your nodejs script that handles the authent
 Replace the `openhimOptions` values with the correct implementation details
 
 ```javascript
-// append to nodejs script with authentication methods
+// append below code to the "openhim-api.js" script containing the authentication methods. 
+// This is described within the authentication section
 
 (async () => {
   const openhimOptions = {
@@ -77,7 +78,7 @@ Replace the `openhimOptions` values with the correct implementation details
 
 Ensure that you have created your bash script to construct the HTTP authentication headers and send the request to the OpenHIM API as described in the [authentication section](../introduction/authentication.md). 
 
-Execute the below command in your terminal with the required arguments. Replace the placeholder arguments with the correct implementation details.
+Execute the below command in your terminal where the file is located with the required arguments. Replace the placeholder arguments with the correct implementation details.
 
 ```curl
 ./openhim-api.sh root@openhim.org openhim-password -v https://localhost:8080/visualizers/visualizerId
