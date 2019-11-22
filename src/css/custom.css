@@ -69,13 +69,14 @@
 }
 
 .home .row .col {
-  --ifm-col-width: 42%;
+  --ifm-col-width: 35%;
   max-width: var(--ifm-col-width);
 }
 
 .feature {
-  align-items: center;
   display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100%;
 }
 
@@ -111,4 +112,8 @@
 
 .hero {
   background-color: var(--ifm-color-primary-lightest);
+}
+
+.odd_item {
+  background: var(--ifm-color-primary-lightest);
 }
