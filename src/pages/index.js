@@ -212,8 +212,8 @@ const features = [
 function Feature({ imageUrl, title, description, id }) {
   const imgUrl = useBaseUrl(imageUrl)
   return (
-    <div className={"row feature " + ((id % 2) === 1 ? "odd_item" : '')}>
-      <div className="col padding-vert center">
+    <div className={"row padding-vert feature " + ((id % 2) === 1 ? "odd_item" : '')}>
+      <div className="col center">
         <img className="padding-horizontal" src={imgUrl} alt={title} />
       </div>
       <div className="col col--offset-1">
