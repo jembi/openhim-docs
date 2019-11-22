@@ -19,7 +19,7 @@
   --ifm-color-primary-darkest: rgb(26, 136, 112);
   --ifm-color-primary-light: rgb(70, 203, 174);
   --ifm-color-primary-lighter: rgb(102, 212, 189);
-  --ifm-color-primary-lightest: rgb(146, 224, 208);
+  --ifm-color-primary-lightest:#E9F5EF;
 }
 
 .docusaurus-highlight-code-line {
@@ -107,4 +107,8 @@
 
 .mediator_description_max_width {
   max-width: 50%;
+}
+
+.hero {
+  background-color: var(--ifm-color-primary-lightest);
 }

@@ -133,7 +133,7 @@ function Help() {
   return (
     <Layout>
       <header
-        className={classnames('pentagon-background hero center', styles.heroBanner)}
+        className={classnames('hero center', styles.heroBanner)}
       >
         <div className="container">
           <h1 className="hero__title">Need help?</h1>
