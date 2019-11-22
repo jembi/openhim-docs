@@ -86,7 +86,8 @@ function MediatorLibrary() {
     <Layout>
       <header className={classnames('hero center', styles.heroBanner)}>
         <div className="container">
-          <h1 className="hero__title">OpenHIM Mediator Library</h1>
+          <img className="logo_header" src="img/openhim-logo-green.svg" alt="Project Logo" />
+          <h1 className="subtitle">Mediator Library</h1>
           <p>
             This is like the app store for the OpenHIM. Here you will find a
             number of mediators that are designed to extend the OpenHIM's
