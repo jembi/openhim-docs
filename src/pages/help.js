@@ -121,7 +121,7 @@ function Help() {
                 data-show-count="true"
                 aria-label="Star jembi/openhim-console on GitHub"
               >
-                Watch openHIM Console
+                Watch OpenHIM Console
               </GitHubButton>
             </div>
           </div>
@@ -133,7 +133,7 @@ function Help() {
   return (
     <Layout>
       <header
-        className={classnames('pentagon-background hero center', styles.heroBanner)}
+        className={classnames('hero center', styles.heroBanner)}
       >
         <div className="container">
           <h1 className="hero__title">Need help?</h1>

@@ -233,7 +233,7 @@ function Home() {
       description="Console for administrating the OpenHIM Core"
     >
       <header
-        className={classnames('hero pentagon-background', styles.heroBanner)}
+        className={classnames('hero', styles.heroBanner)}
       >
         <div className="container">
           <SplashContainer>
