@@ -257,7 +257,7 @@ function Home() {
       </header>
       <main>
         {features && features.length && (
-          <div className="container">
+          <div className="container home">
             {features.map((props, idx) => (
               <Feature key={idx} {...props} />
             ))}
