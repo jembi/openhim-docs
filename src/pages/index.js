@@ -217,7 +217,7 @@ function Feature({ imageUrl, title, description }) {
         <img src={imgUrl} alt={title} />
       </div>
       <div className="col col--offset-1 padding-vert">
-        <h2>{title}</h2>
+        <h2 className="subtitle">{title}</h2>
         <div>{description}</div>
       </div>
     </div>
