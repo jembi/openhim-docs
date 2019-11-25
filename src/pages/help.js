@@ -34,7 +34,7 @@ function Tutorials() {
   return (
     <div>
       <h2 className="tutorial_title subtitle">Setup Tutorials</h2>
-      <div className="mediator_box_container">
+      <div className="help_section_container">
         {videoData.map(({title, description, src}) => (
           <div className="help_page_card card_box_shadow">
 
@@ -60,40 +60,61 @@ function Tutorials() {
   )
 }
 
+const bugsAndFeaturesContent = [
+  {
+    title: 'OpenHIM Core',
+    description:
+      'The OpenHIM core component is responsible for providing a single entry-point into a system. It is provides, transaction logging, client authentication, ATNA logging, and transaction rerun functionality. Therefore, bug reports and feature requests relating to core functionality can be made in this GitHub repo.',
+    button: (
+      <GitHubButton
+        href="https://github.com/jembi/openhim-core-js/issues"
+        data-color-scheme="no-preference: dark; light: light; dark: dark;"
+        data-size="large"
+        aria-label="Issue jembi/openhim-core-js on GitHub"
+      >
+        Issue
+      </GitHubButton>
+    )
+  },
+  {
+    title: 'OpenHIM Console',
+    description: 'A webApp that provides a management console for the OpenHIM. Therefore, visual bug reports and feature requests for the OpenHIM can be made in this GitHub repo.',
+    button: (
+      <GitHubButton
+      href="https://github.com/jembi/openhim-console/issues"
+      data-color-scheme="no-preference: dark; light: light; dark: dark;"
+      data-size="large"
+      aria-label="Issue jembi/openhim-console on GitHub"
+    >
+      Issue
+    </GitHubButton>
+    )
+  }
+]
+
+function BugsAndFeatures() {
+  return (
+    <div>
+      <h2 className="tutorial_title subtitle">Report a Bug or Request a Feature</h2>
+      <div className="help_section_container">
+        {
+          bugsAndFeaturesContent.map(({title, description, button}) => (
+            <div className="help_page_card card_box_shadow">
+              <div className="help_card_content">
+                <h3>{title}</h3>
+                <p>{description}</p>
+                {button}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  )
+}
+
 function Help() {
   const supportLinks = [
-    {
-      title: 'Log Bugs and request features!',
-      content: (
-        <div>
-          <p>We appreciate your feedback!</p>
-        </div>
-      ),
-      links: (
-        <div className="button_row">
-          <div className="button_padding">
-            <GitHubButton
-              href="https://github.com/jembi/openhim-core-js/issues"
-              data-color-scheme="no-preference: dark; light: light; dark: dark;"
-              data-size="large"
-              aria-label="Issue jembi/openhim-core-js on GitHub"
-            >
-              Log OpenHIM Core Issue
-            </GitHubButton>
-          </div>
-          <div className="button_padding">
-            <GitHubButton
-              href="https://github.com/jembi/openhim-console/issues"
-              data-color-scheme="no-preference: dark; light: light; dark: dark;"
-              data-size="large"
-              aria-label="Issue jembi/openhim-console on GitHub"
-            >
-              Log OpenHIM Console Issue
-            </GitHubButton>
-          </div>
-        </div>
-      )
-    },
     {
       content: (
         <p>
@@ -180,6 +201,7 @@ function Help() {
       </header>
       <main>
         <Tutorials />
+        <BugsAndFeatures />
         <div className="container padding center">
           {supportLinks.map(({ title, content }) => (
             <div className="container">
