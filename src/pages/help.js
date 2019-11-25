@@ -12,32 +12,30 @@ import { styles } from 'ansi-colors'
 import classnames from 'classnames'
 import GitHubButton from 'react-github-btn'
 
-const videoData = [{
-  title: 'OpenHIM Setup Tutorial (Development Environment)',
-  src: 'https://www.youtube.com/embed/F0bTS3qJlG0',
-  description:
-    `The Open Health Information Mediator(OpenHIM) is a middleware
+const videoData = [
+  {
+    title: 'OpenHIM Setup Tutorial (Development Environment)',
+    src: 'https://www.youtube.com/embed/F0bTS3qJlG0',
+    description: `The Open Health Information Mediator(OpenHIM) is a middleware
     component designed to allow data transfer between diverse information
     systems by routing, orchestrating and translating requests as they
     flow between systems.`
-  ,
-}, {
-  title: 'OpenHIM Mediator Code Along Tutorial',
-  src: 'https://www.youtube.com/embed/s-l60WMiZw8',
-  description:
-    `Create a Scaffold OpenHIM Mediator and Register it with your local
+  },
+  {
+    title: 'OpenHIM Mediator Code Along Tutorial',
+    src: 'https://www.youtube.com/embed/s-l60WMiZw8',
+    description: `Create a Scaffold OpenHIM Mediator and Register it with your local
     OpenHIM instance.`
-  ,
-}]
+  }
+]
 
 function Tutorials() {
   return (
     <div>
       <h2 className="tutorial_title subtitle">Setup Tutorials</h2>
       <div className="help_section_container">
-        {videoData.map(({title, description, src}) => (
+        {videoData.map(({ title, description, src }) => (
           <div className="help_page_card card_box_shadow">
-
             <div className="video_wrapper">
               <iframe
                 src={src}
@@ -51,17 +49,17 @@ function Tutorials() {
 
             <div className="help_card_content">
               <h3>{title}</h3>
-               <p>{description}</p>
+              <p>{description}</p>
             </div>
           </div>
         ))}
+      </div>
     </div>
-  </div>
   )
 }
 
 function BrowseDocs() {
-  return(
+  return (
     <div>
       <h2 className="tutorial_title subtitle">Browse the OpenHIM docs</h2>
       <div className="help_section_container">
@@ -69,7 +67,8 @@ function BrowseDocs() {
           <div className="help_card_content">
             <h3>For your convenience, all documentation is located here</h3>
             <p>
-              For user and implementor guides please see the sections labelled <b>Docs</b>.
+              For user and implementor guides please see the sections labelled{' '}
+              <b>Docs</b>.
               <br />
               For developer guides please see the section labelled <b>API</b>.
             </p>
@@ -98,16 +97,17 @@ const bugsAndFeaturesContent = [
   },
   {
     title: 'OpenHIM Console',
-    description: 'A webApp that provides a management console for the OpenHIM. Therefore, visual bug reports and feature requests for the OpenHIM can be made in this GitHub repo.',
+    description:
+      'A webApp that provides a management console for the OpenHIM. Therefore, visual bug reports and feature requests for the OpenHIM can be made in this GitHub repo.',
     button: (
       <GitHubButton
-      href="https://github.com/jembi/openhim-console/issues"
-      data-color-scheme="no-preference: dark; light: light; dark: dark;"
-      data-size="large"
-      aria-label="Issue jembi/openhim-console on GitHub"
-    >
-      Issue
-    </GitHubButton>
+        href="https://github.com/jembi/openhim-console/issues"
+        data-color-scheme="no-preference: dark; light: light; dark: dark;"
+        data-size="large"
+        aria-label="Issue jembi/openhim-console on GitHub"
+      >
+        Issue
+      </GitHubButton>
     )
   }
 ]
@@ -131,7 +131,8 @@ const starAndWatch = [
   },
   {
     title: 'OpenHIM Console',
-    description: "Star and watch our console repository to keep up with the latest releases.",
+    description:
+      'Star and watch our console repository to keep up with the latest releases.',
     button: (
       <GitHubButton
         href="https://github.com/jembi/openhim-console/subscription"
@@ -146,22 +147,20 @@ const starAndWatch = [
   }
 ]
 
-function GithubSection({heading, data}) {
+function GithubSection({ heading, data }) {
   return (
     <div>
-<h2 className="tutorial_title subtitle">{heading}</h2>
+      <h2 className="tutorial_title subtitle">{heading}</h2>
       <div className="help_section_container">
-        {
-          data.map(({title, description, button}) => (
-            <div className="help_page_card card_box_shadow">
-              <div className="help_card_content">
-                <h3>{title}</h3>
-                <p>{description}</p>
-                {button}
-              </div>
+        {data.map(({ title, description, button }) => (
+          <div className="help_page_card card_box_shadow">
+            <div className="help_card_content">
+              <h3>{title}</h3>
+              <p>{description}</p>
+              {button}
             </div>
-          ))
-        }
+          </div>
+        ))}
       </div>
     </div>
   )
@@ -170,7 +169,8 @@ function GithubSection({heading, data}) {
 const communityContent = [
   {
     title: 'OpenHIM Implementors',
-    description: 'Below is a link to join the OpenHIM implementers google group',
+    description:
+      'Below is a link to join the OpenHIM implementers google group',
     link: (
       <Link href="mailto:openhim-implementers@googlegroups.com">
         openhim-implementers@googlegroups.com
@@ -179,10 +179,11 @@ const communityContent = [
   },
   {
     title: 'OpenHIE Interoperability',
-    description: 'The OpenHIM is a reference technology within the systems architecture defined by the Open Health Information Exchange. Join the interoperability sub-community to help guide the future of the OpenHIM.',
+    description:
+      'The OpenHIM is a reference technology within the systems architecture defined by the Open Health Information Exchange. Join the interoperability sub-community to help guide the future of the OpenHIM.',
     link: (
       <Link
-        href='https://wiki.ohie.org/display/SUB/Interoperability+Layer+Community'
+        href="https://wiki.ohie.org/display/SUB/Interoperability+Layer+Community"
         className="button button--outline button--lg"
       >
         OHIE
@@ -196,17 +197,15 @@ function Community() {
     <div>
       <h2 className="tutorial_title subtitle">Join the Community</h2>
       <div className="help_section_container">
-        {
-          communityContent.map(({title, description, link}) => (
-            <div className="help_page_card card_box_shadow">
-              <div className="help_card_content">
-                <h3>{title}</h3>
-                <p>{description}</p>
-                {link}
-              </div>
+        {communityContent.map(({ title, description, link }) => (
+          <div className="help_page_card card_box_shadow">
+            <div className="help_card_content">
+              <h3>{title}</h3>
+              <p>{description}</p>
+              {link}
             </div>
-          ))
-        }
+          </div>
+        ))}
       </div>
     </div>
   )
@@ -228,7 +227,10 @@ function Help() {
       <main>
         <Tutorials />
         <BrowseDocs />
-        <GithubSection heading="Report a Bug or Request a Feature" data={bugsAndFeaturesContent} />
+        <GithubSection
+          heading="Report a Bug or Request a Feature"
+          data={bugsAndFeaturesContent}
+        />
         <Community />
         <GithubSection heading="Stay up to date" data={starAndWatch} />
       </main>

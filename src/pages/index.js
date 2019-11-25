@@ -93,9 +93,9 @@ const features = [
     description: (
       <div>
         <p>
-          The administration console allows you to view requests as they
-          travel through the system as well as view metrics such as
-          transaction load and error rates.
+          The administration console allows you to view requests as they travel
+          through the system as well as view metrics such as transaction load
+          and error rates.
         </p>
       </div>
     )
@@ -107,11 +107,10 @@ const features = [
       <div>
         <p>
           The OpenHIM allows you to build your own micro-services called
-          mediators that plug into the OpenHIM to extend its
-          functionality. These mediators can be used to transform or
-          orchestrate requests or more. They also report details of what
-          processing has been done back to the OpenHIM using the mediator
-          framework.
+          mediators that plug into the OpenHIM to extend its functionality.
+          These mediators can be used to transform or orchestrate requests or
+          more. They also report details of what processing has been done back
+          to the OpenHIM using the mediator framework.
         </p>
         <p className="lead justify">
           View our <a href="mediator-library">mediator library</a> to see
@@ -127,11 +126,11 @@ const features = [
       <div>
         <p>
           The OpenHIM provides a secure interface to upstream hosts with
-          certificate management and self signed certificate generation
-          along with advanced access control mechanisms based on client
-          and server certificates.
+          certificate management and self signed certificate generation along
+          with advanced access control mechanisms based on client and server
+          certificates.
         </p>
-    </div>
+      </div>
     )
   },
   {
@@ -140,12 +139,12 @@ const features = [
     description: (
       <div>
         <p>
-          If you need it, full support for IHE’s ATNA profile is provided.
-          Both node authentication and audit trails are supported. The
-          OpenHIM also provides a full ATNA audit repository
-          implementation and advanced audit viewer.
+          If you need it, full support for IHE’s ATNA profile is provided. Both
+          node authentication and audit trails are supported. The OpenHIM also
+          provides a full ATNA audit repository implementation and advanced
+          audit viewer.
         </p>
-    </div>
+      </div>
     )
   },
   {
@@ -154,11 +153,10 @@ const features = [
     description: (
       <div>
         <p>
-          User alerts can be configured for when requests fail or a
-          particular failure rate is exceeded. Users can be notified via
-          email or sms.
+          User alerts can be configured for when requests fail or a particular
+          failure rate is exceeded. Users can be notified via email or sms.
         </p>
-    </div>
+      </div>
     )
   },
   {
@@ -167,11 +165,11 @@ const features = [
     description: (
       <div>
         <p>
-          The OpenHIM is scalable to handle large transaction loads. It
-          supports same server and multi-server clusters and uses MongoDB
-          as a database which is also massively scalable.
+          The OpenHIM is scalable to handle large transaction loads. It supports
+          same server and multi-server clusters and uses MongoDB as a database
+          which is also massively scalable.
         </p>
-    </div>
+      </div>
     )
   },
   {
@@ -180,12 +178,11 @@ const features = [
     description: (
       <div>
         <p>
-          If failures occur the OpenHIM can re-run requests to your
-          services if your client systems are not able to. It allows you
-          to review and bulk re-run requests or re-run individual
-          requests.
+          If failures occur the OpenHIM can re-run requests to your services if
+          your client systems are not able to. It allows you to review and bulk
+          re-run requests or re-run individual requests.
         </p>
-    </div>
+      </div>
     )
   },
   {
@@ -194,11 +191,11 @@ const features = [
     description: (
       <div>
         <p>
-          The OpenHIM used the latest technologies such as Node.js and
-          MongoDB to ensure that it doesn’t introduce any significant
-          overhead to your requests.
+          The OpenHIM used the latest technologies such as Node.js and MongoDB
+          to ensure that it doesn’t introduce any significant overhead to your
+          requests.
         </p>
-    </div>
+      </div>
     )
   }
 ]
@@ -226,22 +223,25 @@ function Home() {
       title={siteConfig.title}
       description="Console for administrating the OpenHIM Core"
     >
-      <header
-        className={classnames('hero', styles.heroBanner)}
-      >
+      <header className={classnames('hero', styles.heroBanner)}>
         <div className="container">
-          <img className="logo_header" src="img/openhim-logo-green.svg" alt="Project Logo" />
+          <img
+            className="logo_header"
+            src="img/openhim-logo-green.svg"
+            alt="Project Logo"
+          />
           <p className="hero__subtitle subtitle">{siteConfig.tagline}</p>
           <div className="container">
             <p className="summary">
-              The <strong>Open Health Information Mediator</strong> (OpenHIM)
-              is a middleware component designed to ease interoperability
-              between disparate information systems. It provides secure
-              communications and data governance as well as support for
-              routing, orchestrating and translating requests as they flow
-              between systems.
+              The <strong>Open Health Information Mediator</strong> (OpenHIM) is
+              a middleware component designed to ease interoperability between
+              disparate information systems. It provides secure communications
+              and data governance as well as support for routing, orchestrating
+              and translating requests as they flow between systems.
             </p>
-            <p className="summary">Connecting health systems simply, securely and safely.</p>
+            <p className="summary">
+              Connecting health systems simply, securely and safely.
+            </p>
           </div>
         </div>
       </header>
