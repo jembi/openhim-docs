@@ -2,6 +2,12 @@
 id: read
 title: Read Visualizer/s
 sidebar_label: Read
+keywords:
+  - OpenHIM
+  - API
+  - Visualizer
+  - Read
+description: Read OpenHIM Visualizers via the API
 ---
 
 import Tabs from '@theme/Tabs';
@@ -42,7 +48,7 @@ Copy the below code at the bottom of your nodejs script that handles the authent
 Replace the `openhimOptions` values with the correct implementation details
 
 ```javascript
-// append below code to the "openhim-api.js" script containing the authentication methods. 
+// append below code to the "openhim-api.js" script containing the authentication methods.
 // This is described within the authentication section
 
 (async () => {

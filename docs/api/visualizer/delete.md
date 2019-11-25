@@ -2,6 +2,12 @@
 id: delete
 title: Delete visualizer
 sidebar_label: Delete
+keywords:
+  - OpenHIM
+  - API
+  - Visualizer
+  - Delete
+description: Delete an OpenHIM Visualizer via the API
 ---
 
 import Tabs from '@theme/Tabs';
@@ -9,7 +15,7 @@ import TabItem from '@theme/TabItem';
 
 To delete a visualizer record you will need to make a TLS request to the OpenHIM API for the below method and endpoint.
 
-## Delete visualizer
+## Delete a specific visualizer record
 
 ```curl
 Method: DELETE

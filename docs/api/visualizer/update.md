@@ -2,6 +2,12 @@
 id: update
 title: Update an existing visualizer
 sidebar_label: Update
+keywords:
+  - OpenHIM
+  - API
+  - Visualizer
+  - Update
+description: Update an OpenHIM Visualizer via the API
 ---
 
 ## Update visualizer
