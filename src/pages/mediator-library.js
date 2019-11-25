@@ -8,15 +8,15 @@ import classnames from 'classnames';
 
 function MediatorDetails(props) {
   return (
-    <div>
-      <div>
+    <div className="card mediator_box_shadow">
+      <div className="card__header">
         <h2>
           <a href={'https://github.com/' + props.data.full_name}>
             {props.data.name}
           </a>
         </h2>
       </div>
-      <div>
+      <div className="card__body">
         {props.data.description && (
           <p>{props.data.description}</p>
         )}
@@ -31,7 +31,6 @@ function MediatorDetails(props) {
           </a>
         </p>
       </div>
-      <hr />
     </div>
   )
 }
@@ -87,7 +86,8 @@ function MediatorLibrary() {
     <Layout>
       <header className={classnames('hero center', styles.heroBanner)}>
         <div className="container">
-          <h1 className="hero__title">OpenHIM Mediator Library</h1>
+          <img className="logo_header" src="img/openhim-logo-green.svg" alt="Project Logo" />
+          <h1 className="subtitle">Mediator Library</h1>
           <p>
             This is like the app store for the OpenHIM. Here you will find a
             number of mediators that are designed to extend the OpenHIM's
@@ -102,7 +102,7 @@ function MediatorLibrary() {
           </p>
           <div className={styles.buttons}>
             <Link
-              className={classnames("button button--secondary button--lg")}
+              className={classnames("button button--outline button--lg")}
               href="/openhim-docs/docs/introduction/about"
             >
               Create a new mediator »
@@ -111,7 +111,7 @@ function MediatorLibrary() {
         </div>
       </header>
       <main>
-        <div className="container padding-vert center mediator_description_max_width">
+        <div className="container center mediator_page_max_width">
           <MediatorListContainer />
         </div>
       </main>

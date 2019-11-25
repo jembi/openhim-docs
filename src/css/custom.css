@@ -17,7 +17,7 @@
   --ifm-color-primary-dark: rgb(33, 175, 144);
   --ifm-color-primary-darker: rgb(31, 165, 136);
   --ifm-color-primary-darkest: rgb(26, 136, 112);
-  --ifm-color-primary-light: rgb(70, 203, 174);
+  --ifm-color-primary-light: #E9F5EF;
   --ifm-color-primary-lighter: rgb(102, 212, 189);
   --ifm-color-primary-lightest:#E9F5EF;
 }
@@ -69,13 +69,14 @@
 }
 
 .home .row .col {
-  --ifm-col-width: 42%;
+  --ifm-col-width: 35%;
   max-width: var(--ifm-col-width);
 }
 
 .feature {
-  align-items: center;
   display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100%;
 }
 
@@ -105,10 +106,25 @@
   margin: 0.5em
 }
 
-.mediator_description_max_width {
+.mediator_page_max_width {
   max-width: 50%;
 }
 
 .hero {
   background-color: var(--ifm-color-primary-lightest);
+}
+
+.odd_item {
+  background: var(--ifm-color-primary-lightest);
+}
+
+.mediator_box_shadow {
+  background-color: var(--ifm-color-primary-light);
+  margin-top: 2em;
+  margin-bottom: 2em;
+  box-shadow: 5px 7px 6px 1px #e0dde0;
+}
+
+.logo_header {
+  max-height: 8em;
 }

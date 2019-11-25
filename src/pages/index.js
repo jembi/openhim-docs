@@ -209,14 +209,14 @@ const features = [
   }
 ]
 
-function Feature({ imageUrl, title, description }) {
+function Feature({ imageUrl, title, description, id }) {
   const imgUrl = useBaseUrl(imageUrl)
   return (
-    <div className="row feature">
-      <div className="col padding-vert center">
-        <img src={imgUrl} alt={title} />
+    <div className={"row padding-vert feature " + ((id % 2) === 1 ? "odd_item" : '')}>
+      <div className="col center">
+        <img className="padding-horizontal" src={imgUrl} alt={title} />
       </div>
-      <div className="col col--offset-1 padding-vert">
+      <div className="col col--offset-1">
         <h2 className="subtitle">{title}</h2>
         <div>{description}</div>
       </div>
@@ -257,10 +257,13 @@ function Home() {
       </header>
       <main>
         {features && features.length && (
-          <div className="container home">
-            {features.map((props, idx) => (
-              <Feature key={idx} {...props} />
-            ))}
+          <div className="home">
+            {features.map((props, idx) => {
+              props.id = idx
+              return(
+                <Feature key={idx} {...props} />
+              )}
+            )}
           </div>
         )}
       </main>

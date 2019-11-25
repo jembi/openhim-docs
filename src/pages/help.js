@@ -136,14 +136,12 @@ function Help() {
         className={classnames('hero center', styles.heroBanner)}
       >
         <div className="container">
-          <h1 className="hero__title">Need help?</h1>
-          <p className="hero__subtitle">
-            This project is maintained by a dedicated group of people.
-          </p>
+          <img className="logo_header" src="img/openhim-logo-green.svg" alt="Project Logo" />
+          <h1 className="subtitle">Need help?</h1>
         </div>
       </header>
       <main>
-        <div className="container padding-vert center">
+        <div className="container padding center">
           {supportLinks.map(({ title, content }) => (
             <div className="container">
               <h2 className="subtitle">{title}</h2>
