@@ -60,6 +60,26 @@ function Tutorials() {
   )
 }
 
+function BrowseDocs() {
+  return(
+    <div>
+      <h2 className="tutorial_title subtitle">Browse the OpenHIM docs</h2>
+      <div className="help_section_container">
+        <div className="help_page_card card_box_shadow">
+          <div className="help_card_content">
+            <h3>For your convenience, all documentation is located here</h3>
+            <p>
+              For user and implementor guides please see the sections labelled <b>Docs</b>.
+              <br />
+              For developer guides please see the section labelled <b>API</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 const bugsAndFeaturesContent = [
   {
     title: 'OpenHIM Core',
@@ -115,18 +135,6 @@ function BugsAndFeatures() {
 
 function Help() {
   const supportLinks = [
-    {
-      content: (
-        <p>
-          Learn more using the{' '}
-          <a href={useBaseUrl('introduction/about')}>
-            documentation on this site
-          </a>
-          .
-        </p>
-      ),
-      title: 'Browse OpenHIM Docs'
-    },
     {
       content: (
         <div>
@@ -201,6 +209,7 @@ function Help() {
       </header>
       <main>
         <Tutorials />
+        <BrowseDocs />
         <BugsAndFeatures />
         <div className="container padding center">
           {supportLinks.map(({ title, content }) => (
