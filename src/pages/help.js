@@ -175,7 +175,7 @@ function Help() {
             src="img/openhim-logo-green.svg"
             alt="Project Logo"
           />
-          <h1 className="subtitle">What do you need?</h1>
+          <p className="hero__subtitle subtitle">What do you need?</p>
         </div>
       </header>
       <main>
