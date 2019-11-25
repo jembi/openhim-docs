@@ -12,53 +12,87 @@ import { styles } from 'ansi-colors'
 import classnames from 'classnames'
 import GitHubButton from 'react-github-btn'
 
+const videoData = [{
+  title: 'OpenHIM Setup Tutorial (Development Environment)',
+  src: 'https://www.youtube.com/embed/F0bTS3qJlG0',
+  description:
+    `The Open Health Information Mediator(OpenHIM) is a middleware
+    component designed to allow data transfer between diverse information
+    systems by routing, orchestrating and translating requests as they
+    flow between systems.`
+  ,
+}, {
+  title: 'OpenHIM Mediator Code Along Tutorial',
+  src: 'https://www.youtube.com/embed/s-l60WMiZw8',
+  description:
+    `Create a Scaffold OpenHIM Mediator and Register it with your local
+    OpenHIM instance.`
+  ,
+}]
+
+function Tutorials() {
+  return (
+    <div>
+      <h2 className="tutorial_title">Setup Tutorials</h2>
+      <div className="mediator_box_container">
+        {videoData.map(({title, description, src}) => (
+          <div className="help_page_card">
+
+            <div className="video_wrapper">
+              <iframe
+                src={src}
+                frameBorder="0"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+                title="video"
+                className="video_frame"
+              />
+            </div>
+
+            <div className="help_card_content">
+              <h3>{title}</h3>
+               <p>{description}</p>
+            </div>
+          </div>
+        ))}
+    </div>
+  </div>
+  )
+}
+
 function Help() {
   const supportLinks = [
     {
       title: 'Log Bugs and request features!',
       content: (
         <div>
-          <p>
-            We appreciate your feedback!
-          </p>
-          <div className="button_row">
-            <div className="button_padding">
-              <GitHubButton
-                href="https://github.com/jembi/openhim-core-js/issues"
-                data-color-scheme="no-preference: dark; light: light; dark: dark;"
-                data-size="large"
-                aria-label="Issue jembi/openhim-core-js on GitHub"
-              >
-                Log OpenHIM Core Issue
-              </GitHubButton>
-            </div>
-            <div className="button_padding">
-              <GitHubButton
-                href="https://github.com/jembi/openhim-console/issues"
-                data-color-scheme="no-preference: dark; light: light; dark: dark;"
-                data-size="large"
-                aria-label="Issue jembi/openhim-console on GitHub"
-              >
-                Log OpenHIM Console Issue
-              </GitHubButton>
-            </div>
+          <p>We appreciate your feedback!</p>
+        </div>
+      ),
+      links: (
+        <div className="button_row">
+          <div className="button_padding">
+            <GitHubButton
+              href="https://github.com/jembi/openhim-core-js/issues"
+              data-color-scheme="no-preference: dark; light: light; dark: dark;"
+              data-size="large"
+              aria-label="Issue jembi/openhim-core-js on GitHub"
+            >
+              Log OpenHIM Core Issue
+            </GitHubButton>
+          </div>
+          <div className="button_padding">
+            <GitHubButton
+              href="https://github.com/jembi/openhim-console/issues"
+              data-color-scheme="no-preference: dark; light: light; dark: dark;"
+              data-size="large"
+              aria-label="Issue jembi/openhim-console on GitHub"
+            >
+              Log OpenHIM Console Issue
+            </GitHubButton>
           </div>
         </div>
       )
-    },
-    {
-      content: (
-        <div>
-          <p>
-            Check out our{' '}
-            <a href="https://www.youtube.com/channel/UCz3UpAGDJbKG7KkorgMGfEA">
-              OpenHIM YouTube channel
-            </a>{' '}
-            (and subscribe)
-          </p>
-        </div>
-      ),
-      title: 'Watch our OpenHIM tutorials'
     },
     {
       content: (
@@ -100,7 +134,9 @@ function Help() {
       title: 'Stay up to date',
       content: (
         <div>
-          <p>&#127775; and watch our Github repositories to keep up with the latest releases.</p>
+          <p>
+            &#127775; and watch our Github repositories to keep up with the latest releases.
+          </p>
           <div className="button_row">
             <div className="button_padding">
               <GitHubButton
@@ -132,15 +168,18 @@ function Help() {
 
   return (
     <Layout>
-      <header
-        className={classnames('hero center', styles.heroBanner)}
-      >
+      <header className={classnames('hero center', styles.heroBanner)}>
         <div className="container">
-          <img className="logo_header" src="img/openhim-logo-green.svg" alt="Project Logo" />
-          <h1 className="subtitle">Need help?</h1>
+          <img
+            className="logo_header"
+            src="img/openhim-logo-green.svg"
+            alt="Project Logo"
+          />
+          <h1 className="subtitle">What do you need?</h1>
         </div>
       </header>
       <main>
+        <Tutorials />
         <div className="container padding center">
           {supportLinks.map(({ title, content }) => (
             <div className="container">
