@@ -12,12 +12,6 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import useBaseUrl from '@docusaurus/useBaseUrl'
 import styles from './styles.module.css'
 
-function SplashContainer(props) {
-  return (
-    <div className="container">{props.children}</div>
-  )
-}
-
 const features = [
   {
     title: <>About</>,
@@ -236,23 +230,19 @@ function Home() {
         className={classnames('hero', styles.heroBanner)}
       >
         <div className="container">
-          <SplashContainer>
-            <h1>
-              <img src="img/openhim-logo-green.svg" alt="Project Logo" />
-            </h1>
-            <p className="hero__subtitle subtitle">{siteConfig.tagline}</p>
-            <div className="container">
-              <p className="summary">
-                The <strong>Open Health Information Mediator</strong> (OpenHIM)
-                is a middleware component designed to ease interoperability
-                between disparate information systems. It provides secure
-                communications and data governance as well as support for
-                routing, orchestrating and translating requests as they flow
-                between systems.
-              </p>
-              <p className="summary">Connecting health systems simply, securely and safely.</p>
-            </div>
-          </SplashContainer>
+          <img className="logo_header" src="img/openhim-logo-green.svg" alt="Project Logo" />
+          <p className="hero__subtitle subtitle">{siteConfig.tagline}</p>
+          <div className="container">
+            <p className="summary">
+              The <strong>Open Health Information Mediator</strong> (OpenHIM)
+              is a middleware component designed to ease interoperability
+              between disparate information systems. It provides secure
+              communications and data governance as well as support for
+              routing, orchestrating and translating requests as they flow
+              between systems.
+            </p>
+            <p className="summary">Connecting health systems simply, securely and safely.</p>
+          </div>
         </div>
       </header>
       <main>

@@ -8,7 +8,7 @@ import classnames from 'classnames';
 
 function MediatorDetails(props) {
   return (
-    <div className="card mediator_box_shadow">
+    <div className="card card_box_shadow mediator_card_padding">
       <div className="card__header">
         <h2>
           <a href={'https://github.com/' + props.data.full_name}>
@@ -87,15 +87,15 @@ function MediatorLibrary() {
       <header className={classnames('hero center', styles.heroBanner)}>
         <div className="container">
           <img className="logo_header" src="img/openhim-logo-green.svg" alt="Project Logo" />
-          <h1 className="subtitle">Mediator Library</h1>
-          <p>
+          <p className="hero__subtitle subtitle">Mediator Library</p>
+          <p className="summary">
             This is like the app store for the OpenHIM. Here you will find a
             number of mediators that are designed to extend the OpenHIM's
             functionality for a specific purpose. Browse the mediators below to
             see if any suit your needs. If not, then it is easy to create your
             own.
           </p>
-          <p>
+          <p className="summary">
             To get your own mediator published here all you need to do is follow
             the github repository naming convention. Any public repository
             beginning with "openhim-mediator" will be displayed here.

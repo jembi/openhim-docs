@@ -33,10 +33,10 @@ const videoData = [{
 function Tutorials() {
   return (
     <div>
-      <h2 className="tutorial_title">Setup Tutorials</h2>
-      <div className="mediator_box_container">
+      <h2 className="tutorial_title subtitle">Setup Tutorials</h2>
+      <div className="help_section_container">
         {videoData.map(({title, description, src}) => (
-          <div className="help_page_card">
+          <div className="help_page_card card_box_shadow">
 
             <div className="video_wrapper">
               <iframe
@@ -60,52 +60,81 @@ function Tutorials() {
   )
 }
 
+function BrowseDocs() {
+  return(
+    <div>
+      <h2 className="tutorial_title subtitle">Browse the OpenHIM docs</h2>
+      <div className="help_section_container">
+        <div className="help_page_card card_box_shadow">
+          <div className="help_card_content">
+            <h3>For your convenience, all documentation is located here</h3>
+            <p>
+              For user and implementor guides please see the sections labelled <b>Docs</b>.
+              <br />
+              For developer guides please see the section labelled <b>API</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+const bugsAndFeaturesContent = [
+  {
+    title: 'OpenHIM Core',
+    description:
+      'The OpenHIM core component is responsible for providing a single entry-point into a system. It is provides, transaction logging, client authentication, ATNA logging, and transaction rerun functionality. Therefore, bug reports and feature requests relating to core functionality can be made in this GitHub repo.',
+    button: (
+      <GitHubButton
+        href="https://github.com/jembi/openhim-core-js/issues"
+        data-color-scheme="no-preference: dark; light: light; dark: dark;"
+        data-size="large"
+        aria-label="Issue jembi/openhim-core-js on GitHub"
+      >
+        Issue
+      </GitHubButton>
+    )
+  },
+  {
+    title: 'OpenHIM Console',
+    description: 'A webApp that provides a management console for the OpenHIM. Therefore, visual bug reports and feature requests for the OpenHIM can be made in this GitHub repo.',
+    button: (
+      <GitHubButton
+      href="https://github.com/jembi/openhim-console/issues"
+      data-color-scheme="no-preference: dark; light: light; dark: dark;"
+      data-size="large"
+      aria-label="Issue jembi/openhim-console on GitHub"
+    >
+      Issue
+    </GitHubButton>
+    )
+  }
+]
+
+function BugsAndFeatures() {
+  return (
+    <div>
+      <h2 className="tutorial_title subtitle">Report a Bug or Request a Feature</h2>
+      <div className="help_section_container">
+        {
+          bugsAndFeaturesContent.map(({title, description, button}) => (
+            <div className="help_page_card card_box_shadow">
+              <div className="help_card_content">
+                <h3>{title}</h3>
+                <p>{description}</p>
+                {button}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  )
+}
+
 function Help() {
   const supportLinks = [
-    {
-      title: 'Log Bugs and request features!',
-      content: (
-        <div>
-          <p>We appreciate your feedback!</p>
-        </div>
-      ),
-      links: (
-        <div className="button_row">
-          <div className="button_padding">
-            <GitHubButton
-              href="https://github.com/jembi/openhim-core-js/issues"
-              data-color-scheme="no-preference: dark; light: light; dark: dark;"
-              data-size="large"
-              aria-label="Issue jembi/openhim-core-js on GitHub"
-            >
-              Log OpenHIM Core Issue
-            </GitHubButton>
-          </div>
-          <div className="button_padding">
-            <GitHubButton
-              href="https://github.com/jembi/openhim-console/issues"
-              data-color-scheme="no-preference: dark; light: light; dark: dark;"
-              data-size="large"
-              aria-label="Issue jembi/openhim-console on GitHub"
-            >
-              Log OpenHIM Console Issue
-            </GitHubButton>
-          </div>
-        </div>
-      )
-    },
-    {
-      content: (
-        <p>
-          Learn more using the{' '}
-          <a href={useBaseUrl('introduction/about')}>
-            documentation on this site
-          </a>
-          .
-        </p>
-      ),
-      title: 'Browse OpenHIM Docs'
-    },
     {
       content: (
         <div>
@@ -175,11 +204,13 @@ function Help() {
             src="img/openhim-logo-green.svg"
             alt="Project Logo"
           />
-          <h1 className="subtitle">What do you need?</h1>
+          <p className="hero__subtitle subtitle">What do you need?</p>
         </div>
       </header>
       <main>
         <Tutorials />
+        <BrowseDocs />
+        <BugsAndFeatures />
         <div className="container padding center">
           {supportLinks.map(({ title, content }) => (
             <div className="container">

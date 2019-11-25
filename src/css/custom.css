@@ -17,9 +17,8 @@
   --ifm-color-primary-dark: rgb(33, 175, 144);
   --ifm-color-primary-darker: rgb(31, 165, 136);
   --ifm-color-primary-darkest: rgb(26, 136, 112);
-  --ifm-color-primary-light: #E9F5EF;
+  --ifm-color-primary-light: #0E7139;
   --ifm-color-primary-lighter: rgb(102, 212, 189);
-  --ifm-color-primary-lightest:#E9F5EF;
   --ifm-color-primary-lightest:#E9F5EF;
 }
 
@@ -95,7 +94,7 @@
 }
 
 .summary {
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 
 .button_row {
@@ -119,11 +118,13 @@
   background: var(--ifm-color-primary-lightest);
 }
 
-.mediator_box_shadow {
-  background-color: var(--ifm-color-primary-light);
+.mediator_card_padding {
   margin-top: 2em;
   margin-bottom: 2em;
-  box-shadow: 5px 7px 6px 1px #e0dde0;
+}
+
+.card_box_shadow {
+  box-shadow: 0 0 20px 0 rgba(0,0,0,.2);
 }
 
 .logo_header {
@@ -142,9 +143,7 @@
   min-width: 360px;
   margin: 0 auto 4em auto;
   overflow: hidden;
-  background-color: var(--ifm-color-primary-light);
-  border-radius:  var(--ifm-card-border-radius);
-  box-shadow: 0 0 20px 0 rgba(0,0,0,.2);
+  border-radius: var(--ifm-card-border-radius);
 }
 
 .help_card_content {
@@ -155,7 +154,7 @@
   margin-top: 2em;
 }
 
-.mediator_box_container {
+.help_section_container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -174,10 +173,12 @@
 .video_frame {
   position: absolute;
   border-radius: var(--ifm-card-border-radius);
-  background-color: var(--ifm-color-primary-light);
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
 }
 
+.button.button--outline:hover {
+  color: var(--ifm-color-primary-light)
+}
