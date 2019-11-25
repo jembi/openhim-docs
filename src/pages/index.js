@@ -203,10 +203,10 @@ const features = [
   }
 ]
 
-function Feature({ imageUrl, title, description, id }) {
+function Feature({ imageUrl, title, description }) {
   const imgUrl = useBaseUrl(imageUrl)
   return (
-    <div className={"row padding-vert feature " + ((id % 2) === 1 ? "odd_item" : '')}>
+    <div className="row padding-vert feature even_item">
       <div className="col center">
         <img className="padding-horizontal" src={imgUrl} alt={title} />
       </div>
@@ -248,12 +248,9 @@ function Home() {
       <main>
         {features && features.length && (
           <div className="home">
-            {features.map((props, idx) => {
-              props.id = idx
-              return(
-                <Feature key={idx} {...props} />
-              )}
-            )}
+            {features.map((props, idx) => (
+              <Feature key={idx} {...props} />
+            ))}
           </div>
         )}
       </main>

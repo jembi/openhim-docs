@@ -114,7 +114,7 @@
   background-color: var(--ifm-color-primary-lightest);
 }
 
-.odd_item {
+.even_item:nth-child(even) {
   background: var(--ifm-color-primary-lightest);
 }
 
