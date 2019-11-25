@@ -8,7 +8,7 @@ import classnames from 'classnames';
 
 function MediatorDetails(props) {
   return (
-    <div className="card mediator_box_shadow">
+    <div className="card card_box_shadow mediator_card_padding">
       <div className="card__header">
         <h2>
           <a href={'https://github.com/' + props.data.full_name}>

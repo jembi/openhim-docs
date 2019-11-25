@@ -33,10 +33,10 @@ const videoData = [{
 function Tutorials() {
   return (
     <div>
-      <h2 className="tutorial_title">Setup Tutorials</h2>
+      <h2 className="tutorial_title subtitle">Setup Tutorials</h2>
       <div className="mediator_box_container">
         {videoData.map(({title, description, src}) => (
-          <div className="help_page_card">
+          <div className="help_page_card card_box_shadow">
 
             <div className="video_wrapper">
               <iframe
