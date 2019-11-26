@@ -16,6 +16,7 @@ const features = [
   {
     title: <>About</>,
     imageUrl: 'img/jembi-heal.png',
+    imagePlacement: 'left',
     description: (
       <div>
         <p>
@@ -55,6 +56,7 @@ const features = [
   {
     title: <>Mediators</>,
     imageUrl: 'img/plug-solid.png',
+    imagePlacement: 'right',
     description: (
       <div>
         <p>
@@ -77,6 +79,7 @@ const features = [
   {
     title: <>Acts as a reverse proxy for web services</>,
     imageUrl: 'img/OpenHIM-reverse-proxy.png',
+    imagePlacement: 'left',
     description: (
       <div>
         <p>
@@ -90,6 +93,7 @@ const features = [
   {
     title: <>Gain visibility into your SOA</>,
     imageUrl: 'img/console.gif',
+    imagePlacement: 'right',
     description: (
       <div>
         <p>
@@ -103,6 +107,7 @@ const features = [
   {
     title: <>Extend the OpenHIM's request processing via mediators</>,
     imageUrl: 'img/mediators.png',
+    imagePlacement: 'left',
     description: (
       <div>
         <p>
@@ -122,6 +127,7 @@ const features = [
   {
     title: <>Secure access to your web services</>,
     imageUrl: 'img/certs.png',
+    imagePlacement: 'right',
     description: (
       <div>
         <p>
@@ -136,6 +142,7 @@ const features = [
   {
     title: <>ATNA: audit repository and node authentication</>,
     imageUrl: 'img/audit.png',
+    imagePlacement: 'left',
     description: (
       <div>
         <p>
@@ -150,6 +157,7 @@ const features = [
   {
     title: <>Alerting, for when things go wrong</>,
     imageUrl: 'img/alerts.png',
+    imagePlacement: 'right',
     description: (
       <div>
         <p>
@@ -162,6 +170,7 @@ const features = [
   {
     title: <>Massively scalable</>,
     imageUrl: 'img/cluster.png',
+    imagePlacement: 'left',
     description: (
       <div>
         <p>
@@ -175,6 +184,7 @@ const features = [
   {
     title: <>Re-run failed transactions</>,
     imageUrl: 'img/rerun.png',
+    imagePlacement: 'right',
     description: (
       <div>
         <p>
@@ -188,6 +198,7 @@ const features = [
   {
     title: <>Minimal transaction overhead</>,
     imageUrl: 'img/node-mongo.png',
+    imagePlacement: 'left',
     description: (
       <div>
         <p>
@@ -200,19 +211,34 @@ const features = [
   }
 ]
 
-function Feature({ imageUrl, title, description }) {
+function Feature({ imageUrl, title, imagePlacement, description }) {
   const imgUrl = useBaseUrl(imageUrl)
-  return (
-    <div className="row padding-vert feature even_item">
-      <div className="col center">
-        <img className="padding-horizontal" src={imgUrl} alt={title} />
+
+  if (imagePlacement === 'left') {
+    return (
+      <div className="row padding-vert feature even_item">
+        <div className="col center">
+          <img className="padding-horizontal" src={imgUrl} alt={title} />
+        </div>
+        <div className="col col--offset-1">
+          <h2 className="subtitle">{title}</h2>
+          <div>{description}</div>
+        </div>
       </div>
-      <div className="col col--offset-1">
-        <h2 className="subtitle">{title}</h2>
-        <div>{description}</div>
+    )
+  } else {
+    return (
+      <div className="row padding-vert feature even_item">
+        <div className="col">
+          <h2 className="subtitle">{title}</h2>
+          <div>{description}</div>
+        </div>
+        <div className="col col--offset-1 center">
+          <img className="padding-horizontal" src={imgUrl} alt={title} />
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 function Home() {
