@@ -17,9 +17,9 @@
   --ifm-color-primary-dark: rgb(33, 175, 144);
   --ifm-color-primary-darker: rgb(31, 165, 136);
   --ifm-color-primary-darkest: rgb(26, 136, 112);
-  --ifm-color-primary-light: #0E7139;
+  --ifm-color-primary-light: #0e7139;
   --ifm-color-primary-lighter: rgb(102, 212, 189);
-  --ifm-color-primary-lightest:#E9F5EF;
+  --ifm-color-primary-lightest: #e9f5ef;
 }
 
 .docusaurus-highlight-code-line {
@@ -53,10 +53,14 @@
 }
 
 @keyframes spin {
-  to { -webkit-transform: rotate(360deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
 @-webkit-keyframes spin {
-  to { -webkit-transform: rotate(360deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
 .footer .footer__logo {
@@ -90,7 +94,7 @@
 }
 
 .subtitle {
-  color: var(--ifm-color-primary)
+  color: var(--ifm-color-primary);
 }
 
 .summary {
@@ -103,7 +107,7 @@
 }
 
 .button_padding {
-  margin: 0.5em
+  margin: 0.5em;
 }
 
 .mediator_page_max_width {
@@ -114,7 +118,7 @@
   background-color: var(--ifm-color-primary-lightest);
 }
 
-.odd_item {
+.even_item:nth-child(even) {
   background: var(--ifm-color-primary-lightest);
 }
 
@@ -124,7 +128,7 @@
 }
 
 .card_box_shadow {
-  box-shadow: 0 0 20px 0 rgba(0,0,0,.2);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 .logo_header {
@@ -180,5 +184,5 @@
 }
 
 .button.button--outline:hover {
-  color: var(--ifm-color-primary-light)
+  color: var(--ifm-color-primary-light);
 }
