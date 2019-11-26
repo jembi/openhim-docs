@@ -232,14 +232,14 @@ function Home() {
           />
           <p className="hero__subtitle subtitle">{siteConfig.tagline}</p>
           <div className="container">
-            <p className="summary">
+            <p>
               The <strong>Open Health Information Mediator</strong> (OpenHIM) is
               a middleware component designed to ease interoperability between
               disparate information systems. It provides secure communications
               and data governance as well as support for routing, orchestrating
               and translating requests as they flow between systems.
             </p>
-            <p className="summary">
+            <p>
               Connecting health systems simply, securely and safely.
             </p>
           </div>
