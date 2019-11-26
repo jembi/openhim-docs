@@ -111,6 +111,7 @@ Payload: JSON object of the user record
 
   ```json
   {
+    "_id": "123e4567-e89b-12d3-a456-426655440000",
     "settings": {
       "list": {},
       "filter": {
