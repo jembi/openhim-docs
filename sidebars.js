@@ -107,6 +107,7 @@ module.exports = {
       "api/import-export/delete"
     ],
     "Roles": [
+      "api/roles/overview", 
       "api/roles/create", 
       "api/roles/read", 
       "api/roles/update", 
