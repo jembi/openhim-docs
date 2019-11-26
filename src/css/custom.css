@@ -20,6 +20,9 @@
   --ifm-color-primary-light: #0e7139;
   --ifm-color-primary-lighter: rgb(102, 212, 189);
   --ifm-color-primary-lightest: #e9f5ef;
+  --ifm-font-size-base: 18px;
+  --ifm-line-height-base: 1.8;
+  --ifm-h2-font-size: 2rem;
 }
 
 .docusaurus-highlight-code-line {
@@ -95,10 +98,6 @@
 
 .subtitle {
   color: var(--ifm-color-primary);
-}
-
-.summary {
-  font-size: 1.2em;
 }
 
 .button_row {
@@ -185,4 +184,13 @@
 
 .button.button--outline:hover {
   color: var(--ifm-color-primary-light);
+}
+
+.p {
+  line-height: 1.8;
+  font-size: 18px
+}
+
+.hero .hero__subtitle {
+  font-size: 2rem;
 }
