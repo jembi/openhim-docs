@@ -17,7 +17,6 @@ import TabItem from '@theme/TabItem';
 
 To update an existing visualizer record you will need to make a TLS request to the OpenHIM API for the below method and endpoint and supply the updated JSON object for the visualizer record.
 
-
 ```curl
 Method: PUT
 Endpoint: {openhim_url}:8080/visualizers/:visualizerId
