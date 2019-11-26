@@ -18,7 +18,7 @@
   --ifm-color-primary-darker: rgb(31, 165, 136);
   --ifm-color-primary-darkest: rgb(26, 136, 112);
   --ifm-color-primary-light: #0e7139;
-  --ifm-color-primary-lighter: rgb(102, 212, 189);
+  --ifm-color-primary-lighter: #C2D5C8;
   --ifm-color-primary-lightest: #e9f5ef;
 }
 
@@ -134,7 +134,7 @@
   background: var(--ifm-color-primary-lightest);
 }
 
-.mediator_card_padding {
+.margin-2em-y {
   margin-top: 2em;
   margin-bottom: 2em;
 }
@@ -199,7 +199,6 @@
   color: var(--ifm-color-primary-light);
 }
 
-
 .page{}
 
 .page p {
@@ -213,4 +212,15 @@
 
 .hero .hero__subtitle {
   font-size: 2rem;
+}
+
+.auxillary_info {
+  opacity: 75%;
+  font-size: 14px!important;
+}
+
+.card_header_color{
+  background: var(--ifm-color-primary-lighter);
+  /* Can't change this bottom padding without using important... Causes problems elsewhere */
+  padding-bottom: 1rem!important;
 }

@@ -7,23 +7,29 @@ import classnames from 'classnames'
 
 function MediatorDetails(props) {
   return (
-    <div className="card card_box_shadow mediator_card_padding">
-      <div className="card__header">
-        <h2>
-          <a href={'https://github.com/' + props.data.full_name}>
-            {props.data.name}
-          </a>
+    <div className="card card_box_shadow margin-2em-y">
+      <div className="card__header card_header_color">
+        <h2 className="subtitle">
+          {
+            /openhim-mediator-(.*?)(?:\s|$)/g.exec(props.data.name)[1]
+          }
         </h2>
       </div>
       <div className="card__body">
         {props.data.description && <p>{props.data.description}</p>}
-        <p>
+        <p className="auxillary_info">
           {props.data.stargazers_count} &#127775; - Written in{' '}
           <b>{props.data.language}</b> - Developed by{' '}
           <a href={props.data.owner.html_url}>
             <b>{props.data.owner.login}</b>
           </a>
         </p>
+        <Link
+          className={classnames('button button--outline')}
+          href={'https://github.com/' + props.data.full_name}
+        >
+          View mediator on Github
+        </Link>
       </div>
     </div>
   )
