@@ -35,6 +35,26 @@ function MediatorDetails(props) {
   )
 }
 
+function CreateYourOwn() {
+  return (
+  <div className="card card_box_shadow margin-2em-y">
+      <div className="card__header card_header_color">
+        <h2 className="subtitle">
+          Don't See what you need?
+        </h2>
+      </div>
+      <div className="card__body">
+        <Link
+          className={classnames('button button--outline')}
+          href="/openhim-docs/docs/introduction/about"
+          >
+            Create Your Own >>
+        </Link>
+        </div>
+  </div>
+  )
+}
+
 class MediatorListContainer extends Component {
   constructor() {
     super()
@@ -76,7 +96,7 @@ class MediatorListContainer extends Component {
       var nodes = this.state.data.map(function(item) {
         return <MediatorDetails key={item.id} data={item} />
       })
-      return <div>{nodes}</div>
+      return <div>{nodes}<CreateYourOwn /></div>
     }
   }
 }
