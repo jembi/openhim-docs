@@ -110,7 +110,19 @@
 }
 
 .mediator_page_max_width {
-  max-width: 50%;
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .mediator_page_max_width {
+    max-width: 75%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .mediator_page_max_width {
+    max-width: 50%;
+  }
 }
 
 .hero {
