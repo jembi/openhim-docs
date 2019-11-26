@@ -17,7 +17,6 @@ import TabItem from '@theme/TabItem';
 
 To create a user, you will need to make a TLS request to the OpenHIM API for the below method and endpoint and supply the JSON object for the user.
 
-
 ```curl
 Method: POST
 Endpoint: {openhim_url}:8080/users
@@ -46,13 +45,30 @@ Payload: JSON object of the user
   }>
   <TabItem value="nodejs">
 
-  Copy the below code at the bottom of your nodejs script that handles the authentication of the OpenHIM headers as described in the [authentication section](../introduction/authentication.md). 
+  Copy the below code at the bottom of your nodejs script that handles the authentication of the OpenHIM headers as described in the [authentication section](../introduction/authentication).
 
-  Replace the `openhimOptions` values with the correct implementation details and supply the `SampleData` payload to submit
+  Replace the `openhimOptions` values with the correct implementation details and supply the `SampleData` payload to submit. You will also need to update the userPassword variable to your desired password as well as to ensure you set the passwordSalt and passwordHash values in your `SampleData` payload.
 
   ```javascript
-  // append below code to the "openhim-api.js" script containing the authentication methods. 
+  // append below code to the "openhim-api.js" script containing the authentication methods.
   // This is described within the authentication section
+  
+  const genUserPassword = (password) => {
+    return new Promise((resolve) => {
+      const passwordSalt = crypto.randomBytes(16)
+
+      // create passhash
+      let shasum = crypto.createHash('sha512')
+      shasum.update(password)
+      shasum.update(passwordSalt.toString('hex'))
+      const passwordHash = shasum.digest('hex')
+
+      resolve({
+        "passwordSalt": passwordSalt.toString('hex'),
+        "passwordHash": passwordHash
+      })
+    })
+  }
 
   (async () => {
     const openhimOptions = {
@@ -62,6 +78,10 @@ Payload: JSON object of the user
       password: 'openhim-password',
       rejectUnauthorized: false
     }
+
+    const userPassword = "user-password"
+    const userPasswordDetails = await genUserPassword(userPassword)
+
     const SampleData = 'SampleData'
 
     const headers = await genAuthHeaders(openhimOptions)
@@ -86,7 +106,7 @@ Payload: JSON object of the user
   })()
   ```
 
-   Execute the below command in your terminal to run the nodejs script
+  Execute the below command in your terminal to run the nodejs script
 
   ```bash
   node openhim-api.js
@@ -95,9 +115,39 @@ Payload: JSON object of the user
   </TabItem>
   <TabItem value="bash">
 
-  Ensure that you have created your bash script to construct the HTTP authentication headers and send the request to the OpenHIM API as described in the [authentication section](../introduction/authentication.md). 
+  Ensure that you have created your bash script to construct the HTTP authentication headers and send the request to the OpenHIM API as described in the [authentication section](../introduction/authentication.md).
 
-  Execute the below command in your terminal where the file is located with the required arguments. Replace the placeholder arguments with the correct implementation details and ensure your `SampleData.json` file exists with the user object.
+  To create a user, you first need to generate a password hash and salt. The script below can be used for this
+
+  ```curl
+  # gen-user-password.sh
+
+  #!/bin/bash
+  if (( $# < 1)); then
+      echo "OpenHIM User Password: Curl wrapper that generates the user Password details";
+      echo "Usage: $0 PASSWORD";
+      exit 0;
+  fi
+  pass=$1;
+  shift;
+  shift;
+
+  salt=`cat /dev/urandom | tr -dc 'abcdef0-9' | fold -w 32 | head -n 1`;
+  passhash=`echo -n "$pass$salt" | shasum -a 512 | awk '{print $1}'`;
+
+  echo Password Salt: $salt
+  echo Password Hash: $passhash
+
+  echo "";
+  ```
+
+  Copy and execute the bash script above with the below command. Substitute the <USER_PASSWORD> with your desired password before executing.
+
+  ```curl
+  ./gen-user-password.sh <USER_PASSWORD>
+  ```
+
+  Execute the below command in your terminal where the file is located with the required arguments to create the user. Replace the placeholder arguments with the correct implementation details and ensure your `SampleData.json` file exists with the user object. Add the generated passwordHash and passwordSalt to the `SampleData.json` before executing the command.
 
   ```curl
   ./openhim-api.sh root@openhim.org openhim-password -v https://localhost:8080/users -d @SampleData.json -H "Content-Type:application/json"
@@ -108,7 +158,8 @@ Payload: JSON object of the user
 
   The response status will be 201 if successful.
   
-  Once created, a user's activation email is sent to the users email. For this email to be sent, the OpenHIM's email and password have to be set up.
+  Once created, a user's activation email is sent to the users email. For this email to be sent, the OpenHIM needs to be configured with the correct mail settings. This can be
+  done in the [configuration](https://github.com/jembi/openhim-core-js/blob/master/config/default.json#L66)
 
 </TabItem>
 <TabItem value="sample">
