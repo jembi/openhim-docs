@@ -38,19 +38,19 @@ function Tutorials() {
 
           <div className="help_page_card card card_box_shadow margin-2em-y center">
             <div className="card__header card_header_color">
-              <h2 className="subtitle">{title}</h2>
+              <h3 className="subtitle">{title}</h3>
             </div>
             <div className="help_card_content">
-                <div className="video_wrapper">
-                  <iframe
-                    src={src}
-                    frameBorder="0"
-                    allow="autoplay; encrypted-media"
-                    allowFullScreen
-                    title="video"
-                    className="video_frame"
-                  />
-                </div>
+              <div className="video_wrapper margin-2em-bottom">
+                <iframe
+                  src={src}
+                  frameBorder="0"
+                  allow="autoplay; encrypted-media"
+                  allowFullScreen
+                  title="video"
+                  className="video_frame"
+                />
+              </div>
               <p>{description}</p>
             </div>
           </div>
@@ -65,11 +65,12 @@ function BrowseDocs() {
     <div>
       <h2 className="tutorial_title subtitle">Browse the OpenHIM docs</h2>
       <div className="help_section_container">
-        <div className="help_page_card card_box_shadow">
+        <div className="help_page_card card card_box_shadow margin-2em-y center">
+          <div className="card__header card_header_color">
+            <h3 className="subtitle">All documentation is here</h3>
+          </div>
           <div className="help_card_content">
-            <h3>For your convenience, all documentation is located here</h3>
-            <p>
-              For user and implementor guides please see the sections labelled{' '}
+            <p> For user and implementor guides please see the sections labelled{' '}
               <b>Docs</b>.
               <br />
               For developer guides please see the section labelled <b>API</b>.
@@ -154,10 +155,13 @@ function GithubSection({ heading, data }) {
     <div>
       <h2 className="tutorial_title subtitle">{heading}</h2>
       <div className="help_section_container">
-        {data.map(({ title, description, button }) => (
-          <div className="help_page_card card_box_shadow">
+       {data.map(({ title, description, button }) => (
+
+          <div className="help_page_card card card_box_shadow margin-2em-y center">
+            <div className="card__header card_header_color">
+              <h3 className="subtitle">{title}</h3>
+            </div>
             <div className="help_card_content">
-              <h3>{title}</h3>
               <p>{description}</p>
               {button}
             </div>
@@ -188,7 +192,7 @@ const communityContent = [
         href="https://wiki.ohie.org/display/SUB/Interoperability+Layer+Community"
         className="button button--outline button--lg"
       >
-        OHIE
+        Visit OHIE
       </Link>
     )
   }
@@ -200,9 +204,12 @@ function Community() {
       <h2 className="tutorial_title subtitle">Join the Community</h2>
       <div className="help_section_container">
         {communityContent.map(({ title, description, link }) => (
-          <div className="help_page_card card_box_shadow">
+
+          <div className="help_page_card card card_box_shadow margin-2em-y center">
+            <div className="card__header card_header_color">
+              <h3 className="subtitle">{title}</h3>
+            </div>
             <div className="help_card_content">
-              <h3>{title}</h3>
               <p>{description}</p>
               {link}
             </div>

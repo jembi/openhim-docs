@@ -139,6 +139,10 @@
   margin-bottom: 2em;
 }
 
+.margin-2em-bottom {
+  margin-bottom: 2em;
+}
+
 .card_box_shadow {
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
 }
@@ -164,10 +168,6 @@
 
 .help_card_content {
   padding: 2em;
-}
-
-.help_card_content p {
-  margin-top: 2em;
 }
 
 .help_section_container {
