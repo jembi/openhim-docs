@@ -265,9 +265,7 @@ function Home() {
               and data governance as well as support for routing, orchestrating
               and translating requests as they flow between systems.
             </p>
-            <p>
-              Connecting health systems simply, securely and safely.
-            </p>
+            <p>Connecting health systems simply, securely and safely.</p>
           </div>
         </div>
       </header>

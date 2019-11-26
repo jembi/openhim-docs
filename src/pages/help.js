@@ -35,7 +35,6 @@ function Tutorials() {
       <h2 className="tutorial_title subtitle">Setup Tutorials</h2>
       <div className="help_section_container">
         {videoData.map(({ title, description, src }) => (
-
           <div className="help_page_card card card_box_shadow margin-2em-y center">
             <div className="card__header card_header_color">
               <h3 className="subtitle">{title}</h3>
@@ -70,7 +69,9 @@ function BrowseDocs() {
             <h3 className="subtitle">All documentation is here</h3>
           </div>
           <div className="help_card_content">
-            <p> For user and implementor guides please see the sections labelled{' '}
+            <p>
+              {' '}
+              For user and implementor guides please see the sections labelled{' '}
               <b>Docs</b>.
               <br />
               For developer guides please see the section labelled <b>API</b>.
@@ -155,8 +156,7 @@ function GithubSection({ heading, data }) {
     <div>
       <h2 className="tutorial_title subtitle">{heading}</h2>
       <div className="help_section_container">
-       {data.map(({ title, description, button }) => (
-
+        {data.map(({ title, description, button }) => (
           <div className="help_page_card card card_box_shadow margin-2em-y center">
             <div className="card__header card_header_color">
               <h3 className="subtitle">{title}</h3>
@@ -204,7 +204,6 @@ function Community() {
       <h2 className="tutorial_title subtitle">Join the Community</h2>
       <div className="help_section_container">
         {communityContent.map(({ title, description, link }) => (
-
           <div className="help_page_card card card_box_shadow margin-2em-y center">
             <div className="card__header card_header_color">
               <h3 className="subtitle">{title}</h3>
