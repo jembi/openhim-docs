@@ -78,7 +78,7 @@ class MediatorListContainer extends Component {
 function MediatorLibrary() {
   return (
     <Layout>
-      <header className={classnames('hero center', styles.heroBanner)}>
+      <header className={classnames('hero center page', styles.heroBanner)}>
         <div className="container">
           <img
             className="logo_header"
@@ -109,7 +109,7 @@ function MediatorLibrary() {
         </div>
       </header>
       <main>
-        <div className="container center mediator_page_max_width">
+        <div className="container center page mediator_page_max_width">
           <MediatorListContainer />
         </div>
       </main>

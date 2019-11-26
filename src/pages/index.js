@@ -223,7 +223,7 @@ function Home() {
       title={siteConfig.title}
       description="Console for administrating the OpenHIM Core"
     >
-      <header className={classnames('hero', styles.heroBanner)}>
+      <header className={classnames('hero page', styles.heroBanner)}>
         <div className="container">
           <img
             className="logo_header"
@@ -247,7 +247,7 @@ function Home() {
       </header>
       <main>
         {features && features.length && (
-          <div className="home">
+          <div className="home page">
             {features.map((props, idx) => (
               <Feature key={idx} {...props} />
             ))}

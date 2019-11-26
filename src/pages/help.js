@@ -214,7 +214,7 @@ function Community() {
 function Help() {
   return (
     <Layout>
-      <header className={classnames('hero center', styles.heroBanner)}>
+      <header className={classnames('hero center page', styles.heroBanner)}>
         <div className="container">
           <img
             className="logo_header"
@@ -224,7 +224,7 @@ function Help() {
           <p className="hero__subtitle subtitle">What do you need?</p>
         </div>
       </header>
-      <main>
+      <main className="page">
         <Tutorials />
         <BrowseDocs />
         <GithubSection
