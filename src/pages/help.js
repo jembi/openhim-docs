@@ -14,7 +14,7 @@ import GitHubButton from 'react-github-btn'
 
 const videoData = [
   {
-    title: 'OpenHIM Setup Tutorial (Development Environment)',
+    title: 'OpenHIM Setup',
     src: 'https://www.youtube.com/embed/F0bTS3qJlG0',
     description: `The Open Health Information Mediator(OpenHIM) is a middleware
     component designed to allow data transfer between diverse information
@@ -22,7 +22,7 @@ const videoData = [
     flow between systems.`
   },
   {
-    title: 'OpenHIM Mediator Code Along Tutorial',
+    title: 'Mediator Code Along',
     src: 'https://www.youtube.com/embed/s-l60WMiZw8',
     description: `Create a Scaffold OpenHIM Mediator and Register it with your local
     OpenHIM instance.`
@@ -35,20 +35,22 @@ function Tutorials() {
       <h2 className="tutorial_title subtitle">Setup Tutorials</h2>
       <div className="help_section_container">
         {videoData.map(({ title, description, src }) => (
-          <div className="help_page_card card_box_shadow">
-            <div className="video_wrapper">
-              <iframe
-                src={src}
-                frameBorder="0"
-                allow="autoplay; encrypted-media"
-                allowFullScreen
-                title="video"
-                className="video_frame"
-              />
-            </div>
 
+          <div className="help_page_card card card_box_shadow margin-2em-y center">
+            <div className="card__header card_header_color">
+              <h2 className="subtitle">{title}</h2>
+            </div>
             <div className="help_card_content">
-              <h3>{title}</h3>
+                <div className="video_wrapper">
+                  <iframe
+                    src={src}
+                    frameBorder="0"
+                    allow="autoplay; encrypted-media"
+                    allowFullScreen
+                    title="video"
+                    className="video_frame"
+                  />
+                </div>
               <p>{description}</p>
             </div>
           </div>
