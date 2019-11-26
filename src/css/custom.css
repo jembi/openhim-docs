@@ -72,6 +72,10 @@
   background: url(../../static/img/congruent_pentagon.png) repeat;
 }
 
+.home .row {
+  margin: 0px;
+}
+
 .home .row .col {
   --ifm-col-width: 35%;
   max-width: var(--ifm-col-width);
