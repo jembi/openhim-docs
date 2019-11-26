@@ -113,21 +113,17 @@ function MediatorLibrary() {
           />
           <p className="hero__subtitle subtitle">Mediator Library</p>
           <p>
-            This is like the app store for the OpenHIM. Here you will find a
-            number of mediators that are designed to extend the OpenHIM's
-            functionality for a specific purpose. Browse the mediators below to
-            see if any suit your needs. If not, then it is easy to create your
-            own.
+            This is the 'App Store' for purpose-specific mediators that extend
+            the OpenHIM. Take a look and see if any match what you need. If not,
+            then we'll show you how to create your own.
           </p>
           <p>
-            To get your own mediator published here all you need to do is follow
-            the github repository naming convention. Any public repository
-            beginning with "openhim-mediator" will be displayed here.
+            Follow the naming convention and your public repo will be displayed
+            here automatically. Just start your repo name with
+            "openhim-mediator".
           </p>
           <div className={styles.buttons}>
-            <Link
-              href="/openhim-docs/docs/introduction/about"
-            >
+            <Link href="/openhim-docs/docs/introduction/about">
               Create a new mediator »
             </Link>
           </div>
