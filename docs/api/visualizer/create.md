@@ -17,7 +17,6 @@ import TabItem from '@theme/TabItem';
 
 To create a new visualizer record you will need to make a TLS request to the OpenHIM API for the below method and endpoint and supply the JSON object for the visualizer record.
 
-
 ```curl
 Method: POST
 Endpoint: {openhim_url}:8080/visualizers
@@ -46,7 +45,7 @@ Payload: JSON object of the visualizer record
   }>
   <TabItem value="nodejs">
 
-  Copy the below code at the bottom of your nodejs script that handles the authentication of the OpenHIM headers as described in the [authentication section](../introduction/authentication.md). 
+  Copy the below code at the bottom of your nodejs script that handles the authentication of the OpenHIM headers as described in the [authentication section](../introduction/authentication).
 
   Replace the `openhimOptions` values with the correct implementation details and supply the `SampleData` payload to submit
 
@@ -95,7 +94,7 @@ Payload: JSON object of the visualizer record
   </TabItem>
   <TabItem value="bash">
 
-  Ensure that you have created your bash script to construct the HTTP authentication headers and send the request to the OpenHIM API as described in the [authentication section](../introduction/authentication.md). 
+  Ensure that you have created your bash script to construct the HTTP authentication headers and send the request to the OpenHIM API as described in the [authentication section](../introduction/authentication).
 
   Execute the below command in your terminal where the file is located with the required arguments. Replace the placeholder arguments with the correct implementation details and ensure your `SampleData.json` file exists with the visualizer object.
 

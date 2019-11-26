@@ -17,9 +17,12 @@
   --ifm-color-primary-dark: rgb(33, 175, 144);
   --ifm-color-primary-darker: rgb(31, 165, 136);
   --ifm-color-primary-darkest: rgb(26, 136, 112);
-  --ifm-color-primary-light: #E9F5EF;
+  --ifm-color-primary-light: #0e7139;
   --ifm-color-primary-lighter: rgb(102, 212, 189);
-  --ifm-color-primary-lightest:#E9F5EF;
+  --ifm-color-primary-lightest: #e9f5ef;
+  --ifm-font-size-base: 18px;
+  --ifm-line-height-base: 1.8;
+  --ifm-h2-font-size: 2rem;
 }
 
 .docusaurus-highlight-code-line {
@@ -53,10 +56,14 @@
 }
 
 @keyframes spin {
-  to { -webkit-transform: rotate(360deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
 @-webkit-keyframes spin {
-  to { -webkit-transform: rotate(360deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
 .footer .footer__logo {
@@ -90,11 +97,7 @@
 }
 
 .subtitle {
-  color: var(--ifm-color-primary)
-}
-
-.summary {
-  font-size: 1.4em;
+  color: var(--ifm-color-primary);
 }
 
 .button_row {
@@ -103,28 +106,103 @@
 }
 
 .button_padding {
-  margin: 0.5em
+  margin: 0.5em;
 }
 
 .mediator_page_max_width {
-  max-width: 50%;
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .mediator_page_max_width {
+    max-width: 75%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .mediator_page_max_width {
+    max-width: 50%;
+  }
 }
 
 .hero {
   background-color: var(--ifm-color-primary-lightest);
 }
 
-.odd_item {
+.even_item:nth-child(even) {
   background: var(--ifm-color-primary-lightest);
 }
 
-.mediator_box_shadow {
-  background-color: var(--ifm-color-primary-light);
+.mediator_card_padding {
   margin-top: 2em;
   margin-bottom: 2em;
-  box-shadow: 5px 7px 6px 1px #e0dde0;
+}
+
+.card_box_shadow {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 .logo_header {
   max-height: 8em;
+}
+
+.tutorial_title {
+  text-align: center;
+  margin: 2em 0;
+}
+
+.help_page_card {
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 4em);
+  min-width: 360px;
+  margin: 0 auto 4em auto;
+  overflow: hidden;
+  border-radius: var(--ifm-card-border-radius);
+}
+
+.help_card_content {
+  padding: 2em;
+}
+
+.help_card_content p {
+  margin-top: 2em;
+}
+
+.help_section_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 90vw;
+  max-width: 1300px;
+}
+
+.video_wrapper {
+  position: relative;
+  min-width: 50%;
+  max-height: 0;
+  padding-bottom: 56.25%;
+}
+
+.video_frame {
+  position: absolute;
+  border-radius: var(--ifm-card-border-radius);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.button.button--outline:hover {
+  color: var(--ifm-color-primary-light);
+}
+
+.p {
+  line-height: 1.8;
+  font-size: 18px
+}
+
+.hero .hero__subtitle {
+  font-size: 2rem;
 }
