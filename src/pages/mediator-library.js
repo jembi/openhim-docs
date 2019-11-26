@@ -100,7 +100,6 @@ function MediatorLibrary() {
           </p>
           <div className={styles.buttons}>
             <Link
-              className={classnames('button button--outline button--lg')}
               href="/openhim-docs/docs/introduction/about"
             >
               Create a new mediator »
