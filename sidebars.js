@@ -88,6 +88,7 @@ module.exports = {
       "api/certificates/delete"
     ],
     "Channels": [
+      "api/channels/overview",
       "api/channels/create", 
       "api/channels/read", 
       "api/channels/update", 
@@ -95,6 +96,7 @@ module.exports = {
       "api/channels/polling-trigger"
     ],
     "Clients": [
+      "api/clients/overview",
       "api/clients/create", 
       "api/clients/read", 
       "api/clients/update", 
@@ -132,6 +134,7 @@ module.exports = {
       "api/users/delete"
     ],
     "Visualizer": [
+      "api/visualizer/overview",
       "api/visualizer/create",
       "api/visualizer/read",
       "api/visualizer/update",
