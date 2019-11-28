@@ -4,56 +4,6 @@ title: RESTful API
 sidebar_label: RESTful API
 ---
 
-### Roles resource
-
-Allows for the management of client access control to channels.
-
-It should be noted that there is no actual roles collection in the database. The API is a facade on top of the `allow` and `roles` fields from Channels and Clients respectively. Roles can therefore also be altered by changing values for those fields directly.
-
-### Users resource
-
-Console and API Users of the system.
-
-`https://<server>:<api_port>/users`
-
-#### Fetch all users
-
-`GET /users`
-
-The response status code will be `200` if successful and the response body will contain an array of users objects. See the [user schema](https://github.com/jembi/openhim-core-js/blob/master/src/model/users.js).
-
-#### Add a user
-
-`POST /users`
-
-with a json body representing the user to be added. See the [users schema](https://github.com/jembi/openhim-core-js/blob/master/src/model/users.js).
-
-The response code will be `201` if successful.
-
-#### Fetch a specific user by email address
-
-`GET /users/:email`
-
-where `:email` is the `email` property of the user to fetch.
-
-The response status code will be `200` if successful and the response body will contain a user object. See the [user schema](https://github.com/jembi/openhim-core-js/blob/master/src/model/users.js).
-
-#### Update a user
-
-`PUT /users/:email`
-
-where `:email` is the `email` property of the user to update and with a json body representing the user updates. See the [user schema](https://github.com/jembi/openhim-core-js/blob/master/src/model/users.js).
-
-The response code will be `200` if successful.
-
-#### Delete a user
-
-`DELETE /users/:email`
-
-where `:email` is the `email` property of the user to delete.
-
-The response code will be `200` if successful.
-
 ### Transactions resource
 
 Transactions store details about request and responses send through specifc channels.

@@ -135,6 +135,7 @@ module.exports = {
       "api/transactions/delete"
     ],
     "Users": [
+      "api/users/overview",
       "api/users/create", 
       "api/users/read", 
       "api/users/update", 
