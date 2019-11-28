@@ -47,7 +47,7 @@ Payload: JSON object of the user
 
   Copy the below code at the bottom of your nodejs script that handles the authentication of the OpenHIM headers as described in the [authentication section](../introduction/authentication).
 
-  Replace the `openhimOptions` values with the correct implementation details and supply the `SampleData` payload to submit. You will also need to update the userPassword variable to your desired password as well as to ensure you set the passwordSalt and passwordHash values in your `SampleData` payload.
+  Replace the `openhimOptions` values with the correct implementation details and supply the `SampleData` payload to submit. You will also need to update the userPassword variable to your desired password. The password will be used to create the passwordHash and passwordSalt, which are added to the `SampleData` payload.
 
   ```javascript
   // append below code to the "openhim-api.js" script containing the authentication methods.
@@ -84,9 +84,12 @@ Payload: JSON object of the user
 
     const SampleData = 'SampleData'
 
+    SampleData.passwordHash = userPasswordDetails.passwordHash
+    SampleData.passwordSalt = userPasswordDetails.passwordSalt
+
     const headers = await genAuthHeaders(openhimOptions)
 
-    const options = { 
+    const options = {
       method: 'POST',
       url: `${openhimOptions.apiURL}${openhimOptions.apiEndpoint}`,
       rejectUnauthorized: openhimOptions.rejectUnauthorized,
@@ -115,7 +118,7 @@ Payload: JSON object of the user
   </TabItem>
   <TabItem value="bash">
 
-  Ensure that you have created your bash script to construct the HTTP authentication headers and send the request to the OpenHIM API as described in the [authentication section](../introduction/authentication.md).
+  Ensure that you have created your bash script to construct the HTTP authentication headers and send the request to the OpenHIM API as described in the [authentication section](../introduction/authentication).
 
   To create a user, you first need to generate a password hash and salt. The script below can be used for this
 
@@ -156,7 +159,7 @@ Payload: JSON object of the user
   </TabItem>
   </Tabs>
 
-  The response status will be 201 if successful.
+  The response status will be `201` if successful.
   
   Once created, a user's activation email is sent to the users email. For this email to be sent, the OpenHIM needs to be configured with the correct mail settings. This can be
   done in the [configuration](https://github.com/jembi/openhim-core-js/blob/master/config/default.json#L66)

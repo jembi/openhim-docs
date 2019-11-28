@@ -10,6 +10,8 @@ keywords:
 description: Delete an OpenHIM User via the API
 ---
 
+## Delete user
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -22,7 +24,7 @@ Endpoint: {openhim_url}:8080/users/:userEmail
 
 ## Example
 
-Before we can send our request to the OpenHIM API we need to ensure that we construct our valid HTTP headers to successfully authenticate with the OpenHIM API. 
+Before we can send our request to the OpenHIM API we need to ensure that we construct our valid HTTP headers to successfully authenticate with the OpenHIM API.
 
 <Tabs
   defaultValue="nodejs"
@@ -34,12 +36,12 @@ Before we can send our request to the OpenHIM API we need to ensure that we cons
 
 <TabItem value="nodejs">
 
-Copy the below code at the bottom of your nodejs script that handles the authentication of the OpenHIM headers as described in the [authentication section](../introduction/authentication.md). 
+Copy the below code at the bottom of your nodejs script that handles the authentication of the OpenHIM headers as described in the [authentication section](../introduction/authentication).
 
 Replace the `openhimOptions` values with the correct implementation details
 
 ```javascript
-// append below code to the "openhim-api.js" script containing the authentication methods. 
+// append below code to the "openhim-api.js" script containing the authentication methods.
 // This is described within the authentication section
 
 (async () => {
@@ -73,7 +75,7 @@ Replace the `openhimOptions` values with the correct implementation details
 </TabItem>
 <TabItem value="bash">
 
-Ensure that you have created your bash script to construct the HTTP authentication headers and send the request to the OpenHIM API as described in the [authentication section](../introduction/authentication.md). 
+Ensure that you have created your bash script to construct the HTTP authentication headers and send the request to the OpenHIM API as described in the [authentication section](../introduction/authentication).
 
 Execute the below command in your terminal where the file is located with the required arguments. Replace the placeholder arguments with the correct implementation details.
 

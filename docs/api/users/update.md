@@ -34,7 +34,7 @@ Payload: JSON object of the user record
 }>
 <TabItem value="lang">
 
-  Before we can send our request to the OpenHIM API we need to ensure that we construct our valid HTTP headers to successfully authenticate with the OpenHIM API. 
+  Before we can send our request to the OpenHIM API we need to ensure that we construct our valid HTTP headers to successfully authenticate with the OpenHIM API.
 
   <Tabs
     defaultValue="nodejs"
@@ -45,13 +45,30 @@ Payload: JSON object of the user record
   }>
   <TabItem value="nodejs">
 
-  Copy the below code at the bottom of your nodejs script that handles the authentication of the OpenHIM headers as described in the [authentication section](../introduction/authentication.md).
+  Copy the below code at the bottom of your nodejs script that handles the authentication of the OpenHIM headers as described in the [authentication section](../introduction/authentication).
 
-  Replace the `openhimOptions` values with the correct implementation details and supply the `SampleData` payload to submit
+  Replace the `openhimOptions` values with the correct implementation details and supply the `SampleData` payload to submit. You will also need to update the userPassword variable to your desired password. The password will be used to create the passwordHash and passwordSalt which are added to the `SampleData` payload.
 
   ```javascript
-  // append below code to the "openhim-api.js" script containing the authentication methods. 
+  // append below code to the "openhim-api.js" script containing the authentication methods.
   // This is described within the authentication section
+
+   const genUserPassword = (password) => {
+    return new Promise((resolve) => {
+      const passwordSalt = crypto.randomBytes(16)
+
+      // create passhash
+      let shasum = crypto.createHash('sha512')
+      shasum.update(password)
+      shasum.update(passwordSalt.toString('hex'))
+      const passwordHash = shasum.digest('hex')
+
+      resolve({
+        "passwordSalt": passwordSalt.toString('hex'),
+        "passwordHash": passwordHash
+      })
+    })
+  }
 
   (async () => {
     const openhimOptions = {
@@ -61,11 +78,18 @@ Payload: JSON object of the user record
       password: 'openhim-password',
       rejectUnauthorized: false
     }
+
+    const userPassword = "user-password"
+    const userPasswordDetails = await genUserPassword(userPassword)
+
     const SampleData = 'SampleData'
+
+    SampleData.passwordHash = userPasswordDetails.passwordHash
+    SampleData.passwordSalt = userPasswordDetails.passwordSalt
 
     const headers = await genAuthHeaders(openhimOptions)
 
-    const options = { 
+    const options = {
       method: 'PUT',
       url: `${openhimOptions.apiURL}${openhimOptions.apiEndpoint}`,
       rejectUnauthorized: openhimOptions.rejectUnauthorized,
@@ -94,9 +118,39 @@ Payload: JSON object of the user record
   </TabItem>
     <TabItem value="bash">
 
-  Ensure that you have created your bash script to construct the HTTP authentication headers and send the request to the OpenHIM API as described in the [authentication section](../introduction/authentication.md).
+  Ensure that you have created your bash script to construct the HTTP authentication headers and send the request to the OpenHIM API as described in the [authentication section](../introduction/authentication).
 
-  Execute the below command in your terminal where the file is located with the required arguments. Replace the placeholder arguments with the correct implementation details and ensure your `SampleData.json` file exists with the updated user object.
+  To update a user's password details, you first need to generate a password hash and salt. The script below can be used for this
+
+  ```curl
+  # gen-user-password.sh
+
+  #!/bin/bash
+  if (( $# < 1)); then
+      echo "OpenHIM User Password: Curl wrapper that generates the user Password details";
+      echo "Usage: $0 PASSWORD";
+      exit 0;
+  fi
+  pass=$1;
+  shift;
+  shift;
+
+  salt=`cat /dev/urandom | tr -dc 'abcdef0-9' | fold -w 32 | head -n 1`;
+  passhash=`echo -n "$pass$salt" | shasum -a 512 | awk '{print $1}'`;
+
+  echo Password Salt: $salt
+  echo Password Hash: $passhash
+
+  echo "";
+  ```
+
+  Copy and execute the bash script above with the below command. Substitute the <USER_PASSWORD> with your desired password before executing.
+
+  ```curl
+  ./gen-user-password.sh <USER_PASSWORD>
+  ```
+
+  Execute the below command in your terminal where the file is located with the required arguments. Replace the placeholder arguments with the correct implementation details and ensure your `SampleData.json` file exists with the updated user object. If you are updating the password details, add the generated passwordHash and passwordSalt to the `SampleData.json` before executing the command.
 
   ```curl
   ./openhim-api.sh root@openhim.org openhim-password -v -X PUT https://localhost:8080/users/userEmail -d @SampleData.json -H "Content-Type:application/json"
