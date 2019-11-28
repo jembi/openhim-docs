@@ -116,6 +116,7 @@ module.exports = {
       "api/roles/delete"
     ],
     "Tasks": [
+      "api/tasks/overview",
       "api/tasks/create", 
       "api/tasks/read", 
       "api/tasks/update", 

@@ -65,7 +65,7 @@ Payload: JSON object of the role record
     const SampleData = 'SampleData'
 
     const headers = await genAuthHeaders(openhimOptions)
-    
+
     const options = { 
       method: 'PUT',
       url: `${openhimOptions.apiURL}${openhimOptions.apiEndpoint}`,
