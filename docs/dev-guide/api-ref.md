@@ -127,50 +127,6 @@ where `:transactionId` is the `_id` property of the transaction to delete.
 
 The response code will be `200` if successful.
 
-### Contact groups resource
-
-A contact group (or contact list) defines logical groups of users used for contacting users en masse.
-
-`https://<server>:<api_port>/groups`
-
-#### Fetch all groups
-
-`GET /groups`
-
-The response status code will be `200` if successful and the response body will contain an array of group objects. See the [contact groups schema](https://github.com/jembi/openhim-core-js/blob/master/src/model/contactGroups.js).
-
-#### Add a group
-
-`POST /groups`
-
-with a json body representing the group to be added. See the [contact groups schema](https://github.com/jembi/openhim-core-js/blob/master/src/model/contactGroups.js).
-
-The response code will be `201` if successful.
-
-#### Fetch a specific group
-
-`GET /groups/:groupId`
-
-where `:groupId` is the `_id` property of the group to fetch.
-
-The response status code will be `200` if successful and the response body will contain a group object. See the [contact group schema](https://github.com/jembi/openhim-core-js/blob/master/src/model/contactGroups.js).
-
-#### Update a group
-
-`PUT /groups/:groupId`
-
-where `:groupId` is the `_id` property of the group to update.
-
-The response code will be `200` if successful.
-
-#### Delete a group
-
-`DELETE /groups/:groupId`
-
-where `:groupId` is the `_id` property of the group to delete.
-
-The response code will be `200` if successful.
-
 ### Tasks resource
 
 Tasks are used to submit transactions to be re-run.
