@@ -116,9 +116,9 @@ Payload: JSON object of the contact group record
       { "user": "User 1", "method": "sms", "maxAlerts": "no max" },
       { "user": "User 2", "method": "email", "maxAlerts": "1 per hour" },
       { "user": "User 3", "method": "sms", "maxAlerts": "1 per day" },
-      { "user": "User 8", "method": "email", "maxAlerts": "no max" },
-      { "user": "User 9", "method": "sms", "maxAlerts": "1 per hour" },
-      { "user": "User 7", "method": "email", "maxAlerts": "1 per day"}
+      { "user": "User 7", "method": "email", "maxAlerts": "no max" },
+      { "user": "User 8", "method": "sms", "maxAlerts": "1 per hour" },
+      { "user": "User 9", "method": "email", "maxAlerts": "1 per day"}
     ]
   }
   ```

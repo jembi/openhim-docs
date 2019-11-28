@@ -102,6 +102,13 @@ module.exports = {
       "api/clients/update", 
       "api/clients/delete"
     ],
+    "Contacts group": [
+      "api/contacts-group/overview",
+      "api/contacts-group/create",
+      "api/contacts-group/read",
+      "api/contacts-group/update",
+      "api/contacts-group/delete"
+    ],
     "Import/Export": [
       "api/import-export/create", 
       "api/import-export/read", 
@@ -139,13 +146,6 @@ module.exports = {
       "api/visualizer/read",
       "api/visualizer/update",
       "api/visualizer/delete"
-    ],
-    "Contacts group": [
-      "api/contacts-group/overview",
-      "api/contacts-group/create",
-      "api/contacts-group/read",
-      "api/contacts-group/update",
-      "api/contacts-group/delete"
     ]
   }
 };
