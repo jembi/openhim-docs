@@ -115,6 +115,10 @@ module.exports = {
       "api/import-export/update", 
       "api/import-export/delete"
     ],
+    "logs": [
+      "api/logs/overview",
+      "api/logs/read"
+    ],
     "Roles": [
       "api/roles/overview", 
       "api/roles/create", 
