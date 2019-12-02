@@ -126,6 +126,10 @@ module.exports = {
       "api/roles/update", 
       "api/roles/delete"
     ],
+    "Server Uptime": [
+      "api/server-uptime/overview",
+      "api/server-uptime/read"
+    ],
     "Tasks": [
       "api/tasks/overview",
       "api/tasks/create", 
