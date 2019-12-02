@@ -82,9 +82,9 @@ module.exports = {
       "api/audits/delete"
     ],
     "Certificates": [
+      "api/certificates/overview", 
       "api/certificates/create", 
       "api/certificates/read", 
-      "api/certificates/update", 
       "api/certificates/delete"
     ],
     "Channels": [

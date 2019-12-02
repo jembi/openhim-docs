@@ -276,64 +276,6 @@ The metrics API always returns a JSON array, even if it is returning just one me
 }
 ```
 
-### Keystore resource
-
-The keystore resource allows you to set and fetch the server certificate and key and set and query trusted certificates.
-
-#### Get the current HIM server cert
-
-`GET keystore/cert`
-
-returns 200 ok with `{ subject: '', issuer: '', validity: '', cert: '<pem string>' }`
-
-#### Gets the array of trusted ca certs
-
-`GET keystore/ca`
-
-returns 200 ok with `[ { subject: '', issuer: '', validity: '', cert: '<pem string>' }, ... ]`
-
-#### gets a ca cert by its \_id
-
-`GET keystore/ca/_id`
-
-returns 200 ok with `{ subject: '', issuer: '', validity: '', cert: '<pem string>' }`
-
-#### Sets the HIM server key
-
-`POST keystore/key`
-
-data `{ key: '<pem string>' }`
-
-returns 201 ok
-
-#### Sets the HIM server cert
-
-`POST keystore/cert`
-
-data `{ cert: '<pem string>' }`
-
-returns 201 ok
-
-#### Adds a cert to the list of ca certs
-
-`POST keystore/ca/cert`
-
-data `{ cert: '<pem string>' }`
-
-returns 201 ok
-
-#### Removes a ca cert by its \_id
-
-`DELETE keystore/ca/_id`
-
-returns 200 ok
-
-#### Queries the validity of the server cert and private key
-
-`GET keystore/validity`
-
-return 200 ok with `{ valid: true|false}`
-
 ### Logs resource
 
 The logs resource allows you to get access to the server logs. This resource is only accessible by admin users and only works if you have [database logging](https://github.com/jembi/openhim-core-js/blob/master/config/config.md) enabled (This is enabled by default).
