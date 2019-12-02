@@ -112,7 +112,7 @@ Payload: JSON object of the task record
 
   The `tids` field contains an array of transaction ids, and these are the transactions to be rerun. The `batchSize` field indicates the number of transactions to rerun concurrently. The `paused` field is used to prevent the task from being rerun soon after its been added.
 
-  ```json
+  ```javascript
   {
     "tids": [
       "5bb777777bbb66cc5d4444ee",
