@@ -110,10 +110,9 @@ module.exports = {
       "api/contacts-group/delete"
     ],
     "Import/Export": [
+      "api/import-export/overview",
       "api/import-export/create", 
-      "api/import-export/read", 
-      "api/import-export/update", 
-      "api/import-export/delete"
+      "api/import-export/read"
     ],
     "Roles": [
       "api/roles/overview", 
