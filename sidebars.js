@@ -82,9 +82,9 @@ module.exports = {
       "api/audits/delete"
     ],
     "Certificates": [
+      "api/certificates/overview", 
       "api/certificates/create", 
       "api/certificates/read", 
-      "api/certificates/update", 
       "api/certificates/delete"
     ],
     "Channels": [
@@ -110,10 +110,9 @@ module.exports = {
       "api/contacts-group/delete"
     ],
     "Import/Export": [
+      "api/import-export/overview",
       "api/import-export/create", 
-      "api/import-export/read", 
-      "api/import-export/update", 
-      "api/import-export/delete"
+      "api/import-export/read"
     ],
     "Metrics": [
       "api/metrics/overview",
@@ -125,6 +124,10 @@ module.exports = {
       "api/roles/read", 
       "api/roles/update", 
       "api/roles/delete"
+    ],
+    "Server Uptime": [
+      "api/server-uptime/overview",
+      "api/server-uptime/read"
     ],
     "Tasks": [
       "api/tasks/overview",
