@@ -233,49 +233,6 @@ e.g.
 
 The response will be an http status code of `201` if the channels were successfully created and `400` if you provide a channel name that doesn't exist.
 
-### Metrics resource
-
-This resource enables transaction metrics to be extracted from the OpenHIM in a flexible way. There are various forms of this endpoint depending on the format of the metrics that you want to get out. Metrics will only be returned for the channels that the API user has access to.
-
-The base url is `https://<server>:<api_port>/metrics`
-
-All calls to the metrics API **MUST** include request parameter with both the start date and end date for the metrics query. E.g. `/metrics?startDate=2014-07-15T00:00:00.000Z&endDate=2014-07-19T00:00:00.000Z`
-
-There are a few different forms of this endpoint that returns metrics broken down in different ways:
-
-- Use `/metrics` to get overall metrics about every transaction.
-- Use `/metrics/channels` to get metrics broken down by each channel.
-- Use `/metrics/channels/:channelID` to get metrics for a specific channel.
-- Use `/metrics/timeseries/:timeSeries` to get overall metrics returned in the specified time series. Time series values are one of 'minute', 'hour', 'day', 'month', 'year'.
-- Use `/metrics/timeseries/:timeSeries/channels` to get metrics broken down by each channel returned in the specified time series. Time series values are one of 'minute', 'hour', 'day', 'month', 'year'.
-- Use `/metrics/timeseries/:timeSeries/channels/:channelID` to get metrics for a specific channel returned in the specified time series. Time series values are one of 'minute', 'hour', 'day', 'month', 'year'.
-
-The metrics API always returns a JSON array, even if it is returning just one metrics object. It returns a `200` response along with the metrics array. A `401` response will be returned if a specified channel doesn't exist. Each metrics object in the array has the following format:
-
-```js
-{
-  _id: {
-     channelID: '222222222222222222222222', // Only if breaking down by channels
-     day: 15,  // Only the approporiate time components will be returned when
-     week: 28, // breaking down in time series, these will not appear if not
-     month: 7, // breaking down by time series. These are always UTC values.
-     year: 2014
-    },
-  total: 1,
-  avgResp: 100,
-  minResp: 100,
-  maxResp: 100,
-  failed: 0,
-  successful: 0,
-  processing: 0,
-  completed: 1,
-  completedWErrors: 0,
-  timestamp: '2014-08-14T22:00:00.000Z' // This will appear only for time series
-                                        // data as a convenience. It represents
-                                        // the start of this time series period
-}
-```
-
 ### Logs resource
 
 The logs resource allows you to get access to the server logs. This resource is only accessible by admin users and only works if you have [database logging](https://github.com/jembi/openhim-core-js/blob/master/config/config.md) enabled (This is enabled by default).

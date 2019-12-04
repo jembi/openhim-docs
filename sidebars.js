@@ -114,6 +114,10 @@ module.exports = {
       "api/import-export/create", 
       "api/import-export/read"
     ],
+    "Metrics": [
+      "api/metrics/overview",
+      "api/metrics/read"
+    ],
     "Roles": [
       "api/roles/overview", 
       "api/roles/create", 
