@@ -44,7 +44,7 @@ function Version() {
           <p className="hero__subtitle subtitle">documentation versions</p>
         </div>
       </header>
-      <div className="container margin-vert--xl">
+      <div className="container margin-vert--xl" style={{textAlign: "center"}}>
         <div className="margin-bottom--lg">
           <h3 id="latest">Latest version (Stable)</h3>
           <p>Here you can find the latest documentation.</p>
