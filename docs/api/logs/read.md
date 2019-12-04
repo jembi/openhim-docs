@@ -68,7 +68,10 @@ Replace the `openhimOptions` values with the correct implementation details
   const options = { method: 'GET',
     url: `${openhimOptions.apiURL}${openhimOptions.apiEndpoint}`,
     rejectUnauthorized: openhimOptions.rejectUnauthorized,
-    headers: headers
+    headers: headers,
+    qs: {
+      limit: 5
+    }
   }
   
   request(options, (error, response, body) => {
@@ -90,7 +93,7 @@ Ensure that you have created your bash script to construct the HTTP authenticati
 Execute the below command in your terminal where the file is located with the required arguments. Replace the placeholder arguments with the correct implementation details.
 
 ```curl
-./openhim-api.sh root@openhim.org openhim-password -v https://localhost:8080/logs
+./openhim-api.sh root@openhim.org openhim-password -v https://localhost:8080/logs?limit=5
 ```
 
 </TabItem>
