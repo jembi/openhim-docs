@@ -5,21 +5,21 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
+import React from 'react'
+import Layout from '@theme/Layout'
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
+import Link from '@docusaurus/Link'
+import useBaseUrl from '@docusaurus/useBaseUrl'
+import { styles } from 'ansi-colors'
+import classnames from 'classnames'
 
-import Layout from '@theme/Layout';
-
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Link from '@docusaurus/Link';
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
-import versions from '../../versions.json';
+import versions from '../../versions.json'
 
 function Version() {
-  const context = useDocusaurusContext();
-  const {siteConfig = {}} = context;
-  const latestVersion = versions[0];
-  const pastVersions = versions.filter(version => version !== latestVersion);
+  const context = useDocusaurusContext()
+  const {siteConfig = {}} = context
+  const latestVersion = versions[0]
+  const pastVersions = versions.filter(version => version !== latestVersion)
   const pastVersionsReadTheDocs = [
     '4.0.5',
     '3.4.2',
@@ -29,17 +29,26 @@ function Version() {
     '3.0.0',
     '2.0.0'
   ]
-  const repoUrl = `https://github.com/${siteConfig.organizationName}/${siteConfig.projectName}`;
+  const repoUrl = `https://github.com/${siteConfig.organizationName}/${siteConfig.projectName}`
   return (
     <Layout
       permalink="/versions"
       description="Versions page listing all documented site versions">
+      <header className={classnames('hero center page', styles.heroBanner)}>
+        <div className="container">
+          <img
+            className="logo_header"
+            src="img/openhim-logo-green.svg"
+            alt="Project Logo"
+          />
+          <p className="hero__subtitle subtitle">documentation versions</p>
+        </div>
+      </header>
       <div className="container margin-vert--xl">
-        <h1>{siteConfig.title} documentation versions</h1>
         <div className="margin-bottom--lg">
           <h3 id="latest">Latest version (Stable)</h3>
           <p>Here you can find the latest documentation.</p>
-          <table>
+          <table style={{ display: "flex", justifyContent: "center"}}>
             <tbody>
               <tr>
                 <th>{latestVersion}</th>
@@ -63,7 +72,7 @@ function Version() {
             <p>
               Here you can find documentation for previous versions of {siteConfig.title}.
             </p>
-            <table>
+            <table style={{ display: "flex", justifyContent: "center"}}>
               <tbody>
                 {pastVersions.map(version => (
                   <tr key={version}>
@@ -106,7 +115,7 @@ function Version() {
         )}
       </div>
     </Layout>
-  );
+  )
 }
 
-export default Version;
+export default Version
