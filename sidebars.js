@@ -114,6 +114,13 @@ module.exports = {
       "api/import-export/create", 
       "api/import-export/read"
     ],
+    "Mediators": [
+      "api/mediators/overview",
+      "api/mediators/create",
+      "api/mediators/read",
+      "api/mediators/update",
+      "api/mediators/delete"
+    ],
     "Roles": [
       "api/roles/overview", 
       "api/roles/create", 
