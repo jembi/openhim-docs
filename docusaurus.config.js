@@ -5,6 +5,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+const versions = require('./versions.json');
+
 module.exports = {
   title: 'OpenHIM',
   tagline: 'Simplifying Interoperability',
@@ -27,6 +29,17 @@ module.exports = {
         src: 'img/openhim-logo-green.svg',
       },
       links: [
+        {
+          to: 'versions',
+          label: `${versions[0]}`,
+          position: 'left',
+          style: {
+            whiteSpace: 'nowrap',
+            padding: '0.25rem 0.5rem 0.2rem 0.25rem',
+            fontSize: 'calc(0.9 * var(--ifm-font-size-base))',
+            textDecoration: 'underline',
+          },
+        },
         {to: 'docs/introduction/about', label: 'Docs', position: 'left'},
         {to: 'docs/api/introduction/welcome', label: 'API', position: 'left'},
         {to: 'mediator-library', label: 'Mediator Library', position: 'left'},

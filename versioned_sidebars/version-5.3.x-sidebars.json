@@ -1,0 +1,538 @@
+{
+  "version-5.3.x/docs": [
+    {
+      "type": "category",
+      "label": "Introduction",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-5.3.x/introduction/about"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/introduction/key-components"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/introduction/roadmap"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/introduction/community"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Installation",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-5.3.x/installation/manual"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/installation/docker"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/installation/npm"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/installation/virtual-machine"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/installation/console-configuration"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Tutorial",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-5.3.x/tutorial/prerequisite"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/tutorial/installation"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/tutorial/configuration"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/tutorial/mediator"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "User Guide",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-5.3.x/user-guide/overview"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/user-guide/basic-configuration"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/user-guide/adding-users"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/user-guide/transaction-list"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/user-guide/alerting-reports"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/user-guide/polling-channels"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/user-guide/certificates-keystore"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/user-guide/mediators"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/user-guide/sample-disaster-recovery-procedure"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/user-guide/openhim-core-versioning-and-compatibility"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/user-guide/auditing"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Developer Guide",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-5.3.x/dev-guide/design-overview"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/dev-guide/design-details"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/dev-guide/openhim-development"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/dev-guide/developing-mediators"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/dev-guide/restful-api"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/dev-guide/contributing"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Implementations",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-5.3.x/implementations/datim"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/implementations/mhero"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/implementations/momconnect"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/implementations/openhie"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "How to",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-5.3.x/how-to/setup-and-configure"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/how-to/openhim-core-release"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/how-to/openhim-console-release"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/how-to/build-centos-rpm-package"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/how-to/install-on-centos"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/how-to/setup-ssl"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/how-to/pre-package-offline-release"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/how-to/run-openhim-using-vagrant"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/how-to/run-openhim-on-startup"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/how-to/export-import-configuration"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/how-to/setup-basic-cluster"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/how-to/manually-install-on-ubuntu-trusty"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/how-to/manually-install-on-windows"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/how-to/build-openhim-documentation"
+        }
+      ]
+    }
+  ],
+  "version-5.3.x/api": [
+    {
+      "type": "category",
+      "label": "Introduction",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/introduction/welcome"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/introduction/authentication"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Audits",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/audits/create"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/audits/read"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/audits/update"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/audits/delete"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Certificates",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/certificates/overview"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/certificates/create"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/certificates/read"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/certificates/delete"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Channels",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/channels/overview"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/channels/create"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/channels/read"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/channels/update"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/channels/delete"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/channels/polling-trigger"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Clients",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/clients/overview"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/clients/create"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/clients/read"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/clients/update"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/clients/delete"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Contacts group",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/contacts-group/overview"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/contacts-group/create"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/contacts-group/read"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/contacts-group/update"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/contacts-group/delete"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Import/Export",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/import-export/overview"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/import-export/create"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/import-export/read"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Roles",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/roles/overview"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/roles/create"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/roles/read"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/roles/update"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/roles/delete"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Server Uptime",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/server-uptime/overview"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/server-uptime/read"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Tasks",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/tasks/overview"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/tasks/create"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/tasks/read"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/tasks/update"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/tasks/delete"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Transactions",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/transactions/create"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/transactions/read"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/transactions/update"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/transactions/delete"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Users",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/users/overview"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/users/create"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/users/read"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/users/update"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/users/delete"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Visualizer",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/visualizer/overview"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/visualizer/create"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/visualizer/read"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/visualizer/update"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.3.x/api/visualizer/delete"
+        }
+      ]
+    }
+  ]
+}
