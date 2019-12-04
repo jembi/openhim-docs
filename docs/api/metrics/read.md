@@ -99,7 +99,7 @@ Replace the `openhimOptions` values with the correct implementation details
     rejectUnauthorized: openhimOptions.rejectUnauthorized,
     headers: headers,
     qs: {
-      startDate: new Date(Date.now() - 3.154e+10),
+      startDate: new Date(Date.now() - 3.154e+10), // 3.154e+10 is the number of milliseconds in a year
       endDate: new Date()
     }
   }
