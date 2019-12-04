@@ -118,6 +118,10 @@ module.exports = {
       "api/logs/overview",
       "api/logs/read"
     ],
+    "Metrics": [
+      "api/metrics/overview",
+      "api/metrics/read"
+    ],
     "Roles": [
       "api/roles/overview", 
       "api/roles/create", 

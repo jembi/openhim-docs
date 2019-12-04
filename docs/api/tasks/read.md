@@ -92,7 +92,7 @@ Ensure that you have created your bash script to construct the HTTP authenticati
 Execute the below command in your terminal where the file is located with the required arguments. Replace the placeholder arguments with the correct implementation details. In order to get all the tasks remove the <TASK_ID>, and for a specific task substitute it with the task's id
 
 ```curl
-./openhim-api.sh root@openhim.org openhim-password -v https://localhost:8080/tasks/<TASK_ID>?filterLimit=50&filterPage=0&filters=%7B%7D"
+./openhim-api.sh root@openhim.org openhim-password -v "https://localhost:8080/tasks/<TASK_ID>?filterLimit=50&filterPage=0&filters=%7B%7D"
 ```
 
 </TabItem>
