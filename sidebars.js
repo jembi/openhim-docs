@@ -121,6 +121,10 @@ module.exports = {
       "api/mediators/update",
       "api/mediators/delete"
     ],
+    "Metrics": [
+      "api/metrics/overview",
+      "api/metrics/read"
+    ],
     "Roles": [
       "api/roles/overview", 
       "api/roles/create", 
