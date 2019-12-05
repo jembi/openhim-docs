@@ -41,7 +41,7 @@ function Version() {
             src="img/openhim-logo-green.svg"
             alt="Project Logo"
           />
-          <p className="hero__subtitle subtitle">documentation versions</p>
+          <p className="hero__subtitle subtitle">Documentation Versions</p>
         </div>
       </header>
       <div className="container margin-vert--xl" style={{textAlign: "center"}}>
