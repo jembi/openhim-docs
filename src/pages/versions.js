@@ -46,7 +46,7 @@ function Version() {
       </header>
       <div className="container margin-vert--xl" style={{textAlign: "center"}}>
         <div className="margin-bottom--lg">
-          <h3 id="latest">Latest version (Stable)</h3>
+          <h3 id="latest">Latest Version (Stable)</h3>
           <p>Here you can find the latest documentation.</p>
           <table style={{ display: "flex", justifyContent: "center"}}>
             <tbody>
