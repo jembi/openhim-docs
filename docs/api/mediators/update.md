@@ -116,45 +116,45 @@ The response status code will be `201` whether the update succeeds or not. To ch
 
 ```json
  {
-   "urn": "urn:uuid:EEA84E13-1C92-467C-B0BD-7C480462D1ED",
-   "version": "1.0.1",
-   "name": "Updated Mediator",
-   "description": "An updated mediator for testing",
-   "endpoints": [
-      {
-         "name": "Save Encounter",
-         "host": "localhost",
-         "port": "8005",
-         "type": "http"
-      }
-   ],
-   "defaultChannelConfig": [
-      {
-         "name": "Save Encounter 1",
-         "urlPattern": "/encounters",
-         "type": "http",
-         "allow": [],
-         "routes": [
-            {
-               "name": "Save Encounter 1",
-               "host": "localhost",
-               "port": "8005",
-               "type": "http"
-            }
-         ]
-      }
-   ],
-   "configDefs": [
-     {
+  "urn": "urn:uuid:EEA84E13-1C92-467C-B0BD-7C480462D1ED",
+  "version": "1.0.1",
+  "name": "Updated Mediator",
+  "description": "An updated mediator for testing",
+  "endpoints": [
+    {
+      "name": "Save Encounter",
+      "host": "localhost",
+      "port": "8005",
+      "type": "http"
+    }
+  ],
+  "defaultChannelConfig": [
+    {
+      "name": "Save Encounter 1",
+      "urlPattern": "/encounters",
+      "type": "http",
+      "allow": [],
+      "routes": [
+        {
+          "name": "Save Encounter 1",
+          "host": "localhost",
+          "port": "8005",
+          "type": "http"
+        }
+      ]
+    }
+  ],
+  "configDefs": [
+    {
       "param": "param1",
       "type": "string"
-     },
-     {
+    },
+    {
       "param": "param2",
       "type": "string"
-     }
-   ]
- }
+    }
+  ]
+}
 ```
 
 </TabItem>
