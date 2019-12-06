@@ -19,7 +19,7 @@ To delete a mediator, you will need to make a TLS request to the OpenHIM API for
 
 ```curl
 Method: DELETE
-Endpoint: {openhim_url}:8080/mediators/:mediatorId
+Endpoint: {openhim_url}:8080/mediators/:urn
 ```
 
 ## Example
@@ -47,7 +47,7 @@ Replace the `openhimOptions` values with the correct implementation details
 (async () => {
   const openhimOptions = {
     apiURL: 'https://localhost:8080',
-    apiEndpoint: '/mediators/mediatorId',
+    apiEndpoint: '/mediators/:urn',
     username: 'root@openhim.org',
     password: 'openhim-password',
     rejectUnauthorized: false
@@ -80,7 +80,7 @@ Ensure that you have created your bash script to construct the HTTP authenticati
 Execute the below command in your terminal where the file is located with the required arguments. Replace the placeholder arguments with the correct implementation details.
 
 ```curl
-./openhim-api.sh root@openhim.org openhim-password -v -X DELETE https://localhost:8080/mediators/mediatorId
+./openhim-api.sh root@openhim.org openhim-password -v -X DELETE https://localhost:8080/mediators/:urn
 ```
 
 </TabItem>
