@@ -137,10 +137,10 @@ module.exports = {
       "api/tasks/delete"
     ],
     "Transactions": [
+      "api/transactions/overview",
       "api/transactions/create", 
       "api/transactions/read", 
-      "api/transactions/update", 
-      "api/transactions/delete"
+      "api/transactions/update"
     ],
     "Users": [
       "api/users/overview",
