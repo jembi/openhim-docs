@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[257],{352:function(o){o.exports=JSON.parse('{"id":"version-5.2.x/tutorial/configuration","title":"Configuration","description":"","source":"@site/versioned_docs/version-5.2.x/tutorial/configuration.md","permalink":"/openhim-docs/docs/tutorial/configuration","version":"5.2.x","sidebar_label":"Configuration"}')}}]);

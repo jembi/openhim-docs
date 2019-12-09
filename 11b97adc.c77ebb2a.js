@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[42],{134:function(t){t.exports=JSON.parse('{"id":"tutorial/installation","title":"Installation","description":"","source":"@site/docs/tutorial/installation.md","permalink":"/openhim-docs/docs/next/tutorial/installation","version":"next","sidebar_label":"Installation"}')}}]);

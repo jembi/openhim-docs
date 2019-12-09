@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[236],{332:function(e){e.exports=JSON.parse('{"id":"version-5.2.x/api/router/update","title":"Update","description":"Coming soon ...","source":"@site/versioned_docs/version-5.2.x/api/router/update.md","permalink":"/openhim-docs/docs/api/router/update","version":"5.2.x","sidebar_label":"Update"}')}}]);

@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[53],{137:function(s){s.exports=JSON.parse('{"allTagsPath":"/openhim-docs/blog/tags","slug":"docusaurus","name":"docusaurus","count":3,"permalink":"/openhim-docs/blog/tags/docusaurus"}')}}]);
