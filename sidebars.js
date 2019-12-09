@@ -20,6 +20,17 @@ module.exports = {
       "installation/virtual-machine", 
       "installation/console-configuration"
     ],
+    "Configuration": [
+      "configuration/overview",
+      "configuration/certificates",
+      "configuration/channels",
+      "configuration/clients",
+      "configuration/contact-list",
+      "configuration/import-export",
+      "configuration/mediators",
+      "configuration/users",
+      "configuration/visualizers"
+    ],
     "Tutorial": [
       "tutorial/prerequisite", 
       "tutorial/installation", 
@@ -28,7 +39,6 @@ module.exports = {
     ],
     "User Guide": [
       "user-guide/overview",
-      "user-guide/basic-configuration",
       "user-guide/adding-users",
       "user-guide/transaction-list",
       "user-guide/alerting-reports",
