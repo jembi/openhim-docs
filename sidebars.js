@@ -13,6 +13,11 @@ module.exports = {
       "introduction/roadmap", 
       "introduction/community"
     ],
+    "Getting Started": [
+      "getting-started/prerequisites",
+      "getting-started/install",
+      "getting-started/configuration"
+    ],
     "Installation": [
       "installation/manual", 
       "installation/docker", 
