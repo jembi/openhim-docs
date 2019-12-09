@@ -1,7 +1,7 @@
 ---
-id: mediator
-title: Building a Mediator
-sidebar_label: Building a Mediator
+id: basic-scaffold
+title: Building a Basic Mediator
+sidebar_label: Scaffold Mediator
 keywords:
   - mediator
   - tutorial
@@ -10,8 +10,6 @@ description: Detailed tutorial on creating a basic OpenHIM Mediator
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
-
-## Scaffold OpenHIM Mediator Tutorial
 
 **TLDR; Watch Tutorial Setup on [YouTube](https://www.youtube.com/watch?v=s-l60WMiZw8)**
 
