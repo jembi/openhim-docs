@@ -256,19 +256,15 @@
       "items": [
         {
           "type": "doc",
+          "id": "version-5.2.x/api/audits/overview"
+        },
+        {
+          "type": "doc",
           "id": "version-5.2.x/api/audits/create"
         },
         {
           "type": "doc",
           "id": "version-5.2.x/api/audits/read"
-        },
-        {
-          "type": "doc",
-          "id": "version-5.2.x/api/audits/update"
-        },
-        {
-          "type": "doc",
-          "id": "version-5.2.x/api/audits/delete"
         }
       ]
     },
