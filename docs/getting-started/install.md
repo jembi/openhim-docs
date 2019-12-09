@@ -47,11 +47,17 @@ password: openhim-password
   <img alt="OpenHIM" src={useBaseUrl('img/self-signed-cert-warning.png')} />
 </div>
 
+Once the self signed certificate has been accepted, or a valid certificate is being used for the OpenHIM core, you should see the below JSON output when viewing the `/heartbeat` endpoint within the OpenHIM core API. You are now able to proceed with successfully logging into the OpenHIM console
+
+<div style={{ display: "flex", justifyContent: "center"}}>
+  <img alt="OpenHIM" src={useBaseUrl('img/heartbeat.png')} />
+</div>
+
 ## Useful Docker commands
 
 Below are a few useful Docker commands that will allow you to have better visibility into your OpenHIM/Docker setup
 
-#### Check running processes
+### Check running processes
 
 Now that we have our OpenHIM successfully created and running, we might need to check up on our Docker processes running to find some additional metadata on our containers. Execute the below command to find all the running Docker process 
 
@@ -59,7 +65,7 @@ Now that we have our OpenHIM successfully created and running, we might need to 
 docker ps
 ```
 
-#### Access the Openhim core logs
+### Access the Openhim core logs
 
 To access the OpenHIM core logs, execute the below command within your terminal to see the output of the logs
 
@@ -67,7 +73,7 @@ To access the OpenHIM core logs, execute the below command within your terminal 
 docker logs -f openhim-core
 ```
 
-#### Stop the Docker service
+### Stop the Docker service
 
 To stop the running OpenHIM Docker services, we need to execute the below command
 
