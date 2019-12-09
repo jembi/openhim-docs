@@ -4,7 +4,7 @@ title: Clients
 sidebar_label: Clients
 ---
 
-## OpenHIM Clients
+A client is usually some system that you want to able to send request to the OpenHIM. Setting up a client allows the OpenHIM to authenticate requests.
 
 Using an OpenHIM administrative account, you will be able to add, edit and remove clients by following a few easy steps.
 
@@ -19,7 +19,7 @@ The following is an explanation of the fields that are used in the `Add Client` 
 - **Certificate** - The certificate field is used when the OpenHIM core is running using mutual TLS authentication and needs to authenticate requests coming from the client. By default, the OpenHIM core uses mutual TLS authentication.
 - **Basic Auth Password** - The password field is used when the OpenHIM core is running in basic auth mode and does not require a certificate, it does however require a password.
 
-### How to add clients
+## How to add clients
 
 > **Note**: All fields marked with a * or ** indicates a mandatory field.
 
@@ -39,7 +39,7 @@ The following is an explanation of the fields that are used in the `Add Client` 
 
 > **Note**: When a client certificate is added or updated in the certificates component of the OpenHIM, the OpenHIM console will inform the OpenHIM administrator that a server restart is required. This is for the new certificate to be applied correctly. The user can either decide to manually restart the server at a later time or to click the red `Restart Server Now!` button.
 
-### How to remove clients
+## How to remove clients
 
 1. Log in to your OpenHIM console.
 1. Click on `Clients` found in the left navigation menu.
@@ -49,7 +49,7 @@ The following is an explanation of the fields that are used in the `Add Client` 
 
 > **Note**: This action automatically deletes the role if the role was created primarily for the client that is busy being deleted with no other clients sharing the same role.
 
-### How to edit clients
+## How to edit clients
 
 1. Log in to your OpenHIM console.
 1. Click on `Clients` found in the left navigation menu.
@@ -58,7 +58,7 @@ The following is an explanation of the fields that are used in the `Add Client` 
 1. Update the client information as required.
 1. Click on the `Save Changes` button to update the client.
 
-### Client Roles
+## Client Roles
 
 The purpose of these roles is to act as a list of authorised user groups which are allowed to access and use a given channel. These roles are generally assigned during the creation process when adding a new client.
 
@@ -68,11 +68,11 @@ The following rules apply to roles:
 - When a role is deleted, all clients referencing this role will be automatically updated by unlinking the role.
 - A client may be associated with one or more roles.
 
-#### How to use roles
+### How to use roles
 
 `Roles` allow the OpenHIM administrator to quickly and effortlessly enable or disable channels to which a role has access. The purpose and use of channels will be covered a little later in this document.
 
-#### How to add roles
+### How to add roles
 
 1. Log in to your OpenHIM console.
 1. Click on `Clients` found in the left navigation menu.
@@ -84,7 +84,7 @@ The following rules apply to roles:
 
 > **Note**: By default all channels are disabled at the point of creation.
 
-#### How to remove roles
+### How to remove roles
 
 1. Log in to your OpenHIM console.
 1. Click on `Clients` found in the left navigation menu.
@@ -95,7 +95,7 @@ The following rules apply to roles:
 
 > **Note**: All clients referencing this role will be automatically updated by unlinking the role.
 
-#### How to edit roles
+### How to edit roles
 
 1. Log in to your OpenHIM console.
 1. Click on `Clients` found in the left navigation menu.

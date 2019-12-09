@@ -4,8 +4,6 @@ title: Users
 sidebar_label: Users
 ---
 
-## OpenHIM Users
-
 As an OpenHIM administrator, you may create other users. These too may belong to the admin group or may belong to other groups. Non-admin users cannot create clients and channels, however, they may view transactions for certain channels that they are given access to.
 
 The following is an explanation of the fields that are used in the `Add a Channel` form:
@@ -30,11 +28,11 @@ The following is an explanation of the fields that are used in the `Add a Channe
   - Successful
 - **List Settings and General Settings** - You may pre-define how you want the user to view transactions.
 
-### How are users different from clients
+## How are users different from clients
 
 Clients are different from users in that they represent systems that can route transactions through the OpenHIM. Users are people accessing and configuring the OpenHIM whereas clients are the systems that are allowed to send requests to the OpenHIM.
 
-### User Groups
+## User Groups
 
 `Groups` are created automatically by just adding a new group name in the user form. You do not need to add a group explicitly. When you go on to create the channel, you just need to make sure the group name matches the one you specified when you created the `User`.
 
@@ -48,7 +46,7 @@ There are two kinds of groups:
 
 > **Note**: When creating a channel, an administrator can set the level of user access by specifying the user groups which may have the necessary rights to view a channel, view a channels transactions, view the transactions request and response body, and rerun failed transactions.
 
-#### Group Permissions
+### Group Permissions
 
 Users can be assigned custom permissions on a channel. This is done by adding the group to which they belong to that particular permission in the channel's configuration. By default, all custom user groups do not have permissions on any channel and will need to be set. Please see [OpenHIM Channels](#openhim-channels) for more information regarding channels.
 
@@ -60,7 +58,7 @@ User permissions comprise the following:
 1. Ability to re-run transactions.
    > **Note**: enabling this permission needs to be done with care because it may cause downstream duplicates and data corruption if the user hasn’t received sufficient training around this process.
 
-### How to add users
+## How to add users
 
 > **Note**: All fields marked with a \* indicates a mandatory field.
 
@@ -69,7 +67,7 @@ User permissions comprise the following:
 1. Click on the green `+ User` button.
 1. Supply all the required fields and click the blue `Save changes` button when completed. See the above section which may assist with this process.
 
-### How to remove users
+## How to remove users
 
 1. Log in to your OpenHIM console.
 1. Click on `Users` found in the left navigation menu.
@@ -77,7 +75,7 @@ User permissions comprise the following:
 1. Click on the red `X` button.
 1. You will be prompted to confirm your action to delete the chosen user.
 
-### How to edit users
+## How to edit users
 
 1. Log in to your OpenHIM console.
 1. Click on `Users` found in the left navigation menu.

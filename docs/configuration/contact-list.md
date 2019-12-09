@@ -4,8 +4,6 @@ title: Contact list
 sidebar_label: Contact list
 ---
 
-## OpenHIM Contact List
-
 The OpenHIM is used for transaction alerting (found in each channel's configuration) and user reports (found in each user's configuration).
 
 The following is an explanation of the fields that are used in the `Add Contact` list form:
@@ -16,7 +14,7 @@ The following is an explanation of the fields that are used in the `Add Contact`
 - **Method** - Delivery method for alerts.
 - **Max Alerts** - Select a limit for alerts.
 
-### How to add a contact list
+## How to add a contact list
 
 > **Note**: All fields marked with a \* indicates a mandatory field. Before you can select a user to receive alerts, you must first create all necessary users. See [OpenHIM Users](#openhim-users) for more information regarding users.
 
@@ -25,7 +23,7 @@ The following is an explanation of the fields that are used in the `Add Contact`
 1. Click on the green `+ Contact List` button.
 1. Supply all the required fields and click the blue `Save changes` button when completed. See the above section which may assist with this process.
 
-### How to remove a contact list
+## How to remove a contact list
 
 1. Log in to your OpenHIM console.
 1. Click on `Contact List` found in the left navigation menu.
@@ -33,7 +31,7 @@ The following is an explanation of the fields that are used in the `Add Contact`
 1. Click on the red `X` button.
 1. You will be prompted to confirm your action to delete the chosen Contact list.
 
-### How to edit a contact list
+## How to edit a contact list
 
 1. Log in to your OpenHIM console.
 1. Click on `Contact List` found in the left navigation menu.

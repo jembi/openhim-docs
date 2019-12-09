@@ -4,7 +4,8 @@ title: Channels
 sidebar_label: Channels
 ---
 
-## OpenHIM Channels
+A channel defines a path that a request will take through the OpenHIM. It describes one or more routes for the request to be forwarded to, which clients are allowed to use the channel, which requests are to be directed to this channel and many more options that allows you to control what happens for a particular request.
+The management of clients and channels are discussed later in the document. Only an OpenHIM administrative user has the permission to `Add`, `Edit` and `Delete` a Client or Channel
 
 Using an OpenHIM administrative account, you will be able to add, edit and remove channels by following a few easy steps.
 
@@ -16,7 +17,7 @@ The allowed roles and clients field identifies which clients are allowed to send
 
 The following is an explanation of the fields that are used in the `Add Channels` form.
 
-### Basic Info Tab
+## Basic Info Tab
 
 1. Channel Name - This is a descriptive name of the Channel.
 1. Channel Type - The type of channel to be configured:
@@ -30,7 +31,7 @@ The following is an explanation of the fields that are used in the `Add Channels
 
 1. **_Status_** - Enable or disable the channel.
 
-### Request Matching Tab
+## Request Matching Tab
 
 1. URL Pattern - Supply a URL pattern to match an incoming transaction.
    > **Note**: this field accepts a RegEx value. This field is not applicable for Channel Type of TCP or TLS.
@@ -45,7 +46,7 @@ The following is an explanation of the fields that are used in the `Add Channels
    - XML Matching - Supply an X Path as well as a value to match.
    - JSON Matching - Supply a JSON property as well as a value to match.
 
-### Routes Tab
+## Routes Tab
 
 1. **Mediator Route** - Select a mediator route if any, to populate the required route fields.
 1. **Name** - This is a descriptive name of the route.
@@ -62,7 +63,7 @@ The following is an explanation of the fields that are used in the `Add Channels
 
    > **Note**: At least one route needs to be added to the Channel and only one route is allowed to be set to primary.
 
-### Data Control Tab
+## Data Control Tab
 
 1. **Store Request Body** - Select whether to store the request body.
 
@@ -82,13 +83,13 @@ The following is an explanation of the fields that are used in the `Add Channels
    - _Path Transform_ - Applies a said-like expression to the path string - multiple endpoints can be reached using the same route.
 1. **Add Auto Rewrite Rules** - Determines whether automatic rewrite rules are used. These rules enabled URLs to be automatically rewritten for any URLs that points to a host that the OpenHIM proxies (any host on a primary route). These can be overridden by user specified rules if need be.
 
-### User Access Tab
+## User Access Tab
 
 1. **User groups allowed to view this channel’s transactions** - Supply the groups allowed to view this Channel’s transactions.
 1. **User groups allowed to view this channel’s transactions request/response body** - Supply the groups allowed to view the request/response body of this Channel’s transactions.
 1. **User groups allowed to rerun this channel’s transactions** - Supply the groups allowed to rerun this Channel’s transactions.
 
-### Alerts Tab
+## Alerts Tab
 
 1. **Status** - Supply the status of a transaction when the alert should be sent. This can be supplied in a range format (e.g 2xx or 4xx).
 1. **Failure Rate (%)** - Supply the failure rate of when to start sending the alerts (e.g 50 - once failure rate above 50% then alerts will be sent).
@@ -100,7 +101,7 @@ The following is an explanation of the fields that are used in the `Add Channels
 1. **Add a new group** - Select a group from the drop down to be added to alerts.
 1. '**+ Alert**' - All required fields need to be supplied before the blue `+ Save` button becomes active.
 
-### How to add a channel
+## How to add a channel
 
 > **Note**: All fields marked with a \* or \*\* indicates a mandatory field.
 
@@ -112,7 +113,7 @@ The following is an explanation of the fields that are used in the `Add Channels
 1. Click on the green `+ Channel` button.
 1. Supply all the required fields and click the blue `Save changes` button when completed. See the above section which may assist with this process.
 
-### How to remove a channel
+## How to remove a channel
 
 1. Log in to your OpenHIM console.
 1. Click on `Channels` found in the left navigation menu.
@@ -120,7 +121,7 @@ The following is an explanation of the fields that are used in the `Add Channels
 1. Click on the red `X` button.
 1. You will be prompted to confirm your action to delete the chosen channel.
 
-### How to edit a channel
+## How to edit a channel
 
 1. Log in to your OpenHIM console.
 1. Click on `Channels` found in the left navigation menu.
@@ -129,7 +130,7 @@ The following is an explanation of the fields that are used in the `Add Channels
 1. Update the channel information as required.
 1. Click on the `Save Changes` button to update the channel.
 
-### How to copy a channel’s config
+## How to copy a channel’s config
 
 1. Log in to your OpenHIM console.
 1. Click on `Channels` found in the left navigation menu.

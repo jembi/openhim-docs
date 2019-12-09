@@ -4,8 +4,6 @@ title: Visualizers
 sidebar_label: Visualizers
 ---
 
-## OpenHIM Visualizers
-
 The visualizer displays a live view of how transactions are being routed through the OpenHIM. Multiple visualizers can be created and these are shared among OpenHIM admin users.
 
 The following is an explanation of the fields that are used in the visualizations Management form:
@@ -30,7 +28,7 @@ The following is an explanation of the fields that are used in the visualization
   - _Visualizer Size Management_ - Choose your desired size for the visualizer.
   - _Visualizer Time Management_ - Choose when and for how long to display an event.
 
-### How to add a visualizer
+## How to add a visualizer
 
 > **Note**: All fields marked with a \* indicates a mandatory field.
 
@@ -39,7 +37,7 @@ The following is an explanation of the fields that are used in the visualization
 1. Click on the green `+ Visualizer` button.
 1. Supply all the required fields and click the blue `Create Visualizer` button when completed. See the above section which may assist with this process.
 
-### How to remove a visualizer
+## How to remove a visualizer
 
 1. Log in to your OpenHIM console.
 1. Click on `Visualizers` found in the left navigation menu.
@@ -47,7 +45,7 @@ The following is an explanation of the fields that are used in the visualization
 1. Click on the red `X` button.
 1. You will be prompted to confirm your action to delete the chosen visualizer.
 
-### How to edit a visualizer
+## How to edit a visualizer
 
 1. Log in to your OpenHIM console.
 1. Click on `Visualizers` found in the left navigation menu.
@@ -56,7 +54,7 @@ The following is an explanation of the fields that are used in the visualization
 1. Update the visualizer information as required.
 1. Click on the `Save Changes` button to update the visualizer.
 
-### How to copy a visualizer's config
+## How to copy a visualizer's config
 
 1. Log in to your OpenHIM console.
 1. Click on `Visualizers` found in the left navigation menu.

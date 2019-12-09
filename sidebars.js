@@ -26,7 +26,6 @@ module.exports = {
       "installation/console-configuration"
     ],
     "Configuration": [
-      "configuration/overview",
       "configuration/certificates",
       "configuration/channels",
       "configuration/clients",
