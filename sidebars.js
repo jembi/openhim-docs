@@ -8,22 +8,22 @@
 module.exports = {
   "docs": {
     "Introduction": [
-      "introduction/about", 
-      "introduction/key-components", 
-      "introduction/roadmap", 
+      "introduction/about",
+      "introduction/key-components",
+      "introduction/roadmap",
       "introduction/community"
     ],
     "Installation": [
-      "installation/manual", 
-      "installation/docker", 
-      "installation/npm", 
-      "installation/virtual-machine", 
+      "installation/manual",
+      "installation/docker",
+      "installation/npm",
+      "installation/virtual-machine",
       "installation/console-configuration"
     ],
     "Tutorial": [
-      "tutorial/prerequisite", 
-      "tutorial/installation", 
-      "tutorial/configuration", 
+      "tutorial/prerequisite",
+      "tutorial/installation",
+      "tutorial/configuration",
       "tutorial/mediator"
     ],
     "User Guide": [
@@ -48,9 +48,9 @@ module.exports = {
       "dev-guide/contributing"
     ],
     "Implementations": [
-      "implementations/datim", 
-      "implementations/mhero", 
-      "implementations/momconnect", 
+      "implementations/datim",
+      "implementations/mhero",
+      "implementations/momconnect",
       "implementations/openhie"
     ],
     "How to": [
@@ -81,24 +81,24 @@ module.exports = {
       "api/audits/read"
     ],
     "Certificates": [
-      "api/certificates/overview", 
-      "api/certificates/create", 
-      "api/certificates/read", 
+      "api/certificates/overview",
+      "api/certificates/create",
+      "api/certificates/read",
       "api/certificates/delete"
     ],
     "Channels": [
       "api/channels/overview",
-      "api/channels/create", 
-      "api/channels/read", 
-      "api/channels/update", 
+      "api/channels/create",
+      "api/channels/read",
+      "api/channels/update",
       "api/channels/delete",
       "api/channels/polling-trigger"
     ],
     "Clients": [
       "api/clients/overview",
-      "api/clients/create", 
-      "api/clients/read", 
-      "api/clients/update", 
+      "api/clients/create",
+      "api/clients/read",
+      "api/clients/update",
       "api/clients/delete"
     ],
     "Contacts group": [
@@ -110,7 +110,7 @@ module.exports = {
     ],
     "Import/Export": [
       "api/import-export/overview",
-      "api/import-export/create", 
+      "api/import-export/create",
       "api/import-export/read"
     ],
     "logs": [
@@ -122,10 +122,10 @@ module.exports = {
       "api/metrics/read"
     ],
     "Roles": [
-      "api/roles/overview", 
-      "api/roles/create", 
-      "api/roles/read", 
-      "api/roles/update", 
+      "api/roles/overview",
+      "api/roles/create",
+      "api/roles/read",
+      "api/roles/update",
       "api/roles/delete"
     ],
     "Server Uptime": [
@@ -134,22 +134,22 @@ module.exports = {
     ],
     "Tasks": [
       "api/tasks/overview",
-      "api/tasks/create", 
-      "api/tasks/read", 
-      "api/tasks/update", 
+      "api/tasks/create",
+      "api/tasks/read",
+      "api/tasks/update",
       "api/tasks/delete"
     ],
     "Transactions": [
-      "api/transactions/create", 
-      "api/transactions/read", 
-      "api/transactions/update", 
+      "api/transactions/create",
+      "api/transactions/read",
+      "api/transactions/update",
       "api/transactions/delete"
     ],
     "Users": [
       "api/users/overview",
-      "api/users/create", 
-      "api/users/read", 
-      "api/users/update", 
+      "api/users/create",
+      "api/users/read",
+      "api/users/update",
       "api/users/delete"
     ],
     "Visualizer": [
