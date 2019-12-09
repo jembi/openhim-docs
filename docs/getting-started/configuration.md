@@ -47,7 +47,7 @@ For this example, we will be creating a very basic channel that requires client 
   defaultValue="manual"
   values={[
     { label: 'Manual', value: 'manual', },
-    { label: 'Import', value: 'import', }
+    { label: 'Import Config', value: 'import', }
   ]
 }>
 
@@ -81,7 +81,7 @@ Lets proceed by supplying the below details within our relevant sections to comp
 </TabItem>
 <TabItem value="import">
 
-Import the below JSON object into the OpenHIM as described within the [Import/Export]() section
+Import the below JSON object into the OpenHIM as described within the [Import/Export](/api/import-export/create.md) section
 
 ```json
 {
