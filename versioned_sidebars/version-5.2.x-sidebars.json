@@ -24,6 +24,24 @@
     },
     {
       "type": "category",
+      "label": "Getting Started",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-5.2.x/getting-started/prerequisites"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/getting-started/install"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/getting-started/configuration"
+        }
+      ]
+    },
+    {
+      "type": "category",
       "label": "Installation",
       "items": [
         {
@@ -40,11 +58,45 @@
         },
         {
           "type": "doc",
-          "id": "version-5.2.x/installation/virtual-machine"
+          "id": "version-5.2.x/installation/console-configuration"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Configuration",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-5.2.x/configuration/certificates"
         },
         {
           "type": "doc",
-          "id": "version-5.2.x/installation/console-configuration"
+          "id": "version-5.2.x/configuration/channels"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/configuration/clients"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/configuration/contact-list"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/configuration/import-export"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/configuration/mediators"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/configuration/users"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/configuration/visualizers"
         }
       ]
     },
@@ -52,18 +104,6 @@
       "type": "category",
       "label": "Tutorial",
       "items": [
-        {
-          "type": "doc",
-          "id": "version-5.2.x/tutorial/prerequisite"
-        },
-        {
-          "type": "doc",
-          "id": "version-5.2.x/tutorial/installation"
-        },
-        {
-          "type": "doc",
-          "id": "version-5.2.x/tutorial/configuration"
-        },
         {
           "type": "doc",
           "id": "version-5.2.x/tutorial/mediator"
@@ -77,10 +117,6 @@
         {
           "type": "doc",
           "id": "version-5.2.x/user-guide/overview"
-        },
-        {
-          "type": "doc",
-          "id": "version-5.2.x/user-guide/basic-configuration"
         },
         {
           "type": "doc",
@@ -142,10 +178,6 @@
         },
         {
           "type": "doc",
-          "id": "version-5.2.x/dev-guide/restful-api"
-        },
-        {
-          "type": "doc",
           "id": "version-5.2.x/dev-guide/contributing"
         }
       ]
@@ -178,35 +210,11 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-5.2.x/how-to/setup-and-configure"
-        },
-        {
-          "type": "doc",
-          "id": "version-5.2.x/how-to/openhim-core-release"
-        },
-        {
-          "type": "doc",
-          "id": "version-5.2.x/how-to/openhim-console-release"
-        },
-        {
-          "type": "doc",
-          "id": "version-5.2.x/how-to/build-centos-rpm-package"
-        },
-        {
-          "type": "doc",
           "id": "version-5.2.x/how-to/install-on-centos"
         },
         {
           "type": "doc",
           "id": "version-5.2.x/how-to/setup-ssl"
-        },
-        {
-          "type": "doc",
-          "id": "version-5.2.x/how-to/pre-package-offline-release"
-        },
-        {
-          "type": "doc",
-          "id": "version-5.2.x/how-to/run-openhim-using-vagrant"
         },
         {
           "type": "doc",
@@ -222,15 +230,7 @@
         },
         {
           "type": "doc",
-          "id": "version-5.2.x/how-to/manually-install-on-ubuntu-trusty"
-        },
-        {
-          "type": "doc",
           "id": "version-5.2.x/how-to/manually-install-on-windows"
-        },
-        {
-          "type": "doc",
-          "id": "version-5.2.x/how-to/build-openhim-documentation"
         }
       ]
     }
@@ -387,6 +387,60 @@
         {
           "type": "doc",
           "id": "version-5.2.x/api/import-export/read"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "logs",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-5.2.x/api/logs/overview"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/api/logs/read"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Mediators",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-5.2.x/api/mediators/overview"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/api/mediators/create"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/api/mediators/read"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/api/mediators/update"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/api/mediators/delete"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Metrics",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-5.2.x/api/metrics/overview"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/api/metrics/read"
         }
       ]
     },

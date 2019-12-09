@@ -1,33 +1,36 @@
 ---
 id: read
-title: Read Task/s
+title: Read Logs
 sidebar_label: Read
 keywords:
   - OpenHIM
   - API
-  - Task
+  - Logs
   - Read
-description: Read OpenHIM Task/s via the API
+description: Read OpenHIM server logs via the API
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-To read existing task records you will need to make a TLS request to the OpenHIM API for the below method and endpoint.
+## Read logs
 
-## Read all tasks
-
-```curl
-Method: GET
-Endpoint: {openhim_url}:8080/tasks
-```
-
-## Read a specific task
+To read existing logs you will need to make a TLS request to the OpenHIM API for the below method and endpoint.
 
 ```curl
 Method: GET
-Endpoint: {openhim_url}:8080/tasks/:taskId
+Endpoint: {openhim_url}:8080/logs?[filters]
 ```
+
+By default the logs with level info and above for the last 5 minutes are returned. The logs will be returned as an ordered array. A maximum of 100 000 log messages are returned (hint: use pagination).
+
+The following filters are available:
+
+- `from` - an ISO8601 formatted date to query from. Defaults to 5 mins ago.
+- `until` - an ISO8601 formatted date to query until. Defaults to now.
+- `start` - a number n: the log message to start from, if specified the first `n` message are NOT returned. Useful along with limit for pagination. Defaults to 0.
+- `limit` - a number n: the max number of log messages to return. Useful along with `start` for pagination. Defaults to 100 000.
+- `level` - The log level to return. Possible values are `debug`, `info`, `warn` and `error`. All messages with a level equal to or of higher severity to the specified value will be returned. Defaults to `info`.
 
 ## Example
 
@@ -54,7 +57,7 @@ Replace the `openhimOptions` values with the correct implementation details
 (async () => {
   const openhimOptions = {
     apiURL: 'https://localhost:8080',
-    apiEndpoint: '/tasks/taskId',
+    apiEndpoint: '/logs',
     username: 'root@openhim.org',
     password: 'openhim-password',
     rejectUnauthorized: false
@@ -67,9 +70,7 @@ Replace the `openhimOptions` values with the correct implementation details
     rejectUnauthorized: openhimOptions.rejectUnauthorized,
     headers: headers,
     qs: {
-      filterLimit: 4,
-      filterPage: 0,
-      filters: {}
+      limit: 5
     }
   }
   
@@ -89,10 +90,10 @@ Replace the `openhimOptions` values with the correct implementation details
 
 Ensure that you have created your bash script to construct the HTTP authentication headers and send the request to the OpenHIM API as described in the [authentication section](../introduction/authentication).
 
-Execute the below command in your terminal where the file is located with the required arguments. Replace the placeholder arguments with the correct implementation details. In order to get all the tasks remove the <TASK_ID>, and for a specific task substitute it with the task's id
+Execute the below command in your terminal where the file is located with the required arguments. Replace the placeholder arguments with the correct implementation details.
 
 ```curl
-./openhim-api.sh root@openhim.org openhim-password -v "https://localhost:8080/tasks/<TASK_ID>?filterLimit=50&filterPage=0&filters=%7B%7D"
+./openhim-api.sh root@openhim.org openhim-password -v https://localhost:8080/logs?limit=5
 ```
 
 </TabItem>

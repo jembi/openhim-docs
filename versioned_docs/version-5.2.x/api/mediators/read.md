@@ -1,32 +1,32 @@
 ---
 id: read
-title: Read Task/s
+title: Read Mediator/s
 sidebar_label: Read
 keywords:
   - OpenHIM
   - API
-  - Task
+  - Mediators
   - Read
-description: Read OpenHIM Task/s via the API
+description: Read OpenHIM Mediators via the API
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-To read existing task records you will need to make a TLS request to the OpenHIM API for the below method and endpoint.
+To read existing mediator records you will need to make a TLS request to the OpenHIM API for the below method and endpoint.
 
-## Read all tasks
+## Read all mediators
 
 ```curl
 Method: GET
-Endpoint: {openhim_url}:8080/tasks
+Endpoint: {openhim_url}:8080/mediators
 ```
 
-## Read a specific task
+## Read a specific mediator
 
 ```curl
 Method: GET
-Endpoint: {openhim_url}:8080/tasks/:taskId
+Endpoint: {openhim_url}:8080/mediators/:urn
 ```
 
 ## Example
@@ -54,7 +54,7 @@ Replace the `openhimOptions` values with the correct implementation details
 (async () => {
   const openhimOptions = {
     apiURL: 'https://localhost:8080',
-    apiEndpoint: '/tasks/taskId',
+    apiEndpoint: '/mediators/:urn',
     username: 'root@openhim.org',
     password: 'openhim-password',
     rejectUnauthorized: false
@@ -65,12 +65,7 @@ Replace the `openhimOptions` values with the correct implementation details
   const options = { method: 'GET',
     url: `${openhimOptions.apiURL}${openhimOptions.apiEndpoint}`,
     rejectUnauthorized: openhimOptions.rejectUnauthorized,
-    headers: headers,
-    qs: {
-      filterLimit: 4,
-      filterPage: 0,
-      filters: {}
-    }
+    headers: headers
   }
   
   request(options, (error, response, body) => {
@@ -89,10 +84,10 @@ Replace the `openhimOptions` values with the correct implementation details
 
 Ensure that you have created your bash script to construct the HTTP authentication headers and send the request to the OpenHIM API as described in the [authentication section](../introduction/authentication).
 
-Execute the below command in your terminal where the file is located with the required arguments. Replace the placeholder arguments with the correct implementation details. In order to get all the tasks remove the <TASK_ID>, and for a specific task substitute it with the task's id
+Execute the below command in your terminal where the file is located with the required arguments. Replace the placeholder arguments with the correct implementation details.
 
 ```curl
-./openhim-api.sh root@openhim.org openhim-password -v "https://localhost:8080/tasks/<TASK_ID>?filterLimit=50&filterPage=0&filters=%7B%7D"
+./openhim-api.sh root@openhim.org openhim-password -v https://localhost:8080/mediators/:urn
 ```
 
 </TabItem>
