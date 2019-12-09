@@ -22,7 +22,7 @@ To route using the OpenHIM, create a channel on the OpenHIM console or through t
 
 ## Example routing
 
-For this example the channel that will be created is public.
+Create the channel.
 
 <Tabs
   defaultValue="lang"
@@ -41,41 +41,21 @@ For this example the channel that will be created is public.
 }>
 <TabItem value="nodejs">
 
-In this example a server that will be routed to is created and stopped soon after the routing is done. Ensure that the channel's route's url is `localhost` and the `port` matches the upstream server's `port`. The request `<PATH>` should also match the channel's `urlPattern`. If the channel was private the client's Id and password would have been passed in for the username and password.
+Ensure that request's `<PATH>` matches the channel's `urlPattern`. If the channel is private the client's Id and password will have to be passed in for the username and password.
 
 Copy the below code into a file titled `router.js` and supply the correct implementation details.
 
 ```javascript
-const http = require('http')
-const request = require('request')
+const request = require('request');
 
-// Upstream server being routed to
-const server = http.createServer((req, res) => {
-  res.writeHead(200)
-  res.end('Successful routing')
-});
-
-// Function that send the request to the openhim
 (async () => {
-  // start up upstream server
-  server.listen(4000)
-
-  const openhimOptions = {
-    apiURL: 'https://localhost:5000',
-    apiEndpoint: '/<PATH>',
-    username: 'root@openhim.org',
-    password: 'openhim-password',
-    rejectUnauthorized: false
-  }
-
-  //const headers = await genAuthHeaders(openhimOptions)
   const options = {
     method: 'GET',
-    url: `${openhimOptions.apiURL}${openhimOptions.apiEndpoint}`,
-    rejectUnauthorized: openhimOptions.rejectUnauthorized,
+    url: `https://localhost:5000/<PATH>`,
+    rejectUnauthorized: false,
     auth: {
       user: 'root@openhim.org',
-      pass: 'password'
+      pass: 'openhim-password'
     },
     json: true
   }
@@ -86,9 +66,6 @@ const server = http.createServer((req, res) => {
       statusCode: response.statusCode,
       body
     })
-
-    // Close server
-    server.close()
   })
 })()
 ```
@@ -98,8 +75,6 @@ Execute the below commands in your terminal to run the nodejs script
 ```node
 npm install request && node router.js
 ```
-
-The response status code will be `200` if successful. The transaction will appear on the console with the response body `Successful routing`.
 
 </TabItem>
 <TabItem value="bash">
@@ -112,8 +87,7 @@ curl -k -u <CLIENT_ID>:<CLIENT_PASSWORD> https://localhost:5000/<PATH>
 
 </TabItem>
 </Tabs>
-
-The response body will be returned. If the upstream server is down the response status will be `500` and the response body will be `An internal server error occurred`.
-
 </TabItem>
 </Tabs>
+
+The response body will be returned. If the upstream server (server being routed to) is down the response status will be `500` and the response body will be `An internal server error occurred`.
