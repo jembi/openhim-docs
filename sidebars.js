@@ -76,10 +76,9 @@ module.exports = {
       "api/introduction/authentication"
     ],
     "Audits": [
-      "api/audits/create", 
-      "api/audits/read", 
-      "api/audits/update", 
-      "api/audits/delete"
+      "api/audits/overview",
+      "api/audits/create",
+      "api/audits/read"
     ],
     "Certificates": [
       "api/certificates/overview", 
