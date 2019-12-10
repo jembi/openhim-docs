@@ -36,7 +36,7 @@ The OpenHIM-console has an audit viewer available on the 'Audit Log' page.
 
 ## ATNA Audit Events
 
-The OpenHIM will generate audit events on application start/stop, as well as user authentication. These events can either be sent to the OpenHIM's own internal audit repository, or to an external repository. This can be setup in [config](https://github.com/jembi/openhim-core-js/blob/master/config/default.json#L111-L116) by choosing an appropriate `interface`:
+The OpenHIM will generate audit events on application start, stop, and user authentication. These events can either be sent to the OpenHIM's own internal audit repository, or to an external repository. This can be setup in [config](https://github.com/jembi/openhim-core-js/blob/master/config/default.json#L111-L116) by choosing an appropriate `interface`:
 
 ```json
 "auditEvents": {
@@ -46,6 +46,6 @@ The OpenHIM will generate audit events on application start/stop, as well as use
 }
 ```
 
-Options for the interface are: `internal`, `udp`, `tls` and `tcp`. The host and port does not need to be set for the `internal` interface.
+Options for the interface are: `internal`, `udp`, `tls` and `tcp`. The host and port do not need to be set for the `internal` interface.
 
 Note that audit events are generated in RFC3881 format, but see our [RFC3881 to DICOM Mediator](https://github.com/jembi/openhim-mediator-RFC3881toDICOM) for converting to DICOM.

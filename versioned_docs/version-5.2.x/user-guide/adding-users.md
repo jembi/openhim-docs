@@ -13,13 +13,13 @@ username: root@openhim.org
 password: openhim-password
 ```
 
-Note: It is recommended that you change these as soon as you have installed the him to avoid abuse. Newer versions of the OpenHIM console should prompt you to do this on first login.
+Note: Change these as soon as you have installed the him to avoid abuse. The OpenHIM console should prompt you to do this on first login.
 
-Using the default admin user, you may create other users. These too may belong to the admin group or may belong to other groups. Non-admin users cannot create clients and channels, however, they may view transactions for certain channels that they are given access to.
+Using the default admin user, you may create other users. These too may belong to the admin group or custom groups. Non-admin users cannot create clients and channels, however, they may view transactions for certain channels that they are given access to.
 
 > Note: Users that belong to the **admin** group are Super Users.
 
-User accounts are created in order to give users of the system an certain capabilities depending on the groups to which they belong. Users can access these capabilities through the OpenHIM console.
+User accounts are created in order to give users of the system certain features depending on the groups to which they belong. Users can access these features through the OpenHIM console.
 
 ## How are users different from clients
 
@@ -27,12 +27,12 @@ Clients are different from users, they represent systems that can route transact
 
 ## User Groups
 
-Groups are created automatically by just adding a new group name in the user form. You do not need to add a group explicitly. When you go on to create the channel, you just need to make sure the group name matches the one you specified when you created the user.
+Groups are created automatically by just adding a new group name in the user form. You do not need to add a group explicitly. When you go on to create the channel, you just need to make sure the group name matches the one specified when you created the user.
 
 There are 2 kinds of groups
 
-1. The 'admin' group: this is a special group that grants users all permissions.
-2. Then the rest are defined by the system administrator and in the channels, an admin can set whether the group has any of the permissions below.
+1. The **admin** group: this is a special group that grants users all permissions.
+2. The rest are defined by the system administrator and in the channels, an admin can set whether the group has any of the permissions below.
 
 ## Permissions
 
@@ -67,7 +67,7 @@ Optional Fields are as follows:
 
 ## Reports
 
-The two kinds of reports mentioned above send transaction metrics aggregated over a period. In these reports, you can see, the number of transactions that went through as well as their statuses.
+The two kinds of reports mentioned above send transaction metrics aggregated over a period. In these reports, you can see the number of transactions that went through as well as their statuses.
 
 The statuses are as follows:
 
