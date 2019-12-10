@@ -106,18 +106,6 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-5.2.x/tutorial/prerequisite"
-        },
-        {
-          "type": "doc",
-          "id": "version-5.2.x/tutorial/installation"
-        },
-        {
-          "type": "doc",
-          "id": "version-5.2.x/tutorial/configuration"
-        },
-        {
-          "type": "doc",
           "id": "version-5.2.x/tutorial/mediators/basic-scaffold"
         },
         {

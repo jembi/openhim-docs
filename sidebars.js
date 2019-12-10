@@ -35,9 +35,6 @@ module.exports = {
       "configuration/visualizers"
     ],
     "Tutorial": [
-      "tutorial/prerequisite",
-      "tutorial/installation",
-      "tutorial/configuration",
       "tutorial/mediators/basic-scaffold",
       "tutorial/mediators/orchestrator",
       "tutorial/mediators/production-scaffold"
