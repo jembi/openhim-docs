@@ -400,7 +400,7 @@
     },
     {
       "type": "category",
-      "label": "logs",
+      "label": "Logs",
       "items": [
         {
           "type": "doc",

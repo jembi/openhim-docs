@@ -19,9 +19,9 @@ module.exports = {
       "getting-started/configuration"
     ],
     "Installation": [
-      "installation/manual", 
-      "installation/docker", 
-      "installation/npm", 
+      "installation/manual",
+      "installation/docker",
+      "installation/npm",
       "installation/console-configuration"
     ],
     "Configuration": [
@@ -116,7 +116,7 @@ module.exports = {
       "api/import-export/create",
       "api/import-export/read"
     ],
-    "logs": [
+    "Logs": [
       "api/logs/overview",
       "api/logs/read"
     ],
