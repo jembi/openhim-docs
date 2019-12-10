@@ -24,6 +24,24 @@
     },
     {
       "type": "category",
+      "label": "Getting Started",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-5.2.x/getting-started/prerequisites"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/getting-started/install"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/getting-started/configuration"
+        }
+      ]
+    },
+    {
+      "type": "category",
       "label": "Installation",
       "items": [
         {
@@ -50,6 +68,44 @@
     },
     {
       "type": "category",
+      "label": "Configuration",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-5.2.x/configuration/certificates"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/configuration/channels"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/configuration/clients"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/configuration/contact-list"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/configuration/import-export"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/configuration/mediators"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/configuration/users"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/configuration/visualizers"
+        }
+      ]
+    },
+    {
+      "type": "category",
       "label": "Tutorial",
       "items": [
         {
@@ -66,7 +122,15 @@
         },
         {
           "type": "doc",
-          "id": "version-5.2.x/tutorial/mediator"
+          "id": "version-5.2.x/tutorial/mediators/basic-scaffold"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/tutorial/mediators/orchestrator"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/tutorial/mediators/production-scaffold"
         }
       ]
     },
@@ -77,10 +141,6 @@
         {
           "type": "doc",
           "id": "version-5.2.x/user-guide/overview"
-        },
-        {
-          "type": "doc",
-          "id": "version-5.2.x/user-guide/basic-configuration"
         },
         {
           "type": "doc",
@@ -392,6 +452,60 @@
     },
     {
       "type": "category",
+      "label": "logs",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-5.2.x/api/logs/overview"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/api/logs/read"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Mediators",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-5.2.x/api/mediators/overview"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/api/mediators/create"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/api/mediators/read"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/api/mediators/update"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/api/mediators/delete"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Metrics",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-5.2.x/api/metrics/overview"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/api/metrics/read"
+        }
+      ]
+    },
+    {
+      "type": "category",
       "label": "Roles",
       "items": [
         {
@@ -462,6 +576,10 @@
       "items": [
         {
           "type": "doc",
+          "id": "version-5.2.x/api/transactions/overview"
+        },
+        {
+          "type": "doc",
           "id": "version-5.2.x/api/transactions/create"
         },
         {
@@ -471,10 +589,6 @@
         {
           "type": "doc",
           "id": "version-5.2.x/api/transactions/update"
-        },
-        {
-          "type": "doc",
-          "id": "version-5.2.x/api/transactions/delete"
         }
       ]
     },

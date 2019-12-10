@@ -13,6 +13,11 @@ module.exports = {
       "introduction/roadmap",
       "introduction/community"
     ],
+    "Getting Started": [
+      "getting-started/prerequisites",
+      "getting-started/install",
+      "getting-started/configuration"
+    ],
     "Installation": [
       "installation/manual",
       "installation/docker",
@@ -20,15 +25,26 @@ module.exports = {
       "installation/virtual-machine",
       "installation/console-configuration"
     ],
+    "Configuration": [
+      "configuration/certificates",
+      "configuration/channels",
+      "configuration/clients",
+      "configuration/contact-list",
+      "configuration/import-export",
+      "configuration/mediators",
+      "configuration/users",
+      "configuration/visualizers"
+    ],
     "Tutorial": [
       "tutorial/prerequisite",
       "tutorial/installation",
       "tutorial/configuration",
-      "tutorial/mediator"
+      "tutorial/mediators/basic-scaffold",
+      "tutorial/mediators/orchestrator",
+      "tutorial/mediators/production-scaffold"
     ],
     "User Guide": [
       "user-guide/overview",
-      "user-guide/basic-configuration",
       "user-guide/adding-users",
       "user-guide/transaction-list",
       "user-guide/alerting-reports",
