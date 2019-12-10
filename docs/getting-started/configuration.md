@@ -62,7 +62,6 @@ Lets proceed by supplying the below details within our relevant sections to comp
 - Add new Role: `HL7`
 - Basic Auth Password: `hl7password`
 
-
 **Channel:**
 
 - Basic Info Tab: 
