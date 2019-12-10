@@ -58,9 +58,38 @@ function Version() {
                   </Link>
                 </td>
                 <td>
+                  <Link to={useBaseUrl('/docs/api/introduction/welcome')}>
+                    API
+                  </Link>
+                </td>
+                <td>
                   <a href={`${repoUrl}/releases/tag/v${latestVersion}`}>
                     Release Notes
                   </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div className="margin-bottom--lg">
+          <h3 id="next">Next version (Unreleased)</h3>
+          <p>Here you can find the documentation for unreleased version.</p>
+          <table>
+            <tbody style={{ display: "flex", justifyContent: "center"}}>
+              <tr>
+                <th>master</th>
+                <td>
+                  <Link to={useBaseUrl('/docs/next/introduction/about')}>
+                    Documentation
+                  </Link>
+                </td>
+                <td>
+                  <Link to={useBaseUrl('/docs/next/api/introduction/welcome')}>
+                    API
+                  </Link>
+                </td>
+                <td>
+                  <a href={repoUrl}>Source Code</a>
                 </td>
               </tr>
             </tbody>
