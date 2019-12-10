@@ -19,10 +19,9 @@ module.exports = {
       "getting-started/configuration"
     ],
     "Installation": [
-      "installation/manual",
-      "installation/docker",
-      "installation/npm",
-      "installation/virtual-machine",
+      "installation/manual", 
+      "installation/docker", 
+      "installation/npm", 
       "installation/console-configuration"
     ],
     "Configuration": [
@@ -60,7 +59,6 @@ module.exports = {
       "dev-guide/design-details",
       "dev-guide/openhim-development",
       "dev-guide/developing-mediators",
-      "dev-guide/restful-api",
       "dev-guide/contributing"
     ],
     "Implementations": [
@@ -70,20 +68,12 @@ module.exports = {
       "implementations/openhie"
     ],
     "How to": [
-      "how-to/setup-and-configure",
-      "how-to/openhim-core-release",
-      "how-to/openhim-console-release",
-      "how-to/build-centos-rpm-package",
       "how-to/install-on-centos",
       "how-to/setup-ssl",
-      "how-to/pre-package-offline-release",
-      "how-to/run-openhim-using-vagrant",
       "how-to/run-openhim-on-startup",
       "how-to/export-import-configuration",
       "how-to/setup-basic-cluster",
-      "how-to/manually-install-on-ubuntu-trusty",
-      "how-to/manually-install-on-windows",
-      "how-to/build-openhim-documentation"
+      "how-to/manually-install-on-windows"
     ]
   },
   "api": {
