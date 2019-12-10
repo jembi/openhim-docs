@@ -1,55 +1,38 @@
 ---
 id: read
-title: Read Transaction/s
+title: Read Logs
 sidebar_label: Read
 keywords:
   - OpenHIM
   - API
-  - Transactions
+  - Logs
   - Read
-description: Read OpenHIM Transactions via the API
+description: Read OpenHIM server logs via the API
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-To read existing transaction records you will need to make a TLS request to the OpenHIM API for the below method and endpoint.
+## Read logs
 
-## Read all transactions
-
-```curl
-Method: GET
-Endpoint: {openhim_url}:8080/transactions?[filters]
-```
-
-The following query parameters are supported:
-
-- `filterLimit`: The max number of transactions to return
-- `filterPage`: The page to return (used in conjunction with `filterLimit`)
-- `filterRepresentation`: Determines how much information for a transaction to return; options are
-  - `simple`: minimal transaction information
-  - `simpledetails`: minimal transaction information, but with more fields than simple
-  - `bulkrerun`: minimal transaction information required in order to determine rerun status
-  - `full`: Full transaction information
-  - `fulltruncate`: The same as full except that large transaction bodies will be truncated
-- `channelID`: Only return transactions that are linked to the specified channel
-- `filters`: Advanced filters specified as an object. Transaction fields can be specified based on the [transaction schema](https://github.com/jembi/openhim-core-js/blob/master/src/model/transactions.js#L40-L56). For example, in order to filter by response status 200 and a property called `prop` with a value `val`, the following query could be used: `/transactions?filterLimit=100&filterPage=0&filters=%7B%22response.status%22:%22200%22,%22properties%22:%7B%22prop%22:%22val%22%7D%7D`
-
-### Read client's transactions
+To read existing logs you will need to make a TLS request to the OpenHIM API for the below method and endpoint.
 
 ```curl
 Method: GET
-Endpoint: {openhim_url}:8080/transactions/clients/:clientId
+Endpoint: {openhim_url}:8080/logs?[filters]
 ```
 
-## Read a specific transaction
+By default the logs with level info and above for the last 5 minutes are returned. The logs will be returned as an ordered array. A maximum of 100 000 log messages are returned (hint: use pagination).
 
-```curl
-Method: GET
-Endpoint: {openhim_url}:8080/transactions/:transactionId
-```
+The following filters are available:
 
-## Example Fetch transactions
+- `from` - an ISO8601 formatted date to query from. Defaults to 5 mins ago.
+- `until` - an ISO8601 formatted date to query until. Defaults to now.
+- `start` - a number n: the log message to start from, if specified the first `n` message are NOT returned. Useful along with limit for pagination. Defaults to 0.
+- `limit` - a number n: the max number of log messages to return. Useful along with `start` for pagination. Defaults to 100 000.
+- `level` - The log level to return. Possible values are `debug`, `info`, `warn` and `error`. All messages with a level equal to or of higher severity to the specified value will be returned. Defaults to `info`.
+
+## Example
 
 Before we can send our request to the OpenHIM API we need to ensure that we construct our valid HTTP headers to successfully authenticate with the OpenHIM API.
 
@@ -74,7 +57,7 @@ Replace the `openhimOptions` values with the correct implementation details
 (async () => {
   const openhimOptions = {
     apiURL: 'https://localhost:8080',
-    apiEndpoint: '/transactions',
+    apiEndpoint: '/logs',
     username: 'root@openhim.org',
     password: 'openhim-password',
     rejectUnauthorized: false
@@ -87,9 +70,7 @@ Replace the `openhimOptions` values with the correct implementation details
     rejectUnauthorized: openhimOptions.rejectUnauthorized,
     headers: headers,
     qs: {
-      filterLimit: 5,
-      filterPage: 0,
-      filterRepresentation: 'full'
+      limit: 5
     }
   }
   
@@ -112,7 +93,7 @@ Ensure that you have created your bash script to construct the HTTP authenticati
 Execute the below command in your terminal where the file is located with the required arguments. Replace the placeholder arguments with the correct implementation details.
 
 ```curl
-./openhim-api.sh root@openhim.org openhim-password -v "https://localhost:8080/transactions?filterLimit=5&filterPage=0&filterRepresentation=full"
+./openhim-api.sh root@openhim.org openhim-password -v https://localhost:8080/logs?limit=5
 ```
 
 </TabItem>
