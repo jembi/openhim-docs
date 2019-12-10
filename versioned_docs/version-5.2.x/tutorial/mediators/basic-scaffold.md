@@ -77,7 +77,7 @@ CMD npm start
 EXPOSE 3000
 ```
 
-In your IDE move back to the `index.js` file. Here enter teh following script to setup a basic express server listening on port 3000.
+In your IDE move back to the `index.js` file. Here enter the following script to setup a basic express server listening on port 3000.
 
 ```js
 'use strict'
