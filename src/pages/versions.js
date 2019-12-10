@@ -58,6 +58,11 @@ function Version() {
                   </Link>
                 </td>
                 <td>
+                  <Link to={useBaseUrl('/docs/api/introduction/welcome')}>
+                    API
+                  </Link>
+                </td>
+                <td>
                   <a href={`${repoUrl}/releases/tag/v${latestVersion}`}>
                     Release Notes
                   </a>
@@ -76,6 +81,11 @@ function Version() {
                 <td>
                   <Link to={useBaseUrl('/docs/next/introduction/about')}>
                     Documentation
+                  </Link>
+                </td>
+                <td>
+                  <Link to={useBaseUrl('/docs/next/api/introduction/welcome')}>
+                    API
                   </Link>
                 </td>
                 <td>
