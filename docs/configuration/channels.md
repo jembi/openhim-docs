@@ -24,7 +24,7 @@ The following is an explanation of the fields that are used in the `Add Channels
 
    - **_Hypertext Transfer Protocol (HTTP)_** - Default channel type.
    - **_Transmission Control Protocol (TCP)_** - Supply a TCP host and port number.
-   - **_TLS_** - Supply a TLS host and port number.
+   - **_Transport Layer Security (TLS)_** - Supply a TLS host and port number.
    - **_Polling_** - Supply a Polling schedule in a cron format: `*/10 * * * *` or written format: `10 minutes`.
 
      > **Note**: The module called `Agenda` is used to accomplish the polling. Please visit the [Agenda documentation](https://github.com/agenda/agenda) for more information.
