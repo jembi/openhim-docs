@@ -19,7 +19,7 @@ Using the default admin user, you may create other users. These too may belong t
 
 > Note: Users that belong to the **admin** group are Super Users.
 
-Users accounts are created in order to give users of the system an certain capabilities depending on the groups to which they belong. Users can access these capabilities through the OpenHIM console
+User accounts are created in order to give users of the system an certain capabilities depending on the groups to which they belong. Users can access these capabilities through the OpenHIM console.
 
 ## How are users different from clients
 
@@ -29,10 +29,10 @@ Clients are different from users, they represent systems that can route transact
 
 Groups are created automatically by just adding a new group name in the user form. You do not need to add a group explicitly. When you go on to create the channel, you just need to make sure the group name matches the one you specified when you created the user.
 
-There are 2 kinds of group
+There are 2 kinds of groups
 
-1. The 'admin' group: this is a special group that grants users all permissions
-2. Then the rest are defined by the system administrator and in the channels, an admin can set whether the group has any the permissions below.
+1. The 'admin' group: this is a special group that grants users all permissions.
+2. Then the rest are defined by the system administrator and in the channels, an admin can set whether the group has any of the permissions below.
 
 ## Permissions
 
@@ -79,8 +79,8 @@ The statuses are as follows:
 
 ## Filter and list settings
 
-1. Filter settings: Here you set how you want to view transactions on the Transactions page by default. You can default it to show transactions by status by channel as well as limit the number of transactions per page.
+1. Filter settings: Here you set how you want to view transactions on the Transactions page by default. You can default it to show transactions by status, by channel, as well as limit the number of transactions per page.
 
-2. List settings: Upon clicking on a transaction in the transactions page, you can choose by default whether to view the transaction on the same page, or to open it in a new window altogether.
+2. List settings: Upon clicking on a transaction in the transactions page, you can choose whether to view the transaction on the same page (default), or to open it in a new window altogether.
 
 If you find a field that is not described here, please let us know by [filing an issue on github](https://github.com/jembi/openhim-core-js/issues/new) with the 'documentation' label.
