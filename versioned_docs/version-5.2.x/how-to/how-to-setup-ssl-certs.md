@@ -8,7 +8,7 @@ sidebar_label: Setup SSL
 
 This can be accomplished directly from the OpenHIM console, where you can upload a new certificate for openhim-core through the console.
 
-Openhim-core can be set to automatically watch a path which contains it's certificates. The settings for which path and whether or not it should be automatically monitored, can be configured in the openhim-core config file under: `certificateManagement`.
+Openhim-core can be set to automatically watch a path which contains its certificates. The settings for which path and whether or not it should be automatically monitored, can be configured in the openhim-core config file under: `certificateManagement`.
 
 If the config gets updated, openhim-core will need to be restarted.
 
