@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[172],{268:function(e){e.exports=JSON.parse('{"id":"version-5.2.x/dev-guide/restful-api","title":"RESTful API","description":"### Tasks resource","source":"@site/versioned_docs/version-5.2.x/dev-guide/api-ref.md","permalink":"/openhim-docs/docs/dev-guide/restful-api","version":"5.2.x","sidebar_label":"RESTful API"}')}}]);
