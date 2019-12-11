@@ -19,7 +19,7 @@ If you are installing the OpenHIM on ubuntu, then the installation process is ve
 
 ## Manual Installation
 
-If you don’t have ubuntu or prefer to proceed with the installation manually, please follow the following steps.
+If you don’t use Ubuntu or prefer to proceed with the installation manually, please follow the following steps.
 
 ### Installing the OpenHIM Core
 
@@ -27,9 +27,9 @@ The latest active LTS is **recommended**.
 
 > **Note**: libappstream3 may cause problems with the npm package manager if your ubuntu instance is not fully updated.
 
-1. Install the latest stable Node.js v8 or greater `curl -sL https://deb.nodesource.com/setup_6.x| sudo -E bash` then `sudo apt-get install -y nodejs`
+1. Install the latest stable Node.js. [Here is a guide](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04).
 1. Install and start MongoDB 3.6 or greater. (If you are running Ubuntu 16.04, you may want to configure MongoDB as a systemd service that will automatically start on boot)
-1. Install Git `apt-get install git`
+1. Install Git `sudo apt install git`
 1. Install npm `sudo apt install npm`
 1. Install the OpenHIM-core package globally (this will also install an OpenHIM-core binary to your PATH) `sudo npm install openhim-core -g`
 1. Start the server by executing `openhim-core` from anywhere.
@@ -48,7 +48,7 @@ For more information about the config options, please visit [OpenHIM Config Opti
 
 Before installing the OpenHIM console, it is required that you first have the OpenHIM core server up and running. The OpenHIM console communicates with the OpenHIM core via its API to pull and display data.
 
-> It is **recommended** that as soon as the OpenHIM core is up and running that you setup a properly signed TLS certificate. However, it is possible to do this later through the OpenHIM console under ‘Certificates’ on the left navigation pane.
+> We **recommend** that as soon as the OpenHIM core is up and running that you setup a properly signed TLS certificate. However, it is possible to do this later through the OpenHIM console under **Certificates** page.
 
 Next, you need to download the latest release of the web app and deploy it to a web server (Replace the X’s in the below command to the latest release):
 
@@ -59,19 +59,19 @@ Next, you need to download the latest release of the web app and deploy it to a 
 1. Create the /var/www/html path (If it does not already exist) `sudo mkdir html`
 1. Export the contents of the download `tar -vxzf openhim-console-vX.X.X.tar.gz --directory /var/www/html`
 
-> The next step is vital for the successful setup of the OpenHIM console. Firstly, you need to configure the console to point to your OpenHIM core server and lastly, navigate to the config/default.js file in the folder that you extracted the OpenHIM console’s contents to and edit it as follows:
+> The next step is vital for the successful setup of the OpenHIM console. Firstly, you need to configure the console to point to your OpenHIM core server. Then navigate to the config/default.js file in the folder that you extracted and edit it as follows:
 
 ```json
 {
   "version": "x.x.x", //Replace the x's with the latest release
   "minimumCoreVersion": "5.2.3",
   "protocol": "https",
-  "host": "localhost", // change this to the hostname for your OpenHIM-core server (This hostname _MUST_ be publicly accessible)
-  "port": 8080, // change this to the API port of the OpenHIM-core server, default is 8080 (This port _MUST_ be publicly accessible)
+  "host": "localhost", // Change this to the hostname for your OpenHIM-core server (This hostname MUST be publicly accessible)
+  "port": 8080, // Change this to the API port of the OpenHIM-core server, default is 8080 (This port MUST be publicly accessible)
   "title": "OpenHIM Admin Console", // You may change this to customise the title of the OpenHIM-console instance
   "footerTitle": "OpenHIM Administration Console", // You may change this to customise the footer of the OpenHIM-console instance
   "footerPoweredBy": "<a href='http://openhim.org/' target='_blank'>Powered by OpenHIM</a>",
-  "loginBanner": "", // add text here that you want to appear on the login screen, if any.
+  "loginBanner": "", // Add text here that you want to appear on the login screen, if any.
   "mediatorLastHeartbeatWarningSeconds": 60,
   "mediatorLastHeartbeatDangerSeconds": 120
 }
