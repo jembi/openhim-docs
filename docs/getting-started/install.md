@@ -14,7 +14,7 @@ Once we have all our prerequisites completed we are now ready to spin up our Ope
 docker-compose up -d
 ```
 
-**NB!** the user you are executing the above command with needs to be an administrator for the docker-compose script to run successfully
+**NB!** the user executing the above command will need to be an administrator for the docker-compose script to run successfully
 
 The first time this command is run it will take some time to complete. What is happening is that the Docker Compose file needs to pull the relevant images from Dockerhub that doesn't yet exist within your local machine so that the docker containers can be built successfully for our OpenHIM instance.
 

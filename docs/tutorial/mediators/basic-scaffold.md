@@ -77,7 +77,7 @@ CMD npm start
 EXPOSE 3000
 ```
 
-In your IDE move back to the `index.js` file. Here enter teh following script to setup a basic express server listening on port 3000.
+In your IDE move back to the `index.js` file. Here enter the following script to setup a basic express server listening on port 3000.
 
 ```js
 'use strict'
@@ -240,7 +240,7 @@ The transaction response and `orchestrations` in the transaction can be updated 
 
 ### Step 4 - Adding Mediator Heartbeat
 
-To add a mediator heartbeat, import the `activateHeartbeat` method form `openhim-mediator-utils`. This function takes in the `openhimConfig` option set to instantiate as well as the mediator's `urn` within that object. Therefore, to keep the file neat let's import the `urn` from `mediatorConfig` and add this variable to the openhimConfig object. Instantiate the `activateHeartbeat` method within the `app.listen`. The `index.js` file should now resemble this:
+To add a mediator heartbeat, import the `activateHeartbeat` method from `openhim-mediator-utils`. This function takes in the `openhimConfig` option set to instantiate as well as the mediator's `urn` within that object. Therefore, to keep the file neat let's import the `urn` from `mediatorConfig` and add this variable to the openhimConfig object. Instantiate the `activateHeartbeat` method within the `app.listen`. The `index.js` file should now resemble this:
 
 > Why is the `activateHeartbeat` function always instantiated within the `app.listen` function
 
