@@ -10,7 +10,7 @@ The fist thing you will need to do is get you development environment up. This g
 
 You can use vagrant if you would want to get up and running quickly with a dev environment in a vm. See here to [use Vagrant](./how-to/how-to-run-the-openhim-using-vagrant.html) to fire up an instance. Otherwise, read on to learn more.
 
-Clone the `https://github.com/jembi/openhim-core-js.git` repository.
+Clone the <https://github.com/jembi/openhim-core-js.git> repository.
 
 Ensure you have the following installed:
 
