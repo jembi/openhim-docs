@@ -2,6 +2,10 @@
 id: console-configuration
 title: Console Configuration
 sidebar_label: Console Configuration
+keywords:
+  - openhim
+  - console
+  - config
 ---
 
 The OpenHIM console is accessible by navigating to your web server.

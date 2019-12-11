@@ -2,6 +2,11 @@
 id: virtual-machine
 title: Install on a Virtual Machine
 sidebar_label: Install on a Virtual Machine
+keywords:
+  - openhim
+  - virtual machine
+  - installation
+  - ubuntu 18.04
 ---
 
 When installing the OpenHIM on a VM that is running on your local machine, please take note of the following.
