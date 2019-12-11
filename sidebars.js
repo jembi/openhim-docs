@@ -19,7 +19,6 @@ module.exports = {
       "getting-started/configuration"
     ],
     "Installation": [
-      "installation/manual",
       "installation/docker",
       "installation/npm",
       "installation/console-configuration",
