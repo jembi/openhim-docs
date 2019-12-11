@@ -22,7 +22,8 @@ module.exports = {
       "installation/manual",
       "installation/docker",
       "installation/npm",
-      "installation/console-configuration"
+      "installation/console-configuration",
+      "installation/virtual-machine"
     ],
     "Configuration": [
       "configuration/certificates",
@@ -151,8 +152,8 @@ module.exports = {
     ],
     "Transactions": [
       "api/transactions/overview",
-      "api/transactions/create", 
-      "api/transactions/read", 
+      "api/transactions/create",
+      "api/transactions/read",
       "api/transactions/update"
     ],
     "Users": [

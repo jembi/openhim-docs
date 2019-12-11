@@ -59,6 +59,10 @@
         {
           "type": "doc",
           "id": "version-5.2.x/installation/console-configuration"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/installation/virtual-machine"
         }
       ]
     },
