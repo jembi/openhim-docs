@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[283],{378:function(e){e.exports=JSON.parse('{"id":"api/certificates/update","title":"Update","description":"Coming soon ...","source":"@site/docs/api/certificates/update.md","permalink":"/openhim-docs/docs/next/api/certificates/update","version":"next","sidebar_label":"Update"}')}}]);

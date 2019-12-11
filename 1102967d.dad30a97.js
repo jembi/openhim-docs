@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[41],{133:function(e){e.exports=JSON.parse('{"id":"version-5.2.x/tutorial/prerequisite","title":"Prerequisite","description":"","source":"@site/versioned_docs/version-5.2.x/tutorial/prerequisite.md","permalink":"/openhim-docs/docs/tutorial/prerequisite","version":"5.2.x","sidebar_label":"Prerequisite"}')}}]);
