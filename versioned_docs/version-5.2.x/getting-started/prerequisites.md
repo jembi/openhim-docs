@@ -8,11 +8,11 @@ To easily get started with implementing the OpenHIM Core and Console and to star
 
 The below method of spinning up the OpenHIM makes use of [Docker containers](https://www.docker.com/resources/what-container) that allows for easier deployments of the OpenHIM 
 
-We will need to install some software that will allow us to spin up the OpenHIM with ease. We will using [Docker](https://www.docker.com/) which is a container management service to create our OpenHIM instance.
+We will need to install some software that will allow us to spin up the OpenHIM with ease. We will be using [Docker](https://www.docker.com/) which is a container management service to create our OpenHIM instance.
 
 ## Install Docker
 
-Docker is the engine that will be running our entire local OpenHIM instance by using the publicly available OpenHIM core and console images. To install Docker please follow the relevant steps based on your operating system you are using as described in the below link
+Docker is the engine that will be running our entire local OpenHIM instance by using the publicly available OpenHIM core and console images. To install Docker please follow the relevant steps based on the operating system you are using as described in the below link
 
 To [install Docker](https://docs.docker.com/install/) please follow the relevant steps as described within the install documentation
 
@@ -22,14 +22,11 @@ Now that we have Docker installed on our machine, we will also need to install D
 
 To [install Docker Compose](https://docs.docker.com/compose/install/) please follow the relevant steps as described within the install documentation
 
-
-
 ## Docker Compose file
 
 Before we can use Docker to build our OpenHIM instance, we need to create a `docker-compose.yml` that will contain our instructions for pulling the correct OpenHIM [Core](https://hub.docker.com/r/jembi/openhim-core) and [Console](https://hub.docker.com/r/jembi/openhim-console) images from [Jembi's Dockerhub profile](https://hub.docker.com/r/jembi/)
 
 The `docker-compose.yml` can be downloaded from the [OpenHIM core repository](https://github.com/jembi/openhim-core-js/blob/master/infrastructure/docker-compose.yml), or you can copy/paste the below yaml code into a file called `docker-compose.yml`
-
 
 ```yml
 version: '3'
