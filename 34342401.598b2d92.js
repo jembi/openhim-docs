@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[109],{205:function(e){e.exports=JSON.parse('{"id":"version-5.2.x/api/router/delete","title":"Delete","description":"Coming soon ...","source":"@site/versioned_docs/version-5.2.x/api/router/delete.md","permalink":"/docs/api/router/delete","version":"5.2.x","sidebar_label":"Delete"}')}}]);

@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[66],{163:function(e){e.exports=JSON.parse('{"id":"api/router/create","title":"Create","description":"Coming soon ...","source":"@site/docs/api/router/create.md","permalink":"/docs/next/api/router/create","version":"next","sidebar_label":"Create"}')}}]);
