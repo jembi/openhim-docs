@@ -7,24 +7,24 @@ sidebar_label: Configuration
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Once you have successfully installed the OpenHIM core and console and you are able to successfully access the console at [http://localhost:9000](http://localhost:9000) we can proceed to create a basic channel and client so that we can send a test request through the OpenHIM core successfully
+Once you have successfully installed the OpenHIM core and console and you are able to successfully access the console at <http://localhost:9000> we can proceed to create a basic channel and client so that we can send a test request through the OpenHIM core.
 
-A **Client** is usually some system that you want to be able to send request to the OpenHIM. Setting up a **client** allows the OpenHIM to authenticate requests. A **Channel** defines a path that a request will take through the OpenHIM. It describes one more **routes** for the request to be forwarded to, which **clients** are allowed to use this **channel**, which requests are to be directed to this **channel** and many more options that allow you to controls what happens for a particular request.
+A **Client** is usually some system that you want to be able to send request to the OpenHIM. Setting up a **client** allows the OpenHIM to authenticate requests. A **Channel** defines a path that a request will take through the OpenHIM. It describes one more **routes** for the request to be forwarded to, which **clients** are allowed to use this **channel**, which requests are to be directed to this **channel** and many more options that allow you to control what happens for a particular request.
 
 To manage **clients** and **channels** you will need to log into the OpenHIM console and then you may follow the steps below.
 
-**Note** - Only an Admin user has the permission to Add/Edit/Delete a **Client** or **Channel**
+> **Note** - Only an Admin user has the permission to Add/Edit/Delete a **Client** or **Channel**
 
 ## Adding Clients
 
 Follow the below steps to successfully create/update a **Client**
 
-- Navigate to the **Clients** menu option found in the left sidebar.
-- On the **Clients** page you will be presented with a list of all the created **Clients**
-- Click on the blue "**+ Client**" button to open a popup modal box where you will supply the **Client** details **OR** click on one of the existing **Clients** to open up the popup modal with the **Clients'** saved details.
-- Supply all the required fields (marked with a \*) and click the blue "**Save changes**" button when completed.
+- Navigate to the **Clients** page on the OpenHIM Console.
+- Here you will be presented with a list of all the created **Clients**
+- Click on the blue **+ Client** button to open a popup modal box where you will supply the **Client** details **OR** click on one of the existing **Clients** to open up the popup modal with the **Client**'s saved details.
+- Supply all the required fields (marked with a \*) and click the blue **Save changes** button when completed.
 
-There are many fields that you may supply, to find a detailed explanation of all the available fields, please refer to the [Clients documentation](/configuration/clients.md) page
+There are many fields available, to find a detailed explanation of all possible fields, please refer to the [Clients documentation](../configuration/clients) page
 
 ## Adding Channels
 
@@ -35,9 +35,13 @@ Follow the below steps to successfully create/update a **Channel**
 - Click on the blue "**+ Channel**" button to open a popup modal box where you will supply the **Channel** details **OR** click on one of the existing **Channels** to open up the popup modal with the **Channels'** saved details.
 - Supply all the required fields and click the blue "**Save changes**" button when completed.
 
-The two _most_ important fields to supply are the **URL Pattern** field and the **Allowed roles and clients** field. The **URL Pattern** field describes which incoming requests should be sent down this **channel**. It does this by looking at the URL of the incoming request and testing if it matches the RegEx that you supply in this field. Note, only the first matched **channel** that is found receives the request for processing. The **Allowed roles and clients** field identifies which **clients** are allowed to send requests to this **channel**. If a request matches a private **channel** but the **client** system is not specified in this field or a **role** which contains the **client** is not specified in this field then the request will be denied access to the **channel** as it could not successfully authenticate the the supplied authentication details to those linked to the channel.
+The two _most_ important fields to supply are the **URL Pattern** field and the **Allowed roles and clients** field. The **URL Pattern** field describes which incoming requests should be sent down this **channel**. It does this by looking at the URL of the incoming request and testing if it matches the RegEx that you supply in this field.
 
-There are many fields that you may supply, to find a detailed explanation of all the available fields, please refer to the [Channels documentation](/configuration/channels.md) page
+> **Note**, *only the first* url matched **channel** that is found receives the request for processing.
+
+The **Allowed roles and clients** field identifies which **clients** are allowed to send requests to this **channel**. If a request matches a private **channel** but the **client** system is not specified in this field or a **role** which contains the **client** is not specified in this field then the request will be denied access to the **channel** as it could not successfully authenticate the the supplied authentication details to those linked to the channel.
+
+There are many fields that you may supply, to find a detailed explanation of all the available fields, please refer to the [Channels documentation](../configuration/channels) page
 
 ## Example
 
@@ -64,13 +68,13 @@ Lets proceed by supplying the below details within our relevant sections to comp
 
 **Channel:**
 
-- Basic Info Tab: 
+- Basic Info Tab:
   - name: `HL7 Patient example Channel`
-- Request Matching Tab: 
+- Request Matching Tab:
   - urlPatten: `/hl7-patient-example`
   - Channel Authentication: `Private`
   - Client to access this channel: `HL7`
-- Routes Tab: Add new route: 
+- Routes Tab: Add new route:
   - Name: `HL7 patient example Route`
   - Route Secured: `yes`
   - Host: `www.hl7.org`
@@ -166,9 +170,9 @@ Import the below JSON object into the OpenHIM as described within the [Import/Ex
 </TabItem>
 </Tabs>
 
-Once you have configured your client and channel as described in the above example, you should now be able to successfully make a authenticated request through the OpenHIM to fetch the example HL7 FHIR Patient object.
+Once you have configured your client and channel **as described in the above example**, you should now be able to successfully make a authenticated request through the OpenHIM to fetch the example HL7 FHIR Patient object.
 
-Execute the below command in your terminal to see the output of the request. 
+Execute the below command in your terminal to see the output of the request.
 
 ```bash
 curl "http://localhost:5001/hl7-patient-example" -H "Authorization: Basic $(echo -n HL7:hl7password | base64)"
