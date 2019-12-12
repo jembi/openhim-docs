@@ -2,6 +2,9 @@
 id: design-details
 title: Detailed design using Node.js
 sidebar_label: Detailed design using Node.js
+keywords:
+  - openhim
+  - design
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
@@ -206,22 +209,3 @@ It should also allow for the following actions:
 - querying for monitoring statistics
 
 The API reference as it currently exists can be [found here](../api/transactions/overview).
-
-### API Authentication
-
-For details follow the following issue: [https://github.com/jembi/openhim-core-js/issues/57#issuecomment-44835273](https://github.com/jembi/openhim-core-js/issues/57#issuecomment-44835273)
-
-The users collection should look as follows:
-
-```json
-{
-    "firstname": "Ryan",
-    "surname": "Crichton",
-    "email": "r..@jembi.org",
-    "username": "ryan.crichton",
-    "passwordHash": "xxxxx",
-    "passwordSalt": "xxxxx",
-    "apiKey": "fd41f5da-b059-45e8-afc3-99896ee5a7a4",
-    "groups": [ "Admin", "RHIE"]
-}
-```

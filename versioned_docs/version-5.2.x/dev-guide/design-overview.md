@@ -2,6 +2,10 @@
 id: design-overview
 title: Design overview
 sidebar_label: Design overview
+keywords:
+  - openhim
+  - design
+  - summary
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

@@ -2,6 +2,10 @@
 id: contributing
 title: Contributing
 sidebar_label: Contributing
+keywords:
+  - openhim
+  - contribute
+  - open source
 ---
 
 If you would like to contribute to either of the OpenHIM projects ([openhim-core](https://github.com/jembi/openhim-core-js) or [openhim-console](https://github.com/jembi/openhim-console)) then feel free to fork either repository and send us a pull request. The maintainers will strive to review the code and merge it in if all is well.
