@@ -17,19 +17,18 @@ If you are installing the OpenHIM on ubuntu, then the installation process is ve
 
 ---
 
-## Manual Installation
+## NPM Installation
 
-If you don’t use Ubuntu or prefer to proceed with the installation manually, please follow the following steps.
+If you don’t use Ubuntu or prefer to proceed with the installation manually with npm, please follow the following steps.
 
-### Installing the OpenHIM Core
+### Installing the OpenHIM Core via npm
 
 The latest active LTS is **recommended**.
 
-> **Note**: libappstream3 may cause problems with the npm package manager if your ubuntu instance is not fully updated.
+> **Note**: `libappstream3` may cause problems with the npm package manager if your ubuntu instance is not fully updated.
 
 1. Install the latest stable Node.js. [Here is a guide](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04).
-1. Install and start MongoDB 3.6 or greater. (If you are running Ubuntu 16.04, you may want to configure MongoDB as a systemd service that will automatically start on boot)
-1. Install Git `sudo apt install git`
+1. Install and start MongoDB 3.6 or greater. (If you are running Ubuntu 16.04 and later, you may want to configure MongoDB as a `systemd` service that will automatically start on boot)
 1. Install npm `sudo apt install npm`
 1. Install the OpenHIM-core package globally (this will also install an OpenHIM-core binary to your PATH) `sudo npm install openhim-core -g`
 1. Start the server by executing `openhim-core` from anywhere.
