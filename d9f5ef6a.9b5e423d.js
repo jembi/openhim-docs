@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[435],{529:function(e){e.exports=JSON.parse('{"id":"version-5.2.x/api/router/read","title":"Read","description":"Coming soon ...","source":"@site/versioned_docs/version-5.2.x/api/router/read.md","permalink":"/docs/api/router/read","version":"5.2.x","sidebar_label":"Read"}')}}]);
