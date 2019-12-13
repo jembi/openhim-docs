@@ -2,6 +2,11 @@
 id: manual
 title: Install Manually
 sidebar_label: Install Manually
+keywords:
+  - OpenHIM
+  - Manual
+  - Install
+description: Install the OpenHIM manually
 ---
 
 If you don’t have ubuntu or prefer to proceed with the installation manually, please follow the following steps.

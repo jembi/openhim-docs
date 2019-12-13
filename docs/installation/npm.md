@@ -2,6 +2,10 @@
 id: npm
 title: Install via NPM
 sidebar_label: Install via NPM
+keywords:
+  - OpenHIM
+  - Npm install
+description: Install OpenHIM via npm
 ---
 
 To get you started, we will show you the various options for installing the OpenHIM core along with the OpenHIM admin console.
