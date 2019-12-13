@@ -2,6 +2,10 @@
 id: virtual-machine
 title: Install via Virtual Machine
 sidebar_label: Install via Virtual Machine
+keywords:
+  - OpenHIM
+  - Virtual machine install
+description: Install the OpenHIM via virtual machine
 ---
 
 When installing the OpenHIM on a VM that is running on your local machine, please take note of the following.

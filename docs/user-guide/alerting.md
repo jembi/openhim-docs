@@ -2,6 +2,11 @@
 id: alerting-reports
 title: Alerting and reports
 sidebar_label: Alerting and reports
+keywords:
+  - OpenHIM
+  - Alerts
+  - Reports
+description: Alerting and reporting on the OpenHIM
 ---
 
 The OpenHIM supports alerting users via email or sms under specific conditions. It is also able to send out daily and weekly reports about the transaction that it has processed. In the following section we explore these functions in more detail.

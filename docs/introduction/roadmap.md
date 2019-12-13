@@ -2,6 +2,10 @@
 id: roadmap
 title: Roadmap
 sidebar_label: Roadmap
+keywords:
+  - OpenHIM
+  - Roadmap
+description: The OpenHIM's roadmap
 ---
 
 ## OpenHIM Roadmap 2019

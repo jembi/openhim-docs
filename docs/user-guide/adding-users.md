@@ -2,6 +2,10 @@
 id: adding-users
 title: Adding Users
 sidebar_label: Adding Users
+keywords:
+  - OpenHIM
+  - Users
+description: How to add users on the OpenHIM
 ---
 
 In order to configure the OpenHIM you have to be a registered user account with relevant permissions. A default super/admin user is provided when you first run the OpenHIM.
