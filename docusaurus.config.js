@@ -101,6 +101,9 @@ module.exports = {
       },
       copyright: `Copyright © ${new Date().getFullYear()} Jembi Health Systems NPC`,
     },
+    prism: {
+      theme: require('prism-react-renderer/themes/nightOwl'),
+    }
   },
   presets: [
     [

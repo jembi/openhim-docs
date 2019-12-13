@@ -81,6 +81,10 @@
   max-width: var(--ifm-col-width);
 }
 
+.row .col {
+  max-width: 75%;
+}
+
 .feature {
   display: flex;
   align-items: center;
