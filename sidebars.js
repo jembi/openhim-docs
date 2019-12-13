@@ -21,6 +21,7 @@ module.exports = {
     "Installation": [
       "installation/docker",
       "installation/npm",
+      "installation/manual",
       "installation/console-configuration",
       "installation/virtual-machine"
     ],

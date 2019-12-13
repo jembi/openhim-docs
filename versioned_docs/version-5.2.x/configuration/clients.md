@@ -2,11 +2,15 @@
 id: clients
 title: Clients
 sidebar_label: Clients
+keywords:
+  - openhim
+  - client
+  - config
 ---
 
-A client is usually some system that you want to able to send request to the OpenHIM. Setting up a client allows the OpenHIM to authenticate requests.
+A client is usually a system that you want to be able to send request to the OpenHIM. Setting up a client allows the OpenHIM to authenticate requests.
 
-Using an OpenHIM administrative account, you will be able to add, edit and remove clients by following a few easy steps.
+Using an OpenHIM administrative account, you will be able to add, edit and remove clients by following the steps below.
 
 The following is an explanation of the fields that are used in the `Add Client` form:
 
@@ -17,11 +21,11 @@ The following is an explanation of the fields that are used in the `Add Client` 
 - **Roles** - The client roles field is a list of authorized user groups that are allowed to access this channel. You can either select a role from the suggested roles that appear when you start typing, or you can add a new role to the list by typing in the role and pressing Enter.
   > **Note**: suggested roles will only appear as you type, if they already exist in the OpenHIM.
 - **Certificate** - The certificate field is used when the OpenHIM core is running using mutual TLS authentication and needs to authenticate requests coming from the client. By default, the OpenHIM core uses mutual TLS authentication.
-- **Basic Auth Password** - The password field is used when the OpenHIM core is running in basic auth mode and does not require a certificate, it does however require a password.
+- **Basic Auth Password** - The password field is used when the OpenHIM core is running in basic auth mode and does not require a certificate, however, it does require a password.
 
 ## How to add clients
 
-> **Note**: All fields marked with a * or ** indicates a mandatory field.
+> **Note**: All fields marked with a \* or \*\* indicates a mandatory field.
 
     * - Indicates a required field which means that it cannot be left blank.
     ** - Indicates that one of the fields are required.
@@ -47,7 +51,7 @@ The following is an explanation of the fields that are used in the `Add Client` 
 1. You will be prompted to confirm your action to delete the chosen client.
 1. Click on the `Delete` button.
 
-> **Note**: This action automatically deletes the role if the role was created primarily for the client that is busy being deleted with no other clients sharing the same role.
+> **Note**: This action automatically deletes the role if the role was created primarily for the client that is busy being deleted with no other clients sharing that same role.
 
 ## How to edit clients
 
@@ -99,8 +103,8 @@ The following rules apply to roles:
 
 1. Log in to your OpenHIM console.
 1. Click on `Clients` found in the left navigation menu.
-1. Under the Roles section, Enable or disable channels to be used by the role by clicking on either the green `✓` or the red `X`.
-   > **Note**: You will not see the green `✓` or the red `X` if you don't have any channels configured.
+1. Under the Roles section, enable or disable channels to be used by the role by clicking on either the green `✓` or the red `X`.
+    > **Note**: You will not see the green `✓` or the red `X` if you don't have any channels configured.
 1. The changes are automatically saved.
 
 > **Note**: A `✓` means enabled whereas a `X` means disabled.
