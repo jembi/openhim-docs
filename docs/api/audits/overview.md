@@ -10,7 +10,8 @@ keywords:
 description: An overview of the OpenHIM Audits
 ---
 
-import ExternalContentSyntaxHighlighter from '../../../src/components/ExternalContentSyntaxHighlighter.jsx';
+import ExternalContentSyntaxHighlighter from '../../_react_components/ExternalContentSyntaxHighlighter.jsx';
+import GetCurrentVersion from '../../_react_components/GetCurrentVersion.jsx';
 
 Allows for the management of OpenHIM audits.
 
@@ -22,7 +23,10 @@ The OpenHIM provides full support as an Audit Repository actor in the IHE [ATNA]
 
 ## Schema Model
 
-<ExternalContentSyntaxHighlighter 
-  url="https://raw.githubusercontent.com/jembi/openhim-core-js/v5.2.5/src/model/audits.js"
-  language="javascript"
-/>
+<GetCurrentVersion>
+  <ExternalContentSyntaxHighlighter
+    url="https://raw.githubusercontent.com/jembi/openhim-core-js/<VERSION>/src/model/audits.js"
+    language="javascript"
+  />
+</GetCurrentVersion>
+
