@@ -2,6 +2,10 @@
 id: design-details
 title: Detailed design using Node.js
 sidebar_label: Detailed design using Node.js
+keywords:
+  - OpenHIM
+  - Design
+description: Designing the OpenHIM
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

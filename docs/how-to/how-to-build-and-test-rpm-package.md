@@ -2,6 +2,11 @@
 id: build-centos-rpm-package
 title: Build a CentOS RPM package
 sidebar_label: Build a CentOS RPM package
+keywords:
+  - OpenHIM
+  - CentOS
+  - RPM package
+description: Building a centOS rpm package for the OpenHIM
 ---
 
 The build process for the RPM package is based off of [this](https://github.com/bbc/speculate/wiki/Packaging-a-Node.js-project-as-an-RPM-for-CentOS-7) blog. There is the option to use Vagrant or Docker to build the packages for both the core and console.

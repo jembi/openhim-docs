@@ -2,6 +2,10 @@
 id: prerequisites
 title: Prerequisites
 sidebar_label: Prerequisites
+keywords:
+  - OpenHIM
+  - Prerequisites
+description: OpenHIM installation prerequisites
 ---
 
 To easily get started with implementing the OpenHIM Core and Console and to start playing with the various features we can follow the below steps to get a local OpenHIM environment setup.

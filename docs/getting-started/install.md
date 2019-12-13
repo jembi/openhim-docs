@@ -2,6 +2,10 @@
 id: install
 title: Install OpenHIM
 sidebar_label: Install OpenHIM
+keywords:
+  - OpenHIM
+  - Installation
+description: OpenHIM installation
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

@@ -2,6 +2,10 @@
 id: openhim-development
 title: Getting started with OpenHIM development
 sidebar_label: Getting started with OpenHIM development
+keywords:
+  - OpenHIM
+  - Getting started
+description: Getting started with the OpenHIM
 ---
 
 The fist thing you will need to do is get you development environment up. This guide describes how to get a development environment up for the OpenHIM-core and the OpenHIM-console.
