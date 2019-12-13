@@ -2,6 +2,11 @@
 id: certificates-keystore
 title: Certificates & Keystore
 sidebar_label: Certificates & Keystore
+keywords:
+  - OpenHIM
+  - Certificates
+  - Keystore
+description: Manage OpenHIM certificates and keystore
 ---
 
 The OpenHIM has a built in capability to manage TLS certificates and keys through its keystore. You can upload a certificate and key that you have bought from a certificate authority such as Thwate or you can even generate your own self signed certificate to use in your private OpenHIM implementation. Both mechanisms are secure, however we suggest you purchase a certificate from a trusted certificate authority to save you some pain with self signed certificates.

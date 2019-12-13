@@ -221,7 +221,11 @@ function Community() {
 
 function Help() {
   return (
-    <Layout>
+    <Layout
+      title="OpenHIM help"
+      description="OpenHIM help"
+      keywords={["OpenHIM", "Help"]}
+    >
       <header className={classnames('hero center page', styles.heroBanner)}>
         <div className="container">
           <img
