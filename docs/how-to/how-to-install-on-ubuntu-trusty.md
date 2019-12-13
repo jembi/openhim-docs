@@ -2,6 +2,11 @@
 id: manually-install-on-ubuntu-trusty
 title: Manually install on Ubuntu 14.04 Trusty
 sidebar_label: Manually install on Ubuntu 14.04 Trusty
+keywords:
+  - OpenHIM
+  - Install
+  - Manual
+description: Install OpenHIM manually on Ubuntu 14.04
 ---
 
 The following is a quick start tutorial to help guide you through the steps required for a new OpenHIM installation on a clean Ubuntu 14.04 instance.

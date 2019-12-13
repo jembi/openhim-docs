@@ -2,6 +2,10 @@
 id: build-openhim-documentation
 title: Build the documentation
 sidebar_label: Build the documentation
+keywords:
+  - OpenHIM
+  - Documentation
+description: Building documentation for the OpenHIM
 ---
 
 To build the documentation execute the commands below from the `/docs` directory:
