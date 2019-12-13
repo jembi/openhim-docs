@@ -2,6 +2,10 @@
 id: mediators
 title: Mediators
 sidebar_label: Mediators
+keywords:
+  - OpenHIM
+  - Mediators
+description: Manage OpenHIM mediators
 ---
 
 `Mediators` can be built using any platform that is desired (some good options are pure Java using our mediator engine, Node.js, Apache Camel, Mule ESB, or any language or platform that is a good fit for your needs). The only restriction is that the mediator MUST communicate with the OpenHIM core in a particular way. Mediators must register themselves with the OpenHIM core, accept request from the OpenHIM core and return a specialised response to the OpenHIM core in order to explain what that mediator did.

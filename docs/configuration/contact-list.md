@@ -2,6 +2,10 @@
 id: contact-list
 title: Contact list
 sidebar_label: Contact list
+keywords:
+  - OpenHIM
+  - Contact list
+description: Manage OpenHIM contact lists
 ---
 
 The OpenHIM is used for transaction alerting (found in each channel's configuration) and user reports (found in each user's configuration).

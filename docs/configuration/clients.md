@@ -2,6 +2,10 @@
 id: clients
 title: Clients
 sidebar_label: Clients
+keywords:
+  - OpenHIM
+  - Clients
+description: Manage OpenHIM clients
 ---
 
 A client is usually some system that you want to able to send request to the OpenHIM. Setting up a client allows the OpenHIM to authenticate requests.
