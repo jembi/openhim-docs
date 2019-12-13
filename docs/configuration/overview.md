@@ -9,9 +9,16 @@ keywords:
   - options
 ---
 
-import ExternalContentSyntaxHighlighter from '../../src/components/ExternalContentSyntaxHighlighter.jsx';
+import ExternalContentSyntaxHighlighter from '../_react_components/ExternalContentSyntaxHighlighter.jsx';
+import GetCurrentVersion from '../_react_components/GetCurrentVersion.jsx';
 
 <ExternalContentSyntaxHighlighter
   url="https://raw.githubusercontent.com/jembi/openhim-core-js/master/config/config.md"
   language="json"
 />
+<GetCurrentVersion>
+  <ExternalContentSyntaxHighlighter
+    url="https://raw.githubusercontent.com/jembi/openhim-core-js/master/config/config.md"
+    language="json"
+  />
+</GetCurrentVersion>
