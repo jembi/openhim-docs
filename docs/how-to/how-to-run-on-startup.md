@@ -17,7 +17,9 @@ sudo cp openhim-core.conf /etc/init/
 
 Then run start the server with:
 
-`sudo start openhim-core`
+```sh
+sudo start openhim-core
+```
 
 It will automatically startup on reboot.
 

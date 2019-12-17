@@ -1,11 +1,13 @@
 ---
 id: virtual-machine
-title: Install via Virtual Machine
-sidebar_label: Install via Virtual Machine
+title: Install on a Virtual Machine
+sidebar_label: Install on a Virtual Machine
 keywords:
-  - OpenHIM
-  - Virtual machine install
-description: Install the OpenHIM via virtual machine
+  - openhim
+  - virtual machine
+  - installation
+  - ubuntu
+description: Install the OpenHIM on a virtual machine
 ---
 
 When installing the OpenHIM on a VM that is running on your local machine, please take note of the following.

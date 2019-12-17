@@ -2,6 +2,10 @@
 id: install
 title: Install OpenHIM
 sidebar_label: Install OpenHIM
+keywords:
+  - OpenHIM
+  - Installation
+description: OpenHIM installation
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
@@ -14,11 +18,11 @@ Once we have all our prerequisites completed we are now ready to spin up our Ope
 docker-compose up -d
 ```
 
-**NB!** the user executing the above command will need to be an administrator for the docker-compose script to run successfully
+> **Note:** the user executing the above command will need to be an administrator for the docker-compose script to run successfully
 
-The first time this command is run it will take some time to complete. What is happening is that the Docker Compose file needs to pull the relevant images from Dockerhub that doesn't yet exist within your local machine so that the docker containers can be built successfully for our OpenHIM instance.
+The first time this command is run it will take some time to complete. This is because the Docker Compose file needs to pull the relevant images from Dockerhub that don't exist on your local machine. The Docker images will then be used to build the docker containers for our OpenHIM instance.
 
-Once the `docker-compose` has successfully completed, you should see something like the below printed within your terminal. This means that the relevant images have been downloaded and the docker containers have been created. 
+Once the `docker-compose` has successfully completed, you should see something like the below printed within your terminal. This means that the relevant images have been downloaded and the docker containers have been created.
 
 ```bash
 ...
@@ -36,12 +40,12 @@ Your OpenHIM instance has been successfully installed on your local machine. To 
 
 Once your OpenHIM instance has successfully been created and you are able to access it on the above URL, you will need to login with the `root` user and reset the password. Supply the below `root` user details to continue with the installation process.
 
-```
+```txt
 username: root@openhim.org
 password: openhim-password
 ```
 
-**NB!** if you are presented with a red information box when submitting the default `root` users details, it means that you are using a self signed certificate that will need to be accepted by the browser first. Click on the link that is presented which will try and access the API heartbeat. The browser will present you with a security risk page to notify you of the self signed certificate. Depending on the browser you are using, click on the `advanced` button and proceed to accept the un-trusted certificate so that we are able to successfully communicate with the OpenHIM core API
+> **Important!** If you are presented with a red information box when submitting the default `root` users details, it means that you are using a *self signed certificate* that will need to be accepted by the browser first. Click on the link that is presented which will try and access the *API heartbeat*. The browser will present you with a security risk page to notify you of the self signed certificate. Depending on the browser you are using, click on the `advanced` button and proceed to accept the un-trusted certificate so that we are able to successfully communicate with the OpenHIM core API
 
 <div style={{ display: "flex", justifyContent: "center"}}>
   <img alt="OpenHIM" src={useBaseUrl('img/self-signed-cert-warning.png')} />
@@ -59,7 +63,7 @@ Below are a few useful Docker commands that will allow you to have better visibi
 
 ### Check running processes
 
-Now that we have our OpenHIM successfully created and running, we might need to check up on our Docker processes running to find some additional metadata on our containers. Execute the below command to find all the running Docker process 
+Now that we have our OpenHIM successfully created and running, we might need to check up on our Docker processes running to find some additional metadata on our containers. Execute the below command to find all the running Docker processes.
 
 ```bash
 docker ps
@@ -67,7 +71,7 @@ docker ps
 
 ### Access the Openhim core logs
 
-To access the OpenHIM core logs, execute the below command within your terminal to see the output of the logs
+To access the OpenHIM core logs, execute the below command within your terminal to see and follow (`-f`) the output of the container logs
 
 ```bash
 docker logs -f openhim-core
@@ -75,13 +79,30 @@ docker logs -f openhim-core
 
 ### Stop the Docker service
 
-To stop the running OpenHIM Docker services, we need to execute the below command
+```bash
+docker stop <container_name or container_id>
+```
+
+To stop *all* the running OpenHIM Docker services, we need to execute the below command
 
 ```bash
 docker stop $(docker ps -a)
 ```
 
-This command will stop all running process within Docker.
+### Inspect details of a container
 
+```bash
+docker inspect <container_name>
+```
 
+### List available Docker networks
 
+```bash
+docker network ls
+```
+
+### Access a terminal within a running container
+
+```bash
+docker exec -it <container_name> bash
+```

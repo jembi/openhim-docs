@@ -2,6 +2,10 @@
 id: run-openhim-on-startup
 title: Run the OpenHIM on startup
 sidebar_label: Run the OpenHIM on startup
+keywords:
+  - OpenHIM
+  - Startup
+description: Running OpenHIM on startup
 ---
 
 To help you get the OpenHIM server running on boot we supply a upstart config file (good for Ubuntu or other system that use upstart). Install the upstart config by doing the following:
@@ -13,7 +17,9 @@ sudo cp openhim-core.conf /etc/init/
 
 Then run start the server with:
 
-`sudo start openhim-core`
+```sh
+sudo start openhim-core
+```
 
 It will automatically startup on reboot.
 

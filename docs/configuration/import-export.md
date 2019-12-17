@@ -3,9 +3,10 @@ id: import-export
 title: Import/Export
 sidebar_label: Import/Export
 keywords:
-  - OpenHIM
-  - Import
-  - Export
+  - openhim
+  - import
+  - export
+  - config
 description: Manage OpenHIM imports and exports
 ---
 

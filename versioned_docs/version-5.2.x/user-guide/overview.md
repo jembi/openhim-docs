@@ -2,6 +2,10 @@
 id: overview
 title: OpenHIM Overview
 sidebar_label: OpenHIM Overview
+keywords:
+  - OpenHIM
+  - Overview
+description: An overview of the OpenHIM
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

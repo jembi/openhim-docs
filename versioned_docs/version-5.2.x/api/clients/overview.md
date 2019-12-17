@@ -10,4 +10,14 @@ keywords:
 description: An overview of the OpenHIM Clients
 ---
 
-[Client Model](https://github.com/jembi/openhim-core-js/blob/master/src/model/clients.js)
+import ExternalContentSyntaxHighlighter from '../../_react_components/ExternalContentSyntaxHighlighter.jsx';
+import GetCurrentVersion from '../../_react_components/GetCurrentVersion.jsx';
+
+## Schema Model
+
+<GetCurrentVersion>
+  <ExternalContentSyntaxHighlighter
+    url="https://raw.githubusercontent.com/jembi/openhim-core-js/<VERSION>/src/model/clients.js"
+    language="javascript"
+  />
+</GetCurrentVersion>

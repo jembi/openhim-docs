@@ -29,4 +29,3 @@ The OpenHIM provides full support as an Audit Repository actor in the IHE [ATNA]
     language="javascript"
   />
 </GetCurrentVersion>
-

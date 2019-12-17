@@ -2,6 +2,11 @@
 id: console-configuration
 title: Console Configuration
 sidebar_label: Console Configuration
+keywords:
+  - openhim
+  - console
+  - config
+description: OpenHIM console configuration
 ---
 
 The OpenHIM console is accessible by navigating to your web server.
@@ -13,7 +18,7 @@ For example, assuming your web server host is your local machine, the Uniform re
 - Username: root@openhim.org
 - Password: openhim-password
 
-> **Note**: You will have problems logging in if your OpenHIM server is still setup to use a self-signed certificate (the default). Please see section **How to Generate a free Let’s Encrypt (letsencrypt) certificate** which identifies the steps necessary to generate a free certificate. If you choose to do this later, you may get around this by following these steps:
+> **Note**: You will have problems logging in if your OpenHIM server is still setup to use a self-signed certificate (the default). Please see section [**How to Setup SSL**](../how-to/setup-ssl) which identifies the steps necessary to generate a free certificate. If you choose to do this later, you may get around this by following these steps:
 
 1. Visit the following link: <https://localhost:8080/authenticate/root@openhim.org> in Chrome.
    > **Note**: Make sure you are visiting this link from the system that is running the OpenHIM core. Otherwise, replace localhost and 8080 with the appropriate OpenHIM core server hostname (or IP Address) and API port.
@@ -91,13 +96,13 @@ You are able to generate a free certificate by following these steps:
    (or enter these details when asked during the OpenHIM installation)
    ```
 
-1. setup auto renewal of the certificate:
+1. Setup auto renewal of the certificate:
 
    ```sh
    crontab -e
    ```
 
-1. append the following line at the end of your crontab:
+1. Append the following line at the end of your crontab:
 
    ```text
    0 0 * * * /root/certbot-auto renew --no-self-upgrade >> /var/log/letsencrypt-renewal.log

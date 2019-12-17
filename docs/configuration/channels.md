@@ -3,15 +3,16 @@ id: channels
 title: Channels
 sidebar_label: Channels
 keywords:
-  - OpenHIM
-  - Channels
+  - openhim
+  - channel
+  - config
 description: Manage OpenHIM channels
 ---
 
 A channel defines a path that a request will take through the OpenHIM. It describes one or more routes for the request to be forwarded to, which clients are allowed to use the channel, which requests are to be directed to this channel and many more options that allows you to control what happens for a particular request.
 The management of clients and channels are discussed later in the document. Only an OpenHIM administrative user has the permission to `Add`, `Edit` and `Delete` a Client or Channel
 
-Using an OpenHIM administrative account, you will be able to add, edit and remove channels by following a few easy steps.
+Using an OpenHIM administrative account, you will be able to add, edit and remove channels by following the steps below.
 
 Two of the most important fields are the URL pattern field and the allowed roles and clients field. The URL pattern field describes which incoming requests should be sent down a channel. It does this by looking at the URL of the incoming request and tests to verify that it matches the Regular Expression (RegEx) that you supplied in this field.
 
@@ -23,12 +24,12 @@ The following is an explanation of the fields that are used in the `Add Channels
 
 ## Basic Info Tab
 
-1. Channel Name - This is a descriptive name of the Channel.
-1. Channel Type - The type of channel to be configured:
+1. **Channel Name** - This is a descriptive name of the Channel.
+1. **Channel Type** - The type of channel to be configured:
 
    - **_Hypertext Transfer Protocol (HTTP)_** - Default channel type.
    - **_Transmission Control Protocol (TCP)_** - Supply a TCP host and port number.
-   - **_TLS_** - Supply a TLS host and port number.
+   - **_Transport Layer Security (TLS)_** - Supply a TLS host and port number.
    - **_Polling_** - Supply a Polling schedule in a cron format: `*/10 * * * *` or written format: `10 minutes`.
 
      > **Note**: The module called `Agenda` is used to accomplish the polling. Please visit the [Agenda documentation](https://github.com/agenda/agenda) for more information.
@@ -43,7 +44,7 @@ The following is an explanation of the fields that are used in the `Add Channels
 1. Authentication Type - Set whether this channel is private or public.
 1. Whitelisted IP Addresses - A list of IP addresses that will be given access without authentication required.
 1. Allowed Roles and Clients - Only applicable when Authentication Type is set to private. Supply the Roles and Clients allowed to make requests to this channel.
-1. Match Content Types - Supply what content type to match too. (e.g text/json).
+1. Match Content Types - Supply what content type to match to. (e.g text/json).
 1. Matching Options - These options allow a Channel to be used if the request body matches certain conditions.
    - No Matching - No matching applicable.
    - RegEx Matching - Supply a RegEx to match.
@@ -83,14 +84,14 @@ The following is an explanation of the fields that are used in the `Add Channels
 
 1. **URL Rewriting Enabled** - URL rewriting allows the OpenHIM to look for URLs in a response and rewrite them so that they point to the correct location.
    - _From Host/Port_ - Supply the host and port value you are looking to rewrite.
-   - *To Host/Por*t - Supply the host and port value that will replace the ‘From Host/Port’ matches.
+   - *To Host/Port* - Supply the host and port value that will replace the ‘From Host/Port’ matches.
    - _Path Transform_ - Applies a said-like expression to the path string - multiple endpoints can be reached using the same route.
 1. **Add Auto Rewrite Rules** - Determines whether automatic rewrite rules are used. These rules enabled URLs to be automatically rewritten for any URLs that points to a host that the OpenHIM proxies (any host on a primary route). These can be overridden by user specified rules if need be.
 
 ## User Access Tab
 
 1. **User groups allowed to view this channel’s transactions** - Supply the groups allowed to view this Channel’s transactions.
-1. **User groups allowed to view this channel’s transactions request/response body** - Supply the groups allowed to view the request/response body of this Channel’s transactions.
+1. **User groups allowed to view this channel’s transactions' request/response bodies** - Supply the groups allowed to view the request/response bodies of this Channel’s transactions.
 1. **User groups allowed to rerun this channel’s transactions** - Supply the groups allowed to rerun this Channel’s transactions.
 
 ## Alerts Tab

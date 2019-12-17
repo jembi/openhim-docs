@@ -2,6 +2,12 @@
 id: import-export
 title: Import/Export
 sidebar_label: Import/Export
+keywords:
+  - openhim
+  - import
+  - export
+  - config
+description: Manage OpenHIM imports and exports
 ---
 
 Import and export the OpenHIM's configuration as desired. The configuration will be written out to or read in from a JSON file.

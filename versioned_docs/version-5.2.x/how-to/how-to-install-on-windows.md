@@ -2,13 +2,17 @@
 id: manually-install-on-windows
 title: Manually install on Windows
 sidebar_label: Manually install on Windows
+keywords:
+  - OpenHIM
+  - Windows
+description: Install OpenHIM on windows
 ---
 
 The following is a quick start tutorial to help guide you through the steps required for a new OpenHIM installation on a Windows instance.
 
 ## Install Node.js LTS
 
-Install the latest LTS version of Node.js from their [official site](http://nodejs.org/). Note that the OpenHIM only officially supports the LTS edition of node, which is currently version 8.x
+Install the latest LTS version of Node.js from their [official site](http://nodejs.org/). Note that the OpenHIM only officially supports current LTS editions of node, which such as 8.x and 10.x.
 
 The official process should be suitable for the OpenHIM; simply download and run the installer msi.
 
@@ -16,9 +20,9 @@ The official process should be suitable for the OpenHIM; simply download and run
 
 Install the latest version of MongoDB from their [official site](https://www.mongodb.org/)
 
-As with Node.js, the official process should be suitable for the OpenHIM. Note however that MongoDB requires some additional steps after running the installer - in particular it would be a good idea to setup MongoDB as a service.
+As with Node.js, the official process should be suitable for the OpenHIM. However, MongoDB requires some additional steps after running the installer - in particular it would be a good idea to setup MongoDB as a service.
 
-The following guide should help you get fully setup: https://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/
+The following guide should help you get fully setup: <https://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/>
 
 ## OpenHIM Core
 
@@ -48,7 +52,7 @@ or with whichever file location you chose to create for the config.
 
 To ensure the OpenHIM runs all the time, we will install it as a Windows Service using [NSSM](http://nssm.cc/download) (the Non-Sucking Service Manager)
 
-1. Download [NSSM](http://nssm.cc/download) (the Non-Sucking Service Manager)
+1. Download [NSSM](http://nssm.cc/download)
 2. Open the archive and extract the `win32` or `win64` directory (depending on your Windows architecture) to a location on disk, for example `c:\nssm`
 3. Add the location `c:\nssm` to your path, so that `nssm` is accessible without knowing and typing the whole path to the file on the command line
 4. Open a command window with administrator privileges
@@ -61,28 +65,31 @@ You’re done. You’ve installed the OpenHIM as a windows service.
 
 ## OpenHIM Console
 
-A web server will be required to host the OpenHIM Console and in this guide we will use IIS and as an alternative we will also explain how to use Nginx. However any good web server will be suitable, e.g. Apache.
+A web server will be required to host the OpenHIM Console and in this guide we will use IIS and as an alternative we will also explain how to use Nginx. However, any good web server will be suitable, e.g. Apache.
 
 ### Install IIS
 
 Go to the [microsoft docs](http://www.iis.net/learn/install) for articles on how to install IIS for your particular flavour of Windows OS.
 
-If you want to check if IIS is installed, browse to http://localhost in your browser. If an image pops up, then IIS has been installed correctly.
+If you want to check if IIS is installed, browse to <http://localhost> in your browser. If an image pops up, then IIS has been installed correctly.
 
 ### Setup Console
 
-Download the [latest Console release](https://github.com/jembi/openhim-console/releases/latest) and extract the contents into a folder such as `C:\OpenHIM\Console`. Note that you will need to use a utility such as [7-Zip](http://www.7-zip.org/) to extract the .tar.gz archive.
+Download the [latest Console release](https://github.com/jembi/openhim-console/releases/latest) and extract the contents into a folder such as `C:\OpenHIM\Console`.
+
+> You will need to use a utility such as [7-Zip](http://www.7-zip.org/) to extract the `.tar.gz` archive.
 
 Console contains a config file located in `Console\config\default.json`. You will need to edit the `host` and `port` fields to point to the _public_ address that the OpenHIM Core is running on. If you are only using the OpenHIM locally, then it is fine to leave the setting on localhost, however if you wish to make the Console accessible to other hosts, you will need to change the setting to either the machine's public IP address or domain name.
 
 #### Configure the Console for IIS
 
-Create a new site in Internet Information Services Manager. You can name it whatever you want. I'll call it Console in these instructions.
+Create a new site in Internet Information Services Manager. You can name it whatever you want. I've called it Console in these instructions.
 
 1. Start IIS Manager.
 1. In the Connections panel, expand Sites
 1. Right-click Sites and then click Add Web Site.
 1. In the Add Web Site dialog box, fill in the required fields, for example:
+
    - Site name: `Console`
    - Physical path: `C:\OpenHIM\Console`
    - Port: Make sure the port is something other than 80, as this will conflict with "Default Web Site" in IIS

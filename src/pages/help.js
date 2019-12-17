@@ -230,7 +230,7 @@ function Help() {
         <div className="container">
           <img
             className="logo_header"
-            src="img/openhim-logo-green.svg"
+            src="/img/openhim-logo-green.svg"
             alt="Project Logo"
           />
           <p className="hero__subtitle subtitle">What do you need?</p>

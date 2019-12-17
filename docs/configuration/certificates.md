@@ -3,8 +3,9 @@ id: certificates
 title: Certificates
 sidebar_label: Certificates
 keywords:
-  - OpenHIM
-  - Certificates
+  - openhim
+  - certificates
+  - config
 description: Manage OpenHIM certificates
 ---
 
@@ -22,7 +23,7 @@ To upload an OpenHIM server certificate, simply drag and drop both the certifica
 
 ### Generating a Server Certificate
 
-To generate a self signed certificate, click on the `+ Create Server Certificate` button in the top right. This will guide you through the process of creating a certificate and key. It will also automatically add this to the server once you are done. Make sure you download the certificate and key when asked to do so as the key is not stored on the server for security reasons.
+To generate a self signed certificate, click on the `+ Create Server Certificate` button in the top right. This will guide you through the process of creating a certificate and key. It will also automatically add this to the server once you are done. Make sure you download the certificate and key when prompted as the key is not stored on the server for security reasons.
 
 ### Client Certificates
 

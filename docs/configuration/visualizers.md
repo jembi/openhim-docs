@@ -3,8 +3,9 @@ id: visualizers
 title: Visualizers
 sidebar_label: Visualizers
 keywords:
-  - OpenHIM
-  - Visualizers
+  - openhim
+  - visualizer
+  - config
 description: Manage OpenHIM visualizers
 ---
 
@@ -19,14 +20,14 @@ The following is an explanation of the fields that are used in the visualization
     - Primary Route - These routes are created during the creation of a channel.
     - Secondary Route - These routes are created during the creation of a channel and are not set as the primary route.
     - Orchestration - A mediator that processes a request and makes more subsequent request to perform a specific action.
-    - Channel - Channels that are currently available in the OpenHIM console. See [OpenHim Channels](#openhim-channels) for more information regarding channels.
+    - Channel - Channels that are currently available in the OpenHIM console. See [OpenHim Channels](./channels) for more information regarding channels.
   - Event Name - The name of the event. These names are available as a dropdown for `Primary Route`, `Secondary Route` and Channel.
   - Display - An easily identifiable name to be displayed in the visualizers list of components being monitored.
 
     > **Note**: You may add one or more components by completing the fields above and clicking on the green `+` button. The red `X` button allows you to delete a component.
 
 - **Channels** - A dropdown list of channels where you can select a channel to be monitored. You may select one or more channels by clicking on the Select Channel dropdown and choose a channel name. The red `X` button allows you to delete a channel.
-- **Mediators** - The mediators to be added to the visualizer. Select a mediator from the dropdown list of mediator names. See [OpenHIM Mediators](#openhim-mediators) for more information regarding mediators.
+- **Mediators** - The mediators to be added to the visualizer. Select a mediator from the dropdown list of mediator names. See [OpenHIM Mediators](./mediators) for more information regarding mediators.
 - **Advanced Settings** - Allows you to customize your OpenHIM visualizer:
   - _Visualizer Color Management_ - Choose your desired color styles for events monitoring.
   - _Visualizer Size Management_ - Choose your desired size for the visualizer.

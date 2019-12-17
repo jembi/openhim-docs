@@ -3,30 +3,45 @@ id: manual
 title: Install Manually
 sidebar_label: Install Manually
 keywords:
-  - OpenHIM
-  - Manual
-  - Install
+  - openhim
+  - manual
+  - install
 description: Install the OpenHIM manually
 ---
 
-If you don’t have ubuntu or prefer to proceed with the installation manually, please follow the following steps.
+This guide is for manually installing an OpenHIM instance using the built zipped application releases available on their respective github pages.
+
+> This method is useful for on-site implementation without internet access.
+
+## Prerequisites
+
+This guide assumes that you are installing on an ubuntu server and that the following is already installed and setup:
+
+- NodeJS (v8 or later)
+- NPM
+- MongoDB (v3.6 or later)
+
+> **Note**: `libappstream3` may cause problems with the npm package manager if your ubuntu instance is not fully updated.
 
 ## Installing the OpenHIM Core
 
-The latest active LTS is **recommended**.
+1. Download the latest OpenHIM Core release
 
-> **Note**: libappstream3 may cause problems with the npm package manager if your ubuntu instance is not fully updated.
+  ```sh
+  wget https://github.com/jembi/openhim-core-js/releases/download/vX.X.X/build.openhim-core.vX.X.X.zip
+  ```
 
-1. Install the latest stable Node.js v8 or greater `curl -sL https://deb.nodesource.com/setup_6.x| sudo -E bash` then `sudo apt-get install -y nodejs`
-1. Install and start MongoDB 3.6 or greater. (If you are running Ubuntu 16.04, you may want to configure MongoDB as a systemd service that will automatically start on boot)
-1. Install Git `apt-get install git`
-1. Install npm `sudo apt install npm`
-1. Install the OpenHIM-core package globally (this will also install an OpenHIM-core binary to your PATH) `sudo npm install openhim-core -g`
-1. Start the server by executing `openhim-core` from anywhere.
+  > See [here for all released versions](https://github.com/jembi/openhim-core-js/releases)
+
+1. Unzip the file
+
+  ```sh
+  unzip build.openhim-core.vX.X.X -d {destination_folder}
+  ```
 
 To make use of your own custom configurations, you have two options:
 
-1. You can copy the default.json config file and override the default settings: `wget https://raw.githubusercontent.com/jembi/openhim-core-js/master/config/default.json` edit default.json, then `openhim-core --conf=path/to/default.json`
+1. You can copy the default.json config file and override the default settings: `wget https://raw.githubusercontent.com/jembi/openhim-core-js/master/config/default.json`. Then, depending on your environment instance, rename the file. For example, in the production setup name the file `production.json`. Move your new file into the `/config` directory of the project.
 
 1. You can use environment variables to set specific parameters. Environment variables use a \_ as a separator for nested keys. For example, to change the port that the Application Programming Interface (API) listens on and to change the ports that the router listens on you could do the following: `api_httpsPort=8081 router_httpsPort=50456 router_httpPort=50457 npm start`
 
@@ -34,27 +49,40 @@ To make use of your own custom configurations, you have two options:
 
 For more information about the config options see our [config overview page](../configuration/overview).
 
+Finally start the OpenHIM Core with the following:
+
+```sh
+npm start
+```
+
+> When you start up the OpenHIM Core make sure the `NODE_ENV` matches the setup environment. ie: If you name the config file `production.json` make sure the `NODE_ENV` is set to `production`
+
 ## Installing the OpenHIM Console
 
 Before installing the OpenHIM console, it is required that you first have the OpenHIM core server up and running. The OpenHIM console communicates with the OpenHIM core via its API to pull and display data.
 
-> It is **recommended** that as soon as the OpenHIM core is up and running that you setup a properly signed TLS certificate. However, it is possible to do this later through the OpenHIM console under ‘Certificates’ on the left navigation pane.
+> We **recommended** that as soon as the OpenHIM core is up and running that you setup a properly signed TLS certificate. However, it is possible to do this later through the OpenHIM console on the **Certificates** page.
 
-Next, you need to download the latest release of the web app and deploy it to a web server (Replace the X’s in the below command to the latest release):
+1. Download the latest OpenHIM Console release
 
-1. Get the latest release `sh wget https://github.com/jembi/openhim-console/releases/download/vX.X.X/openhim-console-vX.X.X.tar.gz`
-1. Navigate to the path `cd /var`
-1. Create the /var/www/ path (If it does not already exist) `sudo mkdir www`
-1. Navigate to the path `cd www/`
-1. Create the /var/www/html path (If it does not already exist) `sudo mkdir html`
-1. Export the contents of the download `tar -vxzf openhim-console-vX.X.X.tar.gz --directory /var/www/html`
+  ```sh
+  wget https://github.com/jembi/openhim-console/releases/download/vX.X.X/build.openhim-console.vX.X.X.zip
+  ```
 
-> The next step is vital for the successful setup of the OpenHIM console. Firstly, you need to configure the console to point to your OpenHIM core server and lastly, navigate to the config/default.js file in the folder that you extracted the OpenHIM console’s contents to and edit it as follows:
+  > See [here for all released versions](https://github.com/jembi/openhim-console/releases)
+
+1. Unzip the file
+
+  ```sh
+  unzip build.openhim-console.vX.X.X -d {destination_folder}
+  ```
+
+1. The next step is vital for the successful setup of the OpenHIM console. First configure the console to point to your OpenHIM core server and then navigate to the config/default.js file in the extracted folder and edit it as follows:
 
 ```json
 {
   "version": "x.x.x", //Replace the x's with the latest release
-  "minimumCoreVersion": "5.2.3",
+  "minimumCoreVersion": "5.2.5",
   "protocol": "https",
   "host": "localhost", // change this to the hostname for your OpenHIM-core server (This hostname _MUST_ be publicly accessible)
   "port": 8080, // change this to the API port of the OpenHIM-core server, default is 8080 (This port _MUST_ be publicly accessible)
@@ -67,7 +95,12 @@ Next, you need to download the latest release of the web app and deploy it to a 
 }
 ```
 
+1. Finally, start the OpenHIM Console with the following:
+
+```sh
+npm start
+```
+
 ## Ensure communication between the OpenHIM Console and Core
 
-Make sure you have the latest Apache server installed `sudo apt-get install apache2`
-Make sure the apache service is up and running `sudo service apache2 status`
+Login to the console. Defaults to <http://localhost:9000>

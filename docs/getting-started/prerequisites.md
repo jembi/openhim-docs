@@ -10,7 +10,9 @@ description: OpenHIM installation prerequisites
 
 To easily get started with implementing the OpenHIM Core and Console and to start playing with the various features we can follow the below steps to get a local OpenHIM environment setup.
 
-The below method of spinning up the OpenHIM makes use of [Docker containers](https://www.docker.com/resources/what-container) that allows for easier deployments of the OpenHIM 
+> Don't have time to setup? Try our **sandbox** environments! See the links in the footer.
+
+The below method of spinning up the OpenHIM makes use of [Docker containers](https://www.docker.com/resources/what-container) that allows for easier deployments of the OpenHIM.
 
 We will need to install some software that will allow us to spin up the OpenHIM with ease. We will be using [Docker](https://www.docker.com/) which is a container management service to create our OpenHIM instance.
 
@@ -22,15 +24,15 @@ To [install Docker](https://docs.docker.com/install/) please follow the relevant
 
 ## Install Docker Compose
 
-Now that we have Docker installed on our machine, we will also need to install Docker Compose which is an additional service that makes use of our below `docker-compose.yml` file and builds the relevant containers for us to have our OpenHIM instance up and running. The OpenHIM can be setup and configured without this steps but requires more advanced knowledge of Docker and how to manually create the relevant containers.
+Now that we have Docker installed on our machine, we will also need to install Docker Compose which is an additional service that makes use of our below `docker-compose.yml` file and builds the relevant containers for us to have our OpenHIM instance up and running. The OpenHIM can be setup and configured without these steps however manually creating the relevant Docker containers requires more advanced knowledge of Docker.
 
-To [install Docker Compose](https://docs.docker.com/compose/install/) please follow the relevant steps as described within the install documentation
+To [install Docker Compose](https://docs.docker.com/compose/install/) please follow the relevant steps as described within the install documentation.
 
 ## Docker Compose file
 
 Before we can use Docker to build our OpenHIM instance, we need to create a `docker-compose.yml` that will contain our instructions for pulling the correct OpenHIM [Core](https://hub.docker.com/r/jembi/openhim-core) and [Console](https://hub.docker.com/r/jembi/openhim-console) images from [Jembi's Dockerhub profile](https://hub.docker.com/r/jembi/)
 
-The `docker-compose.yml` can be downloaded from the [OpenHIM core repository](https://github.com/jembi/openhim-core-js/blob/master/infrastructure/docker-compose.yml), or you can copy/paste the below yaml code into a file called `docker-compose.yml`
+The `docker-compose.yml` can be downloaded from the [OpenHIM core repository](https://github.com/jembi/openhim-core-js/blob/master/infrastructure/docker-compose.yml), or you can copy/paste the below yaml code into a file named `docker-compose.yml`
 
 ```yml
 version: '3'

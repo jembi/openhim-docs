@@ -2,6 +2,11 @@
 id: install-on-centos
 title: Install on CentOS
 sidebar_label: Install on CentOS
+keywords:
+  - OpenHIM
+  - Install
+  - CentOS
+description: Installing OpenHIM on CentOS
 ---
 
 ## Install RPM package
@@ -10,7 +15,7 @@ RPM packages are provided for OpenHIM releases since v4.0.1. They may be downloa
 
 ```bash
 # example of downloading the package via the command line
-wget https://github.com/jembi/openhim-core-js/releases/download/v4.0.1/openhim-core-v4.0.1.x86_64.rpm
+wget https://github.com/jembi/openhim-core-js/releases/download/v5.2.5/openhim-core-5.2.5-1.x86_64.rpm
 ```
 
 The package can be installed with the following:
@@ -22,7 +27,7 @@ sudo systemctl start openhim-core
 curl https://localhost:8080/heartbeat -k
 ```
 
-Note: In order for openhim-core to run successfully, there needs to be a valid instance of MongoDB available for openhim-core to use. To install mongo-db locally execute the following on a CentOS system:
+> Note: In order for openhim-core to run successfully, there needs to be a valid instance of MongoDB available for openhim-core to use. To install mongo-db locally execute the following on a CentOS system:
 
 ```bash
 sudo yum install mongodb-org && service mongod start
@@ -44,7 +49,7 @@ sudo systemctl start openhim-console
 curl http://localhost:9000
 ```
 
-Note: In order for openhim-console to run successfully, you'll need to point it to a valid instance of Openhim-core or install it locally. The openhim-console's configuration file can be found here:
+> Note: In order for openhim-console to run successfully, you'll need to point it to a valid instance of Openhim-core or install it locally. The openhim-console's configuration file can be found here:
 
 ```bash
 /usr/lib/openhim-console/dist/config
@@ -54,11 +59,11 @@ Note: In order for openhim-console to run successfully, you'll need to point it 
 
 The rpm package for openhim-console uses the http-server package from npm to host and serve openhim-console. This is acceptable for development or test installations.
 
-However it is recommended that NGINX be installed for production and staging servers. All openhim-console web traffic should be routed through NGINX; allowing NGINX to manage SSL certificates, data compression and port routing.
+However, it is recommended that NGINX be installed for production and staging servers. All openhim-console web traffic should be routed through NGINX; allowing NGINX to manage SSL certificates, data compression and port routing.
 
 ## Install SSL certificates
 
-Please refer to [this](http://openhim.readthedocs.io/en/latest/how-to/how-to-setup-ssl-certs.html) on how to setup SSL certificates for OpenHIM.
+Please refer our [Setup SSL page](./setup-ssl) on on how to setup SSL certificates for OpenHIM.
 
 ## Backups
 

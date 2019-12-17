@@ -40,7 +40,7 @@ function Version() {
         <div className="container">
           <img
             className="logo_header"
-            src="img/openhim-logo-green.svg"
+            src="/img/openhim-logo-green.svg"
             alt="Project Logo"
           />
           <p className="hero__subtitle subtitle">Documentation Versions</p>
@@ -57,6 +57,11 @@ function Version() {
                 <td>
                   <Link to={useBaseUrl('/docs/introduction/about')}>
                     Documentation
+                  </Link>
+                </td>
+                <td>
+                  <Link to={useBaseUrl('/docs/api/introduction/welcome')}>
+                    API
                   </Link>
                 </td>
                 <td>
@@ -78,6 +83,11 @@ function Version() {
                 <td>
                   <Link to={useBaseUrl('/docs/next/introduction/about')}>
                     Documentation
+                  </Link>
+                </td>
+                <td>
+                  <Link to={useBaseUrl('/docs/next/api/introduction/welcome')}>
+                    API
                   </Link>
                 </td>
                 <td>

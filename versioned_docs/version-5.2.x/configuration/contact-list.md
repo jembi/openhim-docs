@@ -2,6 +2,11 @@
 id: contact-list
 title: Contact list
 sidebar_label: Contact list
+keywords:
+  - openhim
+  - contact list
+  - config
+description: Manage OpenHIM contact lists
 ---
 
 The OpenHIM is used for transaction alerting (found in each channel's configuration) and user reports (found in each user's configuration).
@@ -10,13 +15,13 @@ The following is an explanation of the fields that are used in the `Add Contact`
 
 - **List Name** - A uniquely identifiable display name for the list.
 - **Users** - A dropdown of available users for selection to receive alerts.
-  > **Note**: You may add one or more users to the contact list by clicking on the green `+ User` button. The red `X` button allows you to delete a user alert.
+    > **Note**: You may add one or more users to the contact list by clicking on the green `+ User` button. The red `X` button allows you to delete a user alert.
 - **Method** - Delivery method for alerts.
 - **Max Alerts** - Select a limit for alerts.
 
 ## How to add a contact list
 
-> **Note**: All fields marked with a \* indicates a mandatory field. Before you can select a user to receive alerts, you must first create all necessary users. See [OpenHIM Users](#openhim-users) for more information regarding users.
+> **Note**: All fields marked with a \* indicates a mandatory field. Before you can select a user to receive alerts, you must first create all necessary users. See [OpenHIM Users](./users) for more information regarding users.
 
 1. Log in to your OpenHIM console.
 1. Click on `Contact List` found in the left navigation menu.

@@ -46,10 +46,6 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-5.2.x/installation/manual"
-        },
-        {
-          "type": "doc",
           "id": "version-5.2.x/installation/docker"
         },
         {
@@ -58,11 +54,15 @@
         },
         {
           "type": "doc",
-          "id": "version-5.2.x/installation/virtual-machine"
+          "id": "version-5.2.x/installation/manual"
         },
         {
           "type": "doc",
           "id": "version-5.2.x/installation/console-configuration"
+        },
+        {
+          "type": "doc",
+          "id": "version-5.2.x/installation/virtual-machine"
         }
       ]
     },
@@ -112,18 +112,6 @@
       "type": "category",
       "label": "Tutorial",
       "items": [
-        {
-          "type": "doc",
-          "id": "version-5.2.x/tutorial/prerequisite"
-        },
-        {
-          "type": "doc",
-          "id": "version-5.2.x/tutorial/installation"
-        },
-        {
-          "type": "doc",
-          "id": "version-5.2.x/tutorial/configuration"
-        },
         {
           "type": "doc",
           "id": "version-5.2.x/tutorial/mediators/basic-scaffold"
@@ -206,10 +194,6 @@
         },
         {
           "type": "doc",
-          "id": "version-5.2.x/dev-guide/restful-api"
-        },
-        {
-          "type": "doc",
           "id": "version-5.2.x/dev-guide/contributing"
         }
       ]
@@ -242,35 +226,11 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-5.2.x/how-to/setup-and-configure"
-        },
-        {
-          "type": "doc",
-          "id": "version-5.2.x/how-to/openhim-core-release"
-        },
-        {
-          "type": "doc",
-          "id": "version-5.2.x/how-to/openhim-console-release"
-        },
-        {
-          "type": "doc",
-          "id": "version-5.2.x/how-to/build-centos-rpm-package"
-        },
-        {
-          "type": "doc",
           "id": "version-5.2.x/how-to/install-on-centos"
         },
         {
           "type": "doc",
           "id": "version-5.2.x/how-to/setup-ssl"
-        },
-        {
-          "type": "doc",
-          "id": "version-5.2.x/how-to/pre-package-offline-release"
-        },
-        {
-          "type": "doc",
-          "id": "version-5.2.x/how-to/run-openhim-using-vagrant"
         },
         {
           "type": "doc",
@@ -286,15 +246,7 @@
         },
         {
           "type": "doc",
-          "id": "version-5.2.x/how-to/manually-install-on-ubuntu-trusty"
-        },
-        {
-          "type": "doc",
           "id": "version-5.2.x/how-to/manually-install-on-windows"
-        },
-        {
-          "type": "doc",
-          "id": "version-5.2.x/how-to/build-openhim-documentation"
         }
       ]
     }
@@ -456,7 +408,7 @@
     },
     {
       "type": "category",
-      "label": "logs",
+      "label": "Logs",
       "items": [
         {
           "type": "doc",
