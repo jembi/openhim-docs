@@ -45,9 +45,9 @@ const features = [
           <a href="http://www.jembi.org/">Jembi Health Systems</a>. It was
           initially developed in collaboration with{' '}
           <a href="http://www.ukzn.ac.za/">UKZN</a>. Browse the OpenHIM features
-          below or get started right away.{' '}
-          <a href="http://openhim.readthedocs.org/en/latest/getting-started.html#getting-started">
-            <i className="fa fa-arrow-circle-right"></i>
+          below or{' '}
+          <a href="docs/getting-started/prerequisites">
+          get started right away.
           </a>
         </p>
       </div>

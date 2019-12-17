@@ -71,7 +71,7 @@ Important files to backup in order to restore Openhim, are as follows:
 
 - Config file for openhim-core
 - Config file for openhim-console
-- Export and backup server metadata (Use the [import/export](http://openhim.readthedocs.io/en/latest/how-to/how-to-import-export.html) interface in openhim-console)
+- Export and backup server metadata (Use the [import/export](./export-import-configuration) interface in openhim-console)
 - All relevant certificates
 
 These files will backup the configuration and settings for Openhim. The entire database will need to be backed-up in order to backup all historical data for transactions, audit events & certificates. It is recommended that a full database backup occurs on a regular basis. The configuration files only need to be backup when any of the configuration is updated or modified. Once the system has been setup, these configuration files are not expected to change too often.
