@@ -2,6 +2,10 @@
 id: mediators
 title: Mediators
 sidebar_label: Mediators
+keywords:
+  - OpenHIM
+  - Mediators
+description: OpenHIM mediators
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

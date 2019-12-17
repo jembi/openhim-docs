@@ -2,6 +2,10 @@
 id: polling-channels
 title: Polling Channels (scheduled tasks)
 sidebar_label: Polling Channels (scheduled tasks)
+keywords:
+  - OpenHIM
+  - Polling channel
+description: OpenHIM polling channels feature
 ---
 
 A great feature of the OpenHIM is the ability to trigger tasks in other systems.

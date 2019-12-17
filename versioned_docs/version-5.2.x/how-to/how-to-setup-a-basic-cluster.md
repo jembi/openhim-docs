@@ -2,6 +2,10 @@
 id: setup-basic-cluster
 title: Setup a basic cluster
 sidebar_label: Setup a basic cluster
+keywords:
+  - OpenHIM
+  - Basic cluster
+description: Setup a basic cluster for the OpenHIM
 ---
 
 The OpenHIM Core is designed to be horizontally scalable. This means that if you need better performance, you can easily fire up more core instances. In this tutorial we will look at setting up a small, basic cluster of core instances.

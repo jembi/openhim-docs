@@ -6,6 +6,7 @@ keywords:
   - openhim
   - getting started
   - development
+description: Getting started with the OpenHIM
 ---
 
 This guide describes how to get a development environment up for the OpenHIM-core and the OpenHIM-console.

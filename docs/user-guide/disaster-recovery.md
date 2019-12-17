@@ -2,6 +2,11 @@
 id: sample-disaster-recovery-procedure
 title: Sample disaster recovery procedure
 sidebar_label: Sample disaster recovery procedure
+keywords:
+  - OpenHIM
+  - Disaster
+  - Recovery
+description: Disaster recovery on the OpenHIM
 ---
 
 This page describes a suggested disaster recover plan for an OpenHIM deployment. Follow this as a minimum for a production deployment of the OpenHIM.

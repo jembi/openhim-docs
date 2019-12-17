@@ -7,6 +7,7 @@ keywords:
   - manual
   - install
   - npm
+description: Install OpenHIM via npm
 ---
 
 To get you started, we will show you the various options for installing the OpenHIM core along with the OpenHIM admin console.
@@ -41,7 +42,7 @@ To make use of your own custom configurations, you have two options:
 
 > **Note**: The environment variables are case sensitive.
 
-For more information about the config options, please visit [OpenHIM Config Options](https://github.com/jembi/openhim-core-js/blob/master/config/config.md).
+For more information about the config options see our [config overview page](../configuration/overview).
 
 ### Installing the OpenHIM Console
 

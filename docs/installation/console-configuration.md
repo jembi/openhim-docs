@@ -6,6 +6,7 @@ keywords:
   - openhim
   - console
   - config
+description: OpenHIM console configuration
 ---
 
 The OpenHIM console is accessible by navigating to your web server.

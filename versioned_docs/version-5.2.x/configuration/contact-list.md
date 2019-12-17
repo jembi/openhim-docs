@@ -6,6 +6,7 @@ keywords:
   - openhim
   - contact list
   - config
+description: Manage OpenHIM contact lists
 ---
 
 The OpenHIM is used for transaction alerting (found in each channel's configuration) and user reports (found in each user's configuration).

@@ -72,6 +72,10 @@
       "items": [
         {
           "type": "doc",
+          "id": "version-5.2.x/configuration/overview"
+        },
+        {
+          "type": "doc",
           "id": "version-5.2.x/configuration/certificates"
         },
         {

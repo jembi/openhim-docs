@@ -2,6 +2,10 @@
 id: datim
 title: DATIM
 sidebar_label: DATIM
+keywords:
+  - OpenHIM
+  - Datim
+description: Data for Accountability Transparency and Impact
 ---
 
 Data for Accountability Transparency and Impact (DATIM)

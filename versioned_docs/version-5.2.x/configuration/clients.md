@@ -6,6 +6,7 @@ keywords:
   - openhim
   - client
   - config
+description: Manage OpenHIM clients
 ---
 
 A client is usually a system that you want to be able to send request to the OpenHIM. Setting up a client allows the OpenHIM to authenticate requests.

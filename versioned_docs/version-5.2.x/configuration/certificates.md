@@ -6,6 +6,7 @@ keywords:
   - openhim
   - certificates
   - config
+description: Manage OpenHIM certificates
 ---
 
 The OpenHIM has a built in capability to manage TLS certificates and keys through its keystore. You can upload a certificate and key that you have bought from a certificate authority such as [Thwate](https://www.thawte.com/) or you can generate your own self signed certificate to use in your private OpenHIM implementation. While both mechanisms are secure, it is suggested that you purchase a certificate from a trusted certificate authority to save you some unwanted difficulty with self signed certificates.

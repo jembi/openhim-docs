@@ -2,6 +2,10 @@
 id: configuration
 title: Configuration
 sidebar_label: Configuration
+keywords:
+  - OpenHIM
+  - Configuration
+description: OpenHIM configuration
 ---
 
 import Tabs from '@theme/Tabs';

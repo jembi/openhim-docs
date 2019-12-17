@@ -2,6 +2,10 @@
 id: mhero
 title: mHero
 sidebar_label: mHero
+keywords:
+  - OpenHIM
+  - mHero
+description: Mobile Health Worker Electronic Response and Outreach
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

@@ -2,6 +2,9 @@
 id: openhim-core-versioning-and-compatibility
 title: OpenHIM Core versioning and compatibility
 sidebar_label: OpenHIM Core versioning and compatibility
+  - OpenHIM
+  - Versioning
+description: The OpenHIM's versioning
 ---
 
 The [OpenHIM Core component](https://github.com/jembi/openhim-core-js) uses [Semantic Versioning](http://semver.org/). This means that if a specific software component, such as the OpenHIM Console or a Mediator states that it is compatible with Core version 5.2 for example, it means that:

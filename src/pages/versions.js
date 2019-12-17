@@ -33,7 +33,9 @@ function Version() {
   return (
     <Layout
       permalink="/versions"
-      description="Versions page listing all documented site versions">
+      keywords={["OpenHIM", "Versions"]}
+      description="Versions page listing all documented site versions"
+    >
       <header className={classnames('hero center page', styles.heroBanner)}>
         <div className="container">
           <img

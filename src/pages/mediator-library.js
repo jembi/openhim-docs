@@ -76,8 +76,12 @@ class MediatorListContainer extends Component {
           })
         }
       })
-      .catch(function(err) {
+      .catch((err) => {
         console.error(err.toString())
+        this.setState({
+          data: null,
+          spinner: false
+        })
       })
   }
 
@@ -104,7 +108,11 @@ class MediatorListContainer extends Component {
 
 function MediatorLibrary() {
   return (
-    <Layout>
+    <Layout
+      title="OpenHIM mediator library"
+      description="OpenHIM mediator library"
+      keywords={["OpenHIM", "Mediator Library"]}
+    >
       <header className={classnames('hero center page', styles.heroBanner)}>
         <div className="container">
           <img

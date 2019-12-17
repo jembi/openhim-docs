@@ -5,6 +5,7 @@ sidebar_label: Detailed design using Node.js
 keywords:
   - openhim
   - design
+description: Designing the OpenHIM
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

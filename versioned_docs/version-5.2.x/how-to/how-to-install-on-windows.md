@@ -2,6 +2,10 @@
 id: manually-install-on-windows
 title: Manually install on Windows
 sidebar_label: Manually install on Windows
+keywords:
+  - OpenHIM
+  - Windows
+description: Install OpenHIM on windows
 ---
 
 The following is a quick start tutorial to help guide you through the steps required for a new OpenHIM installation on a Windows instance.

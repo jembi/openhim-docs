@@ -2,6 +2,12 @@
 id: export-import-configuration
 title: Export/import Configuration
 sidebar_label: Export/import Configuration
+keywords:
+  - OpenHIM
+  - Export
+  - Import
+  - Configuration
+description: Export/import OpenHIM configuration
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

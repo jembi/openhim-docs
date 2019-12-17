@@ -2,6 +2,11 @@
 id: authentication
 title: API Authentication
 sidebar_label: Authentication
+keywords:
+  - OpenHIM
+  - API
+  - Authentication
+description: Authentication for the OpenHIM API calls
 ---
 
 import Tabs from '@theme/Tabs';

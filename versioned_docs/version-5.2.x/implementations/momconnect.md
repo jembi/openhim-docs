@@ -2,6 +2,10 @@
 id: momconnect
 title: MomConnect
 sidebar_label: MomConnect
+keywords:
+  - OpenHIM
+  - Momconnect
+description: Momconnect OpenHIM implementation
 ---
 
 MomConnect is a South African National Department of Health (NDoH) initiative to use cellphone SMS technology to register every pregnant woman in South Africa.

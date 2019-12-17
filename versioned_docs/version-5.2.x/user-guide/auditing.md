@@ -2,6 +2,10 @@
 id: auditing
 title: Auditing
 sidebar_label: Auditing
+keywords:
+  - OpenHIM
+  - Auditing
+description: Auditing on the OpenHIM
 ---
 
 ## ATNA Audit Repository

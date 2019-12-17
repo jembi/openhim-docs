@@ -7,6 +7,7 @@ keywords:
   - docker
   - docker-compose
   - install
+description: Installing OpenHIM via docker
 ---
 
 The following steps will guide you through the process of installing the OpenHIM using docker images.

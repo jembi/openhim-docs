@@ -6,6 +6,7 @@ keywords:
   - openhim
   - manual
   - install
+description: Install the OpenHIM manually
 ---
 
 This guide is for manually installing an OpenHIM instance using the built zipped application releases available on their respective github pages.
@@ -46,7 +47,7 @@ To make use of your own custom configurations, you have two options:
 
 > **Note**: The environment variables are case sensitive.
 
-For more information about the config options, please visit [OpenHIM Config Options](https://github.com/jembi/openhim-core-js/blob/master/config/config.md).
+For more information about the config options see our [config overview page](../configuration/overview).
 
 Finally start the OpenHIM Core with the following:
 

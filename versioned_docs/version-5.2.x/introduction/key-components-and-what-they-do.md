@@ -2,6 +2,10 @@
 id: key-components
 title: Key Components and What They Do
 sidebar_label: Key Components
+keywords:
+  - OpenHIM
+  - Key components
+description: The OpenHIM key components
 ---
 
 The OpenHIM logically consists of three components:

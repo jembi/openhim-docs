@@ -103,6 +103,9 @@ module.exports = {
     },
     googleAnalytics: {
       trackingID: 'UA-60988221-1',
+    },
+    prism: {
+      theme: require('prism-react-renderer/themes/nightOwl'),
     }
   },
   presets: [

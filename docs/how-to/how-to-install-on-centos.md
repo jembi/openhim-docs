@@ -2,6 +2,11 @@
 id: install-on-centos
 title: Install on CentOS
 sidebar_label: Install on CentOS
+keywords:
+  - OpenHIM
+  - Install
+  - CentOS
+description: Installing OpenHIM on CentOS
 ---
 
 ## Install RPM package

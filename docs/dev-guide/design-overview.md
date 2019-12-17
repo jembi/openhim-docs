@@ -6,6 +6,7 @@ keywords:
   - openhim
   - design
   - summary
+description: an overview of the interoperability layer
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

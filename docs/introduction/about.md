@@ -3,6 +3,10 @@ id: about
 hide_title: true
 title: About the OpenHIM
 sidebar_label: About the OpenHIM
+keywords:
+  - OpenHIM
+  - About
+description: About the OpenHIM
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
