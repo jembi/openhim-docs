@@ -1,51 +1,42 @@
-# OpenHIM Docs
+# Website
 
-This repository contains all the scripts and files for running the OpenHIM website as well as the documentation sections for the OpenHIM.
+This website is built using Docusaurus 2, a modern static website generator.
 
-[https://jembi.github.io/openhim-docs/](https://jembi.github.io/openhim-docs/)
+### Installation
 
-## Local development
-
-### Prerequisite
-
-Ensure that you have Docusaurus installed globally to be able to run the project locally for development.
-
-```sh
-yarn global add docusaurus
+```bash
+$ yarn
 ```
 
-or 
+### Local Development
 
-```sh
-npm install --global docusaurus
+```bash
+$ yarn start
 ```
 
-### Running the development environment
+This command starts a local development server and open up a browser window. Most changes are reflected live without having to restart the server.
 
-Ensure that you are within the `website` directory to start up the local development server.
+### Build
 
-Execute the below commands to download the dependencies and start the development server. 
-
-```sh
-yarn && yarn start
+```bash
+$ yarn build
 ```
 
-or 
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-```sh
-npm install && npm start
+### Deployment
+
+```bash
+$ GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
 ```
 
-If port `3000` isnt being used by another service, you should see the website successfully start up at [http://localhost:3000/openhim-docs/](http://localhost:3000/openhim-docs/)
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
 
-Any changes made to the existing scripts should automatically reload the relevant changes. Any new files will require the server to be restarted to load them as a files to be watched
+### Build a new documentation version
 
-## Deploy updated version
-
-Ensure that the latest changes have been reviewed and pushed into the master branch before deploying the changes. 
-
-To deploy the latest documentation changes, execute the below command:
-
-```sh
-GIT_USER=<GIT_USERNAME> USE_SSH=true npm run publish-gh-pages
+```bash
+$ yarn run docusaurus docs:version 5.3.x
 ```
+
+This command will build a new version of the documentation and set the new version as the latest.
+When versioning, a copy of the docs directory is made, as well as a copy of the sidebar specific to the tagged version. 
