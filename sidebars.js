@@ -26,6 +26,7 @@ module.exports = {
       "installation/console-configuration"
     ],
     "Configuration": [
+      "configuration/overview",
       "configuration/certificates",
       "configuration/channels",
       "configuration/clients",
@@ -164,8 +165,8 @@ module.exports = {
     ],
     "Transactions": [
       "api/transactions/overview",
-      "api/transactions/create", 
-      "api/transactions/read", 
+      "api/transactions/create",
+      "api/transactions/read",
       "api/transactions/update"
     ],
     "Users": [

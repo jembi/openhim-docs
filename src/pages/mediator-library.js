@@ -76,8 +76,12 @@ class MediatorListContainer extends Component {
           })
         }
       })
-      .catch(function(err) {
+      .catch((err) => {
         console.error(err.toString())
+        this.setState({
+          data: null,
+          spinner: false
+        })
       })
   }
 

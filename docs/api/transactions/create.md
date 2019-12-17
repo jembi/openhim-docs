@@ -25,14 +25,6 @@ To route using the OpenHIM, create a channel on the OpenHIM console or through t
 Create the channel.
 
 <Tabs
-  defaultValue="lang"
-  values={[
-    { label: 'Languages', value: 'lang' }
-  ]
-}>
-<TabItem value="lang">
-
-<Tabs
   defaultValue="nodejs"
   values={[
     { label: 'NodeJS', value: 'nodejs' },
@@ -85,8 +77,6 @@ Copy the below code and replace the `<PATH>`, `<CLIENT_ID>` and `<CLIENT_PASSWOR
 curl -k -u <CLIENT_ID>:<CLIENT_PASSWORD> https://localhost:5000/<PATH>
 ```
 
-</TabItem>
-</Tabs>
 </TabItem>
 </Tabs>
 
