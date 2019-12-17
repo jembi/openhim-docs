@@ -12,7 +12,7 @@ module.exports = {
   tagline: 'Simplifying Interoperability',
   url: 'https://jembi.github.io',
   baseUrl: '/',
-  favicon: 'img/openhim_badge.svg',
+  favicon: 'img/openhim_badge.png',
   organizationName: 'jembi', // Usually your GitHub org/user name.
   projectName: 'openhim-docs', // Usually your repo name.
   themeConfig: {
