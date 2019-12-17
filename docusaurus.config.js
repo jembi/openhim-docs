@@ -11,7 +11,7 @@ module.exports = {
   title: 'OpenHIM',
   tagline: 'Simplifying Interoperability',
   url: 'https://jembi.github.io',
-  baseUrl: '/openhim-docs/',
+  baseUrl: '/',
   favicon: 'img/openhim_badge.svg',
   organizationName: 'jembi', // Usually your GitHub org/user name.
   projectName: 'openhim-docs', // Usually your repo name.
@@ -101,6 +101,9 @@ module.exports = {
       },
       copyright: `Copyright © ${new Date().getFullYear()} Jembi Health Systems NPC`,
     },
+    googleAnalytics: {
+      trackingID: 'UA-60988221-1',
+    }
   },
   presets: [
     [
@@ -115,5 +118,5 @@ module.exports = {
       },
     ],
   ],
-  plugins: ["docusaurus-image-loader"]
+  plugins: ['docusaurus-image-loader', '@docusaurus/plugin-google-analytics']
 };

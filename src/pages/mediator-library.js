@@ -109,7 +109,7 @@ function MediatorLibrary() {
         <div className="container">
           <img
             className="logo_header"
-            src="img/openhim-logo-green.svg"
+            src="/img/openhim-logo-green.svg"
             alt="Project Logo"
           />
           <p className="hero__subtitle subtitle">Mediator Library</p>
@@ -124,7 +124,7 @@ function MediatorLibrary() {
             "openhim-mediator".
           </p>
           <div className={styles.buttons}>
-            <Link href="/openhim-docs/docs/introduction/about">
+            <Link href="/docs/introduction/about">
               Create a new mediator »
             </Link>
           </div>

@@ -15,7 +15,7 @@ import styles from './styles.module.css'
 const features = [
   {
     title: <>About</>,
-    imageUrl: 'img/jembi-heal.png',
+    imageUrl: '/img/jembi-heal.png',
     imagePlacement: 'left',
     description: (
       <div>
@@ -55,7 +55,7 @@ const features = [
   },
   {
     title: <>Mediators</>,
-    imageUrl: 'img/plug-solid.png',
+    imageUrl: '/img/plug-solid.png',
     imagePlacement: 'right',
     description: (
       <div>
@@ -78,7 +78,7 @@ const features = [
   },
   {
     title: <>Acts as a reverse proxy for web services</>,
-    imageUrl: 'img/OpenHIM-reverse-proxy.png',
+    imageUrl: '/img/OpenHIM-reverse-proxy.png',
     imagePlacement: 'left',
     description: (
       <div>
@@ -92,7 +92,7 @@ const features = [
   },
   {
     title: <>Gain visibility into your SOA</>,
-    imageUrl: 'img/console.gif',
+    imageUrl: '/img/console.gif',
     imagePlacement: 'right',
     description: (
       <div>
@@ -106,7 +106,7 @@ const features = [
   },
   {
     title: <>Extend the OpenHIM's request processing via mediators</>,
-    imageUrl: 'img/mediators.png',
+    imageUrl: '/img/mediators.png',
     imagePlacement: 'left',
     description: (
       <div>
@@ -126,7 +126,7 @@ const features = [
   },
   {
     title: <>Secure access to your web services</>,
-    imageUrl: 'img/certs.png',
+    imageUrl: '/img/certs.png',
     imagePlacement: 'right',
     description: (
       <div>
@@ -141,7 +141,7 @@ const features = [
   },
   {
     title: <>ATNA: audit repository and node authentication</>,
-    imageUrl: 'img/audit.png',
+    imageUrl: '/img/audit.png',
     imagePlacement: 'left',
     description: (
       <div>
@@ -156,7 +156,7 @@ const features = [
   },
   {
     title: <>Alerting, for when things go wrong</>,
-    imageUrl: 'img/alerts.png',
+    imageUrl: '/img/alerts.png',
     imagePlacement: 'right',
     description: (
       <div>
@@ -169,7 +169,7 @@ const features = [
   },
   {
     title: <>Massively scalable</>,
-    imageUrl: 'img/cluster.png',
+    imageUrl: '/img/cluster.png',
     imagePlacement: 'left',
     description: (
       <div>
@@ -183,7 +183,7 @@ const features = [
   },
   {
     title: <>Re-run failed transactions</>,
-    imageUrl: 'img/rerun.png',
+    imageUrl: '/img/rerun.png',
     imagePlacement: 'right',
     description: (
       <div>
@@ -197,7 +197,7 @@ const features = [
   },
   {
     title: <>Minimal transaction overhead</>,
-    imageUrl: 'img/node-mongo.png',
+    imageUrl: '/img/node-mongo.png',
     imagePlacement: 'left',
     description: (
       <div>
@@ -253,7 +253,7 @@ function Home() {
         <div className="container">
           <img
             className="logo_header"
-            src="img/openhim-logo-green.svg"
+            src="/img/openhim-logo-green.svg"
             alt="Project Logo"
           />
           <p className="hero__subtitle subtitle">{siteConfig.tagline}</p>
