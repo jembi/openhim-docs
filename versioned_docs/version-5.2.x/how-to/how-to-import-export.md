@@ -44,7 +44,7 @@ Navigate to the `Export/Import` page on the console.
 
 ### Export
 
-To export your configuration, open the relevant drop downs to check that the desired configs are selected (all configs is selected by default). Deselect any unwanted settings. Then `click Generate Export Script`. See below for expected screen.
+To export your configuration, open the relevant drop downs to check that the desired configs are selected (all configs are selected by default). Deselect any unwanted settings. Then `click Generate Export Script`. See below for expected screen.
 
 <img alt="export/import screen" src={useBaseUrl('img/tutorial/import-export.png')}/>
 
