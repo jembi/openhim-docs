@@ -2,6 +2,11 @@
 id: setup-and-configure
 title: Setup and configure the OpenHIM
 sidebar_label: Setup and configure the OpenHIM
+keywords:
+  - OpenHIM
+  - Setup
+  - Configuration
+description: Setup and configure the OpenHIM
 ---
 
 ## OpenHIM Basic Configuration

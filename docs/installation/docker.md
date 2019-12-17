@@ -2,6 +2,11 @@
 id: docker
 title: Install via Docker
 sidebar_label: Install via Docker
+keywords:
+  - OpenHIM
+  - Docker
+  - Install
+description: Installing OpenHIM via docker
 ---
 
 The following steps will guide you through the process of installing the OpenHIM using docker images.

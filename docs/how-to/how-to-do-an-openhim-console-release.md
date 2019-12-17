@@ -2,6 +2,10 @@
 id: openhim-console-release
 title: Create an OpenHIM-console release
 sidebar_label: Create an OpenHIM-console release
+keywords:
+  - OpenHIM
+  - Console release
+description: Create an OpenHIM-console release
 ---
 
 This page describes the steps to follow to do an OpenHIM console release. Make sure you are on the master branch and it is fully up-to-date before beginning this process. Additionally, ensure that the version of OpenHIM core compatible with this release of OpenHIM console has already been pushed to GitHub.

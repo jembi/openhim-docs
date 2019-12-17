@@ -2,6 +2,10 @@
 id: transaction-list
 title: Transaction List
 sidebar_label: Transaction List
+keywords:
+  - OpenHIM
+  - Transactions
+description: OpenHIM transactions
 ---
 
 The **transactions** page is pretty straight forward. It shows a list of the most recent transactions that the OpenHIM has received and processed. You are presented with a number of different filters (even more are accessible by clicking the 'Toggle Advanced Filters' button).

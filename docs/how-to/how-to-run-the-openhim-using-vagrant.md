@@ -2,6 +2,10 @@
 id: run-openhim-using-vagrant
 title: Run the OpenHIM using vagrant
 sidebar_label: Run the OpenHIM using vagrant
+keywords:
+  - OpenHIM
+  - Vagrant
+description: Run the OpenHIM using vagrant
 ---
 
 If you're a developer, or would just like to get the OpenHIM up and running for testing purposes, the quickest way to do so is to fire up a Vagrant instance.

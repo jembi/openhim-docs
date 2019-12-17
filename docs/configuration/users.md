@@ -2,6 +2,10 @@
 id: users
 title: Users
 sidebar_label: Users
+keywords:
+  - OpenHIM
+  - Users
+description: Manage OpenHIM users
 ---
 
 As an OpenHIM administrator, you may create other users. These too may belong to the admin group or may belong to other groups. Non-admin users cannot create clients and channels, however, they may view transactions for certain channels that they are given access to.

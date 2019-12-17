@@ -2,6 +2,12 @@
 id: export-import-configuration
 title: Export/import Configuration
 sidebar_label: Export/import Configuration
+keywords:
+  - OpenHIM
+  - Export
+  - Import
+  - Configuration
+description: Export/import OpenHIM configuration
 ---
 
 **Note:** This can now be done directly from the OpenHIM console which may be easier. See [here](https://github.com/jembi/openhim-core-js/blob/master/docs/dev-guide/api-ref.md#metadata-resource).

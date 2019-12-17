@@ -248,6 +248,7 @@ function Home() {
     <Layout
       title={siteConfig.title}
       description="Console for administrating the OpenHIM Core"
+      keywords={["OpenHIM", "Console"]}
     >
       <header className={classnames('hero page', styles.heroBanner)}>
         <div className="container">

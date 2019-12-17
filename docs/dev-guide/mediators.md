@@ -2,6 +2,10 @@
 id: developing-mediators
 title: Developing mediators
 sidebar_label: Developing mediators
+keywords:
+  - OpenHIM
+  - Mediators
+description: Developing mediators
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

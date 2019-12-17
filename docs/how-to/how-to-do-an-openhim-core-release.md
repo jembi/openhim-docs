@@ -2,6 +2,11 @@
 id: openhim-core-release
 title: Create an OpenHIM-core release
 sidebar_label: Create an OpenHIM-core release
+keywords:
+  - OpenHIM
+  - Core release
+description: Create an OpenHIM-core release
+
 ---
 
 This page describes the steps to follow to do an OpenHIM release. Make sure you are on the `master` branch and it is fully up-to-date before beginning this process.

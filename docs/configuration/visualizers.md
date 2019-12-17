@@ -2,6 +2,10 @@
 id: visualizers
 title: Visualizers
 sidebar_label: Visualizers
+keywords:
+  - OpenHIM
+  - Visualizers
+description: Manage OpenHIM visualizers
 ---
 
 The visualizer displays a live view of how transactions are being routed through the OpenHIM. Multiple visualizers can be created and these are shared among OpenHIM admin users.

@@ -3,6 +3,10 @@ id: welcome
 hide_title: true
 title: welcome
 sidebar_label: Welcome
+keywords:
+  - OpenHIM
+  - API
+  - Welcome
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

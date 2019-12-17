@@ -2,6 +2,10 @@
 id: setup-ssl
 title: Setup SSL
 sidebar_label: Setup SSL
+keywords:
+  - OpenHIM
+  - Setup SSL
+description: Setup SSL certificates for the OpenHIM-core
 ---
 
 ## Install SSL certificates for Openhim-core

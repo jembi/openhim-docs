@@ -2,6 +2,11 @@
 id: design-overview
 title: Design overview
 sidebar_label: Design overview
+keywords:
+  - OpenHIM
+  - Design
+  - Overview
+description: an overview of the interoperability layer
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

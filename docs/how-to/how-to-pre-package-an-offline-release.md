@@ -2,6 +2,10 @@
 id: pre-package-offline-release
 title: Pre-package an offline OpenHIM-core release
 sidebar_label: Pre-package an offline OpenHIM-core release
+keywords:
+  - OpenHIM
+  - Prepackage core
+description: Prepackage OpenHIM-core release
 ---
 
 Sometimes it's necessary to install the HIM in a locked down environment, e.g. on a corporate controlled server with a firewall that blocks npm, or in an environment with poor internet access. In these cases it would be useful to prepackage the HIM suitable for installation in such environments. The following instructions detail how to do this using [offline-npm](https://www.npmjs.com/package/offline-npm).

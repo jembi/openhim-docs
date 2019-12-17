@@ -104,7 +104,11 @@ class MediatorListContainer extends Component {
 
 function MediatorLibrary() {
   return (
-    <Layout>
+    <Layout
+      title="OpenHIM mediator library"
+      description="OpenHIM mediator library"
+      keywords={["OpenHIM", "Mediator Library"]}
+    >
       <header className={classnames('hero center page', styles.heroBanner)}>
         <div className="container">
           <img
