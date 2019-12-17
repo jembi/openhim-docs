@@ -41,8 +41,8 @@ Before we can send our request to the OpenHIM API we need to ensure that we cons
 <Tabs
   defaultValue="nodejs"
   values={[
-      { label: 'NodeJS', value: 'nodejs' },
-      { label: 'Bash', value: 'bash' }
+    { label: 'NodeJS', value: 'nodejs' },
+    { label: 'Bash', value: 'bash' }
   ]
 }>
 <TabItem value="nodejs">
@@ -87,7 +87,7 @@ Before we can send our request to the OpenHIM API we need to ensure that we cons
   })()
   ```
 
- Execute the below command in your terminal to run the nodejs script
+  Execute the below command in your terminal to run the nodejs script
 
   ```bash
   node openhim-api.js
@@ -113,40 +113,81 @@ Before we can send our request to the OpenHIM API we need to ensure that we cons
 <TabItem value="sample">
 
   ```json
-{
-  "Channels": [{
-    "name": "TestChannel1",
-    "urlPattern": "test/sample",
-    "allow": ["PoC", "Test1", "Test2"],
-    "routes": [{ "name": "test route", "host": "localhost", "port": 9876, "primary": true }],
-    "txViewAcl": "group1",
-    "updatedBy": {
-      "id": "12344444444",
-      "name": "Test"
-    }
-  }],
-  "Mediators": [{
-    "urn": "urn:uuid:EEA84E13-1C92-467C-B0BD-7C480462D1ED",
-    "version": "1.0.0",
-    "name": "Save Encounter Mediator",
-    "description": "A mediator for testing",
-    "endpoints": [{ "name": "Save Encounter", "host": "localhost", "port": "8005", "type": "http" }],
-    "defaultChannelConfig": [{
-      "name": "Save Encounter 1",
-      "urlPattern": "/encounters",
-      "type": "http",
-      "allow": [],
-      "routes": [{ "name": "Save Encounter 1", "host": "localhost", "port": "8005", "type": "http" }]
-    }]
-  }],
-  "ContactGroups": [{
-    "group": "Group 1",
-    "users": [
-      { "user": "User 1", "method": "sms", "maxAlerts": "no max" },
-      { "user": "User 2", "method": "email", "maxAlerts": "1 per hour"}
+  {
+    "Channels": [
+      {
+        "name": "TestChannel1",
+        "urlPattern": "test/sample",
+        "allow": [
+          "PoC",
+          "Test1",
+          "Test2"
+        ],
+        "routes": [
+          {
+            "name": "test route",
+            "host": "localhost",
+            "port": 9876,
+            "primary": true
+          }
+        ],
+        "txViewAcl": "group1",
+        "updatedBy": {
+          "id": "12344444444",
+          "name": "Test"
+        }
+      }
+    ],
+    "Mediators": [
+      {
+        "urn": "urn:uuid:EEA84E13-1C92-467C-B0BD-7C480462D1ED",
+        "version": "1.0.0",
+        "name": "Save Encounter Mediator",
+        "description": "A mediator for testing",
+        "endpoints": [
+          {
+            "name": "Save Encounter",
+            "host": "localhost",
+            "port": "8005",
+            "type": "http"
+          }
+        ],
+        "defaultChannelConfig": [
+          {
+            "name": "Save Encounter 1",
+            "urlPattern": "/encounters",
+            "type": "http",
+            "allow": [],
+            "routes": [
+              {
+                "name": "Save Encounter 1",
+                "host": "localhost",
+                "port": "8005",
+                "type": "http"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "ContactGroups": [
+      {
+        "group": "Group 1",
+        "users": [
+          {
+            "user": "User 1",
+            "method": "sms",
+            "maxAlerts": "no max"
+          },
+          {
+            "user": "User 2",
+            "method": "email",
+            "maxAlerts": "1 per hour"
+          }
+        ]
+      }
     ]
-  }]
-}
+  }
   ```
 
 </TabItem>
