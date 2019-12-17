@@ -5,15 +5,23 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+const versions = require('./versions.json');
+
 module.exports = {
   title: 'OpenHIM',
   tagline: 'Simplifying Interoperability',
   url: 'https://jembi.github.io',
-  baseUrl: '/openhim-docs/',
-  favicon: 'img/openhim_badge.svg',
+  baseUrl: '/',
+  favicon: 'img/openhim_badge.png',
   organizationName: 'jembi', // Usually your GitHub org/user name.
   projectName: 'openhim-docs', // Usually your repo name.
   themeConfig: {
+    disableDarkMode: true,
+    algolia: {
+      apiKey: 'f2ab382210f2739e1e7d61a2367cd742',
+      indexName: 'openhim',
+      algoliaOptions: {}, // Optional, if provided by Algolia
+    },
     navbar: {
       // title: 'OpenHIM',
       logo: {
@@ -21,6 +29,17 @@ module.exports = {
         src: 'img/openhim-logo-green.svg',
       },
       links: [
+        {
+          to: 'versions',
+          label: `${versions[0]}`,
+          position: 'left',
+          style: {
+            whiteSpace: 'nowrap',
+            padding: '0.25rem 0.5rem 0.2rem 0.25rem',
+            fontSize: 'calc(0.9 * var(--ifm-font-size-base))',
+            textDecoration: 'underline',
+          },
+        },
         {to: 'docs/introduction/about', label: 'Docs', position: 'left'},
         {to: 'docs/api/introduction/welcome', label: 'API', position: 'left'},
         {to: 'mediator-library', label: 'Mediator Library', position: 'left'},
@@ -82,6 +101,12 @@ module.exports = {
       },
       copyright: `Copyright © ${new Date().getFullYear()} Jembi Health Systems NPC`,
     },
+    googleAnalytics: {
+      trackingID: 'UA-60988221-1',
+    },
+    prism: {
+      theme: require('prism-react-renderer/themes/nightOwl'),
+    }
   },
   presets: [
     [
@@ -96,4 +121,5 @@ module.exports = {
       },
     ],
   ],
+  plugins: ['docusaurus-image-loader', '@docusaurus/plugin-google-analytics']
 };

@@ -12,16 +12,11 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import useBaseUrl from '@docusaurus/useBaseUrl'
 import styles from './styles.module.css'
 
-function SplashContainer(props) {
-  return (
-    <div className="container">{props.children}</div>
-  )
-}
-
 const features = [
   {
     title: <>About</>,
-    imageUrl: 'img/jembi-heal.png',
+    imageUrl: '/img/jembi-heal.png',
+    imagePlacement: 'left',
     description: (
       <div>
         <p>
@@ -60,7 +55,8 @@ const features = [
   },
   {
     title: <>Mediators</>,
-    imageUrl: 'img/plug-solid.png',
+    imageUrl: '/img/plug-solid.png',
+    imagePlacement: 'right',
     description: (
       <div>
         <p>
@@ -82,7 +78,8 @@ const features = [
   },
   {
     title: <>Acts as a reverse proxy for web services</>,
-    imageUrl: 'img/OpenHIM-reverse-proxy.png',
+    imageUrl: '/img/OpenHIM-reverse-proxy.png',
+    imagePlacement: 'left',
     description: (
       <div>
         <p>
@@ -95,29 +92,30 @@ const features = [
   },
   {
     title: <>Gain visibility into your SOA</>,
-    imageUrl: 'img/console.gif',
+    imageUrl: '/img/console.gif',
+    imagePlacement: 'right',
     description: (
       <div>
         <p>
-          The administration console allows you to view requests as they
-          travel through the system as well as view metrics such as
-          transaction load and error rates.
+          The administration console allows you to view requests as they travel
+          through the system as well as view metrics such as transaction load
+          and error rates.
         </p>
       </div>
     )
   },
   {
     title: <>Extend the OpenHIM's request processing via mediators</>,
-    imageUrl: 'img/mediators.png',
+    imageUrl: '/img/mediators.png',
+    imagePlacement: 'left',
     description: (
       <div>
         <p>
           The OpenHIM allows you to build your own micro-services called
-          mediators that plug into the OpenHIM to extend its
-          functionality. These mediators can be used to transform or
-          orchestrate requests or more. They also report details of what
-          processing has been done back to the OpenHIM using the mediator
-          framework.
+          mediators that plug into the OpenHIM to extend its functionality.
+          These mediators can be used to transform or orchestrate requests or
+          more. They also report details of what processing has been done back
+          to the OpenHIM using the mediator framework.
         </p>
         <p className="lead justify">
           View our <a href="mediator-library">mediator library</a> to see
@@ -128,100 +126,119 @@ const features = [
   },
   {
     title: <>Secure access to your web services</>,
-    imageUrl: 'img/certs.png',
+    imageUrl: '/img/certs.png',
+    imagePlacement: 'right',
     description: (
       <div>
         <p>
           The OpenHIM provides a secure interface to upstream hosts with
-          certificate management and self signed certificate generation
-          along with advanced access control mechanisms based on client
-          and server certificates.
+          certificate management and self signed certificate generation along
+          with advanced access control mechanisms based on client and server
+          certificates.
         </p>
-    </div>
+      </div>
     )
   },
   {
     title: <>ATNA: audit repository and node authentication</>,
-    imageUrl: 'img/audit.png',
+    imageUrl: '/img/audit.png',
+    imagePlacement: 'left',
     description: (
       <div>
         <p>
-          If you need it, full support for IHE’s ATNA profile is provided.
-          Both node authentication and audit trails are supported. The
-          OpenHIM also provides a full ATNA audit repository
-          implementation and advanced audit viewer.
+          If you need it, full support for IHE’s ATNA profile is provided. Both
+          node authentication and audit trails are supported. The OpenHIM also
+          provides a full ATNA audit repository implementation and advanced
+          audit viewer.
         </p>
-    </div>
+      </div>
     )
   },
   {
     title: <>Alerting, for when things go wrong</>,
-    imageUrl: 'img/alerts.png',
+    imageUrl: '/img/alerts.png',
+    imagePlacement: 'right',
     description: (
       <div>
         <p>
-          User alerts can be configured for when requests fail or a
-          particular failure rate is exceeded. Users can be notified via
-          email or sms.
+          User alerts can be configured for when requests fail or a particular
+          failure rate is exceeded. Users can be notified via email or sms.
         </p>
-    </div>
+      </div>
     )
   },
   {
     title: <>Massively scalable</>,
-    imageUrl: 'img/cluster.png',
+    imageUrl: '/img/cluster.png',
+    imagePlacement: 'left',
     description: (
       <div>
         <p>
-          The OpenHIM is scalable to handle large transaction loads. It
-          supports same server and multi-server clusters and uses MongoDB
-          as a database which is also massively scalable.
+          The OpenHIM is scalable to handle large transaction loads. It supports
+          same server and multi-server clusters and uses MongoDB as a database
+          which is also massively scalable.
         </p>
-    </div>
+      </div>
     )
   },
   {
     title: <>Re-run failed transactions</>,
-    imageUrl: 'img/rerun.png',
+    imageUrl: '/img/rerun.png',
+    imagePlacement: 'right',
     description: (
       <div>
         <p>
-          If failures occur the OpenHIM can re-run requests to your
-          services if your client systems are not able to. It allows you
-          to review and bulk re-run requests or re-run individual
-          requests.
+          If failures occur the OpenHIM can re-run requests to your services if
+          your client systems are not able to. It allows you to review and bulk
+          re-run requests or re-run individual requests.
         </p>
-    </div>
+      </div>
     )
   },
   {
     title: <>Minimal transaction overhead</>,
-    imageUrl: 'img/node-mongo.png',
+    imageUrl: '/img/node-mongo.png',
+    imagePlacement: 'left',
     description: (
       <div>
         <p>
-          The OpenHIM used the latest technologies such as Node.js and
-          MongoDB to ensure that it doesn’t introduce any significant
-          overhead to your requests.
+          The OpenHIM used the latest technologies such as Node.js and MongoDB
+          to ensure that it doesn’t introduce any significant overhead to your
+          requests.
         </p>
-    </div>
+      </div>
     )
   }
 ]
 
-function Feature({ imageUrl, title, description }) {
+function Feature({ imageUrl, title, imagePlacement, description }) {
   const imgUrl = useBaseUrl(imageUrl)
-  return (
-    <div className="row feature">
-      <div className="col padding-vert center">
-        <img src={imgUrl} alt={title} />
+
+  if (imagePlacement === 'left') {
+    return (
+      <div className="row padding-vert feature even_item">
+        <div className="col center">
+          <img className="padding-horizontal" src={imgUrl} alt={title} />
+        </div>
+        <div className="col col--offset-1">
+          <h2 className="subtitle">{title}</h2>
+          <div>{description}</div>
+        </div>
       </div>
-      <div className="col col--offset-1 padding-vert">
-        <h2>{title}</h2>
-        <div>{description}</div>
+    )
+  } else {
+    return (
+      <div className="row padding-vert feature even_item">
+        <div className="col">
+          <h2 className="subtitle">{title}</h2>
+          <div>{description}</div>
+        </div>
+        <div className="col col--offset-1 center">
+          <img className="padding-horizontal" src={imgUrl} alt={title} />
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 function Home() {
@@ -231,33 +248,31 @@ function Home() {
     <Layout
       title={siteConfig.title}
       description="Console for administrating the OpenHIM Core"
+      keywords={["OpenHIM", "Console"]}
     >
-      <header
-        className={classnames('hero splash_background', styles.heroBanner)}
-      >
+      <header className={classnames('hero page', styles.heroBanner)}>
         <div className="container">
-          <SplashContainer>
-            <h1>
-              <img src="img/openhim-logo-green.svg" alt="Project Logo" />
-            </h1>
-            <p className="hero__subtitle subtitle">{siteConfig.tagline}</p>
-            <div className="container">
-              <p className="summary">
-                The <strong>Open Health Information Mediator</strong> (OpenHIM)
-                is a middleware component designed to ease interoperability
-                between disparate information systems. It provides secure
-                communications and data governance as well as support for
-                routing, orchestrating and translating requests as they flow
-                between systems.
-              </p>
-              <p className="summary">Connecting health systems simply, securely and safely.</p>
-            </div>
-          </SplashContainer>
+          <img
+            className="logo_header"
+            src="/img/openhim-logo-green.svg"
+            alt="Project Logo"
+          />
+          <p className="hero__subtitle subtitle">{siteConfig.tagline}</p>
+          <div className="container">
+            <p>
+              The <strong>Open Health Information Mediator</strong> (OpenHIM) is
+              a middleware component designed to ease interoperability between
+              disparate information systems. It provides secure communications
+              and data governance as well as support for routing, orchestrating
+              and translating requests as they flow between systems.
+            </p>
+            <p>Connecting health systems simply, securely and safely.</p>
+          </div>
         </div>
       </header>
       <main>
         {features && features.length && (
-          <div className="container">
+          <div className="home page">
             {features.map((props, idx) => (
               <Feature key={idx} {...props} />
             ))}

@@ -6,151 +6,245 @@
  */
 
 import React from 'react'
-import useBaseUrl from '@docusaurus/useBaseUrl'
 import Layout from '@theme/Layout'
+import Link from '@docusaurus/Link'
 import { styles } from 'ansi-colors'
 import classnames from 'classnames'
 import GitHubButton from 'react-github-btn'
 
-function Help() {
-  const supportLinks = [
-    {
-      title: 'Log Bugs and request features!',
-      content: (
-        <div>
-          <p>
-            We appreciate your feedback!
-          </p>
-          <div className="button_row">
-            <div className="button_padding">
-              <GitHubButton
-                href="https://github.com/jembi/openhim-core-js/issues"
-                data-color-scheme="no-preference: dark; light: light; dark: dark;"
-                data-size="large"
-                aria-label="Issue jembi/openhim-core-js on GitHub"
-              >
-                Log OpenHIM Core Issue
-              </GitHubButton>
-            </div>
-            <div className="button_padding">
-              <GitHubButton
-                href="https://github.com/jembi/openhim-console/issues"
-                data-color-scheme="no-preference: dark; light: light; dark: dark;"
-                data-size="large"
-                aria-label="Issue jembi/openhim-console on GitHub"
-              >
-                Log OpenHIM Console Issue
-              </GitHubButton>
-            </div>
-          </div>
-        </div>
-      )
-    },
-    {
-      content: (
-        <div>
-          <p>
-            Check out our{' '}
-            <a href="https://www.youtube.com/channel/UCz3UpAGDJbKG7KkorgMGfEA">
-              OpenHIM YouTube channel
-            </a>{' '}
-            (and subscribe)
-          </p>
-        </div>
-      ),
-      title: 'Watch our OpenHIM tutorials'
-    },
-    {
-      content: (
-        <p>
-          Learn more using the{' '}
-          <a href={useBaseUrl('introduction/about')}>
-            documentation on this site
-          </a>
-          .
-        </p>
-      ),
-      title: 'Browse OpenHIM Docs'
-    },
-    {
-      content: (
-        <div>
-          <p>Ask questions about the documentation and project.</p>
-          <p>
-            OpenHIM Implementers Mailing list:
-            <br />
-            <a href="mailto:openhim-implementers@googlegroups.com">Join</a>
-            <br />
-            <a href="mailto:openhim-implementers+subscribe@googlegroups.com">
-              Subscribe
-            </a>
-          </p>
-          <p>
-            Join the Open Health Information Exchange (OpenHIE)
-            <a href="https://wiki.ohie.org/display/SUB/Interoperability+Layer+Community">
-              {' '}
-              Interoperability Layer (IOL) community
-            </a>
-          </p>
-        </div>
-      ),
-      title: 'Join the community'
-    },
-    {
-      title: 'Stay up to date',
-      content: (
-        <div>
-          <p>&#127775; and watch our Github repositories to keep up with the latest releases.</p>
-          <div className="button_row">
-            <div className="button_padding">
-              <GitHubButton
-                href="https://github.com/jembi/openhim-core-js/subscription"
-                data-color-scheme="no-preference: dark; light: light; dark: dark;"
-                data-size="large"
-                data-show-count="true"
-                aria-label="Star jembi/openhim-core-js on GitHub"
-              >
-                Watch OpenHIM Core
-              </GitHubButton>
-            </div>
-            <div className="button_padding">
-              <GitHubButton
-                href="https://github.com/jembi/openhim-console/subscription"
-                data-color-scheme="no-preference: dark; light: light; dark: dark;"
-                data-size="large"
-                data-show-count="true"
-                aria-label="Star jembi/openhim-console on GitHub"
-              >
-                Watch openHIM Console
-              </GitHubButton>
-            </div>
-          </div>
-        </div>
-      )
-    }
-  ]
+const videoData = [
+  {
+    title: 'OpenHIM Setup',
+    src: 'https://www.youtube.com/embed/F0bTS3qJlG0',
+    description: `The Open Health Information Mediator(OpenHIM) is a middleware
+    component designed to allow data transfer between diverse information
+    systems by routing, orchestrating and translating requests as they
+    flow between systems.`
+  },
+  {
+    title: 'Mediator Code Along',
+    src: 'https://www.youtube.com/embed/s-l60WMiZw8',
+    description: `Create a Scaffold OpenHIM Mediator and Register it with your local
+    OpenHIM instance.`
+  }
+]
 
+function Tutorials() {
   return (
-    <Layout>
-      <header
-        className={classnames('hero hero--primary center', styles.heroBanner)}
+    <div>
+      <h2 className="tutorial_title subtitle">Setup Tutorials</h2>
+      <div className="help_section_container">
+        {videoData.map(({ title, description, src }) => (
+          <div className="help_page_card card card_box_shadow margin-2em-y center">
+            <div className="card__header card_header_color">
+              <h3 className="subtitle">{title}</h3>
+            </div>
+            <div className="help_card_content">
+              <div className="video_wrapper margin-2em-bottom">
+                <iframe
+                  src={src}
+                  frameBorder="0"
+                  allow="autoplay; encrypted-media"
+                  allowFullScreen
+                  title="video"
+                  className="video_frame"
+                />
+              </div>
+              <p>{description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function BrowseDocs() {
+  return (
+    <div>
+      <h2 className="tutorial_title subtitle">Browse the OpenHIM docs</h2>
+      <div className="help_section_container">
+        <div className="help_page_card card card_box_shadow margin-2em-y center">
+          <div className="card__header card_header_color">
+            <h3 className="subtitle">All documentation is here</h3>
+          </div>
+          <div className="help_card_content">
+            <p>
+              {' '}
+              For user and implementor guides please see the sections labelled{' '}
+              <b>Docs</b>.
+              <br />
+              For developer guides please see the section labelled <b>API</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+const bugsAndFeaturesContent = [
+  {
+    title: 'OpenHIM Core',
+    description:
+      'The OpenHIM core component is responsible for providing a single entry-point into a system. It is provides, transaction logging, client authentication, ATNA logging, and transaction rerun functionality. Therefore, bug reports and feature requests relating to core functionality can be made in this GitHub repo.',
+    button: (
+      <GitHubButton
+        href="https://github.com/jembi/openhim-core-js/issues"
+        data-color-scheme="no-preference: dark; light: light; dark: dark;"
+        data-size="large"
+        aria-label="Issue jembi/openhim-core-js on GitHub"
       >
+        Issue
+      </GitHubButton>
+    )
+  },
+  {
+    title: 'OpenHIM Console',
+    description:
+      'A webApp that provides a management console for the OpenHIM. Therefore, visual bug reports and feature requests for the OpenHIM can be made in this GitHub repo.',
+    button: (
+      <GitHubButton
+        href="https://github.com/jembi/openhim-console/issues"
+        data-color-scheme="no-preference: dark; light: light; dark: dark;"
+        data-size="large"
+        aria-label="Issue jembi/openhim-console on GitHub"
+      >
+        Issue
+      </GitHubButton>
+    )
+  }
+]
+
+const starAndWatch = [
+  {
+    title: 'OpenHIM Core',
+    description:
+      'Star and watch our core repository to keep up with the latest features and security updates.',
+    button: (
+      <GitHubButton
+        href="https://github.com/jembi/openhim-core-js/subscription"
+        data-color-scheme="no-preference: dark; light: light; dark: dark;"
+        data-size="large"
+        data-show-count="true"
+        aria-label="Star jembi/openhim-core-js on GitHub"
+      >
+        Watch
+      </GitHubButton>
+    )
+  },
+  {
+    title: 'OpenHIM Console',
+    description:
+      'Star and watch our console repository to keep up with the latest releases.',
+    button: (
+      <GitHubButton
+        href="https://github.com/jembi/openhim-console/subscription"
+        data-color-scheme="no-preference: dark; light: light; dark: dark;"
+        data-size="large"
+        data-show-count="true"
+        aria-label="Star jembi/openhim-console on GitHub"
+      >
+        Watch
+      </GitHubButton>
+    )
+  }
+]
+
+function GithubSection({ heading, data }) {
+  return (
+    <div>
+      <h2 className="tutorial_title subtitle">{heading}</h2>
+      <div className="help_section_container">
+        {data.map(({ title, description, button }) => (
+          <div className="help_page_card card card_box_shadow margin-2em-y center">
+            <div className="card__header card_header_color">
+              <h3 className="subtitle">{title}</h3>
+            </div>
+            <div className="help_card_content">
+              <p>{description}</p>
+              {button}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+const communityContent = [
+  {
+    title: 'OpenHIM Implementors',
+    description:
+      'Below is a link to join the OpenHIM implementers google group',
+    link: (
+      <Link href="mailto:openhim-implementers@googlegroups.com">
+        openhim-implementers@googlegroups.com
+      </Link>
+    )
+  },
+  {
+    title: 'OpenHIE Interoperability',
+    description:
+      'The OpenHIM is a reference technology within the systems architecture defined by the Open Health Information Exchange. Join the interoperability sub-community to help guide the future of the OpenHIM.',
+    link: (
+      <Link
+        href="https://wiki.ohie.org/display/SUB/Interoperability+Layer+Community"
+        className="button button--outline button--lg"
+      >
+        Visit OHIE
+      </Link>
+    )
+  }
+]
+
+function Community() {
+  return (
+    <div>
+      <h2 className="tutorial_title subtitle">Join the Community</h2>
+      <div className="help_section_container">
+        {communityContent.map(({ title, description, link }) => (
+          <div className="help_page_card card card_box_shadow margin-2em-y center">
+            <div className="card__header card_header_color">
+              <h3 className="subtitle">{title}</h3>
+            </div>
+            <div className="help_card_content">
+              <p>{description}</p>
+              {link}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function Help() {
+  return (
+    <Layout
+      title="OpenHIM help"
+      description="OpenHIM help"
+      keywords={["OpenHIM", "Help"]}
+    >
+      <header className={classnames('hero center page', styles.heroBanner)}>
         <div className="container">
-          <h1 className="hero__title">Need help?</h1>
-          <p className="hero__subtitle">
-            This project is maintained by a dedicated group of people.
-          </p>
+          <img
+            className="logo_header"
+            src="/img/openhim-logo-green.svg"
+            alt="Project Logo"
+          />
+          <p className="hero__subtitle subtitle">What do you need?</p>
         </div>
       </header>
-      <main>
-        <div className="container padding-vert center">
-          {supportLinks.map(({ title, content }) => (
-            <div className="container">
-              <h2 className="subtitle">{title}</h2>
-              <div>{content}</div>
-            </div>
-          ))}
-        </div>
+      <main className="page">
+        <Tutorials />
+        <BrowseDocs />
+        <GithubSection
+          heading="Report a Bug or Request a Feature"
+          data={bugsAndFeaturesContent}
+        />
+        <Community />
+        <GithubSection heading="Stay up to date" data={starAndWatch} />
       </main>
     </Layout>
   )

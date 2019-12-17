@@ -1,37 +1,52 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import Layout from '@theme/Layout';
-import { styles } from 'ansi-colors';
-import Link from '@docusaurus/Link';
-import classnames from 'classnames';
-
+import Layout from '@theme/Layout'
+import { styles } from 'ansi-colors'
+import Link from '@docusaurus/Link'
+import classnames from 'classnames'
 
 function MediatorDetails(props) {
   return (
-    <div>
-      <div>
-        <h2>
-          <a href={'https://github.com/' + props.data.full_name}>
-            {props.data.name}
-          </a>
+    <div className="card card_box_shadow margin-2em-y">
+      <div className="card__header card_header_color">
+        <h2 className="subtitle">
+          {/openhim-mediator-(.*?)(?:\s|$)/g.exec(props.data.name)[1]}
         </h2>
       </div>
-      <div>
-        {props.data.description && (
-          <p>{props.data.description}</p>
-        )}
-        <p>
+      <div className="card__body">
+        {props.data.description && <p>{props.data.description}</p>}
+        <p className="auxillary_info">
           {props.data.stargazers_count} &#127775; - Written in{' '}
-          <b>{props.data.language}</b>
-          {' '}- Developed by{' '}
+          <b>{props.data.language}</b> - Developed by{' '}
           <a href={props.data.owner.html_url}>
-            <b>
-              {props.data.owner.login}
-            </b>
+            <b>{props.data.owner.login}</b>
           </a>
         </p>
+        <Link
+          className={classnames('button button--outline')}
+          href={'https://github.com/' + props.data.full_name}
+        >
+          View mediator on Github
+        </Link>
       </div>
-      <hr />
+    </div>
+  )
+}
+
+function CreateYourOwn() {
+  return (
+    <div className="card card_box_shadow margin-2em-y">
+      <div className="card__header card_header_color">
+        <h2 className="subtitle">Don't See what you need?</h2>
+      </div>
+      <div className="card__body">
+        <Link
+          className={classnames('button button--outline')}
+          href="/openhim-docs/docs/introduction/about"
+        >
+          Create Your Own >>
+        </Link>
+      </div>
     </div>
   )
 }
@@ -51,7 +66,7 @@ class MediatorListContainer extends Component {
   componentWillMount() {
     axios
       .get(
-        'https://api.github.com/search/repositories?q=%22openhim-mediator%22&sort=stars&order=desc'
+        'https://api.github.com/search/repositories?q=openhim-mediator%20in:name&sort=stars&order=desc'
       )
       .then(response => {
         if (response.data.items && response.data.items.length > 0) {
@@ -61,8 +76,12 @@ class MediatorListContainer extends Component {
           })
         }
       })
-      .catch(function(err) {
+      .catch((err) => {
         console.error(err.toString())
+        this.setState({
+          data: null,
+          spinner: false
+        })
       })
   }
 
@@ -70,48 +89,57 @@ class MediatorListContainer extends Component {
     if (this.state.spinner) {
       return (
         <div className="spinnerContainer">
-          <div id="loading"/>
+          <div id="loading" />
         </div>
-        )
+      )
     } else {
       var nodes = this.state.data.map(function(item) {
         return <MediatorDetails key={item.id} data={item} />
       })
-      return <div>{nodes}</div>
+      return (
+        <div>
+          {nodes}
+          <CreateYourOwn />
+        </div>
+      )
     }
   }
 }
 
 function MediatorLibrary() {
   return (
-    <Layout>
-      <header className={classnames('hero hero--primary center', styles.heroBanner)}>
+    <Layout
+      title="OpenHIM mediator library"
+      description="OpenHIM mediator library"
+      keywords={["OpenHIM", "Mediator Library"]}
+    >
+      <header className={classnames('hero center page', styles.heroBanner)}>
         <div className="container">
-          <h1 className="hero__title">OpenHIM Mediator Library</h1>
+          <img
+            className="logo_header"
+            src="/img/openhim-logo-green.svg"
+            alt="Project Logo"
+          />
+          <p className="hero__subtitle subtitle">Mediator Library</p>
           <p>
-            This is like the app store for the OpenHIM. Here you will find a
-            number of mediators that are designed to extend the OpenHIM's
-            functionality for a specific purpose. Browse the mediators below to
-            see if any suit your needs. If not, then it is easy to create your
-            own.
+            This is the 'App Store' for purpose-specific mediators that extend
+            the OpenHIM. Take a look and see if any match what you need. If not,
+            then we'll show you how to create your own.
           </p>
           <p>
-            To get your own mediator published here all you need to do is follow
-            the github repository naming convention. Any public repository
-            beginning with "openhim-mediator" will be displayed here.
+            Follow the naming convention and your public repo will be displayed
+            here automatically. Just start your repo name with
+            "openhim-mediator".
           </p>
           <div className={styles.buttons}>
-            <Link
-              className={classnames("button button--secondary button--lg")}
-              href="/openhim-docs/docs/introduction/about"
-            >
+            <Link href="/docs/introduction/about">
               Create a new mediator »
             </Link>
           </div>
         </div>
       </header>
       <main>
-        <div className="container padding-vert center mediator_description_max_width">
+        <div className="container center page mediator_page_max_width">
           <MediatorListContainer />
         </div>
       </main>

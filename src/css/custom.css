@@ -17,9 +17,9 @@
   --ifm-color-primary-dark: rgb(33, 175, 144);
   --ifm-color-primary-darker: rgb(31, 165, 136);
   --ifm-color-primary-darkest: rgb(26, 136, 112);
-  --ifm-color-primary-light: rgb(70, 203, 174);
-  --ifm-color-primary-lighter: rgb(102, 212, 189);
-  --ifm-color-primary-lightest: rgb(146, 224, 208);
+  --ifm-color-primary-light: #0e7139;
+  --ifm-color-primary-lighter: #c2d5c8;
+  --ifm-color-primary-lightest: #e9f5ef;
 }
 
 .docusaurus-highlight-code-line {
@@ -53,10 +53,14 @@
 }
 
 @keyframes spin {
-  to { -webkit-transform: rotate(360deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
 @-webkit-keyframes spin {
-  to { -webkit-transform: rotate(360deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
 .footer .footer__logo {
@@ -64,14 +68,27 @@
   filter: brightness(0) invert(1);
 }
 
-.row .col {
-  --ifm-col-width: 42%;
+.pentagon-background {
+  background: url(../../static/img/congruent_pentagon.png) repeat;
+}
+
+.home .row {
+  margin: 0px;
+}
+
+.home .row .col {
+  --ifm-col-width: 35%;
   max-width: var(--ifm-col-width);
 }
 
+.row .col {
+  max-width: 75%;
+}
+
 .feature {
-  align-items: center;
   display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100%;
 }
 
@@ -85,11 +102,7 @@
 }
 
 .subtitle {
-  color: var(--ifm-color-primary)
-}
-
-.summary {
-  font-size: 1.4em;
+  color: var(--ifm-color-primary);
 }
 
 .button_row {
@@ -98,9 +111,117 @@
 }
 
 .button_padding {
-  margin: 0.5em
+  margin: 0.5em;
 }
 
-.mediator_description_max_width {
-  max-width: 50%;
+.mediator_page_max_width {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .mediator_page_max_width {
+    max-width: 75%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .mediator_page_max_width {
+    max-width: 50%;
+  }
+}
+
+.hero {
+  background-color: var(--ifm-color-primary-lightest);
+}
+
+.even_item:nth-child(even) {
+  background: var(--ifm-color-primary-lightest);
+}
+
+.margin-2em-y {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.margin-2em-bottom {
+  margin-bottom: 2em;
+}
+
+.card_box_shadow {
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.logo_header {
+  max-height: 8em;
+}
+
+.tutorial_title {
+  text-align: center;
+  margin: 1em 0;
+}
+
+.help_page_card {
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 4em);
+  min-width: 360px;
+  margin: 0 auto 4em auto;
+  overflow: hidden;
+  border-radius: var(--ifm-card-border-radius);
+}
+
+.help_card_content {
+  padding: 2em;
+}
+
+.help_section_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 90vw;
+  max-width: 1300px;
+}
+
+.video_wrapper {
+  position: relative;
+  min-width: 50%;
+  max-height: 0;
+  padding-bottom: 56.25%;
+}
+
+.video_frame {
+  position: absolute;
+  border-radius: var(--ifm-card-border-radius);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.button.button--outline:hover {
+  color: var(--ifm-color-primary-light);
+}
+
+.page p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.page h2 {
+  font-size: 2rem;
+}
+
+.hero .hero__subtitle {
+  font-size: 2rem;
+}
+
+.auxillary_info {
+  font-size: 14px !important;
+}
+
+.card_header_color {
+  background: var(--ifm-color-primary-lighter);
+  /* Can't change this bottom padding without using important... Causes problems elsewhere */
+  padding-bottom: 1rem !important;
 }
