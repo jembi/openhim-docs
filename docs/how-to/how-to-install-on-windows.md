@@ -12,7 +12,7 @@ The following is a quick start tutorial to help guide you through the steps requ
 
 ## Install Node.js LTS
 
-Install the latest LTS version of Node.js from their [official site](http://nodejs.org/). Note that the OpenHIM only officially supports current LTS editions of node, which such as 8.x and 10.x.
+Install the latest LTS version of Node.js from their [official site](http://nodejs.org/). Note that the OpenHIM only officially supports current LTS editions of node, which such as 10.x and 12.x.
 
 The official process should be suitable for the OpenHIM; simply download and run the installer msi.
 
@@ -22,7 +22,7 @@ Install the latest version of MongoDB from their [official site](https://www.mon
 
 As with Node.js, the official process should be suitable for the OpenHIM. However, MongoDB requires some additional steps after running the installer - in particular it would be a good idea to setup MongoDB as a service.
 
-The following guide should help you get fully setup: <https://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/>
+[This guide](https://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/) should help you get fully setup.
 
 ## OpenHIM Core
 
@@ -54,12 +54,32 @@ To ensure the OpenHIM runs all the time, we will install it as a Windows Service
 
 1. Download [NSSM](http://nssm.cc/download)
 2. Open the archive and extract the `win32` or `win64` directory (depending on your Windows architecture) to a location on disk, for example `c:\nssm`
-3. Add the location `c:\nssm` to your path, so that `nssm` is accessible without knowing and typing the whole path to the file on the command line
+3. Add the location `c:\nssm` to your `PATH` environment variable so that `nssm` is accessible without knowing and typing the whole path to the file on the command line
 4. Open a command window with administrator privileges
-5. Type `nssm install openhim-core "C:\Program Files\nodejs\node.exe" "<insert-full-path>\node_modules\openhim-core\bin\openhim-core.js --conf=C:\OpenHIM\core.json"`
-6. To capture the log output, type `nssm set openhim-core AppStdout "c:\OpenHIM\stdout.log`
-7. To capture the error output, type `nssm set openhim-core AppStderr "c:\OpenHIM\stderr.log`
+5. Install the OpenHIM core on nssm with the following command:
+
+     ```sh
+     nssm install openhim-core "C:\Program Files\nodejs\node.exe" "<global-npm-path>\node_modules\openhim-core\bin\openhim-core.js" "--conf=C:\OpenHIM\core.json"
+     ```
+
+    The `global-npm-path` defaults to the following:
+
+    ```txt
+    C:\Users\<user>\AppData\Roaming\npm\
+   ```
+
+    If the path to the openhim contains any spaces in the name the command parameter will require triple quotes to be interpreted by nssm properly. For example:
+
+    ```sh
+    nssm install openhim-core "C:\Program Files\nodejs\node.exe" """C:\Users\Test User\AppData\Roaming\npm\node_modules\openhim-core\bin\openhim-core.js""" "--conf=C:\OpenHIM\core.json"
+    ```
+
+    > The triple quotes aren't needed for the `Program Files` directory.
+
+6. To capture the log output, type `nssm set openhim-core AppStdout "c:\OpenHIM\stdout.log"`
+7. To capture the error output, type `nssm set openhim-core AppStderr "c:\OpenHIM\stderr.log"`
 8. Type `net start openhim-core` to start the service or start it from the service manager.
+9. To test whether the Core is available navigate to <https://localhost:8080/heartbeat>. This may bring up a warning about self signed certificates. You can bypass this issue for testing. See the docs section on implementing [SSL certs](./setup-ssl) to deal with this issue properly.
 
 You’re done. You’ve installed the OpenHIM as a windows service.
 
