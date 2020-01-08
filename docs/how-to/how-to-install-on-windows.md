@@ -5,6 +5,9 @@ sidebar_label: Manually install on Windows
 keywords:
   - OpenHIM
   - Windows
+  - nssm
+  - iis
+  - nginx
 description: Install OpenHIM on windows
 ---
 
