@@ -4,7 +4,7 @@ title: Setup a basic cluster
 sidebar_label: Setup a basic cluster
 keywords:
   - OpenHIM
-  - Basic cluster
+  - cluster
 description: Setup a basic cluster for the OpenHIM
 ---
 
@@ -22,7 +22,7 @@ Luckily, since v1.2.0 of the OpenHIM, clustering on a single server is supported
 openhim-core --cluster={n}
 ```
 
-`n` is the number of instances that you want to run (eg, 2, 4 or 6) or it can be the special value of **auto** where the OpenHIM will determine how many core your server has and run that many instances. Each instance that the OpenHIM starts shares the same ports and the OpenHIM will share load between all of these instances.
+`n` is the number of instances that you want to run (eg, 2, 4 or 6) or it can be the special value of **auto** where the OpenHIM will determine how many cores your server has and run that many instances. Each instance that the OpenHIM starts shares the same ports and the OpenHIM will share load between all of these instances.
 
 ## Clustering over multiple servers
 
