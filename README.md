@@ -34,7 +34,7 @@ If you are using GitHub pages for hosting, this command is a convenient way to b
 
 ### Build a new documentation version
 
-When building a new version of the documentation, ensure that once the the changes are merged into the `master` branch that you also create a tag release within the repository. This is important as the new version added to the website needs to point to a a release version to see any release notes
+When building a new version of the documentation, ensure that once the changes are merged into the `master` branch that you also create a tag release within the repository. This is important as the new version added to the website needs to point to a release version to see the release notes
 
 ```bash
 $ yarn run docusaurus docs:version 5.3.x
