@@ -8,9 +8,11 @@ keywords:
 description: The OpenHIM's roadmap
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 ## OpenHIM Roadmap 2019
 
-### Scope 
+### Scope
 
 Must have:
 
