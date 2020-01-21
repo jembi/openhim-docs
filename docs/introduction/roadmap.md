@@ -10,7 +10,7 @@ description: The OpenHIM's roadmap
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-## OpenHIM Roadmap 2019
+## OpenHIM Roadmap
 
 ### Scope
 
@@ -31,6 +31,6 @@ Must have:
 | --- | --- | --- | --- |
 | Improved OpenHIM alpha release | Jembi | | Complete |
 | Performance optimization | Jembi | | Not Started |
-| Productionized generic mapping mediator | Jembi | | In Progresss |
+| Productionized generic mapping mediator | Jembi | | In Progress |
 | Modernization of certs & Alignment with SHR workflows | Jembi | | Not Started |
 | Dependency and package management | Jembi | | In Progress |
