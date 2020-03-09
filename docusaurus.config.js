@@ -86,10 +86,6 @@ module.exports = {
             {
               label: 'OpenHIM 5.2-latest Sandbox',
               href: 'https://sandbox.openhim.org',
-            },
-            {
-              label: 'OpenHIM 5.3-alpha Sandbox',
-              href: 'https://alpha.sandbox.openhim.org',
             }
           ],
         },
