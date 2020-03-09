@@ -18,7 +18,9 @@ For example, assuming your web server host is your local machine, the Uniform re
 - Username: root@openhim.org
 - Password: openhim-password
 
-> **Note**: You will have problems logging in if your OpenHIM server is still setup to use a self-signed certificate (the default). Please see section [**How to Setup SSL**](../how-to/setup-ssl) which identifies the steps necessary to generate a free certificate. If you choose to do this later, you may get around this by following these steps:
+> **Note**: You will have problems logging in if your OpenHIM server is still setup to use a self-signed certificate (the default). This for the case where the OpenHIM core is set up to use the **https** protocol. The protocols **https** and **http** are both supported (https is the default). The protocol to use can be set in the core [**config**](https://github.com/jembi/openhim-core-js/blob/master/config/default.json#L35).
+
+> Please see section [**How to Setup SSL**](../how-to/setup-ssl) which identifies the steps necessary to generate a free certificate. If you choose to do this later, you may get around this by following these steps:
 
 1. Visit the following link: <https://localhost:8080/authenticate/root@openhim.org> in Chrome.
    > **Note**: Make sure you are visiting this link from the system that is running the OpenHIM core. Otherwise, replace localhost and 8080 with the appropriate OpenHIM core server hostname (or IP Address) and API port.

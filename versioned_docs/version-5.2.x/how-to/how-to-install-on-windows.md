@@ -11,9 +11,9 @@ keywords:
 description: Install OpenHIM on windows
 ---
 
-> **<span style={{color: "rgb(153,51,0)"}}>ATTENTION</span>**: This guide describes how to install the OpenHIM on **Windows Server 2012**. Later versions of Windows are currently unsupported due to incompatible SSL ciphers.
+> **<span style={{color: "rgb(153,51,0)"}}>ATTENTION</span>**: This guide describes how to install the OpenHIM on a **Windows Server**. All versions of Windows are supported but due to incompatible SSL ciphers, **Windows 2016+** only work with the **http** protocol. Both protocols **http** and **https** are supported. The default protocol is **https**. The protocol to use can be set in the [**config file**](https://raw.githubusercontent.com/jembi/openhim-core-js/master/config/default.json)
 
-The following is a tutorial to help guide you through the steps required for a new OpenHIM installation on a Windows Server 2012 instance.
+The following is a tutorial to help guide you through the steps required for a new OpenHIM installation on a Windows Server instance.
 
 ## Prerequisites
 
