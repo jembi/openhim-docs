@@ -31,7 +31,7 @@ See below for an example of a JWT token auth config.
     "enableBasicAuthentication": false,
     "enableCustomTokenAuthentication": false,
     "enableJWTAuthentication": true,
-    "jwtSecretOrPublicKey": "randomUUID",
+    "jwtSecretOrPrivateKey": "randomUUID",
     "jwtAlgorithms": ["HS256", "HS384", "HS512"],
     "jwtAudience": ["UUID_representing_downstream_service"],
     "jwtIssuer": "UUID_representing_issuer"
