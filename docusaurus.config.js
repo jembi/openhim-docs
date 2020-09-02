@@ -84,7 +84,7 @@ module.exports = {
           title: 'Playgrounds',
           items: [
             {
-              label: 'OpenHIM 5.2-latest Sandbox',
+              label: 'OpenHIM 6.0-latest Sandbox',
               href: 'https://sandbox.openhim.org',
             }
           ],
