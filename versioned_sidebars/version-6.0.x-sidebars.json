@@ -249,6 +249,16 @@
           "id": "version-6.0.x/how-to/manually-install-on-windows"
         }
       ]
+    },
+    {
+      "type": "category",
+      "label": "Upgrades",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-6.0.x/upgrades/5-to-6"
+        }
+      ]
     }
   ],
   "version-6.0.x/api": [
