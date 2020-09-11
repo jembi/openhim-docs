@@ -21,7 +21,6 @@ function Version() {
   const latestVersion = versions[0]
   const pastVersions = versions.filter(version => version !== latestVersion)
   const pastVersionsReadTheDocs = [
-    '5.2.0',
     '4.0.5',
     '3.4.2',
     '3.3.0',
