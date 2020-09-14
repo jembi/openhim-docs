@@ -30,7 +30,7 @@ module.exports = {
         alt: 'OpenHIM',
         src: 'img/openhim-logo-green.svg',
       },
-      links: [
+      items: [
         {
           to: 'versions',
           label: `${versions[0]}`,
