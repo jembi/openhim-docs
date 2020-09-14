@@ -49,4 +49,4 @@ Mediators may be developed in any language and only talk to the OpenHIM via its 
 
 ## Existing Mediators
 
-To find some existing mediators we suggest either having a look at our <a href={useBaseUrl('/mediator-library')}>mediator library</a> or [searching github for "openhim-mediator"](https://github.com/search?utf8=%E2%9C%93&q=%22openhim-mediator%22&type=Repositories&ref=searchresults) which is the naming convention for OpenHIM mediators. For more information on writing you own mediator [click here](../dev-guide/mediators.html).
+To find some existing mediators we suggest either having a look at our <a href={useBaseUrl('/mediator-library')}>mediator library</a> or [searching github for "openhim-mediator"](https://github.com/search?utf8=%E2%9C%93&q=%22openhim-mediator%22&type=Repositories&ref=searchresults) which is the naming convention for OpenHIM mediators. For more information on writing you own mediator [click here](../dev-guide/developing-mediators).
