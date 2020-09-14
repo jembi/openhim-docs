@@ -16,7 +16,9 @@ module.exports = {
   organizationName: 'jembi', // Usually your GitHub org/user name.
   projectName: 'openhim-docs', // Usually your repo name.
   themeConfig: {
-    disableDarkMode: true,
+    colorMode: {
+      disableSwitch: true
+    },
     algolia: {
       apiKey: 'f2ab382210f2739e1e7d61a2367cd742',
       indexName: 'openhim',
