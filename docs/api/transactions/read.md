@@ -58,7 +58,7 @@ Method: GET
 Endpoint: {openhim_url}:8080/transactions/:transactionId/bodies/:bodyId
 ```
 
-The OpenHIM supports [HTTP range requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests) on this endpoint so that the user may stream parts of the transaction bodies for larger transactions. Range requests are supported with the following restrictions:
+The OpenHIM partially supports [HTTP range requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests) on this endpoint so that the user may stream parts of the transaction bodies for larger transactions. Range requests are supported with the following restrictions:
 
 * Only single ranges are supported
 * Wildcard characters for the starting range isn't supported
@@ -68,7 +68,7 @@ The OpenHIM supports [HTTP range requests](https://developer.mozilla.org/en-US/d
 Some examples of the Range header that must be sent to use range request are shown below:
 
 * `Range: bytes=0-5` - return the first 6 bytes (as the ranges are 0-based and inclusive) of the body
-* `Range: bytes=10-` - return the body from starting from byte 10 until the end of the body
+* `Range: bytes=10-` - return the body starting from byte 10 until the end of the body
 * `Range: bytes=10-20` - returns bytes 10 - 20 (0-based) of the body
 
 ## Example Fetch transactions
