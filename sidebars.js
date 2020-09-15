@@ -75,7 +75,7 @@ module.exports = {
       "how-to/manually-install-on-windows"
     ],
     "Upgrades": [
-      "upgrades/5-to-6"
+      "upgrades/db-functions"
     ]
   },
   "api": {
