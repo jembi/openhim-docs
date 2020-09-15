@@ -49,6 +49,28 @@ Method: GET
 Endpoint: {openhim_url}:8080/transactions/:transactionId
 ```
 
+## Read a specific body for a specific transaction
+
+The response received when reading a transaction only contains an ID (`bodyId`) to reference the request, response or any other body in the transaction details. To fetch these they must be fetched individually.
+
+```curl
+Method: GET
+Endpoint: {openhim_url}:8080/transactions/:transactionId/bodies/:bodyId
+```
+
+The OpenHIM partially supports [HTTP range requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests) on this endpoint so that the user may stream parts of the transaction bodies for larger transactions. Range requests are supported with the following restrictions:
+
+* Only single ranges are supported
+* Wildcard characters for the starting range isn't supported
+* If the end range goes over the actual file length the end range is set to the file length
+* If no range header is sent then the full body is streamed to the user
+
+Some examples of the Range header that must be sent to use range request are shown below:
+
+* `Range: bytes=0-5` - return the first 6 bytes (as the ranges are 0-based and inclusive) of the body
+* `Range: bytes=10-` - return the body starting from byte 10 until the end of the body
+* `Range: bytes=10-20` - returns bytes 10 - 20 (0-based) of the body
+
 ## Example Fetch transactions
 
 Before we can send our request to the OpenHIM API we need to ensure that we construct our valid HTTP headers to successfully authenticate with the OpenHIM API.
@@ -81,7 +103,7 @@ Replace the `openhimOptions` values with the correct implementation details
   }
 
   const headers = await genAuthHeaders(openhimOptions)
-  
+
   const options = { method: 'GET',
     url: `${openhimOptions.apiURL}${openhimOptions.apiEndpoint}`,
     rejectUnauthorized: openhimOptions.rejectUnauthorized,
@@ -92,10 +114,10 @@ Replace the `openhimOptions` values with the correct implementation details
       filterRepresentation: 'full'
     }
   }
-  
+
   request(options, (error, response, body) => {
     if (error) throw new Error(error)
-  
+
     console.log({
       statusCode: response.statusCode,
       body
