@@ -22,4 +22,4 @@ Upgrading to from OpenHIM core v2.0.0 triggers a migration of the visualizer set
 
 ## Transactions Upgrade
 
-From version 5.x.x transaction request bodies, response bodies, orchestrations and route request/response bodies are being stored in GridFS collections. When running an OpenHIM version 6.0.x instance for the first time, it attempts to migrate all existing transaction data to GridFS.
+From version 6.x.x transaction request bodies, response bodies, orchestrations and route request/response bodies are being stored in GridFS collections. When running an OpenHIM version 6.x.x instance for the first time, it attempts to migrate all existing transaction data to GridFS.
