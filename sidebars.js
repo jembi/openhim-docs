@@ -26,8 +26,8 @@ module.exports = {
       "installation/virtual-machine"
     ],
     "Configuration": [
-      "configuration/authentication",
       "configuration/overview",
+      "configuration/authentication",
       "configuration/certificates",
       "configuration/channels",
       "configuration/clients",
