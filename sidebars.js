@@ -73,6 +73,9 @@ module.exports = {
       "how-to/export-import-configuration",
       "how-to/setup-basic-cluster",
       "how-to/manually-install-on-windows"
+    ],
+    "Upgrades": [
+      "upgrades/db-functions"
     ]
   },
   "api": {

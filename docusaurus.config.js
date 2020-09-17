@@ -16,7 +16,9 @@ module.exports = {
   organizationName: 'jembi', // Usually your GitHub org/user name.
   projectName: 'openhim-docs', // Usually your repo name.
   themeConfig: {
-    disableDarkMode: true,
+    colorMode: {
+      disableSwitch: true
+    },
     algolia: {
       apiKey: 'f2ab382210f2739e1e7d61a2367cd742',
       indexName: 'openhim',
@@ -28,7 +30,7 @@ module.exports = {
         alt: 'OpenHIM',
         src: 'img/openhim-logo-green.svg',
       },
-      links: [
+      items: [
         {
           to: 'versions',
           label: `${versions[0]}`,
@@ -84,7 +86,7 @@ module.exports = {
           title: 'Playgrounds',
           items: [
             {
-              label: 'OpenHIM 5.2-latest Sandbox',
+              label: 'OpenHIM 6.0-latest Sandbox',
               href: 'https://sandbox.openhim.org',
             }
           ],
@@ -117,5 +119,5 @@ module.exports = {
       },
     ],
   ],
-  plugins: ['docusaurus-image-loader', '@docusaurus/plugin-google-analytics']
+  plugins: ['docusaurus-image-loader', ['@docusaurus/plugin-google-analytics', {id: 'plugin-google-analytics-1'}]]
 };

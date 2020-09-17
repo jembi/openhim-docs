@@ -29,7 +29,7 @@ The advantage of using the OpenHIM mediator framework over another stand alone s
 
 - NodeJS and NPM
 
-This tutorial assumes you have already successfully setup the OpenHIM. If not please see the [getting started guide](../getting-started/prerequisites)
+This tutorial assumes you have already successfully setup the OpenHIM. If not please see the [getting started guide](../../getting-started/prerequisites)
 
 Having a basic understanding of ExpressJS and Javascript ES6 syntax is advised.
 
