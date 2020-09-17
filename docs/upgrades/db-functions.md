@@ -10,7 +10,7 @@ description: Running database upgrade functions
 ---
 
 When upgrading an OpenHIM instance from one version to another, a couple of upgrade functions might be triggered.
-The functions run in the background and might take a significant amount of time depending on the the amount of data being migrated.
+The upgrade functions might take a significant amount of time to complete depending on the the amount of data being migrated.
 
 ## Clients link to Certs
 
