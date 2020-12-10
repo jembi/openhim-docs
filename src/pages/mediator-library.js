@@ -10,7 +10,7 @@ function MediatorDetails(props) {
     <div className="card card_box_shadow margin-2em-y">
       <div className="card__header card_header_color">
         <h2 className="subtitle">
-          {/openhim-mediator-(.*?)(?:\s|$)/g.exec(props.data.name)[1]}
+          {props.data.name}
         </h2>
       </div>
       <div className="card__body">
