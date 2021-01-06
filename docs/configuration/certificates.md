@@ -29,7 +29,7 @@ To generate a self signed certificate, click on the `+ Create Server Certificate
 
 If you have some client certificates or host certificates that you want the OpenHIM to trust, you can add them by simply dropping them in the bottom box to have them uploaded. These certificates may be attached to clients when you edit a particular client from the clients page and enable clients to be authenticated when using mutual TLS. They may also be used on a route when editing a channel to trust a particular hosts certificate.
 
-You may also add a client certificate by clicking on the `+ Create Client Certificate` button.
+You may also add a client certificate by clicking on the `+ Create Client Certificate` button. You will be presented with a 8 fields to fill in (only two are required). Once you've clicked `Create Certificate`, two buttons will be available for you to download the key and cert files respectively. Store these files somewhere safe then close the prompt. To use these new certs the OpenHIM Core will need to be restarted. The restart button will be available at the top of the **Certificates** page.
 
 ## How to remove certificates
 

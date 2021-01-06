@@ -19,10 +19,11 @@ The following is an explanation of the fields that are used in the `Add Client` 
 - **Client Name** - This is a descriptive name of the client.
 - **Domain** - A domain that is associated with a client.
   > **Note**: The domain needs to match the CN of the certificate if a certificate is used otherwise the client won’t be authorised successfully.
-- **Roles** - The client roles field is a list of authorized user groups that are allowed to access this channel. You can either select a role from the suggested roles that appear when you start typing, or you can add a new role to the list by typing in the role and pressing Enter.
-  > **Note**: suggested roles will only appear as you type, if they already exist in the OpenHIM.
-- **Certificate** - The certificate field is used when the OpenHIM core is running using mutual TLS authentication and needs to authenticate requests coming from the client. By default, the OpenHIM core uses mutual TLS authentication.
-- **Basic Auth Password** - The password field is used when the OpenHIM core is running in basic auth mode and does not require a certificate, however, it does require a password.
+- **Roles** - The client roles field is a list of authorized user groups that are allowed to access this channel. You can either select a role from the existing roles, or you can add a new role to the list by typing in the role and pressing Enter.
+- **JSON Web Token** - JWTs are small encoded packages of data that can be used to authenticate a client.
+- **Custom Token** - The Custom Token is a unique string value associated with a specific Client.
+- **Mutual TLS** - The client certificate and domain fields are used when the OpenHIM core is running using mutual TLS authentication and needs to authenticate requests coming from the client. By default, the OpenHIM core uses mutual TLS authentication.
+- **Basic Auth** - The password field is used when the OpenHIM core is running in basic auth mode and does not require a certificate, however, it does require a password.
 
 ## How to add clients
 
@@ -36,10 +37,7 @@ The following is an explanation of the fields that are used in the `Add Client` 
 1. Click on the button labelled `+ Client` to open a popup window where you will be able to supply the client details.
 1. Capture the client details.
 1. Assign an existing role or enter a name for a new role which will be created and linked to this client.
-1. You may choose to make use of a basic auth password or client certificate, depending on your OpenHIM configuration. If basic auth is enabled in the OpenHIM core configuration, then only a password is required and if mutual TLS authentication is enabled, then only a client certificate is required:
-   - _Certificate_: You may choose one of the available client certificates from the `Client Certificate` drop down.
-     > **Note**: This will only be possible if you have already configured one or more client certificates in the OpenHIM Console.
-   - _Basic Auth Password_: Enter a `Basic Auth Password` and confirm it by retyping it in the confirm password textbox.
+1. You may choose to make use of JWT, Custom Tokens, Basic Auth, or Mutual TLS depending on your OpenHIM configuration. At least one Auth mechanism is required. See the [authentication](./authentication) section for more details
 1. Click on the `Save Changes` button to save your new client.
 
 > **Note**: When a client certificate is added or updated in the certificates component of the OpenHIM, the OpenHIM console will inform the OpenHIM administrator that a server restart is required. This is for the new certificate to be applied correctly. The user can either decide to manually restart the server at a later time or to click the red `Restart Server Now!` button.
