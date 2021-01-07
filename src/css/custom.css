@@ -14,7 +14,7 @@
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #206636;
-  --ifm-color-primary-dark: rgb(33, 175, 144);
+  --ifm-color-primary-dark: #194e2a;
   --ifm-color-primary-darker: rgb(31, 165, 136);
   --ifm-color-primary-darkest: rgb(26, 136, 112);
   --ifm-color-primary-light: #0e7139;
@@ -199,8 +199,12 @@
   top: 0;
 }
 
+.button.button--outline {
+  color: var(--ifm-color-primary);
+}
+
 .button.button--outline:hover {
-  color: var(--ifm-color-primary-light);
+  color: var(--ifm-color-primary-lighter);
 }
 
 .page p {

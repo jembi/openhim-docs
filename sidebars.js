@@ -27,6 +27,7 @@ module.exports = {
     ],
     "Configuration": [
       "configuration/overview",
+      "configuration/authentication",
       "configuration/certificates",
       "configuration/channels",
       "configuration/clients",
