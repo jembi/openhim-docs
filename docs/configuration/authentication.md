@@ -81,7 +81,7 @@ To enable Mutual TLS, the following config line is required:
 
 ```json
 "authentication": {
-  "enableMutualTLSAuthentication": true,
+  "enableMutualTLSAuthentication": true
 }
 ```
 
