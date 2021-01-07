@@ -1,5 +1,5 @@
 {
-  "version-5.4.x/docs": [
+  "version-5.4.1/docs": [
     {
       "collapsed": true,
       "type": "category",
@@ -7,19 +7,19 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-5.4.x/introduction/about"
+          "id": "version-5.4.1/introduction/about"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/introduction/key-components"
+          "id": "version-5.4.1/introduction/key-components"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/introduction/roadmap"
+          "id": "version-5.4.1/introduction/roadmap"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/introduction/community"
+          "id": "version-5.4.1/introduction/community"
         }
       ]
     },
@@ -30,15 +30,15 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-5.4.x/getting-started/prerequisites"
+          "id": "version-5.4.1/getting-started/prerequisites"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/getting-started/install"
+          "id": "version-5.4.1/getting-started/install"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/getting-started/configuration"
+          "id": "version-5.4.1/getting-started/configuration"
         }
       ]
     },
@@ -49,23 +49,23 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-5.4.x/installation/docker"
+          "id": "version-5.4.1/installation/docker"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/installation/npm"
+          "id": "version-5.4.1/installation/npm"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/installation/manual"
+          "id": "version-5.4.1/installation/manual"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/installation/console-configuration"
+          "id": "version-5.4.1/installation/console-configuration"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/installation/virtual-machine"
+          "id": "version-5.4.1/installation/virtual-machine"
         }
       ]
     },
@@ -76,43 +76,43 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-5.4.x/configuration/overview"
+          "id": "version-5.4.1/configuration/overview"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/configuration/authentication"
+          "id": "version-5.4.1/configuration/authentication"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/configuration/certificates"
+          "id": "version-5.4.1/configuration/certificates"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/configuration/channels"
+          "id": "version-5.4.1/configuration/channels"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/configuration/clients"
+          "id": "version-5.4.1/configuration/clients"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/configuration/contact-list"
+          "id": "version-5.4.1/configuration/contact-list"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/configuration/import-export"
+          "id": "version-5.4.1/configuration/import-export"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/configuration/mediators"
+          "id": "version-5.4.1/configuration/mediators"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/configuration/users"
+          "id": "version-5.4.1/configuration/users"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/configuration/visualizers"
+          "id": "version-5.4.1/configuration/visualizers"
         }
       ]
     },
@@ -123,15 +123,15 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-5.4.x/tutorial/mediators/basic-scaffold"
+          "id": "version-5.4.1/tutorial/mediators/basic-scaffold"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/tutorial/mediators/orchestrator"
+          "id": "version-5.4.1/tutorial/mediators/orchestrator"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/tutorial/mediators/production-scaffold"
+          "id": "version-5.4.1/tutorial/mediators/production-scaffold"
         }
       ]
     },
@@ -142,43 +142,43 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-5.4.x/user-guide/overview"
+          "id": "version-5.4.1/user-guide/overview"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/user-guide/adding-users"
+          "id": "version-5.4.1/user-guide/adding-users"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/user-guide/transaction-list"
+          "id": "version-5.4.1/user-guide/transaction-list"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/user-guide/alerting-reports"
+          "id": "version-5.4.1/user-guide/alerting-reports"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/user-guide/polling-channels"
+          "id": "version-5.4.1/user-guide/polling-channels"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/user-guide/certificates-keystore"
+          "id": "version-5.4.1/user-guide/certificates-keystore"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/user-guide/mediators"
+          "id": "version-5.4.1/user-guide/mediators"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/user-guide/sample-disaster-recovery-procedure"
+          "id": "version-5.4.1/user-guide/sample-disaster-recovery-procedure"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/user-guide/openhim-core-versioning-and-compatibility"
+          "id": "version-5.4.1/user-guide/openhim-core-versioning-and-compatibility"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/user-guide/auditing"
+          "id": "version-5.4.1/user-guide/auditing"
         }
       ]
     },
@@ -189,23 +189,23 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-5.4.x/dev-guide/design-overview"
+          "id": "version-5.4.1/dev-guide/design-overview"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/dev-guide/design-details"
+          "id": "version-5.4.1/dev-guide/design-details"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/dev-guide/openhim-development"
+          "id": "version-5.4.1/dev-guide/openhim-development"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/dev-guide/developing-mediators"
+          "id": "version-5.4.1/dev-guide/developing-mediators"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/dev-guide/contributing"
+          "id": "version-5.4.1/dev-guide/contributing"
         }
       ]
     },
@@ -216,19 +216,19 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-5.4.x/implementations/datim"
+          "id": "version-5.4.1/implementations/datim"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/implementations/mhero"
+          "id": "version-5.4.1/implementations/mhero"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/implementations/momconnect"
+          "id": "version-5.4.1/implementations/momconnect"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/implementations/openhie"
+          "id": "version-5.4.1/implementations/openhie"
         }
       ]
     },
@@ -239,32 +239,32 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-5.4.x/how-to/install-on-centos"
+          "id": "version-5.4.1/how-to/install-on-centos"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/how-to/setup-ssl"
+          "id": "version-5.4.1/how-to/setup-ssl"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/how-to/run-openhim-on-startup"
+          "id": "version-5.4.1/how-to/run-openhim-on-startup"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/how-to/export-import-configuration"
+          "id": "version-5.4.1/how-to/export-import-configuration"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/how-to/setup-basic-cluster"
+          "id": "version-5.4.1/how-to/setup-basic-cluster"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/how-to/manually-install-on-windows"
+          "id": "version-5.4.1/how-to/manually-install-on-windows"
         }
       ]
     }
   ],
-  "version-5.4.x/api": [
+  "version-5.4.1/api": [
     {
       "collapsed": true,
       "type": "category",
@@ -272,11 +272,11 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-5.4.x/api/introduction/welcome"
+          "id": "version-5.4.1/api/introduction/welcome"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/introduction/authentication"
+          "id": "version-5.4.1/api/introduction/authentication"
         }
       ]
     },
@@ -287,15 +287,15 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-5.4.x/api/audits/overview"
+          "id": "version-5.4.1/api/audits/overview"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/audits/create"
+          "id": "version-5.4.1/api/audits/create"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/audits/read"
+          "id": "version-5.4.1/api/audits/read"
         }
       ]
     },
@@ -306,19 +306,19 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-5.4.x/api/certificates/overview"
+          "id": "version-5.4.1/api/certificates/overview"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/certificates/create"
+          "id": "version-5.4.1/api/certificates/create"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/certificates/read"
+          "id": "version-5.4.1/api/certificates/read"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/certificates/delete"
+          "id": "version-5.4.1/api/certificates/delete"
         }
       ]
     },
@@ -329,27 +329,27 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-5.4.x/api/channels/overview"
+          "id": "version-5.4.1/api/channels/overview"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/channels/create"
+          "id": "version-5.4.1/api/channels/create"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/channels/read"
+          "id": "version-5.4.1/api/channels/read"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/channels/update"
+          "id": "version-5.4.1/api/channels/update"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/channels/delete"
+          "id": "version-5.4.1/api/channels/delete"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/channels/polling-trigger"
+          "id": "version-5.4.1/api/channels/polling-trigger"
         }
       ]
     },
@@ -360,23 +360,23 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-5.4.x/api/clients/overview"
+          "id": "version-5.4.1/api/clients/overview"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/clients/create"
+          "id": "version-5.4.1/api/clients/create"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/clients/read"
+          "id": "version-5.4.1/api/clients/read"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/clients/update"
+          "id": "version-5.4.1/api/clients/update"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/clients/delete"
+          "id": "version-5.4.1/api/clients/delete"
         }
       ]
     },
@@ -387,23 +387,23 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-5.4.x/api/contacts-group/overview"
+          "id": "version-5.4.1/api/contacts-group/overview"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/contacts-group/create"
+          "id": "version-5.4.1/api/contacts-group/create"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/contacts-group/read"
+          "id": "version-5.4.1/api/contacts-group/read"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/contacts-group/update"
+          "id": "version-5.4.1/api/contacts-group/update"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/contacts-group/delete"
+          "id": "version-5.4.1/api/contacts-group/delete"
         }
       ]
     },
@@ -414,15 +414,15 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-5.4.x/api/import-export/overview"
+          "id": "version-5.4.1/api/import-export/overview"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/import-export/create"
+          "id": "version-5.4.1/api/import-export/create"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/import-export/read"
+          "id": "version-5.4.1/api/import-export/read"
         }
       ]
     },
@@ -433,11 +433,11 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-5.4.x/api/logs/overview"
+          "id": "version-5.4.1/api/logs/overview"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/logs/read"
+          "id": "version-5.4.1/api/logs/read"
         }
       ]
     },
@@ -448,23 +448,23 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-5.4.x/api/mediators/overview"
+          "id": "version-5.4.1/api/mediators/overview"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/mediators/create"
+          "id": "version-5.4.1/api/mediators/create"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/mediators/read"
+          "id": "version-5.4.1/api/mediators/read"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/mediators/update"
+          "id": "version-5.4.1/api/mediators/update"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/mediators/delete"
+          "id": "version-5.4.1/api/mediators/delete"
         }
       ]
     },
@@ -475,11 +475,11 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-5.4.x/api/metrics/overview"
+          "id": "version-5.4.1/api/metrics/overview"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/metrics/read"
+          "id": "version-5.4.1/api/metrics/read"
         }
       ]
     },
@@ -490,23 +490,23 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-5.4.x/api/roles/overview"
+          "id": "version-5.4.1/api/roles/overview"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/roles/create"
+          "id": "version-5.4.1/api/roles/create"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/roles/read"
+          "id": "version-5.4.1/api/roles/read"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/roles/update"
+          "id": "version-5.4.1/api/roles/update"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/roles/delete"
+          "id": "version-5.4.1/api/roles/delete"
         }
       ]
     },
@@ -517,11 +517,11 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-5.4.x/api/server-uptime/overview"
+          "id": "version-5.4.1/api/server-uptime/overview"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/server-uptime/read"
+          "id": "version-5.4.1/api/server-uptime/read"
         }
       ]
     },
@@ -532,23 +532,23 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-5.4.x/api/tasks/overview"
+          "id": "version-5.4.1/api/tasks/overview"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/tasks/create"
+          "id": "version-5.4.1/api/tasks/create"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/tasks/read"
+          "id": "version-5.4.1/api/tasks/read"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/tasks/update"
+          "id": "version-5.4.1/api/tasks/update"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/tasks/delete"
+          "id": "version-5.4.1/api/tasks/delete"
         }
       ]
     },
@@ -559,19 +559,19 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-5.4.x/api/transactions/overview"
+          "id": "version-5.4.1/api/transactions/overview"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/transactions/create"
+          "id": "version-5.4.1/api/transactions/create"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/transactions/read"
+          "id": "version-5.4.1/api/transactions/read"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/transactions/update"
+          "id": "version-5.4.1/api/transactions/update"
         }
       ]
     },
@@ -582,23 +582,23 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-5.4.x/api/users/overview"
+          "id": "version-5.4.1/api/users/overview"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/users/create"
+          "id": "version-5.4.1/api/users/create"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/users/read"
+          "id": "version-5.4.1/api/users/read"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/users/update"
+          "id": "version-5.4.1/api/users/update"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/users/delete"
+          "id": "version-5.4.1/api/users/delete"
         }
       ]
     },
@@ -609,23 +609,23 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-5.4.x/api/visualizer/overview"
+          "id": "version-5.4.1/api/visualizer/overview"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/visualizer/create"
+          "id": "version-5.4.1/api/visualizer/create"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/visualizer/read"
+          "id": "version-5.4.1/api/visualizer/read"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/visualizer/update"
+          "id": "version-5.4.1/api/visualizer/update"
         },
         {
           "type": "doc",
-          "id": "version-5.4.x/api/visualizer/delete"
+          "id": "version-5.4.1/api/visualizer/delete"
         }
       ]
     }
