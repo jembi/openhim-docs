@@ -44,7 +44,7 @@ function CreateYourOwn() {
           className={classnames('button button--outline')}
           href="/openhim-docs/docs/introduction/about"
         >
-          Create Your Own >>
+          Create Your Own &gt;&gt;
         </Link>
       </div>
     </div>
