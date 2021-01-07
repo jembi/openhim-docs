@@ -119,5 +119,5 @@ module.exports = {
       },
     ],
   ],
-  plugins: ['docusaurus-image-loader', '@docusaurus/plugin-google-analytics']
+  plugins: ['docusaurus-image-loader']
 };
