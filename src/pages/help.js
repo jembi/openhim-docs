@@ -59,22 +59,48 @@ function Tutorials() {
   )
 }
 
-function BrowseDocs() {
+function Support() {
   return (
     <div>
-      <h2 className="tutorial_title subtitle">Browse the OpenHIM docs</h2>
+      <h2 className="tutorial_title subtitle">Have a Question or Looking For Info</h2>
       <div className="help_section_container">
         <div className="help_page_card card card_box_shadow margin-2em-y center">
           <div className="card__header card_header_color">
-            <h3 className="subtitle">All documentation is here</h3>
+            <h3 className="subtitle">OpenHIM Support</h3>
           </div>
           <div className="help_card_content">
             <p>
-              {' '}
-              For user and implementor guides please see the sections labelled{' '}
-              <b>Docs</b>.
+            Ask a question on OpenHIE Discourse using the <b>#openhim</b>, <b>#interoperability-layer</b> or <b>#technical-assistance</b> tags
+            </p>
+            <Link
+              href="https://discourse.ohie.org/"
+              className="button button--outline button--lg"
+            >
+              Visit OpenHIE Discourse
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div className="help_section_container">
+        <div className="help_page_card card card_box_shadow margin-2em-y center">
+          <div className="card__header card_header_color">
+            <h3 className="subtitle">Browse the OpenHIM Docs</h3>
+          </div>
+          <div className="help_card_content">
+            <p>
+              For user and implementer guides please see the sections labelled&nbsp;
+              <b><Link
+                href="http://openhim.org/docs/introduction/about"
+              >
+                Docs
+              </Link></b>.
               <br />
-              For developer guides please see the section labelled <b>API</b>.
+              For developer guides please see the section labelled&nbsp;
+              <b><Link
+                href="http://openhim.org/docs/api/introduction/welcome"
+              >
+                API
+              </Link></b>.
             </p>
           </div>
         </div>
@@ -174,17 +200,7 @@ function GithubSection({ heading, data }) {
 
 const communityContent = [
   {
-    title: 'OpenHIM Implementors',
-    description:
-      'Below is a link to join the OpenHIM implementers google group',
-    link: (
-      <Link href="mailto:openhim-implementers@googlegroups.com">
-        openhim-implementers@googlegroups.com
-      </Link>
-    )
-  },
-  {
-    title: 'OpenHIE Interoperability',
+    title: 'Interoperability Layer Community',
     description:
       'The OpenHIM is a reference technology within the systems architecture defined by the Open Health Information Exchange. Join the interoperability sub-community to help guide the future of the OpenHIM.',
     link: (
@@ -192,7 +208,7 @@ const communityContent = [
         href="https://wiki.ohie.org/display/SUB/Interoperability+Layer+Community"
         className="button button--outline button--lg"
       >
-        Visit OHIE
+        Visit the OpenHIE Interoperability Layer Community
       </Link>
     )
   }
@@ -237,13 +253,13 @@ function Help() {
         </div>
       </header>
       <main className="page">
-        <Tutorials />
-        <BrowseDocs />
+        <Support />
         <GithubSection
           heading="Report a Bug or Request a Feature"
           data={bugsAndFeaturesContent}
         />
         <Community />
+        <Tutorials />
         <GithubSection heading="Stay up to date" data={starAndWatch} />
       </main>
     </Layout>
