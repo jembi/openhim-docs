@@ -174,7 +174,7 @@ function GithubSection({ heading, data }) {
 
 const communityContent = [
   {
-    title: 'OpenHIE Interoperability',
+    title: 'Interoperability Layer Community',
     description:
       'The OpenHIM is a reference technology within the systems architecture defined by the Open Health Information Exchange. Join the interoperability sub-community to help guide the future of the OpenHIM.',
     link: (
@@ -182,7 +182,7 @@ const communityContent = [
         href="https://wiki.ohie.org/display/SUB/Interoperability+Layer+Community"
         className="button button--outline button--lg"
       >
-        Visit OHIE
+        Visit the OpenHIE Interoperability Layer Community
       </Link>
     )
   }
