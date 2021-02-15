@@ -252,13 +252,13 @@ function Help() {
         </div>
       </header>
       <main className="page">
-        <Tutorials />
-        <BrowseDocs />
+        <Support />
         <GithubSection
           heading="Report a Bug or Request a Feature"
           data={bugsAndFeaturesContent}
         />
         <Community />
+        <Tutorials />
         <GithubSection heading="Stay up to date" data={starAndWatch} />
       </main>
     </Layout>
