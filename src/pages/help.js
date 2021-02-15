@@ -70,7 +70,7 @@ function Support() {
           </div>
           <div className="help_card_content">
             <p>
-            Ask a question on OpenHIE Discourse using the #openhim, #interoperability-layer or #technical-assistance tags
+            Ask a question on OpenHIE Discourse using the <b>#openhim</b>, <b>#interoperability-layer</b> or <b>#technical-assistance</b> tags
             </p>
             <Link
               href="https://discourse.ohie.org/"
