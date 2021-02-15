@@ -174,16 +174,6 @@ function GithubSection({ heading, data }) {
 
 const communityContent = [
   {
-    title: 'OpenHIM Implementors',
-    description:
-      'Below is a link to join the OpenHIM implementers google group',
-    link: (
-      <Link href="mailto:openhim-implementers@googlegroups.com">
-        openhim-implementers@googlegroups.com
-      </Link>
-    )
-  },
-  {
     title: 'OpenHIE Interoperability',
     description:
       'The OpenHIM is a reference technology within the systems architecture defined by the Open Health Information Exchange. Join the interoperability sub-community to help guide the future of the OpenHIM.',
