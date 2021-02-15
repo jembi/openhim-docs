@@ -59,14 +59,32 @@ function Tutorials() {
   )
 }
 
-function BrowseDocs() {
+function Support() {
   return (
     <div>
-      <h2 className="tutorial_title subtitle">Browse the OpenHIM docs</h2>
+      <h2 className="tutorial_title subtitle">Have a Question or Looking For Info</h2>
       <div className="help_section_container">
         <div className="help_page_card card card_box_shadow margin-2em-y center">
           <div className="card__header card_header_color">
-            <h3 className="subtitle">All documentation is here</h3>
+            <h3 className="subtitle">OpenHIM Support</h3>
+          </div>
+          <div className="help_card_content">
+            <p>
+            Ask a question on OpenHIE Discourse using the #openhim, #interoperability-layer or #technical-assistance tags
+            </p>
+            <Link
+              href="https://discourse.ohie.org/"
+              className="button button--outline button--lg"
+            >
+              Visit OpenHIE Discourse
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div className="help_section_container">
+        <div className="help_page_card card card_box_shadow margin-2em-y center">
+          <div className="card__header card_header_color">
+            <h3 className="subtitle">Browse the OpenHIM Docs</h3>
           </div>
           <div className="help_card_content">
             <p>
