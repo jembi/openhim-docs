@@ -88,14 +88,15 @@ function Support() {
           </div>
           <div className="help_card_content">
             <p>
-              For user and implementer guides please see the sections labelled
+              For user and implementer guides please see the sections labelled&nbsp;
               <b><Link
                 href="http://openhim.org/docs/introduction/about"
               >
                 Docs
               </Link></b>.
               <br />
-              For developer guides please see the section labelled <b><Link
+              For developer guides please see the section labelled&nbsp;
+              <b><Link
                 href="http://openhim.org/docs/api/introduction/welcome"
               >
                 API
