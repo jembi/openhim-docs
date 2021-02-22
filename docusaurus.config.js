@@ -74,7 +74,7 @@ module.exports = {
           items: [
             {
               label: 'Getting Involved',
-              href: 'http://openhim.org/docs/introduction/community',
+              to: 'docs/introduction/community',
             },
             {
               label: 'YouTube Tutorials',
