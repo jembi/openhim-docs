@@ -73,8 +73,8 @@ module.exports = {
           title: 'Community',
           items: [
             {
-              label: 'OpenHIE',
-              href: 'https://wiki.ohie.org/display/SUB/Interoperability+Layer+Community',
+              label: 'Getting Involved',
+              to: 'docs/introduction/community',
             },
             {
               label: 'YouTube Tutorials',
