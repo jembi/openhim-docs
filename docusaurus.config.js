@@ -17,7 +17,7 @@ module.exports = {
   projectName: 'openhim-docs', // Usually your repo name.
   themeConfig: {
     colorMode: {
-      disableSwitch: true
+      defaultMode: 'light',
     },
     algolia: {
       apiKey: 'f2ab382210f2739e1e7d61a2367cd742',
