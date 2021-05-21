@@ -36,15 +36,15 @@ const features = [
         </p>
         <p>
           Plus, the OpenHIM is <b>open-source</b>! It is published under the{' '}
-          <a href="https://tldrlegal.com/license/mozilla-public-license-2.0-(mpl-2)">
+          <a href='https://tldrlegal.com/license/mozilla-public-license-2.0-(mpl-2)'>
             MPL-2.0
           </a>{' '}
           and is currently developed and maintained by{' '}
-          <a href="http://www.jembi.org/">Jembi Health Systems</a>. It was
+          <a href='http://www.jembi.org/'>Jembi Health Systems</a>. It was
           initially developed in collaboration with{' '}
-          <a href="http://www.ukzn.ac.za/">UKZN</a>. Browse the OpenHIM features
+          <a href='http://www.ukzn.ac.za/'>UKZN</a>. Browse the OpenHIM features
           below or{' '}
-          <a href="docs/getting-started/prerequisites">
+          <a href='docs/getting-started/prerequisites'>
           get started right away.
           </a>
         </p>
@@ -66,10 +66,10 @@ const features = [
           user defined config.
         </p>
         <p>
-          Check out the <a href="mediator-library">mediator library</a> to view
+          Check out the <a href='mediator-library'>mediator library</a> to view
           mediators that have already been built. To learn more about creating
           your own mediators, see our{' '}
-          <a href="docs/introduction/welcome">documentation</a>.
+          <a href='docs/introduction/welcome'>documentation</a>.
         </p>
       </div>
     )
@@ -115,8 +115,8 @@ const features = [
           more. They also report details of what processing has been done back
           to the OpenHIM using the mediator framework.
         </p>
-        <p className="lead justify">
-          View our <a href="mediator-library">mediator library</a> to see
+        <p className='lead justify'>
+          View our <a href='mediator-library'>mediator library</a> to see
           mediator have already been built.
         </p>
       </div>
@@ -214,25 +214,25 @@ function Feature({ imageUrl, title, imagePlacement, description }) {
 
   if (imagePlacement === 'left') {
     return (
-      <div className="row padding-vert feature even_item">
-        <div className="col center">
-          <img className="padding-horizontal" src={imgUrl} alt={title} />
+      <div className='row padding-vert feature even_item'>
+        <div className='col center'>
+          <img className='padding-horizontal' src={imgUrl} alt={title} />
         </div>
-        <div className="col col--offset-1">
-          <h2 className="subtitle">{title}</h2>
+        <div className='col col--offset-1'>
+          <h2 className='subtitle'>{title}</h2>
           <div>{description}</div>
         </div>
       </div>
     )
   } else {
     return (
-      <div className="row padding-vert feature even_item">
-        <div className="col">
-          <h2 className="subtitle">{title}</h2>
+      <div className='row padding-vert feature even_item'>
+        <div className='col'>
+          <h2 className='subtitle'>{title}</h2>
           <div>{description}</div>
         </div>
-        <div className="col col--offset-1 center">
-          <img className="padding-horizontal" src={imgUrl} alt={title} />
+        <div className='col col--offset-1 center'>
+          <img className='padding-horizontal' src={imgUrl} alt={title} />
         </div>
       </div>
     )
@@ -245,18 +245,18 @@ function Home() {
   return (
     <Layout
       title={siteConfig.title}
-      description="Console for administrating the OpenHIM Core"
-      keywords={["OpenHIM", "Console"]}
+      description='Console for administrating the OpenHIM Core'
+      keywords={['OpenHIM', 'Console']}
     >
       <header className='hero center page'>
-        <div className="container">
+        <div className='container'>
           <img
-            className="logo_header"
-            src="/img/openhim-logo-green.svg"
-            alt="Project Logo"
+            className='logo_header'
+            src='/img/openhim-logo-green.svg'
+            alt='Project Logo'
           />
-          <p className="hero__subtitle subtitle">{siteConfig.tagline}</p>
-          <div className="container">
+          <p className='hero__subtitle subtitle'>{siteConfig.tagline}</p>
+          <div className='container'>
             <p>
               The <strong>Open Health Information Mediator</strong> (OpenHIM) is
               a middleware component designed to ease interoperability between
@@ -270,7 +270,7 @@ function Home() {
       </header>
       <main>
         {features && features.length && (
-          <div className="home page">
+          <div className='home page'>
             {features.map((props, idx) => (
               <Feature key={idx} {...props} />
             ))}

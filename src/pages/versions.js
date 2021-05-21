@@ -30,25 +30,25 @@ function Version() {
   const repoUrl = `https://github.com/${siteConfig.organizationName}/${siteConfig.projectName}`
   return (
     <Layout
-      permalink="/versions"
-      keywords={["OpenHIM", "Versions"]}
-      description="Versions page listing all documented site versions"
+      permalink='/versions'
+      keywords={['OpenHIM', 'Versions']}
+      description='Versions page listing all documented site versions'
     >
       <header className='hero center page'>
-        <div className="container">
+        <div className='container'>
           <img
-            className="logo_header"
-            src="/img/openhim-logo-green.svg"
-            alt="Project Logo"
+            className='logo_header'
+            src='/img/openhim-logo-green.svg'
+            alt='Project Logo'
           />
-          <p className="hero__subtitle subtitle">Documentation Versions</p>
+          <p className='hero__subtitle subtitle'>Documentation Versions</p>
         </div>
       </header>
-      <div className="container margin-vert--xl" style={{textAlign: "center"}}>
-        <div className="margin-bottom--lg">
-          <h3 id="latest">Latest Version (Stable)</h3>
+      <div className='container margin-vert--xl' style={{textAlign: 'center'}}>
+        <div className='margin-bottom--lg'>
+          <h3 id='latest'>Latest Version (Stable)</h3>
           <p>Here you can find the latest documentation.</p>
-          <table style={{ display: "flex", justifyContent: "center"}}>
+          <table style={{ display: 'flex', justifyContent: 'center'}}>
             <tbody>
               <tr>
                 <th>{latestVersion}</th>
@@ -71,11 +71,11 @@ function Version() {
             </tbody>
           </table>
         </div>
-        <div className="margin-bottom--lg">
-          <h3 id="next">Next version (Unreleased)</h3>
+        <div className='margin-bottom--lg'>
+          <h3 id='next'>Next version (Unreleased)</h3>
           <p>Here you can find the documentation for unreleased version.</p>
           <table>
-            <tbody style={{ display: "flex", justifyContent: "center"}}>
+            <tbody style={{ display: 'flex', justifyContent: 'center'}}>
               <tr>
                 <th>master</th>
                 <td>
@@ -96,12 +96,12 @@ function Version() {
           </table>
         </div>
         {(pastVersions.length > 0 || pastVersionsReadTheDocs.length > 0) && (
-          <div className="margin-bottom--lg">
-            <h3 id="archive">Past Versions</h3>
+          <div className='margin-bottom--lg'>
+            <h3 id='archive'>Past Versions</h3>
             <p>
               Here you can find documentation for previous versions of {siteConfig.title}.
             </p>
-            <table style={{ display: "flex", justifyContent: "center"}}>
+            <table style={{ display: 'flex', justifyContent: 'center'}}>
               <tbody>
                 {pastVersions.map(version => (
                   <tr key={version}>
@@ -120,7 +120,7 @@ function Version() {
                 ))}
 
                 <tr>
-                  <th colSpan="3">Read The Docs version</th>
+                  <th colSpan='3'>Read The Docs version</th>
                 </tr>
 
                 {pastVersionsReadTheDocs.map(version => (

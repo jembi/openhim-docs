@@ -5,15 +5,15 @@ import Link from '@docusaurus/Link'
 
 function MediatorDetails(props) {
   return (
-    <div className="card card_box_shadow margin-2em-y">
-      <div className="card__header card_header_color">
-        <h2 className="subtitle">
+    <div className='card card_box_shadow margin-2em-y'>
+      <div className='card__header card_header_color'>
+        <h2 className='subtitle'>
           {props.data.name}
         </h2>
       </div>
-      <div className="card__body">
+      <div className='card__body'>
         {props.data.description && <p>{props.data.description}</p>}
-        <p className="auxillary_info">
+        <p className='auxillary_info'>
           {props.data.stargazers_count} &#127775; - Written in{' '}
           <b>{props.data.language}</b> - Developed by{' '}
           <a href={props.data.owner.html_url}>
@@ -33,14 +33,14 @@ function MediatorDetails(props) {
 
 function CreateYourOwn() {
   return (
-    <div className="card card_box_shadow margin-2em-y">
-      <div className="card__header card_header_color">
-        <h2 className="subtitle">Don't See what you need?</h2>
+    <div className='card card_box_shadow margin-2em-y'>
+      <div className='card__header card_header_color'>
+        <h2 className='subtitle'>Don't See what you need?</h2>
       </div>
-      <div className="card__body">
+      <div className='card__body'>
         <Link
           className='button button--outline'
-          href="/docs/introduction/about"
+          href='/docs/introduction/about'
         >
           Create Your Own &gt;&gt;
         </Link>
@@ -86,8 +86,8 @@ class MediatorListContainer extends Component {
   render() {
     if (this.state.spinner) {
       return (
-        <div className="spinnerContainer">
-          <div id="loading" />
+        <div className='spinnerContainer'>
+          <div id='loading' />
         </div>
       )
     } else {
@@ -107,18 +107,18 @@ class MediatorListContainer extends Component {
 function MediatorLibrary() {
   return (
     <Layout
-      title="OpenHIM mediator library"
-      description="OpenHIM mediator library"
-      keywords={["OpenHIM", "Mediator Library"]}
+      title='OpenHIM mediator library'
+      description='OpenHIM mediator library'
+      keywords={['OpenHIM', 'Mediator Library']}
     >
       <header className='hero center page'>
-        <div className="container">
+        <div className='container'>
           <img
-            className="logo_header"
-            src="/img/openhim-logo-green.svg"
-            alt="Project Logo"
+            className='logo_header'
+            src='/img/openhim-logo-green.svg'
+            alt='Project Logo'
           />
-          <p className="hero__subtitle subtitle">Mediator Library</p>
+          <p className='hero__subtitle subtitle'>Mediator Library</p>
           <p>
             This is the 'App Store' for purpose-specific mediators that extend
             the OpenHIM. Take a look and see if any match what you need. If not,
@@ -127,17 +127,17 @@ function MediatorLibrary() {
           <p>
             Follow the naming convention and your public repo will be displayed
             here automatically. Just start your repo name with
-            "openhim-mediator".
+            'openhim-mediator'.
           </p>
-          <div className="buttons">
-            <Link href="/docs/introduction/about">
+          <div className='buttons'>
+            <Link href='/docs/introduction/about'>
               Create a new mediator »
             </Link>
           </div>
         </div>
       </header>
       <main>
-        <div className="container center page mediator_page_max_width">
+        <div className='container center page mediator_page_max_width'>
           <MediatorListContainer />
         </div>
       </main>

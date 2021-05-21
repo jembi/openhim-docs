@@ -30,22 +30,22 @@ const videoData = [
 function Tutorials() {
   return (
     <div>
-      <h2 className="tutorial_title subtitle">Setup Tutorials</h2>
-      <div className="help_section_container">
+      <h2 className='tutorial_title subtitle'>Setup Tutorials</h2>
+      <div className='help_section_container'>
         {videoData.map(({ title, description, src }) => (
-          <div className="help_page_card card card_box_shadow margin-2em-y center">
-            <div className="card__header card_header_color">
-              <h3 className="subtitle">{title}</h3>
+          <div className='help_page_card card card_box_shadow margin-2em-y center'>
+            <div className='card__header card_header_color'>
+              <h3 className='subtitle'>{title}</h3>
             </div>
-            <div className="help_card_content">
-              <div className="video_wrapper margin-2em-bottom">
+            <div className='help_card_content'>
+              <div className='video_wrapper margin-2em-bottom'>
                 <iframe
                   src={src}
-                  frameBorder="0"
-                  allow="autoplay; encrypted-media"
+                  frameBorder='0'
+                  allow='autoplay; encrypted-media'
                   allowFullScreen
-                  title="video"
-                  className="video_frame"
+                  title='video'
+                  className='video_frame'
                 />
               </div>
               <p>{description}</p>
@@ -60,42 +60,42 @@ function Tutorials() {
 function Support() {
   return (
     <div>
-      <h2 className="tutorial_title subtitle">Have a Question or Looking For Info</h2>
-      <div className="help_section_container">
-        <div className="help_page_card card card_box_shadow margin-2em-y center">
-          <div className="card__header card_header_color">
-            <h3 className="subtitle">OpenHIM Support</h3>
+      <h2 className='tutorial_title subtitle'>Have a Question or Looking For Info</h2>
+      <div className='help_section_container'>
+        <div className='help_page_card card card_box_shadow margin-2em-y center'>
+          <div className='card__header card_header_color'>
+            <h3 className='subtitle'>OpenHIM Support</h3>
           </div>
-          <div className="help_card_content">
+          <div className='help_card_content'>
             <p>
             Ask a question on OpenHIE Discourse using the <b>#openhim</b>, <b>#interoperability-layer</b> or <b>#technical-assistance</b> tags
             </p>
             <Link
-              href="https://discourse.ohie.org/"
-              className="button button--outline button--lg"
+              href='https://discourse.ohie.org/'
+              className='button button--outline button--lg'
             >
               Visit OpenHIE Discourse
             </Link>
           </div>
         </div>
       </div>
-      <div className="help_section_container">
-        <div className="help_page_card card card_box_shadow margin-2em-y center">
-          <div className="card__header card_header_color">
-            <h3 className="subtitle">Browse the OpenHIM Docs</h3>
+      <div className='help_section_container'>
+        <div className='help_page_card card card_box_shadow margin-2em-y center'>
+          <div className='card__header card_header_color'>
+            <h3 className='subtitle'>Browse the OpenHIM Docs</h3>
           </div>
-          <div className="help_card_content">
+          <div className='help_card_content'>
             <p>
               For user and implementer guides please see the sections labelled&nbsp;
               <b><Link
-                href="http://openhim.org/docs/introduction/about"
+                href='http://openhim.org/docs/introduction/about'
               >
                 Docs
               </Link></b>.
               <br />
               For developer guides please see the section labelled&nbsp;
               <b><Link
-                href="http://openhim.org/docs/api/introduction/welcome"
+                href='http://openhim.org/docs/api/introduction/welcome'
               >
                 API
               </Link></b>.
@@ -114,10 +114,10 @@ const bugsAndFeaturesContent = [
       'The OpenHIM core component is responsible for providing a single entry-point into a system. It is provides, transaction logging, client authentication, ATNA logging, and transaction rerun functionality. Therefore, bug reports and feature requests relating to core functionality can be made in this GitHub repo.',
     button: (
       <GitHubButton
-        href="https://github.com/jembi/openhim-core-js/issues"
-        data-color-scheme="no-preference: dark; light: light; dark: dark;"
-        data-size="large"
-        aria-label="Issue jembi/openhim-core-js on GitHub"
+        href='https://github.com/jembi/openhim-core-js/issues'
+        data-color-scheme='no-preference: dark; light: light; dark: dark;'
+        data-size='large'
+        aria-label='Issue jembi/openhim-core-js on GitHub'
       >
         Issue
       </GitHubButton>
@@ -129,10 +129,10 @@ const bugsAndFeaturesContent = [
       'A webApp that provides a management console for the OpenHIM. Therefore, visual bug reports and feature requests for the OpenHIM can be made in this GitHub repo.',
     button: (
       <GitHubButton
-        href="https://github.com/jembi/openhim-console/issues"
-        data-color-scheme="no-preference: dark; light: light; dark: dark;"
-        data-size="large"
-        aria-label="Issue jembi/openhim-console on GitHub"
+        href='https://github.com/jembi/openhim-console/issues'
+        data-color-scheme='no-preference: dark; light: light; dark: dark;'
+        data-size='large'
+        aria-label='Issue jembi/openhim-console on GitHub'
       >
         Issue
       </GitHubButton>
@@ -147,11 +147,11 @@ const starAndWatch = [
       'Star and watch our core repository to keep up with the latest features and security updates.',
     button: (
       <GitHubButton
-        href="https://github.com/jembi/openhim-core-js/subscription"
-        data-color-scheme="no-preference: dark; light: light; dark: dark;"
-        data-size="large"
-        data-show-count="true"
-        aria-label="Star jembi/openhim-core-js on GitHub"
+        href='https://github.com/jembi/openhim-core-js/subscription'
+        data-color-scheme='no-preference: dark; light: light; dark: dark;'
+        data-size='large'
+        data-show-count='true'
+        aria-label='Star jembi/openhim-core-js on GitHub'
       >
         Watch
       </GitHubButton>
@@ -163,11 +163,11 @@ const starAndWatch = [
       'Star and watch our console repository to keep up with the latest releases.',
     button: (
       <GitHubButton
-        href="https://github.com/jembi/openhim-console/subscription"
-        data-color-scheme="no-preference: dark; light: light; dark: dark;"
-        data-size="large"
-        data-show-count="true"
-        aria-label="Star jembi/openhim-console on GitHub"
+        href='https://github.com/jembi/openhim-console/subscription'
+        data-color-scheme='no-preference: dark; light: light; dark: dark;'
+        data-size='large'
+        data-show-count='true'
+        aria-label='Star jembi/openhim-console on GitHub'
       >
         Watch
       </GitHubButton>
@@ -178,14 +178,14 @@ const starAndWatch = [
 function GithubSection({ heading, data }) {
   return (
     <div>
-      <h2 className="tutorial_title subtitle">{heading}</h2>
-      <div className="help_section_container">
+      <h2 className='tutorial_title subtitle'>{heading}</h2>
+      <div className='help_section_container'>
         {data.map(({ title, description, button }) => (
-          <div className="help_page_card card card_box_shadow margin-2em-y center">
-            <div className="card__header card_header_color">
-              <h3 className="subtitle">{title}</h3>
+          <div className='help_page_card card card_box_shadow margin-2em-y center'>
+            <div className='card__header card_header_color'>
+              <h3 className='subtitle'>{title}</h3>
             </div>
-            <div className="help_card_content">
+            <div className='help_card_content'>
               <p>{description}</p>
               {button}
             </div>
@@ -203,8 +203,8 @@ const communityContent = [
       'The OpenHIM is a reference technology within the systems architecture defined by the Open Health Information Exchange. Join the interoperability sub-community to help guide the future of the OpenHIM.',
     link: (
       <Link
-        href="https://wiki.ohie.org/display/SUB/Interoperability+Layer+Community"
-        className="button button--outline button--lg"
+        href='https://wiki.ohie.org/display/SUB/Interoperability+Layer+Community'
+        className='button button--outline button--lg'
       >
         Visit the OpenHIE Interoperability Layer Community
       </Link>
@@ -215,14 +215,14 @@ const communityContent = [
 function Community() {
   return (
     <div>
-      <h2 className="tutorial_title subtitle">Join the Community</h2>
-      <div className="help_section_container">
+      <h2 className='tutorial_title subtitle'>Join the Community</h2>
+      <div className='help_section_container'>
         {communityContent.map(({ title, description, link }) => (
-          <div className="help_page_card card card_box_shadow margin-2em-y center">
-            <div className="card__header card_header_color">
-              <h3 className="subtitle">{title}</h3>
+          <div className='help_page_card card card_box_shadow margin-2em-y center'>
+            <div className='card__header card_header_color'>
+              <h3 className='subtitle'>{title}</h3>
             </div>
-            <div className="help_card_content">
+            <div className='help_card_content'>
               <p>{description}</p>
               {link}
             </div>
@@ -236,29 +236,29 @@ function Community() {
 function Help() {
   return (
     <Layout
-      title="OpenHIM help"
-      description="OpenHIM help"
-      keywords={["OpenHIM", "Help"]}
+      title='OpenHIM help'
+      description='OpenHIM help'
+      keywords={['OpenHIM', 'Help']}
     >
       <header className='hero center page'>
-        <div className="container">
+        <div className='container'>
           <img
-            className="logo_header"
-            src="/img/openhim-logo-green.svg"
-            alt="Project Logo"
+            className='logo_header'
+            src='/img/openhim-logo-green.svg'
+            alt='Project Logo'
           />
-          <p className="hero__subtitle subtitle">What do you need?</p>
+          <p className='hero__subtitle subtitle'>What do you need?</p>
         </div>
       </header>
-      <main className="page">
+      <main className='page'>
         <Support />
         <GithubSection
-          heading="Report a Bug or Request a Feature"
+          heading='Report a Bug or Request a Feature'
           data={bugsAndFeaturesContent}
         />
         <Community />
         <Tutorials />
-        <GithubSection heading="Stay up to date" data={starAndWatch} />
+        <GithubSection heading='Stay up to date' data={starAndWatch} />
       </main>
     </Layout>
   )
