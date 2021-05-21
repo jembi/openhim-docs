@@ -8,8 +8,6 @@
 import React from 'react'
 import Layout from '@theme/Layout'
 import Link from '@docusaurus/Link'
-import { styles } from 'ansi-colors'
-import classnames from 'classnames'
 import GitHubButton from 'react-github-btn'
 
 const videoData = [
@@ -242,7 +240,7 @@ function Help() {
       description="OpenHIM help"
       keywords={["OpenHIM", "Help"]}
     >
-      <header className={classnames('hero center page', styles.heroBanner)}>
+      <header className='hero center page'>
         <div className="container">
           <img
             className="logo_header"

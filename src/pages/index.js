@@ -6,11 +6,9 @@
  */
 
 import React from 'react'
-import classnames from 'classnames'
 import Layout from '@theme/Layout'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import useBaseUrl from '@docusaurus/useBaseUrl'
-import styles from './styles.module.css'
 
 const features = [
   {
@@ -250,7 +248,7 @@ function Home() {
       description="Console for administrating the OpenHIM Core"
       keywords={["OpenHIM", "Console"]}
     >
-      <header className={classnames('hero page', styles.heroBanner)}>
+      <header className='hero center page'>
         <div className="container">
           <img
             className="logo_header"

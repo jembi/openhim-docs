@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import Layout from '@theme/Layout'
-import { styles } from 'ansi-colors'
 import Link from '@docusaurus/Link'
-import classnames from 'classnames'
 
 function MediatorDetails(props) {
   return (
@@ -23,7 +21,7 @@ function MediatorDetails(props) {
           </a>
         </p>
         <Link
-          className={classnames('button button--outline')}
+          className='button button--outline'
           href={'https://github.com/' + props.data.full_name}
         >
           View mediator on Github
@@ -41,8 +39,8 @@ function CreateYourOwn() {
       </div>
       <div className="card__body">
         <Link
-          className={classnames('button button--outline')}
-          href="/openhim-docs/docs/introduction/about"
+          className='button button--outline'
+          href="/docs/introduction/about"
         >
           Create Your Own &gt;&gt;
         </Link>
@@ -113,7 +111,7 @@ function MediatorLibrary() {
       description="OpenHIM mediator library"
       keywords={["OpenHIM", "Mediator Library"]}
     >
-      <header className={classnames('hero center page', styles.heroBanner)}>
+      <header className='hero center page'>
         <div className="container">
           <img
             className="logo_header"
@@ -131,7 +129,7 @@ function MediatorLibrary() {
             here automatically. Just start your repo name with
             "openhim-mediator".
           </p>
-          <div className={styles.buttons}>
+          <div className="buttons">
             <Link href="/docs/introduction/about">
               Create a new mediator »
             </Link>

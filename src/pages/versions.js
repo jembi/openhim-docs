@@ -10,8 +10,6 @@ import Layout from '@theme/Layout'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import Link from '@docusaurus/Link'
 import useBaseUrl from '@docusaurus/useBaseUrl'
-import { styles } from 'ansi-colors'
-import classnames from 'classnames'
 
 import versions from '../../versions.json'
 
@@ -36,7 +34,7 @@ function Version() {
       keywords={["OpenHIM", "Versions"]}
       description="Versions page listing all documented site versions"
     >
-      <header className={classnames('hero center page', styles.heroBanner)}>
+      <header className='hero center page'>
         <div className="container">
           <img
             className="logo_header"
