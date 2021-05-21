@@ -4,6 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
+/** @type {import('@docusaurus/types').DocusaurusConfig} */
 
 const versions = require('./versions.json');
 
@@ -12,6 +13,8 @@ module.exports = {
   tagline: 'Simplifying Interoperability',
   url: 'https://jembi.github.io',
   baseUrl: '/',
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
   favicon: 'img/openhim_badge.png',
   organizationName: 'jembi', // Usually your GitHub org/user name.
   projectName: 'openhim-docs', // Usually your repo name.
@@ -118,6 +121,5 @@ module.exports = {
         },
       },
     ],
-  ],
-  plugins: ['docusaurus-image-loader']
+  ]
 };
