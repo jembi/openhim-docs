@@ -20,7 +20,7 @@ This guide assumes you are running a **Linux** environment.
 
 To follow this guide you will need internet access and the following software installed:
 
-- NodeJS v10
+- NodeJS v12
 - npm
 - git
 - MongoDB v4.0
@@ -71,7 +71,7 @@ This project uses [mocha](https://mochajs.org/) as a unit testing framework with
 
 To follow this guide you will need internet access and the following software installed:
 
-- NodeJS v10
+- NodeJS v12
 - npm
 - git
 - MongoDB v4.0

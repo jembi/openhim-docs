@@ -17,7 +17,7 @@ This guide is for manually installing an OpenHIM instance using the built zipped
 
 This guide assumes that you are installing on an ubuntu server and that the following is already installed and setup:
 
-- NodeJS (v8 or later)
+- NodeJS (v12 or later)
 - NPM
 - MongoDB (v3.6 or later)
 
@@ -82,7 +82,7 @@ Before installing the OpenHIM console, it is required that you first have the Op
 ```json
 {
   "version": "x.x.x", //Replace the x's with the latest release
-  "minimumCoreVersion": "5.2.5",
+  "minimumCoreVersion": "7.0.0",
   "protocol": "https",
   "host": "localhost", // change this to the hostname for your OpenHIM-core server (This hostname _MUST_ be publicly accessible)
   "port": 8080, // change this to the API port of the OpenHIM-core server, default is 8080 (This port _MUST_ be publicly accessible)

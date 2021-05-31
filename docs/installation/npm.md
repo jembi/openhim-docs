@@ -64,7 +64,7 @@ Next, you need to download the latest release of the web app and deploy it to a 
 ```json
 {
   "version": "x.x.x", //Replace the x's with the latest release
-  "minimumCoreVersion": "5.2.3",
+  "minimumCoreVersion": "7.0.0",
   "protocol": "https",
   "host": "localhost", // Change this to the hostname for your OpenHIM-core server (This hostname MUST be publicly accessible)
   "port": 8080, // Change this to the API port of the OpenHIM-core server, default is 8080 (This port MUST be publicly accessible)

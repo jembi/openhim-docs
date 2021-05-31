@@ -1,11 +1,12 @@
 {
   "name": "openhim-docs",
-  "version": "5.4.0",
+  "version": "7.0.0",
   "private": true,
   "scripts": {
     "start": "docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
+    "clear": "docusaurus clear",
     "deploy": "docusaurus deploy"
   },
   "dependencies": {
