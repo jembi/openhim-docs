@@ -97,6 +97,11 @@ function Version() {
             </tbody>
           </table>
         </div>
+        <div className="margin-bottom--lg">
+          <h3 id="v6">Version 6</h3>
+          <p>Version 6 of the OpenHIM references a <b>draft alpha release</b> that is still in development.</p>
+          <p>We will not be supporting documentation for this version until it is fully released.</p>
+        </div>
         {(pastVersions.length > 0 || pastVersionsReadTheDocs.length > 0) && (
           <div className="margin-bottom--lg">
             <h3 id="archive">Past Versions</h3>
