@@ -26,7 +26,7 @@ Endpoint: {openhim_url}:8080/clients
 
 ```curl
 Method: GET
-Endpoint: {openhim_url}:8080/clients/:clientId
+Endpoint: {openhim_url}:8080/clients/:_id
 ```
 
 ## Read a specific client by domain
