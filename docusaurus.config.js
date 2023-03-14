@@ -119,5 +119,5 @@ module.exports = {
       },
     ],
   ],
-  plugins: ['docusaurus-image-loader']
+  plugins: ['docusaurus-image-loader', require.resolve('./docusuarusWebpack5Plugin')],
 };
