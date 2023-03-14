@@ -66,7 +66,7 @@ class MediatorListContainer extends Component {
   componentWillMount() {
     axios
       .get(
-        'https://api.github.com/search/repositories?q=openhim-mediator%20in:name&sort=stars&order=desc'
+        'https://api.github.com/search/repositories?q=openhim-mediator%20in:name&sort=stars&order=desc&per_page=1000'
       )
       .then(response => {
         if (response.data.items && response.data.items.length > 0) {
