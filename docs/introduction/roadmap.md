@@ -32,14 +32,6 @@ Product modernization is aimed at keeping the OpenHIM technology and dependency 
 
 This covers ongoing support for OpenHIM implementations and the user community, including updates to OpenHIM deployment processes and end user documentation, support channels and tutorials that allow implementers to more easily and effectively set up, configure and maintain their instances of the OpenHIM.
 
-### Timeline
+### Timeline or 2023
 
-<img alt="OpenHIM Roadmap" src={useBaseUrl('img/roadmap.png')} />
-
-### Milestones and Deadlines
-
-| Milestone | Due Date (Proposed) | Status |
-| --- | --- | --- |
-|OpenHIM version release | June 2021 | TODO |
-| Mapping Mediator version release | June 2021 | TODO |
-| DHIS2 Tracker Mediators version release | September 2021 | TODO |
+<img alt="OpenHIM Roadmap" src={useBaseUrl('img/roadmap2023.png')} />
