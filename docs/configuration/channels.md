@@ -55,14 +55,23 @@ The following is an explanation of the fields that are used in the `Add Channels
 
 1. **Mediator Route** - Select a mediator route if any, to populate the required route fields.
 1. **Name** - This is a descriptive name of the route.
-1. **Route Type** - Select whether this route is an HTTP/TCP or MLLP request.
-1. **Path** - Supply a path the route should follow. If none supplied, then the Channel URL pattern will be used.
-1. **Path Transform** - Applies a said-like expression to the path string - multiple endpoints can be reached using the same route.
-1. **Host** - The host where this route should go to.
-1. **Port** - The port where this route should go to.
-1. **Basic Auth Username** - Supply a username if the route requires basic authentication.
-1. **Basic Auth Password** - Supply a password if the route requires basic authentication.
+1. **Route Type** - Select whether this route is an HTTP or Kafka request.
+
+   **HTTP** routes additionally require
+   * **Host** - The host where this route should go to.
+   * **Port** - The port where this route should go to.
+   * **Basic Auth Username** - Supply a username if the route requires basic authentication.
+   * **Basic Auth Password** - Supply a password if the route requires basic authentication.
+   * **Path** - Supply a path the route should follow. If none supplied, then the Channel URL pattern will be used.
+   * **Path Transform** - Applies a said-like expression to the path string - multiple endpoints can be reached using the same route.
+
+   **Kafka** rotues additionally require
+   * **Client ID** - The kafka client id to group the operation under.
+   * **Topic Name** - The topic name to which the request details will be published to.
+
 1. **Is this the primary route?** - Set whether the route is primary - setting a route to primary indicates that this is the first route to check and is the primary endpoint to reach.
+1. **Wait for the response of the primary route** - Set whether or not this route should wait for the primary route to complete before trying to run this route
+   * **Send request when matching status code** - If a route has been set to wait for the primary route's response, then this option can be used to only send the request to this route if the status code from the primary route's response matches. By default it will match any response status code  
 1. **Status** - Set whether the route is enabled/disabled.
 1. '**+ Save**' - All required fields need to be supplied before the blue `+ Save` button becomes active.
 
