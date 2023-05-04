@@ -63,7 +63,7 @@ Next, you need to download the latest release of the web app and deploy it to a 
 
 ```json
 {
-  "version": "x.x.x", //Replace the x's with the latest release
+  "version": "x.x.x", // Replace the x's with the latest release
   "minimumCoreVersion": "7.0.0",
   "protocol": "https",
   "host": "localhost", // Change this to the hostname for your OpenHIM-core server (This hostname MUST be publicly accessible)
@@ -73,7 +73,12 @@ Next, you need to download the latest release of the web app and deploy it to a 
   "footerPoweredBy": "<a href='http://openhim.org/' target='_blank'>Powered by OpenHIM</a>",
   "loginBanner": "", // Add text here that you want to appear on the login screen, if any.
   "mediatorLastHeartbeatWarningSeconds": 60,
-  "mediatorLastHeartbeatDangerSeconds": 120
+  "mediatorLastHeartbeatDangerSeconds": 120,
+  "showLoginForm": true,
+  "ssoEnabled": false, // Enable this if you want to be able to log in using SSO keycloak
+  "keyCloakUrl": "http://localhost:9088", // Change this to the Keycloak URL if you enabled SSO
+  "keyCloakRealm": "platform-realm", // Change this to the realm name configured in Keycloak if you enabled SSO
+  "keyCloakClientId": "openhim-oauth" // Change this to the client ID of Keycloak if you enabled SSO
 }
 ```
 

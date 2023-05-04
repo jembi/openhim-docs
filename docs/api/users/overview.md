@@ -17,9 +17,43 @@ Allows for the management of the OpenHIM users.
 
 ## Schema Model
 
-<GetCurrentVersion>
-  <ExternalContentSyntaxHighlighter
-    url="https://raw.githubusercontent.com/jembi/openhim-core-js/<VERSION>/src/model/users.js"
-    language="javascript"
-  />
-</GetCurrentVersion>
+```js
+const UserSchema = new Schema({
+  firstname: {
+    type: String,
+    required: true
+  },
+  surname: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true
+  },
+  passports: {type: Schema.Types.ObjectId, ref: 'Passport'},
+  /* --- @deprecated --- */
+  passwordAlgorithm: String,
+  passwordHash: String,
+  passwordSalt: String,
+  /* --- ----------- --- */
+  provider: {
+    type: String,
+    enum: ['openid', 'local', 'token'], // token is deprecated
+    default: 'local'
+  },
+  groups: [String],
+  msisdn: String,
+  dailyReport: Boolean,
+  weeklyReport: Boolean,
+  settings: Object,
+  token: String,
+  tokenType: {
+    type: String,
+    enum: ['newUser', 'existingUser', null]
+  }, // null is needed as we used nulls to clear to token and tokenType
+  expiry: Date,
+  locked: Boolean
+})
+```

@@ -25,6 +25,38 @@ Payload: JSON object of the user
 
 ## Example
 
+### Local or Basic authentication
+
+<Tabs
+  defaultValue="sample"
+  values={[
+    { label: 'Sample Data', value: 'sample' }
+  ]
+}>
+<TabItem value="sample">
+
+  ```json
+  {
+    "settings": {
+      "list": {},
+      "filter": {
+        "limit":100
+      }
+    },
+    "groups": ["root@openhim.org"],
+    "email": "root2@openhim.org",
+    "firstname": "Test",
+    "surname": "Tester",
+    "msisdn": "",
+    "password": "new-openhim-password",
+  }
+  ```
+
+</TabItem>
+</Tabs>
+
+### Token authentication [Deprecated]
+
 <Tabs
   defaultValue="lang"
   values={[

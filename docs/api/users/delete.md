@@ -24,6 +24,8 @@ Endpoint: {openhim_url}:8080/users/:userEmail
 
 ## Example
 
+### Token authentication [Deprecated]
+
 Before we can send our request to the OpenHIM API we need to ensure that we construct our valid HTTP headers to successfully authenticate with the OpenHIM API.
 
 <Tabs

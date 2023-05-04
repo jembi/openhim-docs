@@ -31,4 +31,5 @@ Import and export the OpenHIM's configuration as desired. The configuration will
    - Keystore
    - Mediators
    - Users
+   - Passports
 1. Click on the green `Generate Export Script` button

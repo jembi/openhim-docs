@@ -25,6 +25,39 @@ Payload: JSON object of the user record
 
 ## Example
 
+### Local or Basic authentication
+
+<Tabs
+  defaultValue="sample"
+  values={[
+    { label: 'Sample Data', value: 'sample' }
+  ]
+}>
+<TabItem value="sample">
+
+  ```json
+    {
+    "_id": "123e4567-e89b-12d3-a456-426655440000",
+    "settings": {
+      "list": {},
+      "filter": {
+        "limit":100
+      }
+    },
+    "groups": ["root@openhim.org"],
+    "email": "root2@openhim.org",
+    "firstname": "Klod",
+    "surname": "Klester",
+    "msisdn": "",
+    "password": "new-password",
+  }
+  ```
+
+</TabItem>
+</Tabs>
+
+### Token authentication [Deprecated]
+
 <Tabs
   defaultValue="lang"
   values={[

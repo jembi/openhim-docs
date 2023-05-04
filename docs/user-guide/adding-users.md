@@ -17,7 +17,7 @@ username: root@openhim.org
 password: openhim-password
 ```
 
-Note: Change these as soon as you have installed the him to avoid abuse. The OpenHIM console should prompt you to do this on first login.
+Note: Change these as soon as you have installed the openhim to avoid abuse. The OpenHIM console should prompt you to do this on first login.
 
 Using the default admin user, you may create other users. These too may belong to the admin group or custom groups. Non-admin users cannot create clients and channels, however, they may view transactions for certain channels that they are given access to.
 
@@ -52,7 +52,7 @@ Also on the users page, there is a matrix that shows these permissions. This can
 
 ## Walk through and examples
 
-1. To add a user as an admin user, navigate to the admin section and click the button to add the user.
+To add a user as an admin user, navigate to the admin section and click the button to add the user.
 
 Required fields, are as follows:
 
@@ -88,3 +88,13 @@ The statuses are as follows:
 2. List settings: Upon clicking on a transaction in the transactions page, you can choose whether to view the transaction on the same page (default), or to open it in a new window altogether.
 
 If you find a field that is not described here, please let us know by [filing an issue on github](https://github.com/jembi/openhim-core-js/issues/new) with the 'documentation' label.
+
+## Keycloak Single Sign-On (SSO)
+
+Openhim console and core are supporting SSO authentication (Keycloak identity manager).
+Enabling SSO in the openhim console and core will allow:
+
+1. Authentication: A user can be logged in using keycloak credentials.
+2. Profile setup: The user authenticated using Keycloak will have its profile filled automatically with info provided by Keycloak. 
+The User group of that user is also provided and managed through Keycloak. The optional fields can still be editable.
+3. Single sign-on and single sign-out.
