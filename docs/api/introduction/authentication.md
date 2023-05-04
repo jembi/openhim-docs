@@ -13,15 +13,15 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-We have 4 types of user authentication in Openhim described below: Local, Basic, Openid and Token *(deprecated)*.
+We have four types of user authentication in Openhim: Local, Basic, Openid and Token *(deprecated)*, described below.
 
 All of these types will create a session for each authenticated user and will send a response header "Set-Cookie" to authenticate the other incoming requests.
 
-The session will be saved in a Mongo collection "Session".
+The session will be saved in the "Session" Mongo collection.
 
-The password related fields will be saved in Mongo collection "Passport".
+The password related fields will be saved in the "Passport" Mongo collection.
 
-Some configurations can be updated related to the use case:
+Some configurations can be updated according to the use case:
 
 ```json
 "api": {
@@ -49,14 +49,14 @@ Some configurations can be updated related to the use case:
 
 ## Local authentication
 
-This type of authentication use the local authentication protocol (Local passport module). It is the most widely used way for websites to authenticate users via username
+This type of authentication uses the local authentication protocol (Local passport module). It is the most widely used way for websites to authenticate users via username
 and/or email as well as a password.
 
 For more information on local authentication in Passport.js, check out: http://passportjs.org/guide/username-password/
 
 ### Authentication endpoint
 
-To be authenticated using Local, you can hit this route: 
+To be authenticated using the local protocol, you can hit this route: 
 
 `POST https://<server>:8080/authenticate/local`
 
@@ -70,7 +70,7 @@ With a body that contains the following user details:
 
 ## Basic authentication
 
-This is very similar to the Local authentication, expect it uses Basic passport module and every request to any endpoint should be authenticated
+This is very similar to the Local authentication, except that it uses the Basic passport module and every request to any endpoint should be authenticated.
 
 For more information on basic authentication in Passport.js, check out: https://www.passportjs.org/packages/passport-http/
 

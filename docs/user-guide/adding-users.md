@@ -95,6 +95,6 @@ Openhim console and core are supporting SSO authentication (Keycloak identity ma
 Enabling SSO in the openhim console and core will allow:
 
 1. Authentication: A user can be logged in using keycloak credentials.
-2. Profile setup: The user authenticated using Keycloak will have its profile filled automatically with info provided by Keycloak. 
+2. Profile setup: The user authenticated using Keycloak will have his profile filled automatically with info provided by Keycloak. 
 The User group of that user is also provided and managed through Keycloak. The optional fields can still be editable.
 3. Single sign-on and single sign-out.

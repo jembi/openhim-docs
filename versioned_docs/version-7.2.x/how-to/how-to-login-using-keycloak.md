@@ -58,11 +58,14 @@ This configuration should be adapted according to your use case.
 
 Clicking on Sign-in with keycloak will redirect you to Keycloak Login UI.
 
+<img alt="Login With keycloak UI" src={useBaseUrl('img/keycloak-login-ui.png')} />
+
 After entering the Keycloak User credentials and submiting you will be redirected to the dashboard.
 
 Make sure that Keycloak is on and running to be able to authenticate successfully and that you configured a user with group permissions and details that you need.
 
-The profile user in Openhim will be the same as the profile configured in Keycloak and you will not be able to edit the essential fields from Openhim of that user.
+The profile user in Openhim will be the same as the profile configured in Keycloak and you will not be able to edit the essential fields from Openhim for that user.
 
+<img alt="Login With keycloak UI" src={useBaseUrl('img/keycloak-user-profile.png')} />
 
 
