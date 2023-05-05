@@ -58,6 +58,12 @@ services:
       mongo_url: "mongodb://mongo-db/openhim-development"
       mongo_atnaUrl: "mongodb://mongo-db/openhim-development"
       NODE_ENV: "development"
+      api_authenticationTypes: ["token", "basic", "openid", "local"]
+      # Edit the following to enable SSO authentication (openid)
+      # api_openid_url: ${KC_FRONTEND_URL}/realms/${KC_REALM_NAME}
+      # api_openid_callbackUrl: ${KC_OPENHIM_ROOT_URL}
+      # api_openid_clientId: ${KC_OPENHIM_CLIENT_ID}
+      # api_openid_clientSecret: ${KC_OPENHIM_CLIENT_SECRET}
     ports:
       - "8080:8080"
       - "5000:5000"

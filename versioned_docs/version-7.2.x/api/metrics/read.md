@@ -63,6 +63,8 @@ The metrics API always returns a JSON array with the metrics. If the channel doe
 
 ## Example
 
+***Note:*** *In the examples below, we are using the token authentication type to authenticate requests*
+
 Before we can send our request to the OpenHIM API we need to ensure that we construct our valid HTTP headers to successfully authenticate with the OpenHIM API.
 
 <Tabs

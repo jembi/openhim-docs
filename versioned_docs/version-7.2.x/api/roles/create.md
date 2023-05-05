@@ -28,6 +28,8 @@ With a json body containing the role name and channels and clients to apply to. 
 
 ## Example
 
+***Note:*** *In the examples below, we are using the token authentication type to authenticate requests*
+
 <Tabs
   defaultValue="lang"
   values={[

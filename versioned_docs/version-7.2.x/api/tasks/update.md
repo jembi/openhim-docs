@@ -27,6 +27,8 @@ Tasks can be paused, resumed or cancelled by sending through an update with stat
 
 ## Example
 
+***Note:*** *In the examples below, we are using the token authentication type to authenticate requests*
+
 <Tabs
   defaultValue="lang"
   values={[

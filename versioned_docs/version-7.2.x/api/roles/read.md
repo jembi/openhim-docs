@@ -31,6 +31,8 @@ Endpoint: {openhim_url}:8080/roles/:roleId
 
 ## Example
 
+***Note:*** *In the examples below, we are using the token authentication type to authenticate requests*
+
 Before we can send our request to the OpenHIM API we need to ensure that we construct our valid HTTP headers to successfully authenticate with the OpenHIM API. 
 
 <Tabs

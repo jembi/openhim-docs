@@ -23,6 +23,10 @@ Endpoint: {openhim_url}:8080/mediators
 Payload: JSON object of the mediator
 ```
 
+## Examples 
+
+***Note:*** *In the examples below, we are using the token authentication type to authenticate requests*
+
 ## Adding Mediator Example
 
 <Tabs

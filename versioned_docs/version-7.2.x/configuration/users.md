@@ -90,3 +90,5 @@ User permissions comprise of the following:
 1. Click on the amber button that looks like a pencil.
 1. Update the user information as required.
 1. Click on the `Save Changes` button to update the user.
+
+**NB:** Only the optional fields (e.g MSISDN, settings) can be edited for a user provided by an external identity manager (e.g Keycloak).

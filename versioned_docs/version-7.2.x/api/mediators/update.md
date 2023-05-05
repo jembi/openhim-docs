@@ -25,6 +25,10 @@ Payload: JSON object of the mediator
 
 **Note:** For a mediator to be updated the version number in the update object has to be greater than current one for that mediator. If the mediator does not exist a new one is created.
 
+## Examples
+
+***Note:*** *In the examples below, we are using the token authentication type to authenticate requests*
+
 ## Update Example
 
 <Tabs

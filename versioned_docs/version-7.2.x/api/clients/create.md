@@ -26,6 +26,8 @@ Payload: JSON object of the client record
 
 ## Example
 
+***Note:*** *In the examples below, we are using the token authentication type to authenticate requests*
+
 <Tabs
   defaultValue="lang"
   values={[

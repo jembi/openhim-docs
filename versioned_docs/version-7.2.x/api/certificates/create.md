@@ -26,6 +26,10 @@ Endpoint: {openhim_url}:8080/keystore/key
 Payload: JSON object with the key
 ```
 
+## Examples
+
+***Note:*** *In the examples below, we are using the token authentication type to authenticate requests*
+
 ### Key Example
 
 <Tabs
