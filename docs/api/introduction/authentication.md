@@ -78,7 +78,6 @@ If this type of authentication is enabled then you can add this header to your r
 
 ```json
 "headers": { 
-    // ...,
   "Authorization": "Basic Buffer.from(`${<email>}:${<password>}`).toString('base64');"
 }
 ```
