@@ -62,7 +62,7 @@ Clicking on Sign-in with keycloak will redirect you to Keycloak Login UI.
 
 After entering the Keycloak User credentials and submiting you will be redirected to the dashboard.
 
-Make sure that Keycloak is on and running to be able to authenticate successfully and that you configured a user with group permissions and details that you need.
+Keycloak should be running and configured with a user that has group permissions and details that will be needed.
 
 The profile user in Openhim will be the same as the profile configured in Keycloak and you will not be able to edit the essential fields from Openhim for that user.
 
