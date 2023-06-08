@@ -141,7 +141,9 @@ In addition, the ability to store orchestration steps exists in the structure. W
 
 ## Router
 
-The router allows requests to be forwarded to one or more external services (these could be mediators or an actual HIE component). It does this by allowing the user to configure a number of channels. Each channel matches a certain path and contains a number of routes on which to forward requests. Request may be forwarded to multiple routes however, there can only be one **primary route**. The primary route is a the route whose response is returned back to the service requester making use of the OpenHIM.
+The router allows requests to be forwarded to one or more external services (these could be mediators or an actual HIE component). It does this by allowing the user to configure a number of channels. Each channel matches a certain path and contains a number of routes on which to forward requests. Request may be forwarded to multiple routes however, there can only be one **primary route**. The primary route is a the route whose response is returned back to the service requester making use of the OpenHIM. 
+    
+> **Note:** By default all routes defined in a channel are run simultaneously along side the primary route. However it is possible to alter this behavior by setting a route to wait for the primary route. In which case the primary route and any non-waiting non-primary routes are run simultaneously, while all waiting non-primary routes will only run once the primary route has finished. It is possible to further alter this process by specifying specific status codes the primary route should respond with before running the waiting non-primary routes. This enables, for example, the ability to send a request to a logging service on the event that the primary route returns a 401 or 500.  
 
 Channels may be added, removed or updated dynamically as the application is running.
 

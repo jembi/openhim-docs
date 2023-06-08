@@ -73,7 +73,8 @@ module.exports = {
       "how-to/run-openhim-on-startup",
       "how-to/export-import-configuration",
       "how-to/setup-basic-cluster",
-      "how-to/manually-install-on-windows"
+      "how-to/manually-install-on-windows",
+      "how-to/login-using-keycloak"
     ]
   },
   "api": {
