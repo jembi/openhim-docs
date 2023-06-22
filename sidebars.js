@@ -11,7 +11,8 @@ module.exports = {
       "introduction/about",
       "introduction/key-components",
       "introduction/roadmap",
-      "introduction/community"
+      "introduction/community",
+      "introduction/privacy-disclaimer"
     ],
     "Getting Started": [
       "getting-started/prerequisites",
