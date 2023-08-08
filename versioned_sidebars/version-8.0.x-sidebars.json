@@ -20,6 +20,10 @@
         {
           "type": "doc",
           "id": "version-8.0.x/introduction/community"
+        },
+        {
+          "type": "doc",
+          "id": "version-8.0.x/introduction/privacy-disclaimer"
         }
       ]
     },
