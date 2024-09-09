@@ -32,6 +32,6 @@ Product modernization is aimed at keeping the OpenHIM technology and dependency 
 
 This covers ongoing support for OpenHIM implementations and the user community, including updates to OpenHIM deployment processes and end user documentation, support channels and tutorials that allow implementers to more easily and effectively set up, configure and maintain their instances of the OpenHIM.
 
-### Timeline for 2023
+### Timeline for 2024
 
-<img alt="OpenHIM Roadmap" src={useBaseUrl('img/roadmap2023.png')} />
+<img alt="OpenHIM Roadmap" src={useBaseUrl('img/roadmap2024.png')} />
